@@ -77,7 +77,33 @@
         .clinical-shadow { box-shadow: 0 32px 64px -12px rgba(28, 28, 26, 0.06); }
         .no-scrollbar::-webkit-scrollbar { display: none; }
         .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-        
+        .glass-ribbon {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .ribbon-zone:hover .zone-bg {
+            opacity: 1;
+            transform: scale(1.05);
+        }
+        .ribbon-zone:hover {
+            flex-grow: 1.5;
+        }
+        .slide-container {
+            display: flex;
+            transition: transform 0.8s cubic-bezier(0.65, 0, 0.35, 1);
+            height: 100%;
+            width: 400%;
+        }
+        .slide {
+            width: 25%;
+            height: 100%;
+            flex-shrink: 0;
+        }
+        .dot.active {
+            width: 3rem;
+            background-color: white;
+        }
          .glass-silk {
             background: rgba(252, 249, 245, 0.7);
             backdrop-filter: blur(20px);
@@ -333,12 +359,22 @@
             filter: grayscale(40%);
         }
         /* end of faq */
+        /* trust cards */
+         .glass-card6 {
+            background: rgba(0, 48, 119, 0.88);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .glass-card6:hover {
+            background: rgba(255, 255, 255, 0.95);
+            transform: translateY(-8px);
+        }
     </style>
 </head>
 <body class="bg-background text-on-background font-body selection:bg-primary-fixed-dim selection:text-primary overflow-x-hidden">
 <!-- TopNavBar -->
 <nav class="fixed top-0 w-full z-50 glass-silk shadow-sm shadow-[#001e49]/5 transition-all duration-300">
-<div class="flex justify-between items-center w-full px-8 py-4 max-w-screen-2xl mx-auto">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-screen-7xl mx-auto">
 <div class="text-2xl font-bold tracking-tighter text-[#001e49]">
               <img src="images/dental-logo.png" class="img-fluid" width="240" />
             </div>
@@ -356,67 +392,158 @@
             </button>
 </div>
 </nav>
-<!-- Hero Slider Section -->
-<section class="relative h-screen min-h-[800px] w-full overflow-hidden bg-primary" id="hero-slider">
-<!-- Slide Container -->
-<div class="relative w-full h-full" id="slides-wrapper">
-<!-- Slides will be injected here or managed via opacity -->
-<div class="slide absolute inset-0 opacity-100 transition-opacity duration-700 z-10">
-<img alt="Modern Dental Clinic" class="absolute inset-0 w-full h-full object-cover" src="images/hero-new.png"/>
-<div class="absolute inset-0 hero-overlay"></div>
-<div class="relative z-20 h-full w-full max-w-screen-2xl mx-auto px-8 flex items-center">
-<div class="max-w-3xl space-y-6 ml-10">
-<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 backdrop-blur-md">
-<span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
-<span class="text-white font-label text-[10px] uppercase tracking-widest font-bold">Innovation Hub 01</span>
+<!-- Cinematic Hero Slider Section -->
+<section class="overflow-hidden">
+<div class="slide-container h-full" id="hero-slider">
+<!-- Slide 1 -->
+<div class="slide relative">
+<img alt="Confident Smile" class="w-full h-full object-cover" src="images/hero-new.png"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-primary/30"></div>
+<div class="absolute inset-0 flex items-center px-12 md:px-24">
+<div class="max-w-4xl">
+<span class="inline-block px-4 py-1.5 mb-6 rounded-full bg-white/20 backdrop-blur-md text-primary border border-primary/30 font-label tracking-widest text-xs font-semibold uppercase">Welcome To Chagger Dental Services</span>
+<h1 class="text-6xl md:text-5xl font-headline font-extrabold text-primary leading-tight tracking-tight mb-8 drop-shadow-xl">Where Confident<br> Smiles Begin.</h1>
+<!-- <p class="text-xl md:text-sm text-primary/40 font-body max-w-2xl leading-relaxed mb-10">Discover a dental experience designed to lower your heart rate and<br> elevate your expectations. World-class care in an environment of absolute calm.</p> -->
+<div class="flex items-center gap-6">
+<button class="px-8 py-4 bg-primary text-on-primary rounded-full font-bold text-md flex items-center gap-3 transition-transform hover:scale-105 active:scale-95 shadow-2xl">Start Your Journey <span class="material-symbols-outlined">arrow_forward</span></button>
+<button class="flex items-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-xl border border-primary/30 text-primary rounded-full font-bold text-md transition-transform hover:scale-105">View Services <span class="material-symbols-outlined">home_repair_service</span></button>
 </div>
-<h1 class="font-headline text-5xl md:text-6xl font-extrabold text-white leading-[1.1] tracking-normal">
-                                Clinical Mastery <br/><span class="text-on-primary-container">Meets Human Art.</span>
-</h1>
-<p class="text-lg text-white/80 max-w-xl font-body leading-relaxed">
-                                Redefining precision with AI-driven diagnostics and 3D intraoral scanning. We’ve removed the friction of traditional dentistry to focus on your perfect smile.
-                            </p>
-<div class="flex flex-wrap gap-4 pt-4">
-<button class="bg-white text-primary px-8 py-4 rounded-full font-bold flex items-center gap-3 group transition-all duration-300 hover:bg-primary-fixed">
-                                    Book Appointment
-                                    <span class="material-symbols-outlined text-2xl group-hover:translate-x-1 transition-transform">call</span>
+</div>
+</div>
+</div>
+<!-- Slide 2 -->
+<div class="slide relative">
+<img alt="Clinical Excellence" class="w-full h-full object-cover" src="images/hero-new3.png"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-primary/30"></div>
+<div class="absolute inset-0 flex items-center px-12 md:px-24">
+<div class="max-w-4xl">
+<span class="inline-block px-4 py-1.5 mb-6 rounded-full bg-white/20 backdrop-blur-md text-primary border border-primary/30 font-label tracking-widest text-xs font-semibold uppercase">Next-Gen Precision</span>
+<h2 class="text-6xl md:text-5xl font-headline font-extrabold text-primary leading-tight tracking-tight mb-8 drop-shadow-xl">Modern Care. <br/> Gentle Hands.</h2>
+<!-- <p class="text-xl md:text-sm text-primary/40 font-body max-w-2xl leading-relaxed mb-10">Combining advanced digital dentistry with a master's touch for results that are as functional as they are beautiful.</p> -->
+<div class="flex items-center gap-6">
+<button class="px-8 py-4 bg-primary text-on-primary rounded-full font-bold text-md flex items-center gap-3 transition-transform hover:scale-105 active:scale-95 shadow-2xl">Explore Technology <span class="material-symbols-outlined">biotech</span></button>
+<button class="flex items-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-xl border border-primary/30 text-primary rounded-full font-bold text-md transition-transform hover:scale-105">View Services <span class="material-symbols-outlined">home_repair_service</span></button>
+
+</div>
+</div>
+</div>
+</div>
+<!-- Slide 3 -->
+<div class="slide relative">
+<img alt="Comfort Environment" class="w-full h-full object-cover" src="images/hero-new-5.png"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-primary/30"></div>
+<div class="absolute inset-0 flex items-center px-12 md:px-24">
+<div class="max-w-4xl">
+<span class="inline-block px-4 py-1.5 mb-6 rounded-full bg-white/20 backdrop-blur-md text-primary border border-primary/30 font-label tracking-widest text-xs font-semibold uppercase">Patient Focused</span>
+<h2 class="text-6xl md:text-5xl font-headline font-extrabold text-primary leading-tight tracking-tight mb-8 drop-shadow-xl">World-Class <br/>Professionals.</h2>
+<!-- <p class="text-xl md:text-2xl text-white/90 font-body max-w-2xl leading-relaxed mb-10">From noise-cancelling headphones to sedation options, we've thought of every detail to ensure your total comfort.</p> -->
+<div class="flex items-center gap-6">
+<button class="px-8 py-4 bg-primary text-on-primary rounded-full font-bold text-md flex items-center gap-3 transition-transform hover:scale-105 active:scale-95 shadow-2xl">About Us <span class="material-symbols-outlined">spa</span></button>
+<button class="flex items-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-xl border border-primary/30 text-primary rounded-full font-bold text-md transition-transform hover:scale-105">View Services <span class="material-symbols-outlined">home_repair_service</span></button>
+
+</div>
+</div>
+</div>
+</div>
+<!-- Slide 4 -->
+<div class="slide relative">
+<img alt="Happy Patient" class="w-full h-full object-cover" src="images/hero-new-4.png"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-primary/30"></div>
+<div class="absolute inset-0 flex items-center px-12 md:px-24">
+<div class="max-w-4xl">
+<span class="inline-block px-4 py-1.5 mb-6 rounded-full bg-white/20 backdrop-blur-md text-primary border border-primary/30 font-label tracking-widest text-xs font-semibold uppercase">Patient Focused</span>
+<h2 class="text-6xl md:text-5xl font-headline font-extrabold text-primary leading-tight tracking-tight mb-8 drop-shadow-xl">Comprehensive <br/>Dental Care</h2>
+<!-- <p class="text-xl md:text-2xl text-white/90 font-body max-w-2xl leading-relaxed mb-10">From noise-cancelling headphones to sedation options, we've thought of every detail to ensure your total comfort.</p> -->
+<div class="flex items-center gap-6">
+<button class="px-8 py-4 bg-primary text-on-primary rounded-full font-bold text-md flex items-center gap-3 transition-transform hover:scale-105 active:scale-95 shadow-2xl">Why Chagger <span class="material-symbols-outlined">spa</span></button>
+<button class="flex items-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-xl border border-primary/30 text-primary rounded-full font-bold text-md transition-transform hover:scale-105">View Services <span class="material-symbols-outlined">home_repair_service</span></button>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Slider Controls -->
+<div class="absolute inset-y-0 left-8 flex items-center z-20">
+<button class="w-10 h-10 rounded-full border border-primary/50 bg-primary backdrop-blur-md text-white flex items-center justify-center transition-all hover:bg-white/20 hover:text-primary group" onclick="prevSlide()">
+<span class="material-symbols-outlined text-2xl group-hover:-translate-x-1  transition-transform">chevron_left</span>
 </button>
-<button class="flex items-center align-center gap-3 bg-white/10 border border-white/20 backdrop-blur-xl text-white px-8 py-4 rounded-full font-bold transition-all hover:bg-white/20">
-                                   Our Services
-                                     <span class="material-symbols-outlined text-3xl group-hover:translate-x-1 transition-transform">home_repair_service</span>
-                                </button>
 </div>
-</div>
-</div>
-</div>
-</div>
-<!-- Slider Controls - Fixed Z-index and visibility -->
-<div class="absolute bottom-12 left-1/2 -translate-x-1/2 flex items-center gap-6 z-40">
-<button class="w-12 h-12 rounded-full border-2 border-white/40 flex items-center justify-center text-white hover:bg-white hover:text-primary transition-all group bg-black/20 backdrop-blur-sm" id="prev-slide">
-<span class="material-symbols-outlined">chevron_left</span>
-</button>
-<div class="flex gap-3" id="pagination-dots">
-<div class="dot w-8 h-1.5 bg-white rounded-full cursor-pointer transition-all duration-300" data-index="0"></div>
-<div class="dot w-2.5 h-1.5 bg-white/40 rounded-full cursor-pointer transition-all duration-300" data-index="1"></div>
-<div class="dot w-2.5 h-1.5 bg-white/40 rounded-full cursor-pointer transition-all duration-300" data-index="2"></div>
-<div class="dot w-2.5 h-1.5 bg-white/40 rounded-full cursor-pointer transition-all duration-300" data-index="3"></div>
-</div>
-<button class="w-12 h-12 rounded-full border-2 border-white/40 flex items-center justify-center text-white hover:bg-white hover:text-primary transition-all group bg-black/20 backdrop-blur-sm" id="next-slide">
-<span class="material-symbols-outlined">chevron_right</span>
+<div class="absolute inset-y-0 right-8 flex items-center z-20">
+<button class="w-10 h-10 rounded-full border border-primary/50 bg-primary backdrop-blur-md text-white flex items-center justify-center transition-all hover:bg-white/20 group" onclick="nextSlide()">
+<span class="material-symbols-outlined text-2xl group-hover:translate-x-1 transition-transform">chevron_right</span>
 </button>
 </div>
-<!-- Scroll Indicator -->
-<!-- <div class="absolute bottom-8 right-8 flex flex-col items-center gap-4 z-40">
-<span class="text-white/60 [writing-mode:vertical-lr] font-label text-[10px] tracking-[0.2em] uppercase">Scroll to Discover</span>
-<div class="w-px h-12 bg-gradient-to-b from-white/60 to-transparent"></div>
+<!-- Pagination Dots -->
+<!-- <div class="absolute bottom-44 left-1/2 -translate-x-1/2 flex items-center gap-4 z-20">
+<button class="dot h-1 w-8 bg-white/30 rounded-full transition-all duration-300 active" onclick="goToSlide(0)"></button>
+<button class="dot h-1 w-8 bg-white/30 rounded-full transition-all duration-300" onclick="goToSlide(1)"></button>
+<button class="dot h-1 w-8 bg-white/30 rounded-full transition-all duration-300" onclick="goToSlide(2)"></button>
+<button class="dot h-1 w-8 bg-white/30 rounded-full transition-all duration-300" onclick="goToSlide(3)"></button>
 </div> -->
+</section>
+<!-- Cinematic Ribbon (Bottom Anchor) -->
+<section class="absolute bottom-0 w-full z-40">
+<div class="flex h-32 glass-ribbon border-t border-white/10 overflow-hidden backdrop-blur-2xl">
+<!-- Zone 1 -->
+<div class="ribbon-zone group relative flex-1 flex flex-col items-center justify-center px-4 cursor-pointer transition-all duration-500 ease-out hover:bg-primary/20 border-r border-white/10 overflow-hidden">
+<div class="zone-bg absolute inset-0 opacity-0 transition-all duration-700 pointer-events-none">
+<img alt="Finance" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUWTCOrwlr3QGUvrm1d2RTJsUaYkBfoiJWJd1-8d0jrhudyQLOIfckiFbTYd6eDQ7Tl9EiidDxW2RNZJ2mNtclRKXWmx54l7HVAo_34noimPzFm2OH3oMohtnuzMlwjoxKEEA3XD_-O4y0eIdoK15twuzInZe8LZSiUcQl7Nb2y9Wo4k3rPKJH4GGwYVEzt3kH3912JbCkvajpFmpI39G_N9TFvksj9PSeUcOCoA1QM_Vz-bE3Q0gpzW5-E534-YPcrAavCZPOnuzV"/>
+<div class="absolute inset-0 bg-primary/40"></div>
+</div>
+<div class="relative z-10 flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-white mb-2 text-3xl">payments</span>
+<h4 class="font-headline font-bold text-sm text-white uppercase tracking-widest">Financial Ease</h4>
+<p class="text-white/60 text-[10px] uppercase tracking-[0.2em] font-label mt-1 group-hover:text-white/90 transition-colors">Direct Billing</p>
+</div>
+</div>
+<!-- Zone 2 -->
+<div class="ribbon-zone group relative flex-1 flex flex-col items-center justify-center px-4 cursor-pointer transition-all duration-500 ease-out hover:bg-primary/20 border-r border-white/10 overflow-hidden">
+<div class="zone-bg absolute inset-0 opacity-0 transition-all duration-700 pointer-events-none">
+<img alt="Mastery" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB44uCHQoZCTDGo71Ow2eCU6J6P4_6-UCN2M1oh1nQ5xLodBaVBQhKme31VIdXl2iTyQkDAe6Wrn-ALbz_pSOs1-9pK1lQ9ntMpHYMApmeiVX98gwJa7ucRVuq4pwPLxi7yDd_Dr25wF2wBeiEhqiKoTiRpYDjSmLsT5pMCd6QVsRNKoLhFaBq2WoMA_2soR5e3DJDctVOYAHt3fd6Vd_tzr9w7Mz5t_hEnUbc-1MDnD9qOYTxXN2sRPL-mYNgEYGjrfKtljYfirZ0h"/>
+<div class="absolute inset-0 bg-primary/40"></div>
+</div>
+<div class="relative z-10 flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-white mb-2 text-3xl">biotech</span>
+<h4 class="font-headline font-bold text-sm text-white uppercase tracking-widest">Clinical Mastery</h4>
+<p class="text-white/60 text-[10px] uppercase tracking-[0.2em] font-label mt-1 group-hover:text-white/90 transition-colors">3D Precision</p>
+</div>
+</div>
+<!-- Zone 3 -->
+<div class="ribbon-zone group relative flex-1 flex flex-col items-center justify-center px-4 cursor-pointer transition-all duration-500 ease-out hover:bg-primary/20 border-r border-white/10 overflow-hidden">
+<div class="zone-bg absolute inset-0 opacity-0 transition-all duration-700 pointer-events-none">
+<img alt="Gentle" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTTT0ZAXhjGENtgkiPvXqxCW_AF6NAGXHqElCoPMUIBRASblCoEcMvlrGhIobYdoh_Ivo5DDRL34NjO72UPg3AH9BGvRHqCW68MC3aQykZn7pBriGJWoKHMn_xzHCZedcZVa7NVJqEQdHw4PfHSqiHdLAAgDeTovf0cz-qCjn5VMHmiXbr00Ih3mmJga3QgiCsB0_Xb3vZV6mKUIB9Yzmb2uNEDX80x4yKWZMwDCLgS-ABsiReHJJ4uVkbxSJcdLNM_PEwhy57RzAz"/>
+<div class="absolute inset-0 bg-primary/40"></div>
+</div>
+<div class="relative z-10 flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-white mb-2 text-3xl">spa</span>
+<h4 class="font-headline font-bold text-sm text-white uppercase tracking-widest">Gentle Entry</h4>
+<p class="text-white/60 text-[10px] uppercase tracking-[0.2em] font-label mt-1 group-hover:text-white/90 transition-colors">Anxiety-Free</p>
+</div>
+</div>
+<!-- Zone 4 -->
+<div class="ribbon-zone group relative flex-1 flex flex-col items-center justify-center px-4 cursor-pointer transition-all duration-500 ease-out hover:bg-primary/20 overflow-hidden">
+<div class="zone-bg absolute inset-0 opacity-0 transition-all duration-700 pointer-events-none">
+<img alt="Access" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvCLDfYoUpqzBEGw9GFAt4yAjGWtelNiLo0N7CS6GG-ZLL8eNJLglt0UsYXAiy2X-NravNJ63LS76mUMvy7EJ0LLbbPV8utp5kJu6fL53kaAVdEf2oCNDUmLko7FMLenP6GcDqrYhlu8O8dxy3D5uJAb-Z2PyD1qfuTq84nb0yi37L7HJ3Aqphgnbfkd-mUn5A9Aqv8BAQCcPf3DzLFYpwmVN1CBuVqERZSWTN3WvkPeJFrI7EKTfiIqtQ8DIC22eEd7rnQJLFK0Tu"/>
+<div class="absolute inset-0 bg-primary/40"></div>
+</div>
+<div class="relative z-10 flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-white mb-2 text-3xl">calendar_month</span>
+<h4 class="font-headline font-bold text-sm text-white uppercase tracking-widest">Infinite Access</h4>
+<p class="text-white/60 text-[10px] uppercase tracking-[0.2em] font-label mt-1 group-hover:text-white/90 transition-colors">24/7 Support</p>
+</div>
+</div>
+</div>
 </section>
 <!-- Feature Bento Grid -->
 
 
+
 <!-- About Us Section -->
-<section class="mt-20 bg-surface">
-<div class="max-w-7xl mx-auto">
+<section class="mt-10 bg-surface">
+  
+<div class="max-w-7xl mx-auto mt-10">
+
 <!-- Section Header: Editorial Typography -->
 <div class="mb-16 text-center md:text-center">
 <span class="inline-block py-1 px-3 rounded-full bg-secondary-container text-on-secondary-fixed-variant text-xs font-bold tracking-widest uppercase font-label">
@@ -2150,143 +2277,49 @@ treatment and technology</h3>
     duration:1200
   });
     // hero slider
-    const slideData = [
-            {
-                tag: "Innovation Hub 01",
-                headline: "Clinical Mastery <br/><span class='text-on-primary-container'>Meets Human Art.</span>",
-                description: "Redefining precision with AI-driven diagnostics and 3D intraoral scanning. We’ve removed the friction of traditional dentistry to focus on what matters: your perfect, healthy smile.",
-                image: "images/hero-new.png"
-            },
-            {
-                tag: "Patient Care 02",
-                headline: "Digital Precision <br/><span class='text-on-primary-container'>Virtual Smile Design.</span>",
-                description: "See your final result before we even start. Our virtual smile design software creates a custom blueprint tailored to your facial features and unique aesthetic.",
-                image: "images/hero-new2.png"
-            },
-            {
-                tag: "Advanced Tech 03",
-                headline: "Robotic Accuracy <br/><span class='text-on-primary-container'>Sub-Micron Implants.</span>",
-                description: "Guided surgery for dental implants ensures 0.1mm accuracy. Faster procedures, minimal discomfort, and results that last a lifetime.",
-                image: "images/hero-new3.png"
-            },
-            {
-                tag: "Comfort First 04",
-                headline: "Painless Future <br/><span class='text-on-primary-container'>Laser Technology.</span>",
-                description: "Biolase technology eliminates the need for drills and needles in most procedures. Faster healing times and a gentle experience that changes dentistry forever.",
-                image: "images/chag.webp"
+   let currentSlide = 0;
+    const totalSlides = 4;
+    const slider = document.getElementById('hero-slider');
+    const dots = document.querySelectorAll('.dot');
+
+    function updateSlider() {
+        slider.style.transform = `translateX(-${currentSlide * 25}%)`;
+        dots.forEach((dot, index) => {
+            if (index === currentSlide) {
+                dot.classList.add('active');
+            } else {
+                dot.classList.remove('active');
             }
-        ];
-
-        let currentIndex = 0;
-        const wrapper = document.getElementById('slides-wrapper');
-        const dots = document.querySelectorAll('.dot');
-        let isTransitioning = false;
-
-        function renderSlide(index) {
-            if (isTransitioning) return;
-            isTransitioning = true;
-
-            const data = slideData[index];
-            
-            // Create new slide element
-            const slideEl = document.createElement('div');
-            slideEl.className = 'slide absolute inset-0 opacity-0 transition-opacity duration-700 z-20';
-            slideEl.innerHTML = `
-                <img src="${data.image}" class="absolute inset-0 w-full h-full object-cover" alt="Dental Care">
-                <div class="absolute inset-0 hero-overlay"></div>
-                <div class="relative z-20 h-full w-full max-w-screen-2xl mx-auto px-8 flex items-center">
-                    <div class="max-w-3xl space-y-8 ml-10">
-                        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 backdrop-blur-md">
-                            <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
-                            <span class="text-white font-label text-[10px] uppercase tracking-widest font-bold">${data.tag}</span>
-                        </div>
-                        <h1 class="font-headline text-5xl md:text-6xl font-extrabold text-white leading-[1.1] tracking-normal">
-                            ${data.headline}
-                        </h1>
-                        <p class="text-lg text-white/80 max-w-xl font-body leading-relaxed">
-                            ${data.description}
-                        </p>
-                        <div class="flex flex-wrap gap-4 pt-4">
-                            <button class="bg-white text-primary px-8 py-4 rounded-full font-bold flex items-center gap-3 group transition-all duration-300 hover:bg-primary-fixed">
-                                Book Appointment
-                                <span class="material-symbols-outlined text-xl group-hover:translate-x-1 transition-transform">arrow_forward</span>
-                            </button>
-                            <button class="flex items-center align-center gap-3 bg-white/10 border border-white/20 backdrop-blur-xl text-white px-8 py-4 rounded-full font-bold transition-all hover:bg-white/20">
-                                   Our Services
-                                     <span class="material-symbols-outlined text-3xl group-hover:translate-x-1 transition-transform">home_repair_service</span>
-                                </button>
-                        </div>
-                    </div>
-                </div>
-            `;
-
-            // Append new slide
-            wrapper.appendChild(slideEl);
-
-            // Trigger reflow
-            slideEl.offsetHeight;
-
-            // Fade in new, fade out old
-            slideEl.classList.remove('opacity-0');
-            slideEl.classList.add('opacity-100');
-
-            // Handle previous slides
-            const oldSlides = wrapper.querySelectorAll('.slide');
-            oldSlides.forEach(slide => {
-                if (slide !== slideEl) {
-                    slide.classList.add('opacity-0');
-                    slide.classList.remove('z-20');
-                    slide.classList.add('z-10');
-                    setTimeout(() => slide.remove(), 700);
-                }
-            });
-
-            // Update dots
-            dots.forEach((dot, i) => {
-                if (i === index) {
-                    dot.classList.replace('w-2.5', 'w-8');
-                    dot.classList.replace('bg-white/40', 'bg-white');
-                } else {
-                    dot.classList.replace('w-8', 'w-2.5');
-                    dot.classList.replace('bg-white', 'bg-white/40');
-                }
-            });
-
-            setTimeout(() => {
-                isTransitioning = false;
-            }, 700);
-        }
-
-        document.getElementById('next-slide').addEventListener('click', () => {
-            currentIndex = (currentIndex + 1) % slideData.length;
-            renderSlide(currentIndex);
         });
+    }
 
-        document.getElementById('prev-slide').addEventListener('click', () => {
-            currentIndex = (currentIndex - 1 + slideData.length) % slideData.length;
-            renderSlide(currentIndex);
-        });
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        updateSlider();
+    }
 
-        dots.forEach(dot => {
-            dot.addEventListener('click', () => {
-                const index = parseInt(dot.dataset.index);
-                if (index !== currentIndex) {
-                    currentIndex = index;
-                    renderSlide(currentIndex);
-                }
-            });
-        });
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        updateSlider();
+    }
 
-        // Auto-play
-        let autoSlide = setInterval(() => {
-            currentIndex = (currentIndex + 1) % slideData.length;
-            renderSlide(currentIndex);
-        }, 6000);
+    function goToSlide(index) {
+        currentSlide = index;
+        updateSlider();
+    }
 
-        // Pause auto-play on interaction
-        [document.getElementById('next-slide'), document.getElementById('prev-slide'), ...dots].forEach(el => {
-            el.addEventListener('click', () => clearInterval(autoSlide));
-        });
+    // Auto-advance
+    let autoPlay = setInterval(nextSlide, 6000);
+
+    // Reset timer on manual interaction
+    function resetTimer() {
+        clearInterval(autoPlay);
+        autoPlay = setInterval(nextSlide, 6000);
+    }
+
+    document.querySelectorAll('button').forEach(btn => {
+        btn.addEventListener('click', resetTimer);
+    });
 
     // --- Services Slider ---
     document.addEventListener('DOMContentLoaded', function() {

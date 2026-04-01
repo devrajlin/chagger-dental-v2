@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-ribbon {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .ribbon-zone:hover .zone-bg {
+            opacity: 1;
+            transform: scale(1.05);
+        }
+        .ribbon-zone:hover {
+            flex-grow: 1.5;
+        }
+        .slide-container {
+            display: flex;
+            transition: transform 0.8s cubic-bezier(0.65, 0, 0.35, 1);
+            height: 100%;
+            width: 400%;
+        }
+        .slide {
+            width: 25%;
+            height: 100%;
+            flex-shrink: 0;
+        }
+        .dot.active {
+            width: 3rem;
+            background-color: white;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "surface-tint": "#405e97",
+                "on-secondary-container": "#546678",
+                "surface-dim": "#dcdad6",
+                "outline-variant": "#c4c6d1",
+                "on-tertiary": "#ffffff",
+                "inverse-surface": "#31302e",
+                "on-secondary-fixed-variant": "#36495a",
+                "on-secondary-fixed": "#091d2c",
+                "error-container": "#ffdad6",
+                "surface-container-high": "#eae8e4",
+                "tertiary-fixed": "#eee0d4",
+                "on-secondary": "#ffffff",
+                "on-surface-variant": "#434750",
+                "inverse-on-surface": "#f3f0ec",
+                "on-primary-fixed-variant": "#26467d",
+                "primary-fixed": "#d8e2ff",
+                "tertiary-container": "#3b332b",
+                "surface-container-lowest": "#ffffff",
+                "surface": "#fcf9f5",
+                "on-primary": "#ffffff",
+                "surface-container": "#f0ede9",
+                "on-background": "#1c1c1a",
+                "inverse-primary": "#adc6ff",
+                "primary-fixed-dim": "#adc6ff",
+                "on-tertiary-fixed-variant": "#4e453c",
+                "surface-container-low": "#f6f3ef",
+                "secondary-fixed": "#d1e5fa",
+                "primary": "#001e49",
+                "tertiary": "#251e16",
+                "surface-variant": "#e5e2de",
+                "on-primary-fixed": "#001a41",
+                "on-error": "#ffffff",
+                "on-error-container": "#93000a",
+                "primary-container": "#0e336a",
+                "tertiary-fixed-dim": "#d1c4b8",
+                "outline": "#747781",
+                "surface-container-highest": "#e5e2de",
+                "secondary": "#4e6072",
+                "on-tertiary-container": "#a79b90",
+                "secondary-container": "#d1e5fa",
+                "surface-bright": "#fcf9f5",
+                "on-primary-container": "#809ddb",
+                "error": "#ba1a1a",
+                "on-tertiary-fixed": "#211a13",
+                "on-surface": "#1c1c1a",
+                "background": "#fcf9f5",
+                "secondary-fixed-dim": "#b5c9dd"
+              },
+              fontFamily: {
+                "headline": ["Manrope"],
+                "body": ["Inter"],
+                "label": ["Inter"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+      </script>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-primary-container selection:text-white antialiased overflow-x-hidden">
+<header class="fixed top-0 w-full z-50 bg-white/70 dark:bg-slate-950/70 backdrop-blur-xl shadow-sm">
+<!-- TopNavBar -->
+<nav class="">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-screen-7xl mx-auto">
+<div class="text-2xl font-bold tracking-tighter text-[#001e49]">
+              <img src="images/dental-logo.png" class="img-fluid" width="240" />
+            </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-manrope uppercase tracking-widest text-xs font-semibold text-[#0e336a] border-b-2 border-[#0e336a] pb-1" href="#">Home</a>
+<a class="font-manrope uppercase tracking-widest text-xs font-semibold text-[#4e6072] hover:text-[#0e336a] transition-colors" href="#">Services</a>
+<a class="font-manrope uppercase tracking-widest text-xs font-semibold text-[#4e6072] hover:text-[#0e336a] transition-colors" href="#">About Us</a>
+<a class="font-manrope uppercase tracking-widest text-xs font-semibold text-[#4e6072] hover:text-[#0e336a] transition-colors" href="#">Locations</a>
+<a class="font-manrope uppercase tracking-widest text-xs font-semibold text-[#4e6072] hover:text-[#0e336a] transition-colors" href="#">Reviews</a>
+</div>
+<button class="flex gap-2 items-center justify-center bg-primary text-on-primary px-6 py-2.5 rounded-full font-manrope font-semibold text-sm scale-95 active:scale-90 transition-transform duration-200 shadow-lg shadow-primary/10 hover:shadow-primary/20">
+                Book Appointment
+            <span class="material-symbols-outlined" data-icon="play_circle" style="font-variation-settings: 'FILL' 1;">call</span>
+
+            </button>
+</div>
+</nav>
+</header>
+<main class="relative h-screen w-full flex flex-col overflow-hidden">
+<!-- Cinematic Hero Slider Section -->
+<section class="absolute inset-0 z-0 overflow-hidden">
+<div class="slide-container h-full" id="hero-slider">
+<!-- Slide 1 -->
+<div class="slide relative">
+<img alt="Confident Smile" class="w-full h-full object-cover" src="images/hero-new.png"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-primary/30"></div>
+<div class="absolute inset-0 flex items-center px-12 md:px-24">
+<div class="max-w-4xl">
+<span class="inline-block px-4 py-1.5 mb-6 rounded-full bg-white/20 backdrop-blur-md text-primary border border-primary/30 font-label tracking-widest text-xs font-semibold uppercase">Welcome To Chagger Dental Services</span>
+<h1 class="text-6xl md:text-6xl font-headline font-extrabold text-primary leading-tight tracking-tight mb-8 drop-shadow-xl">Where Confident<br> Smiles Begin.</h1>
+<!-- <p class="text-xl md:text-sm text-primary/40 font-body max-w-2xl leading-relaxed mb-10">Discover a dental experience designed to lower your heart rate and<br> elevate your expectations. World-class care in an environment of absolute calm.</p> -->
+<div class="flex items-center gap-6">
+<button class="px-8 py-4 bg-primary text-on-primary rounded-full font-bold text-md flex items-center gap-3 transition-transform hover:scale-105 active:scale-95 shadow-2xl">Start Your Journey <span class="material-symbols-outlined">arrow_forward</span></button>
+<button class="flex items-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-xl border border-primary/30 text-primary rounded-full font-bold text-md transition-transform hover:scale-105">View Services <span class="material-symbols-outlined">home_repair_service</span></button>
+</div>
+</div>
+</div>
+</div>
+<!-- Slide 2 -->
+<div class="slide relative">
+<img alt="Clinical Excellence" class="w-full h-full object-cover" src="images/hero-new3.png"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-primary/30"></div>
+<div class="absolute inset-0 flex items-center px-12 md:px-24">
+<div class="max-w-4xl">
+<span class="inline-block px-4 py-1.5 mb-6 rounded-full bg-white/20 backdrop-blur-md text-primary border border-primary/30 font-label tracking-widest text-xs font-semibold uppercase">Next-Gen Precision</span>
+<h2 class="text-6xl md:text-6xl font-headline font-extrabold text-primary leading-tight tracking-tight mb-8 drop-shadow-xl">Modern Care. <br/> Gentle Hands.</h2>
+<!-- <p class="text-xl md:text-sm text-primary/40 font-body max-w-2xl leading-relaxed mb-10">Combining advanced digital dentistry with a master's touch for results that are as functional as they are beautiful.</p> -->
+<div class="flex items-center gap-6">
+<button class="px-8 py-4 bg-primary text-on-primary rounded-full font-bold text-lg flex items-center gap-3 transition-transform hover:scale-105 active:scale-95 shadow-2xl">Explore Technology <span class="material-symbols-outlined">biotech</span></button>
+<button class="flex items-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-xl border border-primary/30 text-primary rounded-full font-bold text-md transition-transform hover:scale-105">View Services <span class="material-symbols-outlined">home_repair_service</span></button>
+
+</div>
+</div>
+</div>
+</div>
+<!-- Slide 3 -->
+<div class="slide relative">
+<img alt="Comfort Environment" class="w-full h-full object-cover" src="images/hero-new2.png"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-primary/30"></div>
+<div class="absolute inset-0 flex items-center px-12 md:px-24">
+<div class="max-w-4xl">
+<span class="inline-block px-4 py-1.5 mb-6 rounded-full bg-white/20 backdrop-blur-md text-primary border border-primary/30 font-label tracking-widest text-xs font-semibold uppercase">Patient Focused</span>
+<h2 class="text-6xl md:text-6xl font-headline font-extrabold text-primary leading-tight tracking-tight mb-8 drop-shadow-xl">World-Class <br/>Professionals.</h2>
+<!-- <p class="text-xl md:text-2xl text-white/90 font-body max-w-2xl leading-relaxed mb-10">From noise-cancelling headphones to sedation options, we've thought of every detail to ensure your total comfort.</p> -->
+<div class="flex items-center gap-6">
+<button class="px-8 py-4 bg-primary text-on-primary rounded-full font-bold text-lg flex items-center gap-3 transition-transform hover:scale-105 active:scale-95 shadow-2xl">About Us <span class="material-symbols-outlined">spa</span></button>
+<button class="flex items-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-xl border border-primary/30 text-primary rounded-full font-bold text-md transition-transform hover:scale-105">View Services <span class="material-symbols-outlined">home_repair_service</span></button>
+
+</div>
+</div>
+</div>
+</div>
+<!-- Slide 4 -->
+<div class="slide relative">
+<img alt="Happy Patient" class="w-full h-full object-cover" src="images/chag.webp"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-primary/30"></div>
+<div class="absolute inset-0 flex items-center px-12 md:px-24">
+<div class="max-w-4xl">
+<span class="inline-block px-4 py-1.5 mb-6 rounded-full bg-white/20 backdrop-blur-md text-white border border-white/30 font-label tracking-widest text-xs font-semibold uppercase">World-Class Smile</span>
+<h2 class="text-6xl md:text-6xl font-headline font-extrabold text-white leading-tight tracking-tight mb-8 drop-shadow-xl">World-Class <br/>Dentistry for you.</h2>
+<!-- <p class="text-xl md:text-2xl text-white/90 font-body max-w-2xl leading-relaxed mb-10">Join thousands of patients who have transformed their lives through the power of a healthy, radiant Luxe smile.</p> -->
+<div class="flex items-center gap-6">
+<button class="px-8 py-4 bg-white text-on-white rounded-full font-bold text-lg flex items-center gap-3 transition-transform hover:scale-105 active:scale-95 shadow-2xl">Why Chagger <span class="material-symbols-outlined">star</span></button>
+<button class="flex items-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-xl border border-white/30 text-white rounded-full font-bold text-md transition-transform hover:scale-105">View Services <span class="material-symbols-outlined">home_repair_service</span></button>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Slider Controls -->
+<div class="absolute inset-y-0 left-8 flex items-center z-20">
+<button class="w-10 h-10 rounded-full border border-primary/50 bg-primary backdrop-blur-md text-white flex items-center justify-center transition-all hover:bg-white/20 hover:text-primary group" onclick="prevSlide()">
+<span class="material-symbols-outlined text-2xl group-hover:-translate-x-1  transition-transform">chevron_left</span>
+</button>
+</div>
+<div class="absolute inset-y-0 right-8 flex items-center z-20">
+<button class="w-10 h-10 rounded-full border border-primary/50 bg-primary backdrop-blur-md text-white flex items-center justify-center transition-all hover:bg-white/20 group" onclick="nextSlide()">
+<span class="material-symbols-outlined text-2xl group-hover:translate-x-1 transition-transform">chevron_right</span>
+</button>
+</div>
+<!-- Pagination Dots -->
+<!-- <div class="absolute bottom-44 left-1/2 -translate-x-1/2 flex items-center gap-4 z-20">
+<button class="dot h-1 w-8 bg-white/30 rounded-full transition-all duration-300 active" onclick="goToSlide(0)"></button>
+<button class="dot h-1 w-8 bg-white/30 rounded-full transition-all duration-300" onclick="goToSlide(1)"></button>
+<button class="dot h-1 w-8 bg-white/30 rounded-full transition-all duration-300" onclick="goToSlide(2)"></button>
+<button class="dot h-1 w-8 bg-white/30 rounded-full transition-all duration-300" onclick="goToSlide(3)"></button>
+</div> -->
+</section>
+<!-- Cinematic Ribbon (Bottom Anchor) -->
+<section class="absolute bottom-0 w-full z-40">
+<div class="flex h-32 glass-ribbon border-t border-white/10 overflow-hidden backdrop-blur-2xl">
+<!-- Zone 1 -->
+<div class="ribbon-zone group relative flex-1 flex flex-col items-center justify-center px-4 cursor-pointer transition-all duration-500 ease-out hover:bg-primary/20 border-r border-white/10 overflow-hidden">
+<div class="zone-bg absolute inset-0 opacity-0 transition-all duration-700 pointer-events-none">
+<img alt="Finance" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUWTCOrwlr3QGUvrm1d2RTJsUaYkBfoiJWJd1-8d0jrhudyQLOIfckiFbTYd6eDQ7Tl9EiidDxW2RNZJ2mNtclRKXWmx54l7HVAo_34noimPzFm2OH3oMohtnuzMlwjoxKEEA3XD_-O4y0eIdoK15twuzInZe8LZSiUcQl7Nb2y9Wo4k3rPKJH4GGwYVEzt3kH3912JbCkvajpFmpI39G_N9TFvksj9PSeUcOCoA1QM_Vz-bE3Q0gpzW5-E534-YPcrAavCZPOnuzV"/>
+<div class="absolute inset-0 bg-primary/40"></div>
+</div>
+<div class="relative z-10 flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-white mb-2 text-3xl">payments</span>
+<h4 class="font-headline font-bold text-sm text-white uppercase tracking-widest">Financial Ease</h4>
+<p class="text-white/60 text-[10px] uppercase tracking-[0.2em] font-label mt-1 group-hover:text-white/90 transition-colors">Direct Billing</p>
+</div>
+</div>
+<!-- Zone 2 -->
+<div class="ribbon-zone group relative flex-1 flex flex-col items-center justify-center px-4 cursor-pointer transition-all duration-500 ease-out hover:bg-primary/20 border-r border-white/10 overflow-hidden">
+<div class="zone-bg absolute inset-0 opacity-0 transition-all duration-700 pointer-events-none">
+<img alt="Mastery" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB44uCHQoZCTDGo71Ow2eCU6J6P4_6-UCN2M1oh1nQ5xLodBaVBQhKme31VIdXl2iTyQkDAe6Wrn-ALbz_pSOs1-9pK1lQ9ntMpHYMApmeiVX98gwJa7ucRVuq4pwPLxi7yDd_Dr25wF2wBeiEhqiKoTiRpYDjSmLsT5pMCd6QVsRNKoLhFaBq2WoMA_2soR5e3DJDctVOYAHt3fd6Vd_tzr9w7Mz5t_hEnUbc-1MDnD9qOYTxXN2sRPL-mYNgEYGjrfKtljYfirZ0h"/>
+<div class="absolute inset-0 bg-primary/40"></div>
+</div>
+<div class="relative z-10 flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-white mb-2 text-3xl">biotech</span>
+<h4 class="font-headline font-bold text-sm text-white uppercase tracking-widest">Clinical Mastery</h4>
+<p class="text-white/60 text-[10px] uppercase tracking-[0.2em] font-label mt-1 group-hover:text-white/90 transition-colors">3D Precision</p>
+</div>
+</div>
+<!-- Zone 3 -->
+<div class="ribbon-zone group relative flex-1 flex flex-col items-center justify-center px-4 cursor-pointer transition-all duration-500 ease-out hover:bg-primary/20 border-r border-white/10 overflow-hidden">
+<div class="zone-bg absolute inset-0 opacity-0 transition-all duration-700 pointer-events-none">
+<img alt="Gentle" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTTT0ZAXhjGENtgkiPvXqxCW_AF6NAGXHqElCoPMUIBRASblCoEcMvlrGhIobYdoh_Ivo5DDRL34NjO72UPg3AH9BGvRHqCW68MC3aQykZn7pBriGJWoKHMn_xzHCZedcZVa7NVJqEQdHw4PfHSqiHdLAAgDeTovf0cz-qCjn5VMHmiXbr00Ih3mmJga3QgiCsB0_Xb3vZV6mKUIB9Yzmb2uNEDX80x4yKWZMwDCLgS-ABsiReHJJ4uVkbxSJcdLNM_PEwhy57RzAz"/>
+<div class="absolute inset-0 bg-primary/40"></div>
+</div>
+<div class="relative z-10 flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-white mb-2 text-3xl">spa</span>
+<h4 class="font-headline font-bold text-sm text-white uppercase tracking-widest">Gentle Entry</h4>
+<p class="text-white/60 text-[10px] uppercase tracking-[0.2em] font-label mt-1 group-hover:text-white/90 transition-colors">Anxiety-Free</p>
+</div>
+</div>
+<!-- Zone 4 -->
+<div class="ribbon-zone group relative flex-1 flex flex-col items-center justify-center px-4 cursor-pointer transition-all duration-500 ease-out hover:bg-primary/20 overflow-hidden">
+<div class="zone-bg absolute inset-0 opacity-0 transition-all duration-700 pointer-events-none">
+<img alt="Access" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvCLDfYoUpqzBEGw9GFAt4yAjGWtelNiLo0N7CS6GG-ZLL8eNJLglt0UsYXAiy2X-NravNJ63LS76mUMvy7EJ0LLbbPV8utp5kJu6fL53kaAVdEf2oCNDUmLko7FMLenP6GcDqrYhlu8O8dxy3D5uJAb-Z2PyD1qfuTq84nb0yi37L7HJ3Aqphgnbfkd-mUn5A9Aqv8BAQCcPf3DzLFYpwmVN1CBuVqERZSWTN3WvkPeJFrI7EKTfiIqtQ8DIC22eEd7rnQJLFK0Tu"/>
+<div class="absolute inset-0 bg-primary/40"></div>
+</div>
+<div class="relative z-10 flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-white mb-2 text-3xl">calendar_month</span>
+<h4 class="font-headline font-bold text-sm text-white uppercase tracking-widest">Infinite Access</h4>
+<p class="text-white/60 text-[10px] uppercase tracking-[0.2em] font-label mt-1 group-hover:text-white/90 transition-colors">24/7 Support</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+<script>
+    let currentSlide = 0;
+    const totalSlides = 4;
+    const slider = document.getElementById('hero-slider');
+    const dots = document.querySelectorAll('.dot');
+
+    function updateSlider() {
+        slider.style.transform = `translateX(-${currentSlide * 25}%)`;
+        dots.forEach((dot, index) => {
+            if (index === currentSlide) {
+                dot.classList.add('active');
+            } else {
+                dot.classList.remove('active');
+            }
+        });
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        updateSlider();
+    }
+
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        updateSlider();
+    }
+
+    function goToSlide(index) {
+        currentSlide = index;
+        updateSlider();
+    }
+
+    // Auto-advance
+    let autoPlay = setInterval(nextSlide, 6000);
+
+    // Reset timer on manual interaction
+    function resetTimer() {
+        clearInterval(autoPlay);
+        autoPlay = setInterval(nextSlide, 6000);
+    }
+
+    document.querySelectorAll('button').forEach(btn => {
+        btn.addEventListener('click', resetTimer);
+    });
+</script>
+</body></html>
