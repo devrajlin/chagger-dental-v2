@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Chagger Dental | Innovation Hub</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-container-low": "#f6f3ef",
+                        "secondary-fixed-dim": "#b5c9dd",
+                        "on-secondary-fixed": "#091d2c",
+                        "outline": "#747781",
+                        "on-primary-fixed-variant": "#26467d",
+                        "surface-container-highest": "#e5e2de",
+                        "outline-variant": "#c4c6d1",
+                        "on-tertiary-fixed-variant": "#4e453c",
+                        "on-error-container": "#93000a",
+                        "secondary-container": "#d1e5fa",
+                        "surface-container": "#f0ede9",
+                        "surface-bright": "#fcf9f5",
+                        "error-container": "#ffdad6",
+                        "tertiary-fixed-dim": "#d1c4b8",
+                        "surface-container-high": "#eae8e4",
+                        "on-secondary-fixed-variant": "#36495a",
+                        "surface-dim": "#dcdad6",
+                        "on-secondary": "#ffffff",
+                        "inverse-on-surface": "#f3f0ec",
+                        "surface-tint": "#405e97",
+                        "on-secondary-container": "#546678",
+                        "on-primary-fixed": "#001a41",
+                        "tertiary-container": "#3b332b",
+                        "secondary-fixed": "#d1e5fa",
+                        "primary": "#001e49",
+                        "surface-variant": "#e5e2de",
+                        "secondary": "#4e6072",
+                        "inverse-primary": "#adc6ff",
+                        "on-tertiary-fixed": "#211a13",
+                        "surface": "#fcf9f5",
+                        "primary-container": "#0e336a",
+                        "on-surface": "#1c1c1a",
+                        "inverse-surface": "#31302e",
+                        "on-primary": "#ffffff",
+                        "tertiary": "#251e16",
+                        "primary-fixed-dim": "#adc6ff",
+                        "background": "#fcf9f5",
+                        "on-background": "#1c1c1a",
+                        "surface-container-lowest": "#ffffff",
+                        "error": "#ba1a1a",
+                        "on-tertiary-container": "#a79b90",
+                        "on-primary-container": "#809ddb",
+                        "primary-fixed": "#d8e2ff",
+                        "on-tertiary": "#ffffff",
+                        "on-surface-variant": "#434750",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed": "#eee0d4"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .slider-container {
+            scroll-snap-type: x mandatory;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+        .slider-container::-webkit-scrollbar {
+            display: none;
+        }
+        .slide {
+            scroll-snap-align: start;
+            flex: 0 0 100%;
+        }
+        .dial-track {
+            stroke-dasharray: 283;
+            stroke-dashoffset: 0;
+            transition: stroke-dashoffset 0.5s ease;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-white/70 dark:bg-slate-900/70 backdrop-blur-xl shadow-sm">
+<div class="flex justify-between items-center h-20 px-8 max-w-screen-2xl mx-auto">
+<div class="text-2xl font-bold tracking-tight text-blue-900 dark:text-blue-50 font-headline">Chagger Dental</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-manrope text-sm tracking-wide uppercase font-semibold text-blue-600 dark:text-blue-400 border-b-2 border-blue-600 pb-1" href="#">Home</a>
+<a class="font-manrope text-sm tracking-wide uppercase font-semibold text-slate-600 dark:text-slate-300 hover:text-blue-900 dark:hover:text-white transition-colors" href="#">Services</a>
+<a class="font-manrope text-sm tracking-wide uppercase font-semibold text-slate-600 dark:text-slate-300 hover:text-blue-900 dark:hover:text-white transition-colors" href="#">About Us</a>
+<a class="font-manrope text-sm tracking-wide uppercase font-semibold text-slate-600 dark:text-slate-300 hover:text-blue-900 dark:hover:text-white transition-colors" href="#">Locations</a>
+<a class="font-manrope text-sm tracking-wide uppercase font-semibold text-slate-600 dark:text-slate-300 hover:text-blue-900 dark:hover:text-white transition-colors" href="#">Reviews</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-manrope text-sm font-semibold tracking-wide hover:opacity-80 transition-opacity active:scale-95 duration-300">
+                    Book Appointment
+                </button>
+</div>
+</div>
+</nav>
+<!-- Hero Innovation Hub Slider -->
+<main class="relative h-screen w-full overflow-hidden bg-primary">
+<!-- Slider Layout -->
+<div class="slider-container flex h-full w-full overflow-x-auto overflow-y-hidden" id="mainSlider">
+<!-- Slide 1: Future of Dentistry -->
+<section class="slide relative h-90 w-full flex-shrink-0">
+<div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/40 to-transparent z-10"></div>
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="Modern clinical treatment room with advanced 3D diagnostic screens and a patient smiling warmly while receiving expert consultation" src="images/hero-new.png"/>
+<div class="relative z-20 h-full flex items-center px-12 md:px-24 max-w-7xl mx-auto">
+<div class="max-w-2xl space-y-8">
+<span class="inline-block px-4 py-1 rounded-full bg-secondary-container text-on-secondary-container text-xs font-bold tracking-widest uppercase font-headline">Clinical Innovation 01</span>
+<h1 class="text-5xl md:text-5xl font-extrabold text-white font-headline leading-[1.1] tracking-tight">
+                            The Future of Dentistry, <span class="text-primary-fixed">Experienced Today.</span>
+</h1>
+<p class="text-md text-white/80 font-body leading-relaxed max-w-lg">
+                            Merging quantum precision with empathetic artistry to redefine your dental journey. Welcome to the sanctuary of high-tech care.
+                        </p>
+<div class="flex items-center gap-6 pt-4">
+<button class="bg-white text-primary px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-fixed transition-all flex items-center gap-2">
+                                Explore Innovation <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Slide 2: High-Tech Diagnostics -->
+<section class="slide relative h-full w-full flex-shrink-0">
+<div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/40 to-transparent z-10"></div>
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="A professional dentist analyzing a digital 3D model of teeth on a futuristic glass interface with soft blue ambient lighting" src="images/hero-new2.png"/>
+<div class="relative z-20 h-full flex items-center px-12 md:px-24 max-w-7xl mx-auto">
+<div class="max-w-2xl space-y-8">
+<span class="inline-block px-4 py-1 rounded-full bg-secondary-container text-on-secondary-container text-xs font-bold tracking-widest uppercase font-headline">Diagnostic Accuracy 02</span>
+<h2 class="text-5xl md:text-5xl font-extrabold text-white font-headline leading-[1.1] tracking-tight">
+                            High-Tech Diagnostics, <span class="text-primary-fixed">Deep-Human Care.</span>
+</h2>
+<p class="text-md text-white/80 font-body leading-relaxed max-w-lg">
+                            AI-driven analysis meets intuitive clinical expertise to catch what the naked eye cannot, ensuring a lifetime of oral health.
+                        </p>
+<div class="flex items-center gap-6 pt-4">
+<button class="bg-white text-primary px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-fixed transition-all flex items-center gap-2">
+                                View Our Tech <span class="material-symbols-outlined">analytics</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Slide 3: Precision Implants -->
+<section class="slide relative h-full w-full flex-shrink-0">
+<div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/40 to-transparent z-10"></div>
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="Close up of high-precision dental implant technology displayed on a clean surgical tray with elegant warm lighting" src="images/hero-new3.png"/>
+<div class="relative z-20 h-full flex items-center px-12 md:px-24 max-w-7xl mx-auto">
+<div class="max-w-2xl space-y-8">
+<span class="inline-block px-4 py-1 rounded-full bg-secondary-container text-on-secondary-container text-xs font-bold tracking-widest uppercase font-headline">Restorative Art 03</span>
+<h2 class="text-5xl md:text-5xl font-extrabold text-white font-headline leading-[1.1] tracking-tight">
+                            Precision Implants &amp; <span class="text-primary-fixed">Artistic Restoration.</span>
+</h2>
+<p class="text-md text-white/80 font-body leading-relaxed max-w-lg">
+                            Bespoke dental architecture tailored to your unique facial geometry. We don't just fix smiles; we sculpt them.
+                        </p>
+<div class="flex items-center gap-6 pt-4">
+<button class="bg-white text-primary px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-fixed transition-all flex items-center gap-2">
+                                Smile Gallery <span class="material-symbols-outlined">brush</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Slide 4: Accelerating Smile -->
+<section class="slide relative h-full w-full flex-shrink-0">
+<div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/40 to-transparent z-10"></div>
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="A radiantly happy person showing a perfect smile in a sun-drenched modern dental clinic lounge with high-end aesthetic furniture" src="images/hero2.png"/>
+<div class="relative z-20 h-full flex items-center px-12 md:px-24 max-w-7xl mx-auto">
+<div class="max-w-2xl space-y-8">
+<span class="inline-block px-4 py-1 rounded-full bg-secondary-container text-on-secondary-container text-xs font-bold tracking-widest uppercase font-headline">Velocity &amp; Care 04</span>
+<h2 class="text-5xl md:text-5xl font-extrabold text-white font-headline leading-[1.1] tracking-tight">
+                            Accelerating Your <span class="text-primary-fixed">Smile Transformation.</span>
+</h2>
+<p class="text-md text-white/80 font-body leading-relaxed max-w-lg">
+                            Experience rapid, painless treatments powered by next-generation surgical lasers and 3D printing technology.
+                        </p>
+<div class="flex items-center gap-6 pt-4">
+<button class="bg-white text-primary px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-fixed transition-all flex items-center gap-2">
+                                Start Today <span class="material-symbols-outlined">bolt</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Futuristic UI Dial Navigation -->
+<div class="absolute bottom-12 right-12 z-40 hidden md:flex items-center gap-8">
+<div class="relative group cursor-pointer w-24 h-24">
+<!-- Circular Dial UI -->
+<svg class="w-full h-full transform -rotate-90">
+<circle cx="48" cy="48" fill="none" r="45" stroke="rgba(255,255,255,0.1)" stroke-width="2"></circle>
+<circle class="dial-track" cx="48" cy="48" fill="none" id="dialProgress" r="45" stroke="white" stroke-width="4" style="stroke-dashoffset: 212;"></circle>
+</svg>
+<div class="absolute inset-0 flex items-center justify-center text-white font-headline font-bold text-xl">
+<span id="currentSlide">01</span><span class="text-white/40 text-sm">/04</span>
+</div>
+</div>
+<!-- Discrete Controls -->
+<div class="flex flex-col gap-2">
+<button class="w-12 h-12 rounded-full border bg-primary/100 flex items-center justify-center text-white hover:bg-primary/80 transition-all" onclick="navigateSlide(-1)">
+<span class="material-symbols-outlined">expand_less</span>
+</button>
+<button class="w-12 h-12 rounded-full border bg-primary/100 flex items-center justify-center text-white hover:bg-primaty/80 transition-all" onclick="navigateSlide(1)">
+<span class="material-symbols-outlined">expand_more</span>
+</button>
+</div>
+</div>
+<!-- Mobile Indicator -->
+<div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-40 md:hidden flex gap-2">
+<div class="w-8 h-1 bg-white rounded-full"></div>
+<div class="w-2 h-1 bg-white/30 rounded-full"></div>
+<div class="w-2 h-1 bg-white/30 rounded-full"></div>
+<div class="w-2 h-1 bg-white/30 rounded-full"></div>
+</div>
+</main>
+<!-- Content Sections -->
+<section class="py-24 px-8 bg-surface">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-12">
+<div class="space-y-4">
+<div class="w-12 h-12 rounded-xl bg-primary-container flex items-center justify-center text-on-primary-container">
+<span class="material-symbols-outlined" data-weight="fill">biotech</span>
+</div>
+<h3 class="text-2xl font-bold font-headline text-primary">Intelligent Precision</h3>
+<p class="text-secondary leading-relaxed">Our AI diagnostics analyze over 5,000 data points to predict potential issues before they become painful problems.</p>
+</div>
+<div class="space-y-4">
+<div class="w-12 h-12 rounded-xl bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined" data-weight="fill">model_training</span>
+</div>
+<h3 class="text-2xl font-bold font-headline text-primary">3D Smile Preview</h3>
+<p class="text-secondary leading-relaxed">Visualize your transformation before we even begin. Our photorealistic 3D modeling brings your future smile to life.</p>
+</div>
+<div class="space-y-4">
+<div class="w-12 h-12 rounded-xl bg-surface-container-highest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-weight="fill">verified_user</span>
+</div>
+<h3 class="text-2xl font-bold font-headline text-primary">Sanctuary Standards</h3>
+<p class="text-secondary leading-relaxed">High-performance clinical care wrapped in the quiet luxury of a private lounge. Dentistry, elevated.</p>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-slate-50 dark:bg-slate-950 w-full py-12 px-8 border-t border-slate-100 dark:border-slate-800">
+<div class="max-w-screen-2xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="text-lg font-bold text-blue-900 dark:text-blue-50 font-headline">Chagger Dental</div>
+<div class="flex gap-8">
+<a class="font-manrope text-xs font-medium text-slate-500 hover:text-blue-900 hover:underline transition-all" href="#">Privacy Policy</a>
+<a class="font-manrope text-xs font-medium text-slate-500 hover:text-blue-900 hover:underline transition-all" href="#">Terms of Service</a>
+<a class="font-manrope text-xs font-medium text-slate-500 hover:text-blue-900 hover:underline transition-all" href="#">Contact Us</a>
+<a class="font-manrope text-xs font-medium text-slate-500 hover:text-blue-900 hover:underline transition-all" href="#">Accessibility</a>
+</div>
+<div class="font-manrope text-xs font-medium text-slate-500">
+                © 2024 Chagger Dental. All rights reserved.
+            </div>
+</div>
+</footer>
+<!-- Slider Functionality -->
+<script>
+        const slider = document.getElementById('mainSlider');
+        const slides = slider.querySelectorAll('.slide');
+        const dialProgress = document.getElementById('dialProgress');
+        const currentSlideText = document.getElementById('currentSlide');
+        let activeIndex = 0;
+
+        // Formula for stroke-dashoffset: Circumference (2*pi*r) = 282.7. 
+        // 0% progress = 283 offset, 100% progress = 0 offset.
+        const updateDial = (index) => {
+            const total = slides.length;
+            const progress = ((index + 1) / total) * 100;
+            const offset = 283 - (283 * progress / 100);
+            dialProgress.style.strokeDashoffset = offset;
+            currentSlideText.innerText = `0${index + 1}`;
+        };
+
+        const navigateSlide = (direction) => {
+            activeIndex = (activeIndex + direction + slides.length) % slides.length;
+            slider.scrollTo({
+                left: slides[activeIndex].offsetLeft,
+                behavior: 'smooth'
+            });
+            updateDial(activeIndex);
+        };
+
+        // Listen for scroll events to update dial manually if user swipes on mobile
+        slider.addEventListener('scroll', () => {
+            const index = Math.round(slider.scrollLeft / slider.offsetWidth);
+            if (index !== activeIndex) {
+                activeIndex = index;
+                updateDial(activeIndex);
+            }
+        });
+
+        // Initialize
+        updateDial(0);
+    </script>
+</body></html>

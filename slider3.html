@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-container": "#0e336a",
+              "surface-container-high": "#eae8e4",
+              "outline-variant": "#c4c6d1",
+              "on-secondary-fixed-variant": "#36495a",
+              "on-primary-fixed": "#001a41",
+              "tertiary-fixed-dim": "#d1c4b8",
+              "tertiary-container": "#3b332b",
+              "surface-bright": "#fcf9f5",
+              "on-tertiary-fixed": "#211a13",
+              "primary-fixed": "#d8e2ff",
+              "on-background": "#1c1c1a",
+              "on-secondary": "#ffffff",
+              "on-primary-container": "#809ddb",
+              "background": "#fcf9f5",
+              "error-container": "#ffdad6",
+              "secondary-container": "#d1e5fa",
+              "on-error": "#ffffff",
+              "on-secondary-container": "#546678",
+              "inverse-primary": "#adc6ff",
+              "surface-container": "#f0ede9",
+              "on-primary": "#ffffff",
+              "surface-container-low": "#f6f3ef",
+              "on-secondary-fixed": "#091d2c",
+              "surface-tint": "#405e97",
+              "tertiary-fixed": "#eee0d4",
+              "surface-container-highest": "#e5e2de",
+              "inverse-surface": "#31302e",
+              "error": "#ba1a1a",
+              "on-tertiary-container": "#a79b90",
+              "secondary-fixed-dim": "#b5c9dd",
+              "inverse-on-surface": "#f3f0ec",
+              "surface": "#fcf9f5",
+              "primary": "#0e336a",
+              "on-surface": "#1c1c1a",
+              "secondary-fixed": "#d1e5fa",
+              "on-error-container": "#93000a",
+              "tertiary": "#251e16",
+              "on-surface-variant": "#434750",
+              "surface-dim": "#dcdad6",
+              "surface-container-lowest": "#ffffff",
+              "on-tertiary": "#ffffff",
+              "primary-fixed-dim": "#adc6ff",
+              "outline": "#747781",
+              "on-tertiary-fixed-variant": "#4e453c",
+              "surface-variant": "#e5e2de",
+              "secondary": "#4e6072",
+              "on-primary-fixed-variant": "#26467d"
+            },
+            fontFamily: {
+              "headline": ["Manrope", "sans-serif"],
+              "body": ["Inter", "sans-serif"],
+              "label": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .glass-silk {
+            background: rgba(252, 249, 245, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .hero-overlay {
+            background: linear-gradient(135deg, rgba(14, 51, 106, 0.85) 0%, rgba(14, 51, 106, 0.4) 100%);
+        }
+        .slide-content-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .parallax-bg {
+            transition: transform 1.2s cubic-bezier(0.2, 0, 0.2, 1), opacity 0.8s ease-in-out, filter 0.8s ease-in-out;
+        }
+        .parallax-content {
+            transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.6s ease-in-out;
+        }
+        .slide-hidden .parallax-bg {
+            transform: scale(1.1) translateX(20px);
+            opacity: 0;
+            filter: blur(10px);
+        }
+        .slide-active .parallax-bg {
+            transform: scale(1) translateX(0);
+            opacity: 1;
+            filter: blur(0);
+        }
+        .slide-hidden .parallax-content {
+            transform: translateY(30px);
+            opacity: 0;
+        }
+        .slide-active .parallax-content {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        .magnetic-btn {
+            transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.3s ease;
+        }
+        .magnetic-btn:hover {
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.3), inset 0 0 10px rgba(255, 255, 255, 0.2);
+        }
+        .nav-link-underline {
+            position: relative;
+        }
+        .nav-link-underline::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #0e336a;
+            transition: width 0.3s ease;
+        }
+        .nav-link-underline:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-background font-body text-on-background antialiased overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-[100] glass-silk border-b border-primary/5 transition-all duration-300">
+<div class="flex justify-between items-center w-full px-8 py-5 max-w-screen-2xl mx-auto">
+<div class="text-2xl font-extrabold tracking-tighter text-primary">
+            Chagger Dental
+        </div>
+<div class="hidden md:flex items-center gap-10">
+<a class="nav-link-underline font-headline tracking-tight font-bold text-sm text-primary" href="#">Home</a>
+<a class="nav-link-underline font-headline tracking-tight font-semibold text-sm text-secondary hover:text-primary transition-colors" href="#">Services</a>
+<a class="nav-link-underline font-headline tracking-tight font-semibold text-sm text-secondary hover:text-primary transition-colors" href="#">About Us</a>
+<a class="nav-link-underline font-headline tracking-tight font-semibold text-sm text-secondary hover:text-primary transition-colors" href="#">Locations</a>
+<a class="nav-link-underline font-headline tracking-tight font-semibold text-sm text-secondary hover:text-primary transition-colors" href="#">Reviews</a>
+</div>
+<button class="bg-primary text-on-primary px-7 py-3 rounded-full font-headline font-bold text-sm hover:brightness-110 active:scale-95 transition-all duration-200 shadow-xl shadow-primary/20">
+            Book Appointment
+        </button>
+</div>
+</nav>
+<main class="relative">
+<!-- Hero Slider Section -->
+<section class="relative h-screen min-h-[750px] w-full overflow-hidden bg-primary" id="hero-slider">
+<!-- Slide Container -->
+<div class="relative w-full h-full" id="slides-wrapper">
+<!-- Slide 1 -->
+<div class="slide slide-active absolute inset-0 z-10 flex items-center" data-slide-index="0">
+<div class="parallax-bg absolute inset-0">
+<img alt="Confident Smile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtgNkEm4PTY3FNh-2v4f-xep74zKOmTzeGQxbC2NIy4aRmgNwu36wW7Ch-eWFP8OPnLoLbJCIOOr7Fa2Z8HI-lN4p32lZ-miO62shxeyK4aovJyP8MwMTjLLVYQDZ-AqEdwnyF0XZSekqj5TXA62U_NCkVs8l9-It9krLyAptyKIsQtQ_1mHJkUvyAd8E_RrKAaOT0h_B6Uaehhk_trIMoWSDb3CiYwlV5O6OWk8xf0SM5L0sDHCXoSsdN-ePo2FHchW5uJ-LEgK6A"/>
+<div class="absolute inset-0 hero-overlay"></div>
+</div>
+<div class="relative z-20 w-full max-w-screen-2xl mx-auto px-8 pt-20">
+<div class="parallax-content max-w-3xl slide-content-card p-10 md:p-14 rounded-[2.5rem] shadow-2xl">
+<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 backdrop-blur-md mb-8">
+<span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+<span class="text-white font-label text-[10px] uppercase tracking-widest font-bold">Excellence 01</span>
+</div>
+<h1 class="font-headline text-5xl md:text-7xl font-extrabold text-white leading-[1.1] tracking-tighter mb-6">
+                            Clinical Mastery <br/><span class="text-cyan-200">Meets Human Art.</span>
+</h1>
+<p class="text-lg text-white/80 max-w-xl font-body leading-relaxed mb-10">
+                            Radiant human-centric imagery of a confident smile. Redefining precision with AI-driven diagnostics and 3D intraoral scanning.
+                        </p>
+<div class="flex flex-wrap gap-5">
+<button class="magnetic-btn bg-white text-primary px-8 py-4 rounded-full font-bold flex items-center gap-3 group">
+                                Explore Technologies
+                                <span class="material-symbols-outlined text-xl group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+<button class="magnetic-btn bg-white/10 border border-white/20 text-white px-8 py-4 rounded-full font-bold hover:bg-white/20">
+                                Our Method
+                            </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Slide 2 -->
+<div class="slide slide-hidden absolute inset-0 z-10 flex items-center" data-slide-index="1">
+<div class="parallax-bg absolute inset-0">
+<img alt="Modern Clinic" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLbQTV-eV5bj22gWjLEItJddRGa4rXHt7ZRhtnLzUNWWgZNHM3yY21q6c2UtFyFgvMQhO1ksgxg5QrCNtAfiJcswTspThDjVRCtf1hX77QXSK3Im1kbOm5Nm9jJdpCwQTAVTqJhOhkyRpJDJ2hd3bPlV-oB4uCMzyKMbcKOaW_Bw5HQ0AygJmTs-H2wuEcdPRGa0mnKWOPai6CWP6gbZWtW9df6u-sqaqF2m-d2rRdm8J-b7-YYFpnSmuf7fpnZHay45WSWA4kPMy2"/>
+<div class="absolute inset-0 hero-overlay"></div>
+</div>
+<div class="relative z-20 w-full max-w-screen-2xl mx-auto px-8 pt-20">
+<div class="parallax-content max-w-3xl slide-content-card p-10 md:p-14 rounded-[2.5rem] shadow-2xl">
+<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 backdrop-blur-md mb-8">
+<span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+<span class="text-white font-label text-[10px] uppercase tracking-widest font-bold">Innovation 02</span>
+</div>
+<h1 class="font-headline text-5xl md:text-7xl font-extrabold text-white leading-[1.1] tracking-tighter mb-6">
+                            Advanced Care, <br/><span class="text-cyan-200">Expertly Delivered.</span>
+</h1>
+<p class="text-lg text-white/80 max-w-xl font-body leading-relaxed mb-10">
+                            A high-tech, modern clinic interior where clinical precision meets a warm, welcoming sanctuary.
+                        </p>
+<div class="flex flex-wrap gap-5">
+<button class="magnetic-btn bg-white text-primary px-8 py-4 rounded-full font-bold flex items-center gap-3 group">
+                                Virtual Tour
+                                <span class="material-symbols-outlined text-xl group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+<button class="magnetic-btn bg-white/10 border border-white/20 text-white px-8 py-4 rounded-full font-bold hover:bg-white/20">
+                                Meet Specialists
+                            </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Slide 3 -->
+<div class="slide slide-hidden absolute inset-0 z-10 flex items-center" data-slide-index="2">
+<div class="parallax-bg absolute inset-0">
+<img alt="Dentist Interaction" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQ17b65hvNlbKPo1EQt7jsACBhA6zvqsSRnFeLRH2aQ5r0fQywBYp6wI_mdd2ozmkMR1qTPZBE9p7gD72Jr-Z0KdQHuUYnvpgHhSfWD4ADvqNWJKMeyABR6v4TWHMNGUO2rgJGCfhIjQZOiCD_Ulj0sImiE1mh6ruL6-eE37B2gosd8Yly1LSlgFKgQyEUovO2rdnw8S55RvfeD3TK4wmWz1pMpNOEO6M8ooTSK013lAd7QuXJJKLtVDYgZMH2BMNq4nrQB9CsZnOG"/>
+<div class="absolute inset-0 hero-overlay"></div>
+</div>
+<div class="relative z-20 w-full max-w-screen-2xl mx-auto px-8 pt-20">
+<div class="parallax-content max-w-3xl slide-content-card p-10 md:p-14 rounded-[2.5rem] shadow-2xl">
+<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 backdrop-blur-md mb-8">
+<span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+<span class="text-white font-label text-[10px] uppercase tracking-widest font-bold">Trust 03</span>
+</div>
+<h1 class="font-headline text-5xl md:text-7xl font-extrabold text-white leading-[1.1] tracking-tighter mb-6">
+                            A Sanctuary for Your <br/><span class="text-cyan-200">Radiant Smile.</span>
+</h1>
+<p class="text-lg text-white/80 max-w-xl font-body leading-relaxed mb-10">
+                            A professional atmosphere showcasing the trust and care built through every patient interaction.
+                        </p>
+<div class="flex flex-wrap gap-5">
+<button class="magnetic-btn bg-white text-primary px-8 py-4 rounded-full font-bold flex items-center gap-3 group">
+                                Patient Stories
+                                <span class="material-symbols-outlined text-xl group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+<button class="magnetic-btn bg-white/10 border border-white/20 text-white px-8 py-4 rounded-full font-bold hover:bg-white/20">
+                                Book Consultation
+                            </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Slide 4 -->
+<div class="slide slide-hidden absolute inset-0 z-10 flex items-center" data-slide-index="3">
+<div class="parallax-bg absolute inset-0">
+<img alt="Biolase Technology" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaJqTZcDLkzYbwRTkztyhyY1Y33a5vN52eClq0bW0YXoEHxVr3t2xB9sgFVD0igD8c1-oUmeYJOrpZOj0PdHjwz4PtCslyXIhJ173UBLnrlLdTWsDwoy8Iqn_dUPenbREbHwuv7BsLHVd14NW5Lgy4FYjKlwBWnwUKzSMM0WsKuZl-JemK5NuyOvixZ1Oz_QOOamMNrICnDVCyMxJDKMhln-OyRKdnX2QhNRsEnX574rty9cKl5RsGQmhsaf6nC0AWF5x3p_BQde65"/>
+<div class="absolute inset-0 hero-overlay"></div>
+</div>
+<div class="relative z-20 w-full max-w-screen-2xl mx-auto px-8 pt-20">
+<div class="parallax-content max-w-3xl slide-content-card p-10 md:p-14 rounded-[2.5rem] shadow-2xl">
+<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 backdrop-blur-md mb-8">
+<span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+<span class="text-white font-label text-[10px] uppercase tracking-widest font-bold">Tech 04</span>
+</div>
+<h1 class="font-headline text-5xl md:text-7xl font-extrabold text-white leading-[1.1] tracking-tighter mb-6">
+                            Next-Gen <br/><span class="text-cyan-200">Laser Precision.</span>
+</h1>
+<p class="text-lg text-white/80 max-w-xl font-body leading-relaxed mb-10">
+                            Experience the future of painless dentistry with Biolase technology. Faster healing, sub-micron accuracy.
+                        </p>
+<div class="flex flex-wrap gap-5">
+<button class="magnetic-btn bg-white text-primary px-8 py-4 rounded-full font-bold flex items-center gap-3 group">
+                                Learn About Biolase
+                                <span class="material-symbols-outlined text-xl group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+<button class="magnetic-btn bg-white/10 border border-white/20 text-white px-8 py-4 rounded-full font-bold hover:bg-white/20">
+                                View Case Studies
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Slider Controls - Fixed Z-index -->
+<div class="absolute  max-w-screen-2xl mr-auto pointer-events-none">
+<div class="flex items-center gap-6 pointer-events-auto">
+<button class="w-14 h-14 rounded-full border border-white/30 flex items-center justify-center text-white hover:bg-white hover:text-primary transition-all group glass-silk/20" id="prev-slide">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<div class="flex gap-3" id="pagination-dots">
+<div class="dot w-10 h-1 bg-white rounded-full cursor-pointer transition-all duration-300" data-index="0"></div>
+<div class="dot w-4 h-1 bg-white/30 rounded-full cursor-pointer transition-all duration-300 hover:bg-white/50" data-index="1"></div>
+<div class="dot w-4 h-1 bg-white/30 rounded-full cursor-pointer transition-all duration-300 hover:bg-white/50" data-index="2"></div>
+<div class="dot w-4 h-1 bg-white/30 rounded-full cursor-pointer transition-all duration-300 hover:bg-white/50" data-index="3"></div>
+</div>
+<button class="w-14 h-14 rounded-full border border-white/30 flex items-center justify-center text-white hover:bg-white hover:text-primary transition-all group glass-silk/20" id="next-slide">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+<!-- Scroll Indicator -->
+<div class="hidden md:flex flex-col items-center gap-4 pointer-events-auto opacity-60 hover:opacity-100 transition-opacity">
+<span class="text-white [writing-mode:vertical-lr] font-label text-[10px] tracking-[0.25em] uppercase font-bold">Scroll to Explore</span>
+<div class="w-px h-16 bg-gradient-to-b from-white to-transparent"></div>
+</div>
+</div>
+</section>
+<!-- Feature Bento Grid -->
+<section class="py-32 bg-surface px-8 relative z-10 shadow-[0_-20px_50px_rgba(0,0,0,0.1)]">
+<div class="max-w-screen-2xl mx-auto">
+<div class="mb-20 text-center max-w-3xl mx-auto">
+<span class="text-primary font-label text-xs tracking-widest uppercase font-black">The Chagger Advantage</span>
+<h2 class="font-headline text-4xl md:text-6xl text-primary mt-6 font-extrabold tracking-tight">Precision built around you.</h2>
+<div class="w-20 h-1 bg-primary/10 mx-auto mt-8"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+<div class="group bg-surface-container-low p-10 rounded-[3rem] hover:bg-primary transition-all duration-700 hover:-translate-y-3 cursor-pointer">
+<div class="w-16 h-16 rounded-2xl bg-white flex items-center justify-center mb-10 shadow-xl group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl">psychology</span>
+</div>
+<h3 class="font-headline text-2xl font-bold text-primary group-hover:text-white mb-6">AI Diagnostics</h3>
+<p class="text-secondary group-hover:text-white/80 leading-relaxed text-lg">Our AI algorithms analyze x-rays to detect microscopic issues up to 12 months earlier than the human eye.</p>
+</div>
+<div class="group bg-surface-container-low p-10 rounded-[3rem] hover:bg-primary transition-all duration-700 hover:-translate-y-3 cursor-pointer">
+<div class="w-16 h-16 rounded-2xl bg-white flex items-center justify-center mb-10 shadow-xl group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl">scanner</span>
+</div>
+<h3 class="font-headline text-2xl font-bold text-primary group-hover:text-white mb-6">3D Scanning</h3>
+<p class="text-secondary group-hover:text-white/80 leading-relaxed text-lg">Goodbye goop. Our intraoral scanners capture 6,000 images per second for a perfect digital map of your bite.</p>
+</div>
+<div class="group bg-surface-container-low p-10 rounded-[3rem] hover:bg-primary transition-all duration-700 hover:-translate-y-3 cursor-pointer">
+<div class="w-16 h-16 rounded-2xl bg-white flex items-center justify-center mb-10 shadow-xl group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl">biotech</span>
+</div>
+<h3 class="font-headline text-2xl font-bold text-primary group-hover:text-white mb-6">Biolase Laser</h3>
+<p class="text-secondary group-hover:text-white/80 leading-relaxed text-lg">Micro-invasive treatments using advanced laser light for faster healing and virtually painless procedures.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest w-full border-t border-primary/5">
+<div class="flex flex-col md:flex-row justify-between items-center px-8 py-16 w-full max-w-screen-2xl mx-auto">
+<div class="text-2xl font-black text-primary mb-8 md:mb-0 uppercase tracking-tighter">
+            Chagger Dental
+        </div>
+<div class="flex flex-wrap justify-center gap-10">
+<a class="font-body text-xs uppercase tracking-widest text-secondary hover:text-primary transition-colors font-semibold" href="#">Privacy Policy</a>
+<a class="font-body text-xs uppercase tracking-widest text-secondary hover:text-primary transition-colors font-semibold" href="#">Terms of Service</a>
+<a class="font-body text-xs uppercase tracking-widest text-secondary hover:text-primary transition-colors font-semibold" href="#">Emergency Care</a>
+</div>
+<div class="mt-8 md:mt-0 font-label text-[10px] uppercase tracking-widest text-secondary/40 font-bold">
+            © 2024 Chagger Dental. Crafted with Precision.
+        </div>
+</div>
+</footer>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.dot');
+        const nextBtn = document.getElementById('next-slide');
+        const prevBtn = document.getElementById('prev-slide');
+        
+        let currentIndex = 0;
+        let isTransitioning = false;
+        let autoSlideInterval;
+
+        const updateSlider = (nextIndex) => {
+            if (isTransitioning || nextIndex === currentIndex) return;
+            isTransitioning = true;
+
+            const currentSlide = slides[currentIndex];
+            const nextSlide = slides[nextIndex];
+
+            // Update Slide Classes
+            currentSlide.classList.remove('slide-active');
+            currentSlide.classList.add('slide-hidden');
+            currentSlide.style.zIndex = '10';
+
+            nextSlide.classList.remove('slide-hidden');
+            nextSlide.classList.add('slide-active');
+            nextSlide.style.zIndex = '20';
+
+            // Update Dots
+            dots.forEach((dot, i) => {
+                if (i === nextIndex) {
+                    dot.classList.replace('w-4', 'w-10');
+                    dot.classList.replace('bg-white/30', 'bg-white');
+                } else {
+                    dot.classList.replace('w-10', 'w-4');
+                    dot.classList.replace('bg-white', 'bg-white/30');
+                }
+            });
+
+            currentIndex = nextIndex;
+
+            setTimeout(() => {
+                isTransitioning = false;
+            }, 800); // Matches CSS transition time
+        };
+
+        const showNext = () => {
+            const next = (currentIndex + 1) % slides.length;
+            updateSlider(next);
+        };
+
+        const showPrev = () => {
+            const prev = (currentIndex - 1 + slides.length) % slides.length;
+            updateSlider(prev);
+        };
+
+        nextBtn.addEventListener('click', () => {
+            resetAutoSlide();
+            showNext();
+        });
+
+        prevBtn.addEventListener('click', () => {
+            resetAutoSlide();
+            showPrev();
+        });
+
+        dots.forEach((dot, i) => {
+            dot.addEventListener('click', () => {
+                resetAutoSlide();
+                updateSlider(i);
+            });
+        });
+
+        const resetAutoSlide = () => {
+            clearInterval(autoSlideInterval);
+            autoSlideInterval = setInterval(showNext, 8000);
+        };
+
+        // Initial Auto-slide
+        resetAutoSlide();
+
+        // Magnetic Button Micro-interaction
+        const magneticButtons = document.querySelectorAll('.magnetic-btn');
+        magneticButtons.forEach(btn => {
+            btn.addEventListener('mousemove', (e) => {
+                const rect = btn.getBoundingClientRect();
+                const x = e.clientX - rect.left - rect.width / 2;
+                const y = e.clientY - rect.top - rect.height / 2;
+                
+                btn.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px)`;
+            });
+
+            btn.addEventListener('mouseleave', () => {
+                btn.style.transform = `translate(0, 0)`;
+            });
+        });
+
+        // Navbar interaction on scroll
+        const nav = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                nav.classList.add('py-3', 'shadow-lg');
+                nav.classList.remove('py-5');
+            } else {
+                nav.classList.add('py-5');
+                nav.classList.remove('py-3', 'shadow-lg');
+            }
+        });
+    });
+</script>
+</body></html>

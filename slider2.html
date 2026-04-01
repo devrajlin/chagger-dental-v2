@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-container": "#0e336a",
+              "surface-container-high": "#eae8e4",
+              "outline-variant": "#c4c6d1",
+              "on-secondary-fixed-variant": "#36495a",
+              "on-primary-fixed": "#001a41",
+              "tertiary-fixed-dim": "#d1c4b8",
+              "tertiary-container": "#3b332b",
+              "surface-bright": "#fcf9f5",
+              "on-tertiary-fixed": "#211a13",
+              "primary-fixed": "#d8e2ff",
+              "on-background": "#1c1c1a",
+              "on-secondary": "#ffffff",
+              "on-primary-container": "#809ddb",
+              "background": "#fcf9f5",
+              "error-container": "#ffdad6",
+              "secondary-container": "#d1e5fa",
+              "on-error": "#ffffff",
+              "on-secondary-container": "#546678",
+              "inverse-primary": "#adc6ff",
+              "surface-container": "#f0ede9",
+              "on-primary": "#ffffff",
+              "surface-container-low": "#f6f3ef",
+              "on-secondary-fixed": "#091d2c",
+              "surface-tint": "#405e97",
+              "tertiary-fixed": "#eee0d4",
+              "surface-container-highest": "#e5e2de",
+              "inverse-surface": "#31302e",
+              "error": "#ba1a1a",
+              "on-tertiary-container": "#a79b90",
+              "secondary-fixed-dim": "#b5c9dd",
+              "inverse-on-surface": "#f3f0ec",
+              "surface": "#fcf9f5",
+              "primary": "#001e49",
+              "on-surface": "#1c1c1a",
+              "secondary-fixed": "#d1e5fa",
+              "on-error-container": "#93000a",
+              "tertiary": "#251e16",
+              "on-surface-variant": "#434750",
+              "surface-dim": "#dcdad6",
+              "surface-container-lowest": "#ffffff",
+              "on-tertiary": "#ffffff",
+              "primary-fixed-dim": "#adc6ff",
+              "outline": "#747781",
+              "on-tertiary-fixed-variant": "#4e453c",
+              "surface-variant": "#e5e2de",
+              "secondary": "#4e6072",
+              "on-primary-fixed-variant": "#26467d"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .glass-silk {
+            background: rgba(252, 249, 245, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .hero-overlay {
+            background: linear-gradient(to right, rgba(0, 30, 73, 0.95) 0%, rgba(0, 30, 73, 0.7) 50%, rgba(0, 30, 73, 0.4) 100%);
+        }
+        .slide-transition {
+            transition: opacity 0.6s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-background font-body text-on-background antialiased overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 glass-silk shadow-sm shadow-[#001e49]/5 transition-all duration-300">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-screen-2xl mx-auto">
+<div class="text-2xl font-bold tracking-tighter text-[#001e49]">
+                Chagger Dental
+            </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-manrope tracking-tight font-semibold text-sm text-[#0e336a] border-b-2 border-[#0e336a] pb-1" href="#">Home</a>
+<a class="font-manrope tracking-tight font-semibold text-sm text-[#4e6072] hover:text-[#0e336a] transition-colors" href="#">Services</a>
+<a class="font-manrope tracking-tight font-semibold text-sm text-[#4e6072] hover:text-[#0e336a] transition-colors" href="#">About Us</a>
+<a class="font-manrope tracking-tight font-semibold text-sm text-[#4e6072] hover:text-[#0e336a] transition-colors" href="#">Locations</a>
+<a class="font-manrope tracking-tight font-semibold text-sm text-[#4e6072] hover:text-[#0e336a] transition-colors" href="#">Reviews</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-manrope font-semibold text-sm scale-95 active:scale-90 transition-transform duration-200 shadow-lg shadow-primary/10 hover:shadow-primary/20">
+                Book Appointment
+            </button>
+</div>
+</nav>
+<main class="relative pt-0 min-h-screen">
+<!-- Hero Slider Section -->
+<section class="relative h-screen min-h-[800px] w-full overflow-hidden bg-primary" id="hero-slider">
+<!-- Slide Container -->
+<div class="relative w-full h-full" id="slides-wrapper">
+<!-- Slides will be injected here or managed via opacity -->
+<div class="slide absolute inset-0 opacity-100 transition-opacity duration-700 z-10">
+<img alt="Modern Dental Clinic" class="absolute inset-0 w-full h-full object-cover" src="images/hero-new.png"/>
+<div class="absolute inset-0 hero-overlay"></div>
+<div class="relative z-20 h-full w-full max-w-screen-2xl mx-auto px-8 flex items-center">
+<div class="max-w-3xl space-y-8">
+<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 backdrop-blur-md">
+<span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+<span class="text-white font-label text-[10px] uppercase tracking-widest font-bold">Innovation Hub 01</span>
+</div>
+<h1 class="font-headline text-5xl md:text-7xl font-extrabold text-white leading-[1.1] tracking-tighter">
+                                Clinical Mastery <br/><span class="text-on-primary-container">Meets Human Art.</span>
+</h1>
+<p class="text-lg text-white/80 max-w-xl font-body leading-relaxed">
+                                Redefining precision with AI-driven diagnostics and 3D intraoral scanning. We’ve removed the friction of traditional dentistry to focus on your perfect smile.
+                            </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<button class="bg-white text-primary px-8 py-4 rounded-full font-bold flex items-center gap-3 group transition-all duration-300 hover:bg-primary-fixed">
+                                    Explore Technologies
+                                    <span class="material-symbols-outlined text-xl group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+<button class="bg-white/10 border border-white/20 backdrop-blur-xl text-white px-8 py-4 rounded-full font-bold transition-all hover:bg-white/20">
+                                    Our Method
+                                </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Slider Controls - Fixed Z-index and visibility -->
+<div class="absolute bottom-12 left-1/2 -translate-x-1/2 flex items-center gap-6 z-40">
+<button class="w-12 h-12 rounded-full border-2 border-white/40 flex items-center justify-center text-white hover:bg-white hover:text-primary transition-all group bg-black/20 backdrop-blur-sm" id="prev-slide">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<div class="flex gap-3" id="pagination-dots">
+<div class="dot w-8 h-1.5 bg-white rounded-full cursor-pointer transition-all duration-300" data-index="0"></div>
+<div class="dot w-2.5 h-1.5 bg-white/40 rounded-full cursor-pointer transition-all duration-300" data-index="1"></div>
+<div class="dot w-2.5 h-1.5 bg-white/40 rounded-full cursor-pointer transition-all duration-300" data-index="2"></div>
+<div class="dot w-2.5 h-1.5 bg-white/40 rounded-full cursor-pointer transition-all duration-300" data-index="3"></div>
+</div>
+<button class="w-12 h-12 rounded-full border-2 border-white/40 flex items-center justify-center text-white hover:bg-white hover:text-primary transition-all group bg-black/20 backdrop-blur-sm" id="next-slide">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+<!-- Scroll Indicator -->
+<div class="absolute bottom-8 right-8 flex flex-col items-center gap-4 z-40">
+<span class="text-white/60 [writing-mode:vertical-lr] font-label text-[10px] tracking-[0.2em] uppercase">Scroll to Discover</span>
+<div class="w-px h-12 bg-gradient-to-b from-white/60 to-transparent"></div>
+</div>
+</section>
+<!-- Feature Bento Grid -->
+<section class="py-24 bg-surface px-8">
+<div class="max-w-screen-2xl mx-auto">
+<div class="mb-16 text-center max-w-3xl mx-auto">
+<span class="text-secondary font-label text-xs tracking-widest uppercase font-bold">The Chagger Advantage</span>
+<h2 class="font-headline text-4xl md:text-5xl text-primary mt-4 font-bold tracking-tight">Precision built around you.</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="group bg-surface-container-low p-8 rounded-[2rem] hover:bg-primary-container transition-all duration-500 hover:-translate-y-2">
+<div class="w-14 h-14 rounded-2xl bg-white flex items-center justify-center mb-8 shadow-sm group-hover:bg-cyan-400">
+<span class="material-symbols-outlined text-primary text-3xl">psychology</span>
+</div>
+<h3 class="font-headline text-2xl font-bold text-primary group-hover:text-white mb-4">AI Diagnostics</h3>
+<p class="text-secondary group-hover:text-white/70 leading-relaxed">Our AI algorithms analyze x-rays to detect microscopic issues up to 12 months earlier than the human eye.</p>
+</div>
+<div class="group bg-surface-container-low p-8 rounded-[2rem] hover:bg-primary-container transition-all duration-500 hover:-translate-y-2">
+<div class="w-14 h-14 rounded-2xl bg-white flex items-center justify-center mb-8 shadow-sm group-hover:bg-cyan-400">
+<span class="material-symbols-outlined text-primary text-3xl">scanner</span>
+</div>
+<h3 class="font-headline text-2xl font-bold text-primary group-hover:text-white mb-4">3D Scanning</h3>
+<p class="text-secondary group-hover:text-white/70 leading-relaxed">Goodbye goop. Our intraoral scanners capture 6,000 images per second for a perfect digital map of your bite.</p>
+</div>
+<div class="group bg-surface-container-low p-8 rounded-[2rem] hover:bg-primary-container transition-all duration-500 hover:-translate-y-2">
+<div class="w-14 h-14 rounded-2xl bg-white flex items-center justify-center mb-8 shadow-sm group-hover:bg-cyan-400">
+<span class="material-symbols-outlined text-primary text-3xl">biotech</span>
+</div>
+<h3 class="font-headline text-2xl font-bold text-primary group-hover:text-white mb-4">Biolase Laser</h3>
+<p class="text-secondary group-hover:text-white/70 leading-relaxed">Micro-invasive treatments using advanced laser light for faster healing and virtually painless procedures.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#fcf9f5] w-full border-t border-[#0e336a]/10">
+<div class="flex flex-col md:flex-row justify-between items-center px-8 py-12 w-full max-w-screen-2xl mx-auto">
+<div class="text-lg font-black text-[#001e49] mb-6 md:mb-0 uppercase tracking-tighter">
+                Chagger Dental
+            </div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-inter text-xs uppercase tracking-widest text-[#4e6072] hover:text-[#0e336a] transition-colors" href="#">Privacy Policy</a>
+<a class="font-inter text-xs uppercase tracking-widest text-[#4e6072] hover:text-[#0e336a] transition-colors" href="#">Terms of Service</a>
+<a class="font-inter text-xs uppercase tracking-widest text-[#4e6072] hover:text-[#0e336a] transition-colors" href="#">Emergency Care</a>
+</div>
+<div class="mt-8 md:mt-0 font-inter text-[10px] uppercase tracking-widest text-[#4e6072]/60">
+                © 2024 Chagger Dental. All rights reserved.
+            </div>
+</div>
+</footer>
+<script>
+        const slideData = [
+            {
+                tag: "Innovation Hub 01",
+                headline: "Clinical Mastery <br/><span class='text-on-primary-container'>Meets Human Art.</span>",
+                description: "Redefining precision with AI-driven diagnostics and 3D intraoral scanning. We’ve removed the friction of traditional dentistry to focus on what matters: your perfect, healthy smile.",
+                image: "images/hero-new.png"
+            },
+            {
+                tag: "Patient Care 02",
+                headline: "Digital Precision <br/><span class='text-on-primary-container'>Virtual Smile Design.</span>",
+                description: "See your final result before we even start. Our virtual smile design software creates a custom blueprint tailored to your facial features and unique aesthetic.",
+                image: "images/hero-new2.png"
+            },
+            {
+                tag: "Advanced Tech 03",
+                headline: "Robotic Accuracy <br/><span class='text-on-primary-container'>Sub-Micron Implants.</span>",
+                description: "Guided surgery for dental implants ensures 0.1mm accuracy. Faster procedures, minimal discomfort, and results that last a lifetime.",
+                image: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=2070"
+            },
+            {
+                tag: "Comfort First 04",
+                headline: "Painless Future <br/><span class='text-on-primary-container'>Laser Technology.</span>",
+                description: "Biolase technology eliminates the need for drills and needles in most procedures. Faster healing times and a gentle experience that changes dentistry forever.",
+                image: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&q=80&w=2070"
+            }
+        ];
+
+        let currentIndex = 0;
+        const wrapper = document.getElementById('slides-wrapper');
+        const dots = document.querySelectorAll('.dot');
+        let isTransitioning = false;
+
+        function renderSlide(index) {
+            if (isTransitioning) return;
+            isTransitioning = true;
+
+            const data = slideData[index];
+            
+            // Create new slide element
+            const slideEl = document.createElement('div');
+            slideEl.className = 'slide absolute inset-0 opacity-0 transition-opacity duration-700 z-20';
+            slideEl.innerHTML = `
+                <img src="${data.image}" class="absolute inset-0 w-full h-full object-cover" alt="Dental Care">
+                <div class="absolute inset-0 hero-overlay"></div>
+                <div class="relative z-20 h-full w-full max-w-screen-2xl mx-auto px-8 flex items-center">
+                    <div class="max-w-3xl space-y-8">
+                        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 backdrop-blur-md">
+                            <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+                            <span class="text-white font-label text-[10px] uppercase tracking-widest font-bold">${data.tag}</span>
+                        </div>
+                        <h1 class="font-headline text-5xl md:text-7xl font-extrabold text-white leading-[1.1] tracking-tighter">
+                            ${data.headline}
+                        </h1>
+                        <p class="text-lg text-white/80 max-w-xl font-body leading-relaxed">
+                            ${data.description}
+                        </p>
+                        <div class="flex flex-wrap gap-4 pt-4">
+                            <button class="bg-white text-primary px-8 py-4 rounded-full font-bold flex items-center gap-3 group transition-all duration-300 hover:bg-primary-fixed">
+                                Explore Technologies
+                                <span class="material-symbols-outlined text-xl group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                            </button>
+                            <button class="bg-white/10 border border-white/20 backdrop-blur-xl text-white px-8 py-4 rounded-full font-bold transition-all hover:bg-white/20">
+                                Our Method
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            // Append new slide
+            wrapper.appendChild(slideEl);
+
+            // Trigger reflow
+            slideEl.offsetHeight;
+
+            // Fade in new, fade out old
+            slideEl.classList.remove('opacity-0');
+            slideEl.classList.add('opacity-100');
+
+            // Handle previous slides
+            const oldSlides = wrapper.querySelectorAll('.slide');
+            oldSlides.forEach(slide => {
+                if (slide !== slideEl) {
+                    slide.classList.add('opacity-0');
+                    slide.classList.remove('z-20');
+                    slide.classList.add('z-10');
+                    setTimeout(() => slide.remove(), 700);
+                }
+            });
+
+            // Update dots
+            dots.forEach((dot, i) => {
+                if (i === index) {
+                    dot.classList.replace('w-2.5', 'w-8');
+                    dot.classList.replace('bg-white/40', 'bg-white');
+                } else {
+                    dot.classList.replace('w-8', 'w-2.5');
+                    dot.classList.replace('bg-white', 'bg-white/40');
+                }
+            });
+
+            setTimeout(() => {
+                isTransitioning = false;
+            }, 700);
+        }
+
+        document.getElementById('next-slide').addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % slideData.length;
+            renderSlide(currentIndex);
+        });
+
+        document.getElementById('prev-slide').addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + slideData.length) % slideData.length;
+            renderSlide(currentIndex);
+        });
+
+        dots.forEach(dot => {
+            dot.addEventListener('click', () => {
+                const index = parseInt(dot.dataset.index);
+                if (index !== currentIndex) {
+                    currentIndex = index;
+                    renderSlide(currentIndex);
+                }
+            });
+        });
+
+        // Auto-play
+        let autoSlide = setInterval(() => {
+            currentIndex = (currentIndex + 1) % slideData.length;
+            renderSlide(currentIndex);
+        }, 6000);
+
+        // Pause auto-play on interaction
+        [document.getElementById('next-slide'), document.getElementById('prev-slide'), ...dots].forEach(el => {
+            el.addEventListener('click', () => clearInterval(autoSlide));
+        });
+    </script>
+</body></html>
