@@ -438,20 +438,19 @@
                 class="hidden lg:block max-w-7xl mx-auto rounded-full p-2 bg-white/50 backdrop-blur-md border border-primary/10 shadow-2xl">
                 <div class="flex align-items-center items-center gap-2 mx-auto">
                     <button
-                        class="tab-btn w-[240px] text-center text-md py-3.5 rounded-full tracking-widest uppercase text-on-surface/60 hover:bg-white transition-all tab-active"
-                        data-cat="all" onclick="filterServices('all')"><span>All Services</span></button>
+                        class="tab-btn w-[320px] text-center text-md py-3.5 rounded-full tracking-widest uppercase text-on-surface/60 hover:bg-white transition-all tab-active"
+                        data-cat="all" onclick="filterServices('all')">All Services</button>
                     <button
-                        class="tab-btn w-[240px] text-center text-md py-3.5 rounded-full tracking-widest uppercase text-on-surface/60 hover:bg-white transition-all"
+                        class="tab-btn w-[320px] text-center text-md py-3.5 rounded-full tracking-widest uppercase text-on-surface/60 hover:bg-white transition-all"
+                        data-cat="restorative" onclick="filterServices('restorative')">General</button>
+                    <button
+                        class="tab-btn w-[320px] text-center text-md py-3.5 rounded-full tracking-widest uppercase text-on-surface/60 hover:bg-white transition-all"
                         data-cat="cosmetic" onclick="filterServices('cosmetic')">Cosmetic</button>
+                   
                     <button
-                        class="tab-btn w-[240px] text-center text-md py-3.5 rounded-full tracking-widest uppercase text-on-surface/60 hover:bg-white transition-all"
-                        data-cat="restorative" onclick="filterServices('restorative')">Restorative</button>
-                    <button
-                        class="tab-btn w-[240px] text-center text-md py-3.5 rounded-full tracking-widest uppercase text-on-surface/60 hover:bg-white transition-all"
-                        data-cat="ortho" onclick="filterServices('ortho')">Orthodontics</button>
-                    <button
-                        class="tab-btn w-[240px] text-center text-md py-3.5 rounded-full tracking-widest uppercase text-on-surface/60 hover:bg-white transition-all"
-                        data-cat="surgical" onclick="filterServices('surgical')">Surgical</button>
+                        class="tab-btn w-[320px] text-center text-md py-3.5 rounded-full tracking-widest uppercase text-on-surface/60 hover:bg-white transition-all"
+                        data-cat="ortho" onclick="filterServices('ortho')">Braces</button>
+                  
                 </div>
             </div>
             <div class="lg:hidden max-w-xs mx-auto">
@@ -536,7 +535,7 @@
                 </div>
             </div>
             <!-- 2. DENTAL IMPLANTS -->
-            <div class="service-row group grid lg:grid-cols-12 items-center gap-16 relative" data-category="surgical">
+            <div class="service-row group grid lg:grid-cols-12 items-center gap-16 relative" data-category="restorative">
                 <div class="lg:col-span-5 stagger-content lg:pr-12 text-right">
                     <h2
                         class="font-headline text-5xl md:text-6xl font-black text-primary mb-8 tracking-tighter leading-none">
@@ -575,6 +574,106 @@
                             <img alt="Advanced dental implant technology"
                                 class="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-1000"
                                 src="images/services/tooth-extra.png" />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-bl from-primary/30 via-transparent to-transparent">
+                            </div>
+                        </div>
+                        <div
+                            class="absolute bottom-10 left-10 bg-white/90 backdrop-blur px-8 py-4 rounded-2xl shadow-xl flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary">biotech</span>
+                            <span class="text-[10px] font-black tracking-widest uppercase text-primary">Structural
+                                Mastery</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ALL. CREC CROWN -->
+            <div class="service-row group grid lg:grid-cols-12 items-center gap-16 relative" data-category="restorative">
+                <div class="lg:col-span-7 relative order-2 lg:order-1">
+                    <div class="glass-sanctuary rounded-4xl p-6 glowing-border-active overflow-hidden tilt-card">
+                        <div class="light-sweep"></div>
+                        <div class="relative overflow-hidden rounded-3xl h-[550px] lg:h-[750px]">
+                            <img alt="Luminous teeth whitening results"
+                                class="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-1000"
+                                src="images/crec.jpg" />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-tr from-primary/20 via-transparent to-transparent">
+                            </div>
+                        </div>
+                        <div
+                            class="absolute top-10 right-10 bg-white/90 backdrop-blur px-8 py-4 rounded-2xl shadow-xl flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary">light_mode</span>
+                            <span class="text-[10px] font-black tracking-widest uppercase text-primary">High-Fidelity
+                                Glow</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-5 stagger-content order-1 lg:order-2 lg:pl-12">
+                    <h2
+                        class="font-headline text-5xl md:text-6xl font-black text-primary mb-8 tracking-tighter leading-none">
+                        CEREC<br /><span class="opacity-30">CROWN</span>
+                    </h2>
+                    <p class="text-on-surface-muted text-xl mb-12 leading-relaxed">CEREC 3D, the latest dental technology, is now possible due to the combination of 3D technology with the CAD-CAM engineering.</p>
+                    <div class="flex flex-wrap gap-4 mb-16">
+                        <span
+                            class="px-8 py-3.5 rounded-full border border-primary/10 bg-white/50 text-[10px] font-bold tracking-widest uppercase flex items-center gap-3">
+                            <span class="material-symbols-outlined text-lg">flare</span> Laser-Activated
+                        </span>
+                        <span
+                            class="px-8 py-3.5 rounded-full border border-primary/10 bg-white/50 text-[10px] font-bold tracking-widest uppercase flex items-center gap-3">
+                            <span class="material-symbols-outlined text-lg">verified</span> Non-Abrasive
+                        </span>
+                    </div>
+                    <button class="magnetic group flex items-center gap-8 text-primary">
+                        <span class="text-[11px] font-black tracking-[0.4em] uppercase">Reveal Your Radiance</span>
+                        <span
+                            class="w-20 h-0.5 bg-primary/20 group-hover:w-32 group-hover:bg-primary transition-all duration-500"></span>
+                    </button>
+                    <a class="inline-flex items-center justify-center mt-5 bg-primary border border-white/20 text-white px-8 py-3 rounded-full font-bold transition-all learn-more-glow group/link"
+                        href="#">
+                        Learn More
+                        <span
+                            class="material-symbols-outlined ml-2 transition-transform group-hover/link:translate-x-2">arrow_right_alt</span>
+                    </a>
+                </div>
+            </div>
+            <!-- ALL. Bonding -->
+            <div class="service-row group grid lg:grid-cols-12 items-center gap-16 relative" data-category="cosmetic">
+                <div class="lg:col-span-5 stagger-content lg:pr-12 text-right">
+                    <h2
+                        class="font-headline text-5xl md:text-6xl font-black text-primary mb-8 tracking-tighter leading-none">
+                        Dental<br /><span class="opacity-30">Bonding</span>
+                    </h2>
+                    <p class="text-on-surface-muted text-xl mb-12 leading-relaxed ml-auto max-w-md">Dental Bonding is an affordable, efficient, and conservative solution that fixes numerous dental issues like decayed, worn teeth, misshapen and chipped teeth.</p>
+                    <div class="flex flex-wrap justify-end gap-4 mb-16">
+                        <span
+                            class="px-8 py-3.5 rounded-full border border-primary/10 bg-white/50 text-[10px] font-bold tracking-widest uppercase flex items-center gap-3">
+                            <span class="material-symbols-outlined text-lg">precision_manufacturing</span> Affordable & Conservative
+                        </span>
+                        <span
+                            class="px-8 py-3.5 rounded-full border border-primary/10 bg-white/50 text-[10px] font-bold tracking-widest uppercase flex items-center gap-3">
+                            <span class="material-symbols-outlined text-lg">shield</span> Efficient
+                        </span>
+                    </div>
+                    <button class="magnetic group flex items-center justify-end gap-8 text-primary ml-auto">
+                        <span
+                            class="w-20 h-0.5 bg-primary/20 group-hover:w-32 group-hover:bg-primary transition-all duration-500"></span>
+                        <span class="text-[11px] font-black tracking-[0.4em] uppercase">Technical Specs</span>
+                    </button>
+                    <a class="inline-flex items-center justify-center mt-5 bg-primary border border-white/20 text-white px-8 py-3 rounded-full font-bold transition-all learn-more-glow group/link"
+                        href="#">
+                        Learn More
+                        <span
+                            class="material-symbols-outlined ml-2 transition-transform group-hover/link:translate-x-2">arrow_right_alt</span>
+                    </a>
+                </div>
+                <div class="lg:col-span-7 relative">
+                    <div class="glass-sanctuary rounded-4xl p-6 glowing-border-active overflow-hidden tilt-card">
+                        <div class="light-sweep"></div>
+                        <div class="relative overflow-hidden rounded-3xl h-[550px] lg:h-[750px]">
+                            <img alt="Advanced dental implant technology"
+                                class="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-1000"
+                                src="images/bonding.jpg" />
                             <div
                                 class="absolute inset-0 bg-gradient-to-bl from-primary/30 via-transparent to-transparent">
                             </div>
@@ -639,12 +738,14 @@
                     </a>
                 </div>
             </div>
+           
+           
             <!-- 4. PEDIATRIC DENTISTRY -->
-            <div class="service-row group grid lg:grid-cols-12 items-center gap-16 relative" data-category="all">
+            <div class="service-row group grid lg:grid-cols-12 items-center gap-16 relative" data-category="restorative">
                 <div class="lg:col-span-5 stagger-content lg:pr-12 text-right">
                     <h2
                         class="font-headline text-5xl md:text-6xl font-black text-primary mb-8 tracking-tighter leading-none">
-                        Pediatric<br /><span class="opacity-30">Sanctuary</span>
+                        Children<br /><span class="opacity-30">Dentistry</span>
                     </h2>
                     <p class="text-on-surface-muted text-xl mb-12 leading-relaxed ml-auto max-w-md">Designing positive
                         clinical associations for the next generation. Gentle, precise, and atmosphere-focused care.</p>
@@ -741,17 +842,318 @@
                     </a>
                 </div>
             </div>
-            <!-- 6. BRIDGES AND CROWNS -->
+            <!-- ALL. DENTURE SERVICES -->
+            <div class="service-row group grid lg:grid-cols-12 items-center gap-16 relative" data-category="restorative">
+                <div class="lg:col-span-5 stagger-content lg:pr-12 text-right">
+                    <h2
+                        class="font-headline text-5xl md:text-6xl font-black text-primary mb-8 tracking-tighter leading-none">
+                        Denture<br /><span class="opacity-30">Services</span>
+                    </h2>
+                    <p class="text-on-surface-muted text-xl mb-12 leading-relaxed ml-auto max-w-md">Dentures services are defined as removable teeth and replacements for lost natural teeth.</p>
+                    <div class="flex flex-wrap justify-end gap-4 mb-16">
+                        <span
+                            class="px-8 py-3.5 rounded-full border border-primary/10 bg-white/50 text-[10px] font-bold tracking-widest uppercase flex items-center gap-3">
+                            <span class="material-symbols-outlined text-lg">sentiment_satisfied</span> Zero Anxiety
+                        </span>
+                        <span
+                            class="px-8 py-3.5 rounded-full border border-primary/10 bg-white/50 text-[10px] font-bold tracking-widest uppercase flex items-center gap-3">
+                            <span class="material-symbols-outlined text-lg">auto_fix_high</span> Gentle Protocol
+                        </span>
+                    </div>
+                    <button class="magnetic group flex items-center justify-end gap-8 text-primary ml-auto">
+                        <span
+                            class="w-20 h-0.5 bg-primary/20 group-hover:w-32 group-hover:bg-primary transition-all duration-500"></span>
+                        <span class="text-[11px] font-black tracking-[0.4em] uppercase">The Junior Experience</span>
+                    </button>
+                    <a class="inline-flex items-center justify-center mt-5 bg-primary border border-white/20 text-white px-8 py-3 rounded-full font-bold transition-all learn-more-glow group/link"
+                        href="#">
+                        Learn More
+                        <span
+                            class="material-symbols-outlined ml-2 transition-transform group-hover/link:translate-x-2">arrow_right_alt</span>
+                    </a>
+                </div>
+                <div class="lg:col-span-7 relative">
+                    <div class="glass-sanctuary rounded-4xl p-6 glowing-border-active overflow-hidden tilt-card">
+                        <div class="light-sweep"></div>
+                        <div class="relative overflow-hidden rounded-3xl h-[550px] lg:h-[750px]">
+                            <img alt="Child-friendly dental clinic"
+                                class="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-1000"
+                                src="images/denture.jpg" />
+                            <div class="absolute inset-0 bg-gradient-to-tr from-primary/10 to-transparent"></div>
+                        </div>
+                        <div
+                            class="absolute bottom-10 right-10 bg-white/90 backdrop-blur px-8 py-4 rounded-2xl shadow-xl flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary">child_care</span>
+                            <span class="text-[10px] font-black tracking-widest uppercase text-primary">Nurturing
+                                Precision</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <!-- Porcelain Veneers -->
+            <div class="service-row group grid lg:grid-cols-12 items-center gap-16 relative"
+                data-category="cosmetic">
+                <div class="lg:col-span-7 relative order-2 lg:order-1">
+                    <div class="glass-sanctuary rounded-4xl p-6 glowing-border-active overflow-hidden tilt-card">
+                        <div class="light-sweep"></div>
+                        <div class="relative overflow-hidden rounded-3xl h-[550px] lg:h-[750px]">
+                            <img alt="Professional dental restoration"
+                                class="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-1000"
+                                src="images/pro.jpg" />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-primary/40 via-transparent to-transparent">
+                            </div>
+                        </div>
+                        <div
+                            class="absolute top-10 right-10 bg-white/90 backdrop-blur px-8 py-4 rounded-2xl shadow-xl flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary">construction</span>
+                            <span class="text-[10px] font-black tracking-widest uppercase text-primary">Biomimetic
+                                Art</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-5 stagger-content order-1 lg:order-2 lg:pl-12">
+                    <h2
+                        class="font-headline text-5xl md:text-6xl font-black text-primary mb-8 tracking-tighter leading-none">
+                       Porcelain Veneers
+                    </h2>
+                    <p class="text-on-surface-muted text-xl mb-12 leading-relaxed">Porcelain Dental Veneers were recognized as a dramatic breakthrough in Cosmetic Dentistry.</p>
+                    <div class="flex flex-wrap gap-4 mb-16">
+                        <span
+                            class="px-8 py-3.5 rounded-full border border-primary/10 bg-white/50 text-[10px] font-bold tracking-widest uppercase flex items-center gap-3">
+                            <span class="material-symbols-outlined text-lg">texture</span> Micro-Etched
+                        </span>
+                        <span
+                            class="px-8 py-3.5 rounded-full border border-primary/10 bg-white/50 text-[10px] font-bold tracking-widest uppercase flex items-center gap-3">
+                            <span class="material-symbols-outlined text-lg">science</span> Resin Mastery
+                        </span>
+                    </div>
+                    <button class="magnetic group flex items-center gap-8 text-primary">
+                        <span class="text-[11px] font-black tracking-[0.4em] uppercase">Restoration Gallery</span>
+                        <span
+                            class="w-20 h-0.5 bg-primary/20 group-hover:w-32 group-hover:bg-primary transition-all duration-500"></span>
+                    </button>
+                    <a class="inline-flex items-center justify-center mt-5 bg-primary border border-white/20 text-white px-8 py-3 rounded-full font-bold transition-all learn-more-glow group/link"
+                        href="#">
+                        Learn More
+                        <span
+                            class="material-symbols-outlined ml-2 transition-transform group-hover/link:translate-x-2">arrow_right_alt</span>
+                    </a>
+                </div>
+            </div>
+             <!-- ALL. ORTHODONTICS -->
+            <div class="service-row group grid lg:grid-cols-12 items-center gap-16 relative"
+                data-category="ortho">
+                <div class="lg:col-span-5 stagger-content lg:pr-12 text-right">
+                    <h2
+                        class="font-headline text-5xl md:text-6xl font-black text-primary mb-8 tracking-tighter leading-none">
+                        Orthodontics
+                    </h2>
+                    <p class="text-on-surface-muted text-xl mb-12 leading-relaxed ml-auto max-w-md">Orthodontic is an area of Cosmetic Dentistry that deals with the jaw and teeth.</p>
+                    <div class="flex flex-wrap justify-end gap-4 mb-16">
+                        <span
+                            class="px-8 py-3.5 rounded-full border border-primary/10 bg-white/50 text-[10px] font-bold tracking-widest uppercase flex items-center gap-3">
+                            <span class="material-symbols-outlined text-lg">architecture</span> CAD/CAM Milled
+                        </span>
+                        <span
+                            class="px-8 py-3.5 rounded-full border border-primary/10 bg-white/50 text-[10px] font-bold tracking-widest uppercase flex items-center gap-3">
+                            <span class="material-symbols-outlined text-lg">diamond</span> Zirconia Core
+                        </span>
+                    </div>
+                    <button class="magnetic group flex items-center justify-end gap-8 text-primary ml-auto">
+                        <span
+                            class="w-20 h-0.5 bg-primary/20 group-hover:w-32 group-hover:bg-primary transition-all duration-500"></span>
+                        <span class="text-[11px] font-black tracking-[0.4em] uppercase">Material Science</span>
+                    </button>
+                    <a class="inline-flex items-center justify-center mt-5 bg-primary border border-white/20 text-white px-8 py-3 rounded-full font-bold transition-all learn-more-glow group/link"
+                        href="#">
+                        Learn More
+                        <span
+                            class="material-symbols-outlined ml-2 transition-transform group-hover/link:translate-x-2">arrow_right_alt</span>
+                    </a>
+                </div>
+                <div class="lg:col-span-7 relative">
+                    <div class="glass-sanctuary rounded-4xl p-6 glowing-border-active overflow-hidden tilt-card">
+                        <div class="light-sweep"></div>
+                        <div class="relative overflow-hidden rounded-3xl h-[550px] lg:h-[750px]">
+                            <img alt="Precision dental crowns"
+                                class="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-1000"
+                                src="images/ortho.jpg" />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-bl from-primary/30 via-transparent to-transparent">
+                            </div>
+                        </div>
+                        <div
+                            class="absolute bottom-10 left-10 bg-white/90 backdrop-blur px-8 py-4 rounded-2xl shadow-xl flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary">token</span>
+                            <span class="text-[10px] font-black tracking-widest uppercase text-primary">Form &amp;
+                                Function</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ALL. ENDODONTICS -->
+            <div class="service-row group grid lg:grid-cols-12 items-center gap-16 relative"
+                data-category="restorative">
+                <div class="lg:col-span-7 relative order-2 lg:order-1">
+                    <div class="glass-sanctuary rounded-4xl p-6 glowing-border-active overflow-hidden tilt-card">
+                        <div class="light-sweep"></div>
+                        <div class="relative overflow-hidden rounded-3xl h-[550px] lg:h-[750px]">
+                            <img alt="Professional dental restoration"
+                                class="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-1000"
+                                src="images/endo.jpg" />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-primary/40 via-transparent to-transparent">
+                            </div>
+                        </div>
+                        <div
+                            class="absolute top-10 right-10 bg-white/90 backdrop-blur px-8 py-4 rounded-2xl shadow-xl flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary">construction</span>
+                            <span class="text-[10px] font-black tracking-widest uppercase text-primary">Biomimetic
+                                Art</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-5 stagger-content order-1 lg:order-2 lg:pl-12">
+                    <h2
+                        class="font-headline text-5xl md:text-6xl font-black text-primary mb-8 tracking-tighter leading-none">
+                        Endodontics
+                    </h2>
+                    <p class="text-on-surface-muted text-xl mb-12 leading-relaxed">Endodontics is a dental specialty that deals with the dental pulp and the tissue surrounding the root of a tooth.</p>
+                    <div class="flex flex-wrap gap-4 mb-16">
+                        <span
+                            class="px-8 py-3.5 rounded-full border border-primary/10 bg-white/50 text-[10px] font-bold tracking-widest uppercase flex items-center gap-3">
+                            <span class="material-symbols-outlined text-lg">texture</span> Micro-Etched
+                        </span>
+                        <span
+                            class="px-8 py-3.5 rounded-full border border-primary/10 bg-white/50 text-[10px] font-bold tracking-widest uppercase flex items-center gap-3">
+                            <span class="material-symbols-outlined text-lg">science</span> Resin Mastery
+                        </span>
+                    </div>
+                    <button class="magnetic group flex items-center gap-8 text-primary">
+                        <span class="text-[11px] font-black tracking-[0.4em] uppercase">Restoration Gallery</span>
+                        <span
+                            class="w-20 h-0.5 bg-primary/20 group-hover:w-32 group-hover:bg-primary transition-all duration-500"></span>
+                    </button>
+                    <a class="inline-flex items-center justify-center mt-5 bg-primary border border-white/20 text-white px-8 py-3 rounded-full font-bold transition-all learn-more-glow group/link"
+                        href="#">
+                        Learn More
+                        <span
+                            class="material-symbols-outlined ml-2 transition-transform group-hover/link:translate-x-2">arrow_right_alt</span>
+                    </a>
+                </div>
+            </div>
+             <!-- SEDATION -->
             <div class="service-row group grid lg:grid-cols-12 items-center gap-16 relative"
                 data-category="restorative">
                 <div class="lg:col-span-5 stagger-content lg:pr-12 text-right">
                     <h2
                         class="font-headline text-5xl md:text-6xl font-black text-primary mb-8 tracking-tighter leading-none">
-                        Bridges<br /><span class="opacity-30">&amp; Crowns</span>
+                        Sedation<br /><span class="opacity-30">&amp; Dentistry</span>
                     </h2>
-                    <p class="text-on-surface-muted text-xl mb-12 leading-relaxed ml-auto max-w-md">Precision-milled
-                        ceramic components designed via CAD/CAM technology to restore the architectural profile of your
-                        dental arch.</p>
+                    <p class="text-on-surface-muted text-xl mb-12 leading-relaxed ml-auto max-w-md">At Chagger Dental, our team understands there are times you may feel nervous or anxious about undergoing dental procedures.</p>
+                    <div class="flex flex-wrap justify-end gap-4 mb-16">
+                        <span
+                            class="px-8 py-3.5 rounded-full border border-primary/10 bg-white/50 text-[10px] font-bold tracking-widest uppercase flex items-center gap-3">
+                            <span class="material-symbols-outlined text-lg">architecture</span> CAD/CAM Milled
+                        </span>
+                        <span
+                            class="px-8 py-3.5 rounded-full border border-primary/10 bg-white/50 text-[10px] font-bold tracking-widest uppercase flex items-center gap-3">
+                            <span class="material-symbols-outlined text-lg">diamond</span> Zirconia Core
+                        </span>
+                    </div>
+                    <button class="magnetic group flex items-center justify-end gap-8 text-primary ml-auto">
+                        <span
+                            class="w-20 h-0.5 bg-primary/20 group-hover:w-32 group-hover:bg-primary transition-all duration-500"></span>
+                        <span class="text-[11px] font-black tracking-[0.4em] uppercase">Material Science</span>
+                    </button>
+                    <a class="inline-flex items-center justify-center mt-5 bg-primary border border-white/20 text-white px-8 py-3 rounded-full font-bold transition-all learn-more-glow group/link"
+                        href="#">
+                        Learn More
+                        <span
+                            class="material-symbols-outlined ml-2 transition-transform group-hover/link:translate-x-2">arrow_right_alt</span>
+                    </a>
+                </div>
+                <div class="lg:col-span-7 relative">
+                    <div class="glass-sanctuary rounded-4xl p-6 glowing-border-active overflow-hidden tilt-card">
+                        <div class="light-sweep"></div>
+                        <div class="relative overflow-hidden rounded-3xl h-[550px] lg:h-[750px]">
+                            <img alt="Precision dental crowns"
+                                class="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-1000"
+                                src="images/sedation.jpg" />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-bl from-primary/30 via-transparent to-transparent">
+                            </div>
+                        </div>
+                        <div
+                            class="absolute bottom-10 left-10 bg-white/90 backdrop-blur px-8 py-4 rounded-2xl shadow-xl flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary">token</span>
+                            <span class="text-[10px] font-black tracking-widest uppercase text-primary">Form &amp;
+                                Function</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ROOT CANAL -->
+            <div class="service-row group grid lg:grid-cols-12 items-center gap-16 relative"
+                data-category="restorative">
+                <div class="lg:col-span-7 relative order-2 lg:order-1">
+                    <div class="glass-sanctuary rounded-4xl p-6 glowing-border-active overflow-hidden tilt-card">
+                        <div class="light-sweep"></div>
+                        <div class="relative overflow-hidden rounded-3xl h-[550px] lg:h-[750px]">
+                            <img alt="Professional dental restoration"
+                                class="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-1000"
+                                src="images/root.jpg" />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-primary/40 via-transparent to-transparent">
+                            </div>
+                        </div>
+                        <div
+                            class="absolute top-10 right-10 bg-white/90 backdrop-blur px-8 py-4 rounded-2xl shadow-xl flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary">construction</span>
+                            <span class="text-[10px] font-black tracking-widest uppercase text-primary">Biomimetic
+                                Art</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-5 stagger-content order-1 lg:order-2 lg:pl-12">
+                    <h2
+                        class="font-headline text-5xl md:text-6xl font-black text-primary mb-8 tracking-tighter leading-none">
+                        Root Canal<br /><span class="opacity-30"> Treatment</span>
+                    </h2>
+                    <p class="text-on-surface-muted text-xl mb-12 leading-relaxed">Root Canal is the term for a type of endodontic treatment or procedure. This type of treatment option becomes necessary when the nerve, also called the pulp, inside a tooth has become irreversibly damaged from an infection.</p>
+                    <div class="flex flex-wrap gap-4 mb-16">
+                        <span
+                            class="px-8 py-3.5 rounded-full border border-primary/10 bg-white/50 text-[10px] font-bold tracking-widest uppercase flex items-center gap-3">
+                            <span class="material-symbols-outlined text-lg">texture</span> Micro-Etched
+                        </span>
+                        <span
+                            class="px-8 py-3.5 rounded-full border border-primary/10 bg-white/50 text-[10px] font-bold tracking-widest uppercase flex items-center gap-3">
+                            <span class="material-symbols-outlined text-lg">science</span> Resin Mastery
+                        </span>
+                    </div>
+                    <button class="magnetic group flex items-center gap-8 text-primary">
+                        <span class="text-[11px] font-black tracking-[0.4em] uppercase">Restoration Gallery</span>
+                        <span
+                            class="w-20 h-0.5 bg-primary/20 group-hover:w-32 group-hover:bg-primary transition-all duration-500"></span>
+                    </button>
+                    <a class="inline-flex items-center justify-center mt-5 bg-primary border border-white/20 text-white px-8 py-3 rounded-full font-bold transition-all learn-more-glow group/link"
+                        href="#">
+                        Learn More
+                        <span
+                            class="material-symbols-outlined ml-2 transition-transform group-hover/link:translate-x-2">arrow_right_alt</span>
+                    </a>
+                </div>
+            </div>
+            <!-- 6. BRIDGES -->
+            <div class="service-row group grid lg:grid-cols-12 items-center gap-16 relative"
+                data-category="restorative">
+                <div class="lg:col-span-5 stagger-content lg:pr-12 text-right">
+                    <h2
+                        class="font-headline text-5xl md:text-6xl font-black text-primary mb-8 tracking-tighter leading-none">
+                        Dental<br /><span class="opacity-30"> Bridges</span>
+                    </h2>
+                    <p class="text-on-surface-muted text-xl mb-12 leading-relaxed ml-auto max-w-md">A Dental Bridge is a form of Restorative Dentistry and Cosmetic Dentistry that can fill the gap of missing teeth and function as natural teeth. </p>
                     <div class="flex flex-wrap justify-end gap-4 mb-16">
                         <span
                             class="px-8 py-3.5 rounded-full border border-primary/10 bg-white/50 text-[10px] font-bold tracking-widest uppercase flex items-center gap-3">
@@ -794,47 +1196,46 @@
                     </div>
                 </div>
             </div>
-            <!-- 7. TOOTH EXTRACTIONS -->
-            <div class="service-row group grid lg:grid-cols-12 items-center gap-16 relative" data-category="surgical">
+            <!-- CROWN -->
+            <div class="service-row group grid lg:grid-cols-12 items-center gap-16 relative"
+                data-category="restorative">
                 <div class="lg:col-span-7 relative order-2 lg:order-1">
                     <div class="glass-sanctuary rounded-4xl p-6 glowing-border-active overflow-hidden tilt-card">
                         <div class="light-sweep"></div>
                         <div class="relative overflow-hidden rounded-3xl h-[550px] lg:h-[750px]">
-                            <img alt="Surgical dental suite"
+                            <img alt="Professional dental restoration"
                                 class="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-1000"
-                                src="images/extra.jpg" />
+                                src="images/crown.jpg" />
                             <div
                                 class="absolute inset-0 bg-gradient-to-t from-primary/40 via-transparent to-transparent">
                             </div>
                         </div>
                         <div
                             class="absolute top-10 right-10 bg-white/90 backdrop-blur px-8 py-4 rounded-2xl shadow-xl flex items-center gap-3">
-                            <span class="material-symbols-outlined text-primary">healing</span>
-                            <span class="text-[10px] font-black tracking-widest uppercase text-primary">Trauma-Free
-                                Surgical</span>
+                            <span class="material-symbols-outlined text-primary">construction</span>
+                            <span class="text-[10px] font-black tracking-widest uppercase text-primary">Biomimetic
+                                Art</span>
                         </div>
                     </div>
                 </div>
                 <div class="lg:col-span-5 stagger-content order-1 lg:order-2 lg:pl-12">
                     <h2
                         class="font-headline text-5xl md:text-6xl font-black text-primary mb-8 tracking-tighter leading-none">
-                        Tooth<br /><span class="opacity-30">Extractions</span>
+                       Dental<br /><span class="opacity-30"> Crowns</span>
                     </h2>
-                    <p class="text-on-surface-muted text-xl mb-12 leading-relaxed">Atraumatic extraction techniques that
-                        preserve the surrounding bone architecture, preparing the site for immediate or future
-                        restoration.</p>
+                    <p class="text-on-surface-muted text-xl mb-12 leading-relaxed">Dental Crown services is the process of restoration that covers or caps a tooth, restoring the tooth</p>
                     <div class="flex flex-wrap gap-4 mb-16">
                         <span
                             class="px-8 py-3.5 rounded-full border border-primary/10 bg-white/50 text-[10px] font-bold tracking-widest uppercase flex items-center gap-3">
-                            <span class="material-symbols-outlined text-lg">spa</span> Minimally Invasive
+                            <span class="material-symbols-outlined text-lg">texture</span> Micro-Etched
                         </span>
                         <span
                             class="px-8 py-3.5 rounded-full border border-primary/10 bg-white/50 text-[10px] font-bold tracking-widest uppercase flex items-center gap-3">
-                            <span class="material-symbols-outlined text-lg">medical_services</span> Socket Preservation
+                            <span class="material-symbols-outlined text-lg">science</span> Resin Mastery
                         </span>
                     </div>
                     <button class="magnetic group flex items-center gap-8 text-primary">
-                        <span class="text-[11px] font-black tracking-[0.4em] uppercase">Protocol Overview</span>
+                        <span class="text-[11px] font-black tracking-[0.4em] uppercase">Restoration Gallery</span>
                         <span
                             class="w-20 h-0.5 bg-primary/20 group-hover:w-32 group-hover:bg-primary transition-all duration-500"></span>
                     </button>
@@ -846,8 +1247,9 @@
                     </a>
                 </div>
             </div>
+           
             <!-- 8. GUM DISEASE CARE -->
-            <div class="service-row group grid lg:grid-cols-12 items-center gap-16 relative" data-category="all">
+            <div class="service-row group grid lg:grid-cols-12 items-center gap-16 relative" data-category="restorative">
                 <div class="lg:col-span-5 stagger-content lg:pr-12 text-right">
                     <h2
                         class="font-headline text-5xl md:text-6xl font-black text-primary mb-8 tracking-tighter leading-none">
@@ -937,6 +1339,108 @@
                     </div>
                     <button class="magnetic group flex items-center gap-8 text-primary">
                         <span class="text-[11px] font-black tracking-[0.4em] uppercase">Surgical Comfort</span>
+                        <span
+                            class="w-20 h-0.5 bg-primary/20 group-hover:w-32 group-hover:bg-primary transition-all duration-500"></span>
+                    </button>
+                    <a class="inline-flex items-center justify-center mt-5 bg-primary border border-white/20 text-white px-8 py-3 rounded-full font-bold transition-all learn-more-glow group/link"
+                        href="#">
+                        Learn More
+                        <span
+                            class="material-symbols-outlined ml-2 transition-transform group-hover/link:translate-x-2">arrow_right_alt</span>
+                    </a>
+                </div>
+            </div>
+             <!-- ALL. COSMETIC -->
+            <div class="service-row group grid lg:grid-cols-12 items-center gap-16 relative" data-category="cosmetic">
+                <div class="lg:col-span-5 stagger-content lg:pr-12 text-right">
+                    <h2
+                        class="font-headline text-5xl md:text-6xl font-black text-primary mb-8 tracking-tighter leading-none">
+                        Cosmetic<br /><span class="opacity-30">Dentistry</span>
+                    </h2>
+                    <p class="text-on-surface-muted text-xl mb-12 leading-relaxed ml-auto max-w-md">Cosmetic dentistry is a professional oral care method focusing on improving your smile’s appearance and function.</p>
+                    <div class="flex flex-wrap justify-end gap-4 mb-16">
+                        <span
+                            class="px-8 py-3.5 rounded-full border border-primary/10 bg-white/50 text-[10px] font-bold tracking-widest uppercase flex items-center gap-3">
+                            <span class="material-symbols-outlined text-lg">precision_manufacturing</span> Affordable & Conservative
+                        </span>
+                        <span
+                            class="px-8 py-3.5 rounded-full border border-primary/10 bg-white/50 text-[10px] font-bold tracking-widest uppercase flex items-center gap-3">
+                            <span class="material-symbols-outlined text-lg">shield</span> Efficient
+                        </span>
+                    </div>
+                    <button class="magnetic group flex items-center justify-end gap-8 text-primary ml-auto">
+                        <span
+                            class="w-20 h-0.5 bg-primary/20 group-hover:w-32 group-hover:bg-primary transition-all duration-500"></span>
+                        <span class="text-[11px] font-black tracking-[0.4em] uppercase">Technical Specs</span>
+                    </button>
+                    <a class="inline-flex items-center justify-center mt-5 bg-primary border border-white/20 text-white px-8 py-3 rounded-full font-bold transition-all learn-more-glow group/link"
+                        href="#">
+                        Learn More
+                        <span
+                            class="material-symbols-outlined ml-2 transition-transform group-hover/link:translate-x-2">arrow_right_alt</span>
+                    </a>
+                </div>
+                <div class="lg:col-span-7 relative">
+                    <div class="glass-sanctuary rounded-4xl p-6 glowing-border-active overflow-hidden tilt-card">
+                        <div class="light-sweep"></div>
+                        <div class="relative overflow-hidden rounded-3xl h-[550px] lg:h-[750px]">
+                            <img alt="Advanced dental implant technology"
+                                class="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-1000"
+                                src="images/cosmo.jpg" />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-bl from-primary/30 via-transparent to-transparent">
+                            </div>
+                        </div>
+                        <div
+                            class="absolute bottom-10 left-10 bg-white/90 backdrop-blur px-8 py-4 rounded-2xl shadow-xl flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary">biotech</span>
+                            <span class="text-[10px] font-black tracking-widest uppercase text-primary">Structural
+                                Mastery</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <!-- 7. TOOTH EXTRACTIONS -->
+            <div class="service-row group grid lg:grid-cols-12 items-center gap-16 relative" data-category="surgical">
+                <div class="lg:col-span-7 relative order-2 lg:order-1">
+                    <div class="glass-sanctuary rounded-4xl p-6 glowing-border-active overflow-hidden tilt-card">
+                        <div class="light-sweep"></div>
+                        <div class="relative overflow-hidden rounded-3xl h-[550px] lg:h-[750px]">
+                            <img alt="Surgical dental suite"
+                                class="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-1000"
+                                src="images/extra.jpg" />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-primary/40 via-transparent to-transparent">
+                            </div>
+                        </div>
+                        <div
+                            class="absolute top-10 right-10 bg-white/90 backdrop-blur px-8 py-4 rounded-2xl shadow-xl flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary">healing</span>
+                            <span class="text-[10px] font-black tracking-widest uppercase text-primary">Trauma-Free
+                                Surgical</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-5 stagger-content order-1 lg:order-2 lg:pl-12">
+                    <h2
+                        class="font-headline text-5xl md:text-6xl font-black text-primary mb-8 tracking-tighter leading-none">
+                        Tooth<br /><span class="opacity-30">Extractions</span>
+                    </h2>
+                    <p class="text-on-surface-muted text-xl mb-12 leading-relaxed">Atraumatic extraction techniques that
+                        preserve the surrounding bone architecture, preparing the site for immediate or future
+                        restoration.</p>
+                    <div class="flex flex-wrap gap-4 mb-16">
+                        <span
+                            class="px-8 py-3.5 rounded-full border border-primary/10 bg-white/50 text-[10px] font-bold tracking-widest uppercase flex items-center gap-3">
+                            <span class="material-symbols-outlined text-lg">spa</span> Minimally Invasive
+                        </span>
+                        <span
+                            class="px-8 py-3.5 rounded-full border border-primary/10 bg-white/50 text-[10px] font-bold tracking-widest uppercase flex items-center gap-3">
+                            <span class="material-symbols-outlined text-lg">medical_services</span> Socket Preservation
+                        </span>
+                    </div>
+                    <button class="magnetic group flex items-center gap-8 text-primary">
+                        <span class="text-[11px] font-black tracking-[0.4em] uppercase">Protocol Overview</span>
                         <span
                             class="w-20 h-0.5 bg-primary/20 group-hover:w-32 group-hover:bg-primary transition-all duration-500"></span>
                     </button>
