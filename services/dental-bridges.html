@@ -159,20 +159,6 @@
         --tw-bg-opacity: 1;
         background-color: rgb(14 51 106 / var(--tw-bg-opacity, 1));
       }
-      /* other services css */
-      .glass-primary {
-        background: rgba(14, 51, 106, 0.75);
-        backdrop-filter: blur(16px);
-      }
-      .tonal-shift-surface-container-low {
-        background-color: #f6f3ef;
-      }
-      .surface-dim-tonal-grounding {
-        background-color: #dcdad6;
-      }
-      .perspective-text {
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-      }
     </style>
   </head>
   <body
@@ -187,7 +173,7 @@
       >
         <!-- Brand Identity -->
         <a class="flex items-center gap-3 shrink-0" href="#">
-          <img src="images/dental-logo.png" class="img-fluid" width="240" />
+          <img src="../images/dental-logo.png" class="img-fluid" width="240" />
         </a>
         <!-- Desktop Navigation Links -->
         <div class="hidden md:flex items-center gap-10 h-full">
@@ -212,7 +198,7 @@
               >
             </div>
             <div
-              class="chg-nav-dropdown-container absolute top-[70px] left-0 right-0 w-full flex justify-center bg-white border-b border-primary/5"
+              class="chg-nav-dropdown-container absolute top-[88px] left-0 right-0 w-full flex justify-center bg-white border-b border-primary/5"
               id="chg-nav-services-dropdown"
             >
               <div class="max-w-7xl w-full px-6 py-12">
@@ -658,7 +644,7 @@
                 alt="Radiant Smile"
                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 data-alt="Close-up of a stunningly bright and healthy human smile with almost invisible clear aligners in soft, natural studio lighting"
-                src="images/about_first.avif"
+                src="../images/about_first.avif"
               />
               <div
                 class="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent"
@@ -667,7 +653,7 @@
                 <h1
                   class="text-5xl md:text-5xl font-headline font-extrabold text-white tracking-tighter leading-[0.9] text-balance"
                 >
-                  Dental Implants
+                  Dental Bridges
                 </h1>
               </div>
             </div>
@@ -677,28 +663,75 @@
             <div
               class="absolute -top-20 -left-20 w-64 h-64 bg-primary-container/10 rounded-full blur-3xl"
             ></div>
-            <div class="space-y-4 relative z-10">
+            <div class="relative z-10">
               <h2
                 class="text-4xl font-headline font-bold text-primary tracking-tight"
               >
-                Fix Your Smile with Dental Implants Services
+                Transform Your Smile with Premier Dental Bridge Services
               </h2>
-              <p class="text-secondary text-lg body-lg leading-relaxed">
-                Our dental implants services are designed to replace missing
-                permanent teeth and act as a tooth root to support the various
-                cosmetic dentistry options available. Without a tooth root,
-                crowns, bridges, and veneers can shift in the mouth and cause
-                issues with speech and eating. Dental Implants are metal bars
-                surgically placed directly into your jaw bone structure. The
-                implanted metal bars protrude through the gum tissue, allowing
-                an artificial tooth to be screwed directly onto the bar. This
-                procedure can be used for a single tooth or a group of teeth
-                (bridge or denture)
+              <p class="text-secondary body-lg leading-relaxed mt-3">
+                A Dental Bridge is a form of Restorative Dentistry and Cosmetic
+                Dentistry that can fill the gap of missing teeth and function as
+                natural teeth. A Dental Bridge consists of an anchor to the
+                surrounding teeth and a false tooth that fits between to fill
+                the gap. A Dental Bridge is permanent, meaning it will not be
+                difficult to eat, as it will not come loose or move around.
               </p>
-              <h2 class="text-4xl mt-20 font-headline font-bold">
+              <h2 class="text-4xl font-headline font-bold mb-4 mt-10">
+                Benefits of Dental Bridges Services
+              </h2>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="flex items-center gap-4 group cursor-default">
+                  <span
+                    class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500"
+                  >
+                    <span class="material-symbols-outlined">brush</span>
+                  </span>
+                  <span class="font-headline font-semibold text-primary"
+                    >Restore your smile</span
+                  >
+                </div>
+                <div class="flex items-center gap-4 group cursor-default">
+                  <span
+                    class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500"
+                  >
+                    <span class="material-symbols-outlined">architecture</span>
+                  </span>
+                  <span class="font-headline font-semibold text-primary"
+                    >Restore the ability to<br />
+                    properly chew and speak</span
+                  >
+                </div>
+                <div class="flex items-center gap-4 group cursor-default">
+                  <span
+                    class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500"
+                  >
+                    <span class="material-symbols-outlined">auto_awesome</span>
+                  </span>
+                  <span class="font-headline font-semibold text-primary"
+                    >Maintain the shape of your face
+                  </span>
+                </div>
+                <div class="flex items-center gap-4 group cursor-default">
+                  <span
+                    class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500"
+                  >
+                    <span class="material-symbols-outlined">auto_awesome</span>
+                  </span>
+                  <span class="font-headline font-semibold text-primary"
+                    >Distribute the forces in your bite<br />
+                    properly by replacing missing teeth
+                  </span>
+                </div>
+              </div>
+              <h2 class="text-4xl font-headline font-bold mt-10">
                 Types of Dental Implants
               </h2>
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-20">
+              <p class="text-lg text-secondary font-manrope mt-2">
+                Three types of dental bridges as an alternative to dental
+                implants:
+              </p>
+              <div class="grid grid-cols-1 md:grid-cols-2 mt-5 gap-8">
                 <div
                   class="p-10 rounded-[2rem] bg-surface-container-low flex flex-col items-start gap-6 border-none hover:translate-y-[-4px] transition-transform duration-500"
                 >
@@ -711,16 +744,13 @@
                       >toys</span
                     >
                   </div>
-                  <!-- <h3 class="text-2xl font-headline font-bold text-primary">
-                    Discovery Lounge
-                  </h3> -->
+                  <h3 class="text-2xl font-headline font-bold text-primary">
+                    Tooth-supported fixed bridges
+                  </h3>
                   <p class="text-secondary leading-relaxed">
-                    There are two main types of Dental Implants that can be used
-                    for tooth replacement such as Endosteal Implants and
-                    Subperiosteal Implants. Endosteal Implants are the steel
-                    posts implanted directly into the bone tissue. Subperiosteal
-                    Implants is a framework of metal that is surgically placed
-                    over the jaw bone, below the gum tissue.
+                    Uses healthy surrounding teeth to attach and support the
+                    bridge. These are the most common type of bridge. These are
+                    traditional dental bridges and are the most common today.
                   </p>
                 </div>
                 <div
@@ -735,18 +765,13 @@
                       >cloud</span
                     >
                   </div>
-                  <!-- <h3 class="text-2xl font-headline font-bold text-primary">
-                    Painless Tech
-                  </h3> -->
+                  <h3 class="text-2xl font-headline font-bold text-primary">
+                    Removable partial/complete dentures
+                  </h3>
                   <p class="text-secondary leading-relaxed">
-                    As your gums heals, the frame becomes fused with your jaw
-                    bone structure. Once healing is complete, metal bars are
-                    attached to the frame, and as Endosteal Implants protrude
-                    through the gums, acting as the root of your tooth and the
-                    vertical bone for dental prosthetics to attach to. These two
-                    options not only allow for stabilization of various cosmetic
-                    dentistry options, it also prevents shifting of adjacent
-                    teeth that often occurs when a natural tooth is lost.
+                    This artificial tooth sits on top of the gums where the
+                    missing teeth were and need to be taken out to clean the
+                    false teeth.
                   </p>
                 </div>
                 <div
@@ -761,16 +786,16 @@
                       >verified_user</span
                     >
                   </div>
-                  <!-- <h3 class="text-2xl font-headline font-bold text-primary">
-                    Expert Hands
-                  </h3> -->
+                  <h3 class="text-2xl font-headline font-bold text-primary">
+                    Resin bonded bridges
+                  </h3>
                   <p class="text-secondary leading-relaxed">
-                    There are many benefits to the placement of Dental Implants.
-                    In addition to strengthening bone tissue, implants can
-                    prevent bone loss by filling the void a missing natural
-                    tooth leaves behind. It’s also proven that restorative
-                    dentistry results in a higher quality of life for patients
-                    who have previously lived with a missing tooth or teeth.
+                    Also known as a Maryland bridge, this is used for replacing
+                    your front teeth and is attached to your healthy adjacent
+                    teeth with metal or porcelain wings on each side. This
+                    dental bridge is specifically used for your front teeth, as
+                    they could not withhold the strong impact of chewing much
+                    like your back wisdom teeth.
                   </p>
                 </div>
                 <div
@@ -785,59 +810,20 @@
                       >auto_awesome</span
                     >
                   </div>
-                  <!-- <h3 class="text-2xl font-headline font-bold text-primary">
+                  <h3 class="text-2xl font-headline font-bold text-primary">
                     Sensory Calm
-                  </h3> -->
+                  </h3>
                   <p class="text-secondary leading-relaxed">
-                    Dental Implants Services enhance the stability of dentures,
-                    resulting in a more secure fitting denture. This minimizes
-                    patient discomfort, and aids in avoiding debris from getting
-                    lodged between the gums and the dental bridge or denture
-                    that often leads to bad breath, or in extreme cases, even
-                    gum diseases.
+                    Dimmable lighting and noise-canceling headsets provide a
+                    sanctuary for children with sensory sensitivities.
                   </p>
                 </div>
               </div>
             </div>
           </section>
-          <!-- find the right dentist section -->
-          <section class="relative z-10">
-            <div
-              class="label-md tracking-[0.2em] text-primary font-headline font-bold mb-6 opacity-60"
-            >
-              CHAGGER DENTAL | COSMETIC ARTISTRY
-            </div>
-            <h1
-              class="text-6xl md:text-5xl font-headline font-extrabold tracking-tighter text-primary leading-[0.9] mb-4"
-            >
-              Find the Right Dentist For Dental Implants Services
-            </h1>
-            <p class="text-secondary text-lg leading-relaxed max-w-5xl">
-              Choosing the right oral surgeon to handle your dental implant
-              procedure is imperative. Our oral and maxillofacial surgical team
-              at Chagger Dental is carefully selected from the top Canadian
-              dental schools. We understand that oral surgery, whether it’s a
-              small surgical procedure or an in depth maxillofacial surgery, you
-              can be assured you are in the right hands with our highly educated
-              team of dental professionals.<br /><br />
-              We take great pride in providing each patient with the best dental
-              care available, ensuring our patients are comfortable with their
-              dental procedures and are provided with in-depth information to
-              answer all patient questions during each of their dental visits.
-              We uphold the highest of standards for each of our dental
-              professionals in accordance with the Canadian dental association.
-              We value not only your oral health and your dental health but your
-              overall health and wellbeing. Call your nearest Chagger Dental
-              office today to book a consultation for dental implants services.
-              Together we can determine if implant surgery is right for you.
-            </p>
-          </section>
+
           <!-- The Sanctuary Journey -->
           <section class="py-6">
-            <h2 class="text-4xl font-headline font-bold mb-8">
-              Dental Implants Services at Chagger Dental | Phases of dental
-              implant treatment
-            </h2>
             <div
               class="relative space-y-8 before:content-[''] before:absolute before:left-[1.25rem] before:top-4 before:bottom-4 before:w-[2px] before:bg-surface-container-highest"
             >
@@ -849,14 +835,21 @@
                   1
                 </div>
                 <h3 class="text-2xl font-bold text-primary mb-4">
-                  Implantological study
+                  Exploring Dental Bridge Services for a Seamless Smile
+                  Transformation
                 </h3>
-                <p class="text-secondary text-lg leading-relaxed max-w-4xl">
-                  A personalized evaluation of the case is carried out, in which
-                  aspects such as the bite and the shape of the mouth are
-                  studied. X-rays are necessary and may include 3D scans or
-                  computerized axial tomography (CAT). This assessment helps to
-                  correctly position the implant in the bone.
+                <p class="text-secondary text-lg leading-relaxed max-w-3xl">
+                  Your first visit with your dental professional will include a
+                  fitting for your bridge. You will be given a temporary bridge
+                  to protect your teeth and gums and is to be worn while the
+                  permanent bridge is sent to the dental laboratory to be made.
+                  During the second visit, your temporary bridge will be removed
+                  and the new bridge will be checked and adjusted to your
+                  prepared teeth. Multiple dental visits may be required to
+                  check the fit of the metal framework and bite to fit properly,
+                  avoiding giving you any mouth sores. This is dependent on each
+                  individual’s case. After a couple weeks, the bridge is
+                  cemented into place.
                 </p>
               </div>
               <!-- Step 2 -->
@@ -867,15 +860,20 @@
                   2
                 </div>
                 <h3 class="text-2xl font-bold text-primary mb-4">
-                  Placement of dental implants
+                  Maintaining a Dental Bridge
                 </h3>
-                <p class="text-secondary text-lg leading-relaxed max-w-4xl">
-                  The surgical procedure begins by applying anesthesia to the
-                  indicated area. With the area anesthetized, the hole where the
-                  implant will be housed is prepared using a sequence of drills
-                  that are inserted from smallest to largest. Once done, the
-                  implant will be placed and, if necessary, the wound will be
-                  closed with stitches.
+                <p class="text-secondary leading-relaxed text-lg max-w-3xl">
+                  Chagger Dental strongly emphasizes the importance of keeping
+                  the remaining teeth healthy and strong as the bridge depends
+                  on the surrounding teeth. Brushing twice a day and flossing
+                  and using an antiseptic mouthwash daily help prevent tooth
+                  decay and gum disease that can lead to tooth loss. Your
+                  dentist or oral care professional can demonstrate how to
+                  properly brush and floss teeth. Dental bridges can last up to
+                  15 years, with good oral hygiene and regular checkups.<br /><br />
+                  If you think you are a candidate for a dental bridge, speak to
+                  your dental care professional at your next visit to discuss
+                  which dental treatment option is best for you.
                 </p>
               </div>
               <!-- Step 3 -->
@@ -886,67 +884,24 @@
                   3
                 </div>
                 <h3 class="text-2xl font-bold text-primary mb-4">
-                  Integration of the implant with the bone and tissues
+                  How much does a dental bridge cost?
                 </h3>
-                <p class="text-secondary text-lg leading-relaxed max-w-4xl">
-                  After the surgical procedure, the fusion of the titanium
-                  implant with the bone requires 2 to 6 months. Once fused, the
-                  definitive rehabilitations can be placed on them.
-                </p>
-              </div>
-              <!-- Step 4 -->
-              <div class="relative pl-16 group">
-                <div
-                  class="absolute left-0 w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center font-bold z-10"
-                >
-                  4
-                </div>
-                <h3 class="text-2xl font-bold text-primary mb-4">
-                  Placement of dental prostheses
-                </h3>
-                <p class="text-secondary text-lg leading-relaxed max-w-4xl">
-                  Once the implant has been perfectly integrated, impressions
-                  will be taken to make the new teeth. Tests are carried out to
-                  ensure the aesthetics and functionality of the new pieces and
-                  they are placed cemented or screwed to the implant.
-                </p>
-              </div>
-              <!-- Step 5 -->
-              <div class="relative pl-16 group">
-                <div
-                  class="absolute left-0 w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center font-bold z-10"
-                >
-                  5
-                </div>
-                <h3 class="text-2xl font-bold text-primary mb-4">
-                  Recommendation of discharge splint
-                </h3>
-                <p class="text-secondary text-lg leading-relaxed max-w-4xl">
-                  To protect both implants and porcelain prostheses from wear,
-                  the use of a relief splint is recommended. The implants do not
-                  have a periodontal ligament, so they do not allow the
-                  cushioning of chewing forces and the prostheses can suffer
-                  overload. On the other hand, porcelain is more fragile than
-                  tooth enamel, so it must be protected even more.
-                </p>
-              </div>
-              <!-- Step 6 -->
-              <div class="relative pl-16 group">
-                <div
-                  class="absolute left-0 w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center font-bold z-10"
-                >
-                  6
-                </div>
-                <h3 class="text-2xl font-bold text-primary mb-4">
-                  Maintenance and hygiene
-                </h3>
-                <p class="text-secondary text-lg leading-relaxed max-w-4xl">
-                  Once the process is done, it will be important to maintain
-                  daily oral hygiene, including brushing and flossing. Finally,
-                  it will be necessary to visit the dentist and hygienist
-                  regularly to ensure that the operation has been positive and
-                  that the implant is stable, as well as the crowns or
-                  prostheses that have been placed on it.
+                <p class="text-secondary leading-relaxed max-w-3xl text-lg">
+                  A fixed dental bridge (i.e., a non-removable bridge, cemented
+                  into place) is an important procedure option for those with
+                  missing teeth. If a missing tooth is not replaced, then
+                  problems such as trouble chewing and speaking, as well as
+                  shifting teeth, may occur. The dental bridge cost may seem
+                  expensive, but dental insurance can significantly reduce the
+                  cost. A Delta Dental insurance plan typically covers 50% to
+                  80% of the total your dental bridge cost depending on
+                  specifics of your dental plan.<br /><br />
+                  The dental bridge cost procedure is dependent on a variety of
+                  factors, but here is a general cost estimate based on internal
+                  data from Delta Dental:<br /><br />
+                  Average out-of-network cost for dental bridge for a three-unit
+                  bridge (i.e. two crowns and a poetic) to replace one missing
+                  tooth is $3,965.
                 </p>
               </div>
             </div>
@@ -1020,7 +975,7 @@
                   <h4 class="text-xl font-bold text-primary mb-2">
                     The type of implant
                   </h4>
-                  <p class="text-secondary text-lg max-w-xl">
+                  <p class="text-secondary">
                     there are different types of dental implants, with different
                     materials and characteristics. Therefore, it’s cost may vary
                     depending on the type chosen.
@@ -1039,7 +994,7 @@
                   <h4 class="text-xl font-bold text-primary mb-2">
                     The number of implants needed
                   </h4>
-                  <p class="text-secondary text-lg max-w-xl">
+                  <p class="text-secondary">
                     if a person requires more than one dental implant, the total
                     cost will be higher than if only one is needed.
                   </p>
@@ -1057,7 +1012,7 @@
                   <h4 class="text-xl font-bold text-primary mb-2">
                     The location of the dental office
                   </h4>
-                  <p class="text-secondary text-lg max-w-xl">
+                  <p class="text-secondary">
                     the cost of dental implants in Ontario may vary depending on
                     the city or country where the dental office is located.
                   </p>
@@ -1075,7 +1030,7 @@
                   <h4 class="text-xl font-bold text-primary mb-2">
                     The experience and qualification of the dentist
                   </h4>
-                  <p class="text-secondary text-lg max-w-xl">
+                  <p class="text-secondary">
                     a dentist with more experience and qualification will have a
                     higher cost to place a dental implant than one with less
                     experience.
@@ -1094,7 +1049,7 @@
                   <h4 class="text-xl font-bold text-primary mb-2">
                     The complexity of the procedure
                   </h4>
-                  <p class="text-secondary text-lg max-w-xl">
+                  <p class="text-secondary">
                     in some cases, the placement of a dental implant may require
                     additional procedures, which can increase the total cost.
                   </p>
@@ -1168,7 +1123,7 @@
         </div>
         <!-- Right Column: Sticky Booking Module (35%) -->
         <div class="w-full lg:w-[35%]">
-          <div class="sticky" style="top: 8%">
+          <div class="sticky" style="top: 12%">
             <div
               class="bg-chagger-blue text-white p-10 rounded-[3rem] editorial-shadow border border-outline-variant/5"
             >
@@ -1354,173 +1309,6 @@
           </div>
         </div>
       </div>
-      <section class="max-w-8xl mt-20 mx-auto px-8">
-        <h2
-          class="text-5xl md:text-6xl mb-10 text-center text-primary font-headline font-extrabold"
-        >
-          Other Services
-        </h2>
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-stretch">
-          <!-- Card 1: Precision Bonding (Large Vertical) -->
-          <div
-            class="md:col-span-5 group relative overflow-hidden rounded-[2.5rem] min-h-[600px] shadow-sm transition-all duration-700"
-          >
-            <div class="absolute inset-0 z-0">
-              <img
-                class="w-full h-full object-cover transition-transform duration-[2s] ease-out group-hover:scale-110"
-                data-alt="Close-up of professional dental bonding procedure with focused blue curing light and dentist's steady gloved hands"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7-_J5CF-vraOPT-Ud0MdwSXJiKV4LCldNo-MZFAk5S2XgDhx7DzHEP14Jk5uYP1f8vy38tvgGIdMqLXdwhRZJnjbQJqOox1vzqcjIs0thy8PypsUOwAfXMkzO3IdQbZX5-EakG-Kpdt2KDbEcun9d9UDeilWWWftUmtrzE_jqrgNHFUWJ104WR87qttP7wTaB64Dzl6iCHVP2cbsvvXvm48tKpt24S43gettv3mELMjy16KjJ9b69JV72CoBE23JdkRAiVjINNq-E"
-              />
-            </div>
-            <div
-              class="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent opacity-60"
-            ></div>
-            <div
-              class="absolute inset-0 glass-primary translate-y-full group-hover:translate-y-0 transition-transform duration-700 ease-in-out p-12 flex flex-col justify-end text-white"
-            >
-              <h3 class="font-headline text-4xl font-bold mb-4">
-                Precision Bonding
-              </h3>
-              <p
-                class="text-on-primary-container text-lg mb-8 leading-relaxed font-light"
-              >
-                Seamless restorations using advanced composite artistry to
-                perfect chips, gaps, and surface imperfections.
-              </p>
-              <div class="flex items-center gap-4 group/btn cursor-pointer">
-                <span
-                  class="w-12 h-12 rounded-full border border-on-primary-container flex items-center justify-center transition-all group-hover/btn:bg-on-primary-container group-hover/btn:text-primary"
-                >
-                  <span class="material-symbols-outlined">arrow_forward</span>
-                </span>
-                <span class="font-headline font-semibold tracking-tight"
-                  >Explore Procedure</span
-                >
-              </div>
-            </div>
-            <div
-              class="absolute bottom-10 left-10 text-white z-10 transition-opacity duration-500 group-hover:opacity-0"
-            >
-              <h3 class="font-headline text-3xl font-bold tracking-tight">
-                Precision Bonding
-              </h3>
-              <p class="opacity-80 font-light">Artistic Restorations</p>
-            </div>
-          </div>
-          <!-- Right Column: Nested Grid -->
-          <div class="md:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-8">
-            <!-- Card 2: Invisalign Mastery -->
-            <div
-              class="group relative overflow-hidden rounded-[2rem] h-[350px] shadow-sm"
-            >
-              <div class="absolute inset-0 z-0">
-                <img
-                  class="w-full h-full object-cover transition-transform duration-[2s] ease-out group-hover:scale-110"
-                  data-alt="Beautifully lit close-up of a clear orthodontic aligner being held by a patient with a soft-focus radiant smile in background"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBR1TwDU_jfvVfH1ij7ERVC4s_E9qfdGWqSgGWTWZfkUaFlczF2Yb4szN6eCM1a3GL08wQvrHTJrwMKcUVtkVPniYdLuMO_poN-ohVVzX1Ph1a1jd7QsxpWhXvm0dxe6-F8U6pzku7WfjUcGsEvX7OSK-iemUhIZx8Fh4dnoLG8KoTQXvHlQ5AlR4pbEBv6VEtoRvNcQd83DTS5IvNnQp7XHdwsTJV41GvG4tnYpTzMbZLs0l_EETOWB-fTWxd_RGVrzlrv-3Ti_1FT"
-                />
-              </div>
-              <div
-                class="absolute inset-0 glass-primary translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out p-8 flex flex-col justify-center text-white text-center"
-              >
-                <h3 class="font-headline text-2xl font-bold mb-2">
-                  Invisalign Mastery
-                </h3>
-                <p class="text-sm opacity-90 leading-relaxed font-light mb-6">
-                  Discrete orthodontic engineering for a perfectly aligned smile
-                  without the visual weight of traditional braces.
-                </p>
-                <span class="material-symbols-outlined mx-auto text-3xl"
-                  >auto_fix_high</span
-                >
-              </div>
-              <div
-                class="absolute bottom-6 left-6 text-white z-10 group-hover:opacity-0 transition-opacity"
-              >
-                <h3 class="font-headline text-xl font-bold">
-                  Invisalign Mastery
-                </h3>
-              </div>
-            </div>
-            <!-- Card 3: Signature Crowns -->
-            <div
-              class="group relative overflow-hidden rounded-[2rem] h-[350px] shadow-sm"
-            >
-              <div class="absolute inset-0 z-0">
-                <img
-                  class="w-full h-full object-cover transition-transform duration-[2s] ease-out group-hover:scale-110"
-                  data-alt="Detailed macro shot of a porcelain dental crown being crafted in a modern laboratory under precise clinical lighting"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvd3HENY3taXVTRabI2Uvfipj_odbJoMWlSha0w7YfIJlfnC9bAMx_cdyTAlGxLIb1A34B7lK666bqa-IY20XDFLpdNLB8nz9VlUt4Ei9srGFkIleSzBf-RgtcuNruXxsCEW1pwN2Lpg3rgncDo9hCxrINS6vjUKPfrOjg4DtzXRpVJ20rNWB0q7rCJ-R8NQGdLPbq0jYgcGIJZ3cS8AxGagaEZ0dUVetjhyD6gbWs2CNMfSilTCsgDL3VVO2i6ASe2L7K4sI2vqas"
-                />
-              </div>
-              <div
-                class="absolute inset-0 glass-primary translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out p-8 flex flex-col justify-center text-white text-center"
-              >
-                <h3 class="font-headline text-2xl font-bold mb-2">
-                  Signature Crowns
-                </h3>
-                <p class="text-sm opacity-90 leading-relaxed font-light mb-6">
-                  Custom-milled porcelain that mimics the natural translucency
-                  and strength of biological tooth enamel.
-                </p>
-                <span class="material-symbols-outlined mx-auto text-3xl"
-                  >workspace_premium</span
-                >
-              </div>
-              <div
-                class="absolute bottom-6 left-6 text-white z-10 group-hover:opacity-0 transition-opacity"
-              >
-                <h3 class="font-headline text-xl font-bold">
-                  Signature Crowns
-                </h3>
-              </div>
-            </div>
-            <!-- Card 4: Dental Implants (Spanning) -->
-            <div
-              class="md:col-span-2 group relative overflow-hidden rounded-[2.5rem] h-[400px] shadow-sm"
-            >
-              <div class="absolute inset-0 z-0">
-                <img
-                  class="w-full h-full object-cover object-top transition-transform duration-[2.5s] ease-out group-hover:scale-105"
-                  data-alt="Elegant portrait of a mature confident man smiling warmly in a bright modern clinical setting with soft natural light"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_qs-kL-AUOPiqUl4vmvoZVsKgodCH-jw9Wc3l8QW3TWp75OgWEwSvUvgeyohitaRGfyMthMYUU1ymOxKoSgoshkJihiJiPoi-_XnnsiAsqpfMVu4MUBj8vvqQluwJHtBzFZsjwrGqBNlAb4YTHJsQV9B_2z5v7IEr6cNddbqjsQjxmeZw8TUBc-nB9dVE8IXcsENx6kyKWJ0J8pqqQQkuVFTSWTzhTJGnv35k1IxqkBvpIlr9g1Xc8Z7yOuJrP4S_h1l1UvTW--Ad"
-                />
-              </div>
-              <div
-                class="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"
-              ></div>
-              <div
-                class="relative h-full p-12 flex flex-col justify-end max-w-lg transition-transform duration-700 translate-y-8 group-hover:translate-y-0"
-              >
-                <div
-                  class="bg-primary-container/80 backdrop-blur-md p-8 rounded-[2rem] border border-white/10 group-hover:bg-primary-container/80 transition-colors duration-500"
-                >
-                  <h3 class="font-headline text-3xl font-bold mb-2 text-white">
-                    Dental Implants
-                  </h3>
-                  <p
-                    class="text-on-primary-container text-base leading-relaxed font-light"
-                  >
-                    The gold standard in tooth replacement, offering permanent
-                    stability and life-changing aesthetics.
-                  </p>
-                  <div
-                    class="mt-6 flex items-center gap-3 text-white font-semibold group/link cursor-pointer"
-                  >
-                    <span class="text-sm uppercase tracking-widest"
-                      >Learn More</span
-                    >
-                    <span
-                      class="material-symbols-outlined translate-x-0 group-hover/link:translate-x-2 transition-transform"
-                      >trending_flat</span
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
       <section class="max-w-8xl mx-auto px-2 py-14">
         <div
           class="bg-primary rounded-[4rem] overflow-hidden relative p-12 md:p-14 text-on-primary"

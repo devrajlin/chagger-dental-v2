@@ -1,17 +1,13 @@
 <!doctype html>
 
-<html class="scroll-smooth" lang="en">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Invisalign: The Clear Path to Confidence | Chagger Dental</title>
+    <title>Book Your Visit | Chagger Dental</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap"
       rel="stylesheet"
     />
     <link
@@ -26,53 +22,54 @@
         theme: {
           extend: {
             colors: {
-              secondary: "#4e6072",
-              "on-secondary-container": "#546678",
-              "on-error-container": "#93000a",
-              "surface-bright": "#fcf9f5",
-              tertiary: "#251e16",
-              surface: "#fcf9f5",
-              "on-surface": "#1c1c1a",
-              "on-primary-fixed-variant": "#26467d",
-              "secondary-fixed": "#d1e5fa",
-              "on-surface-variant": "#434750",
-              "surface-container-low": "#f6f3ef",
-              outline: "#747781",
-              "surface-container-highest": "#e5e2de",
-              "secondary-fixed-dim": "#b5c9dd",
-              "on-secondary-fixed-variant": "#36495a",
-              primary: "#001e49",
-              "on-tertiary-fixed": "#211a13",
-              "inverse-primary": "#adc6ff",
-              "error-container": "#ffdad6",
-              "on-error": "#ffffff",
-              "on-primary": "#ffffff",
-              error: "#ba1a1a",
-              "tertiary-fixed": "#eee0d4",
-              background: "#fcf9f5",
-              "surface-container-lowest": "#ffffff",
-              "surface-dim": "#dcdad6",
-              "secondary-container": "#d1e5fa",
-              "primary-container": "#0e336a",
-              "on-tertiary-container": "#a79b90",
-              "on-primary-fixed": "#001a41",
-              "surface-container-high": "#eae8e4",
-              "inverse-surface": "#31302e",
-              "tertiary-fixed-dim": "#d1c4b8",
-              "surface-variant": "#e5e2de",
-              "on-secondary": "#ffffff",
-              "primary-fixed": "#d8e2ff",
-              "surface-container": "#f0ede9",
-              "on-tertiary": "#ffffff",
-              "outline-variant": "#c4c6d1",
-              "on-primary-container": "#809ddb",
-              "on-background": "#1c1c1a",
-              "inverse-on-surface": "#f3f0ec",
-              "tertiary-container": "#3b332b",
-              "primary-fixed-dim": "#adc6ff",
-              "on-tertiary-fixed-variant": "#4e453c",
-              "surface-tint": "#405e97",
               "on-secondary-fixed": "#091d2c",
+              "secondary-container": "#d1e5fa",
+              "surface-dim": "#dcdad6",
+              "surface-bright": "#fcf9f5",
+              "error-container": "#ffdad6",
+              "inverse-primary": "#adc6ff",
+              "surface-variant": "#e5e2de",
+              surface: "#fcf9f5",
+              tertiary: "#251e16",
+              "surface-container-low": "#f6f3ef",
+              "primary-fixed-dim": "#adc6ff",
+              "on-background": "#1c1c1a",
+              "surface-container-high": "#eae8e4",
+              "inverse-on-surface": "#f3f0ec",
+              "secondary-fixed-dim": "#b5c9dd",
+              "on-tertiary": "#ffffff",
+              "on-secondary": "#ffffff",
+              "on-primary-container": "#809ddb",
+              error: "#ba1a1a",
+              "on-primary-fixed-variant": "#26467d",
+              "on-primary-fixed": "#001a41",
+              "on-surface": "#1c1c1a",
+              "on-secondary-container": "#546678",
+              "on-surface-variant": "#434750",
+              "on-primary": "#ffffff",
+              "surface-container-highest": "#e5e2de",
+              background: "#fcf9f5",
+              "surface-container": "#f0ede9",
+              "primary-container": "#0e336a",
+              primary: "#001e49",
+              "chagger-blue": "#0E336A",
+              "tertiary-fixed-dim": "#d1c4b8",
+              "secondary-fixed": "#d1e5fa",
+              "on-error-container": "#93000a",
+              "tertiary-container": "#3b332b",
+              "on-error": "#ffffff",
+              "on-secondary-fixed-variant": "#36495a",
+              "primary-fixed": "#d8e2ff",
+              "surface-tint": "#405e97",
+              secondary: "#4e6072",
+              outline: "#747781",
+              "on-tertiary-fixed-variant": "#4e453c",
+              "on-tertiary-fixed": "#211a13",
+              "surface-container-lowest": "#ffffff",
+              "on-tertiary-container": "#a79b90",
+              "tertiary-fixed": "#eee0d4",
+              "outline-variant": "#c4c6d1",
+              "inverse-surface": "#31302e",
             },
             borderRadius: {
               DEFAULT: "0.25rem",
@@ -90,12 +87,11 @@
       };
     </script>
     <style>
-      .material-symbols-outlined {
-        font-variation-settings:
-          "FILL" 0,
-          "wght" 400,
-          "GRAD" 0,
-          "opsz" 24;
+      .glass-panel {
+        background: rgba(255, 255, 255, 0.45);
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
       }
       /* nabrbar css */
       .chg-nav-glass-morphism {
@@ -130,53 +126,92 @@
       .chg-nav-z-menu {
         z-index: 100;
       }
-      /* navbar */
       .glass-silk {
         background: rgba(252, 249, 245, 0.7);
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
+      }
+      .light-sweep {
+        position: relative;
+        overflow: hidden;
+      }
+      .light-sweep::after {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: linear-gradient(
+          45deg,
+          transparent 45%,
+          rgba(255, 255, 255, 0.3) 50%,
+          transparent 55%
+        );
+        transform: rotate(30deg);
+        animation: sweep 8s infinite;
+      }
+      @keyframes sweep {
+        0% {
+          transform: translate(-100%, -100%) rotate(30deg);
+        }
+        20% {
+          transform: translate(100%, 100%) rotate(30deg);
+        }
+        100% {
+          transform: translate(100%, 100%) rotate(30deg);
+        }
+      }
+      .custom-scrollbar::-webkit-scrollbar {
+        width: 6px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.05);
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 10px;
+      }
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+      }
+      .glass-input {
+        background: rgba(14, 51, 106, 0.4) !important;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        color: white;
+        transition: all 0.3s ease;
+      }
+      .glass-input:focus {
+        background: rgba(14, 51, 106, 0.6);
+        border-color: rgba(255, 255, 255, 0.4);
+        outline: none;
+        box-shadow: 0 0 0 4px rgba(14, 51, 106, 0.2);
+      }
+      .glass-input::placeholder {
+        color: rgba(255, 255, 255, 0.6);
+      }
+      select.glass-input option {
+        background-color: #0e336a;
+        color: white;
+      }
+      input[type="date"]::-webkit-calendar-picker-indicator {
+        filter: invert(1); /* Turns a black icon white */
       }
       .glass-card {
         background: rgba(14, 51, 106, 0.4);
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
       }
-      .editorial-shadow {
-        box-shadow: 0 32px 64px -16px rgba(0, 30, 73, 0.05);
-      }
-      .text-balance {
-        text-wrap: balance;
-      }
-      .glass-input {
-        background: rgba(14, 51, 106, 0.4) !important;
-        border: 1px solid rgba(255, 255, 255, 0.15) !important;
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
-        color: white !important;
-        transition: all 0.3s ease;
-      }
-      .bg-chagger-blue {
-        --tw-bg-opacity: 1;
-        background-color: rgb(14 51 106 / var(--tw-bg-opacity, 1));
-      }
-      /* other services css */
-      .glass-primary {
-        background: rgba(14, 51, 106, 0.75);
-        backdrop-filter: blur(16px);
-      }
-      .tonal-shift-surface-container-low {
-        background-color: #f6f3ef;
-      }
-      .surface-dim-tonal-grounding {
-        background-color: #dcdad6;
-      }
-      .perspective-text {
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-      }
     </style>
   </head>
   <body
-    class="bg-background text-on-background font-body selection:bg-primary-fixed-dim selection:text-primary overflow-x-hidden"
+    class="bg-background font-body text-on-surface antialiased overflow-x-hidden"
   >
     <!-- TopNavBar Implementation -->
     <nav
@@ -647,951 +682,325 @@
         </div>
       </div>
     </nav>
-    <main class="max-w-[1440px] mx-auto px-6 md:px-12 mt-20 pb-8">
-      <div class="flex flex-col lg:flex-row gap-6">
-        <!-- Left Column: Storytelling (65%) -->
-        <div class="w-full lg:w-[65%] space-y-10 mt-5">
-          <!-- Cinematic Hero -->
-          <section class="relative group">
-            <div class="rounded-[3rem] overflow-hidden aspect-[16/10] relative">
-              <img
-                alt="Radiant Smile"
-                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                data-alt="Close-up of a stunningly bright and healthy human smile with almost invisible clear aligners in soft, natural studio lighting"
-                src="images/about_first.avif"
-              />
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent"
-              ></div>
-              <div class="absolute bottom-12 left-12 max-w-xl">
-                <h1
-                  class="text-5xl md:text-5xl font-headline font-extrabold text-white tracking-tighter leading-[0.9] text-balance"
-                >
-                  Dental Implants
-                </h1>
-              </div>
-            </div>
-          </section>
-          <!-- 'The Art of Perfection' Section -->
-          <section class="grid relative">
-            <div
-              class="absolute -top-20 -left-20 w-64 h-64 bg-primary-container/10 rounded-full blur-3xl"
-            ></div>
-            <div class="space-y-4 relative z-10">
-              <h2
-                class="text-4xl font-headline font-bold text-primary tracking-tight"
-              >
-                Fix Your Smile with Dental Implants Services
-              </h2>
-              <p class="text-secondary text-lg body-lg leading-relaxed">
-                Our dental implants services are designed to replace missing
-                permanent teeth and act as a tooth root to support the various
-                cosmetic dentistry options available. Without a tooth root,
-                crowns, bridges, and veneers can shift in the mouth and cause
-                issues with speech and eating. Dental Implants are metal bars
-                surgically placed directly into your jaw bone structure. The
-                implanted metal bars protrude through the gum tissue, allowing
-                an artificial tooth to be screwed directly onto the bar. This
-                procedure can be used for a single tooth or a group of teeth
-                (bridge or denture)
-              </p>
-              <h2 class="text-4xl mt-20 font-headline font-bold">
-                Types of Dental Implants
-              </h2>
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-20">
-                <div
-                  class="p-10 rounded-[2rem] bg-surface-container-low flex flex-col items-start gap-6 border-none hover:translate-y-[-4px] transition-transform duration-500"
-                >
-                  <div
-                    class="w-16 h-16 rounded-full bg-surface-container-lowest flex items-center justify-center shadow-sm"
-                  >
-                    <span
-                      class="material-symbols-outlined text-primary text-3xl"
-                      data-icon="toys"
-                      >toys</span
-                    >
-                  </div>
-                  <!-- <h3 class="text-2xl font-headline font-bold text-primary">
-                    Discovery Lounge
-                  </h3> -->
-                  <p class="text-secondary leading-relaxed">
-                    There are two main types of Dental Implants that can be used
-                    for tooth replacement such as Endosteal Implants and
-                    Subperiosteal Implants. Endosteal Implants are the steel
-                    posts implanted directly into the bone tissue. Subperiosteal
-                    Implants is a framework of metal that is surgically placed
-                    over the jaw bone, below the gum tissue.
-                  </p>
-                </div>
-                <div
-                  class="p-10 rounded-[2rem] bg-secondary-container/40 flex flex-col items-start gap-6 border-none hover:translate-y-[-4px] transition-transform duration-500"
-                >
-                  <div
-                    class="w-16 h-16 rounded-full bg-surface-container-lowest flex items-center justify-center shadow-sm"
-                  >
-                    <span
-                      class="material-symbols-outlined text-primary text-3xl"
-                      data-icon="cloud"
-                      >cloud</span
-                    >
-                  </div>
-                  <!-- <h3 class="text-2xl font-headline font-bold text-primary">
-                    Painless Tech
-                  </h3> -->
-                  <p class="text-secondary leading-relaxed">
-                    As your gums heals, the frame becomes fused with your jaw
-                    bone structure. Once healing is complete, metal bars are
-                    attached to the frame, and as Endosteal Implants protrude
-                    through the gums, acting as the root of your tooth and the
-                    vertical bone for dental prosthetics to attach to. These two
-                    options not only allow for stabilization of various cosmetic
-                    dentistry options, it also prevents shifting of adjacent
-                    teeth that often occurs when a natural tooth is lost.
-                  </p>
-                </div>
-                <div
-                  class="p-10 rounded-[2rem] bg-primary-fixed-dim/30 flex flex-col items-start gap-6 border-none hover:translate-y-[-4px] transition-transform duration-500"
-                >
-                  <div
-                    class="w-16 h-16 rounded-full bg-surface-container-lowest flex items-center justify-center shadow-sm"
-                  >
-                    <span
-                      class="material-symbols-outlined text-primary text-3xl"
-                      data-icon="verified_user"
-                      >verified_user</span
-                    >
-                  </div>
-                  <!-- <h3 class="text-2xl font-headline font-bold text-primary">
-                    Expert Hands
-                  </h3> -->
-                  <p class="text-secondary leading-relaxed">
-                    There are many benefits to the placement of Dental Implants.
-                    In addition to strengthening bone tissue, implants can
-                    prevent bone loss by filling the void a missing natural
-                    tooth leaves behind. It’s also proven that restorative
-                    dentistry results in a higher quality of life for patients
-                    who have previously lived with a missing tooth or teeth.
-                  </p>
-                </div>
-                <div
-                  class="p-10 rounded-[2rem] bg-surface-container-high flex flex-col items-start gap-6 border-none hover:translate-y-[-4px] transition-transform duration-500"
-                >
-                  <div
-                    class="w-16 h-16 rounded-full bg-surface-container-lowest flex items-center justify-center shadow-sm"
-                  >
-                    <span
-                      class="material-symbols-outlined text-primary text-3xl"
-                      data-icon="auto_awesome"
-                      >auto_awesome</span
-                    >
-                  </div>
-                  <!-- <h3 class="text-2xl font-headline font-bold text-primary">
-                    Sensory Calm
-                  </h3> -->
-                  <p class="text-secondary leading-relaxed">
-                    Dental Implants Services enhance the stability of dentures,
-                    resulting in a more secure fitting denture. This minimizes
-                    patient discomfort, and aids in avoiding debris from getting
-                    lodged between the gums and the dental bridge or denture
-                    that often leads to bad breath, or in extreme cases, even
-                    gum diseases.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section>
-          <!-- find the right dentist section -->
-          <section class="relative z-10">
-            <div
-              class="label-md tracking-[0.2em] text-primary font-headline font-bold mb-6 opacity-60"
-            >
-              CHAGGER DENTAL | COSMETIC ARTISTRY
-            </div>
-            <h1
-              class="text-6xl md:text-5xl font-headline font-extrabold tracking-tighter text-primary leading-[0.9] mb-4"
-            >
-              Find the Right Dentist For Dental Implants Services
-            </h1>
-            <p class="text-secondary text-lg leading-relaxed max-w-5xl">
-              Choosing the right oral surgeon to handle your dental implant
-              procedure is imperative. Our oral and maxillofacial surgical team
-              at Chagger Dental is carefully selected from the top Canadian
-              dental schools. We understand that oral surgery, whether it’s a
-              small surgical procedure or an in depth maxillofacial surgery, you
-              can be assured you are in the right hands with our highly educated
-              team of dental professionals.<br /><br />
-              We take great pride in providing each patient with the best dental
-              care available, ensuring our patients are comfortable with their
-              dental procedures and are provided with in-depth information to
-              answer all patient questions during each of their dental visits.
-              We uphold the highest of standards for each of our dental
-              professionals in accordance with the Canadian dental association.
-              We value not only your oral health and your dental health but your
-              overall health and wellbeing. Call your nearest Chagger Dental
-              office today to book a consultation for dental implants services.
-              Together we can determine if implant surgery is right for you.
-            </p>
-          </section>
-          <!-- The Sanctuary Journey -->
-          <section class="py-6">
-            <h2 class="text-4xl font-headline font-bold mb-8">
-              Dental Implants Services at Chagger Dental | Phases of dental
-              implant treatment
-            </h2>
-            <div
-              class="relative space-y-8 before:content-[''] before:absolute before:left-[1.25rem] before:top-4 before:bottom-4 before:w-[2px] before:bg-surface-container-highest"
-            >
-              <!-- Step 1 -->
-              <div class="relative pl-16 group">
-                <div
-                  class="absolute left-0 w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center font-bold z-10 transition-transform duration-500 group-hover:scale-110"
-                >
-                  1
-                </div>
-                <h3 class="text-2xl font-bold text-primary mb-4">
-                  Implantological study
-                </h3>
-                <p class="text-secondary text-lg leading-relaxed max-w-4xl">
-                  A personalized evaluation of the case is carried out, in which
-                  aspects such as the bite and the shape of the mouth are
-                  studied. X-rays are necessary and may include 3D scans or
-                  computerized axial tomography (CAT). This assessment helps to
-                  correctly position the implant in the bone.
-                </p>
-              </div>
-              <!-- Step 2 -->
-              <div class="relative pl-16 group">
-                <div
-                  class="absolute left-0 w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center font-bold z-10 transition-transform duration-500 group-hover:scale-110"
-                >
-                  2
-                </div>
-                <h3 class="text-2xl font-bold text-primary mb-4">
-                  Placement of dental implants
-                </h3>
-                <p class="text-secondary text-lg leading-relaxed max-w-4xl">
-                  The surgical procedure begins by applying anesthesia to the
-                  indicated area. With the area anesthetized, the hole where the
-                  implant will be housed is prepared using a sequence of drills
-                  that are inserted from smallest to largest. Once done, the
-                  implant will be placed and, if necessary, the wound will be
-                  closed with stitches.
-                </p>
-              </div>
-              <!-- Step 3 -->
-              <div class="relative pl-16 group">
-                <div
-                  class="absolute left-0 w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center font-bold z-10 transition-transform duration-500 group-hover:scale-110"
-                >
-                  3
-                </div>
-                <h3 class="text-2xl font-bold text-primary mb-4">
-                  Integration of the implant with the bone and tissues
-                </h3>
-                <p class="text-secondary text-lg leading-relaxed max-w-4xl">
-                  After the surgical procedure, the fusion of the titanium
-                  implant with the bone requires 2 to 6 months. Once fused, the
-                  definitive rehabilitations can be placed on them.
-                </p>
-              </div>
-              <!-- Step 4 -->
-              <div class="relative pl-16 group">
-                <div
-                  class="absolute left-0 w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center font-bold z-10"
-                >
-                  4
-                </div>
-                <h3 class="text-2xl font-bold text-primary mb-4">
-                  Placement of dental prostheses
-                </h3>
-                <p class="text-secondary text-lg leading-relaxed max-w-4xl">
-                  Once the implant has been perfectly integrated, impressions
-                  will be taken to make the new teeth. Tests are carried out to
-                  ensure the aesthetics and functionality of the new pieces and
-                  they are placed cemented or screwed to the implant.
-                </p>
-              </div>
-              <!-- Step 5 -->
-              <div class="relative pl-16 group">
-                <div
-                  class="absolute left-0 w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center font-bold z-10"
-                >
-                  5
-                </div>
-                <h3 class="text-2xl font-bold text-primary mb-4">
-                  Recommendation of discharge splint
-                </h3>
-                <p class="text-secondary text-lg leading-relaxed max-w-4xl">
-                  To protect both implants and porcelain prostheses from wear,
-                  the use of a relief splint is recommended. The implants do not
-                  have a periodontal ligament, so they do not allow the
-                  cushioning of chewing forces and the prostheses can suffer
-                  overload. On the other hand, porcelain is more fragile than
-                  tooth enamel, so it must be protected even more.
-                </p>
-              </div>
-              <!-- Step 6 -->
-              <div class="relative pl-16 group">
-                <div
-                  class="absolute left-0 w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center font-bold z-10"
-                >
-                  6
-                </div>
-                <h3 class="text-2xl font-bold text-primary mb-4">
-                  Maintenance and hygiene
-                </h3>
-                <p class="text-secondary text-lg leading-relaxed max-w-4xl">
-                  Once the process is done, it will be important to maintain
-                  daily oral hygiene, including brushing and flossing. Finally,
-                  it will be necessary to visit the dentist and hygienist
-                  regularly to ensure that the operation has been positive and
-                  that the implant is stable, as well as the crowns or
-                  prostheses that have been placed on it.
-                </p>
-              </div>
-            </div>
-            <!-- transformation -->
-            <h2 class="text-4xl font-headline font-bold mt-10">
-              Artistic Transformations
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 mt-5 gap-8">
-              <div
-                class="rounded-[2rem] overflow-hidden editorial-shadow bg-white"
-              >
-                <div class="h-64 bg-surface-container overflow-hidden">
-                  <img
-                    alt="Before"
-                    class="w-full h-full object-cover grayscale opacity-60"
-                    data-alt="Detailed macro photo of misaligned teeth in warm lighting, showing overcrowding and orthodontic challenges"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBn7vG-hkYkNw-mBwNxgiv8_onYuJ-9ixpvXz3PScJbEkEV5C1yoxF3GxKAG5TPEhZ5owNzs2fqjuF66zWPlIgGkwT13CMvI0FQbZTTDD-ByxMN-reT41mmxn81WPJA-cRAFzvp4RBhl7jENQDheF_sgnDbRK8kH5ch31EHVZSIZNqLs6tdd2H9X-HkFZp9IENJ5QQA7bxhsHhpymMpyIl5UA67brAcbokCu4otcv-MXjDZHWirVl00m-DzH9OLu8vCPpf72uzeEUum"
-                  />
-                </div>
-                <div
-                  class="p-6 bg-primary text-white flex justify-between items-center"
-                >
-                  <span class="font-bold tracking-widest text-xs uppercase"
-                    >Before</span
-                  >
-                  <span class="material-symbols-outlined">trending_flat</span>
-                </div>
-              </div>
-              <div
-                class="rounded-[2rem] overflow-hidden editorial-shadow bg-white"
-              >
-                <div class="h-64 bg-surface-container overflow-hidden">
-                  <img
-                    alt="After"
-                    class="w-full h-full object-cover"
-                    data-alt="Radiant, perfectly aligned white teeth in a bright, healthy smile with clinical lighting and high-end photographic finish"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDowMjXkDPza618zOvJZI4f0fJYWRbDJnHbo7q9IBD1iWfNadgKqMNueDPgYh7u0Me5SZw5PtBEP7YhqaIhkPvFoqCRsuCVBUNGE9eBurC77J_SkLgugx-wK1h5XWd_UktFrlJgYw3yclfR6p4r1tIyaZ4l3TTvqY2BsMep4ev5dLG-lPYDmm1J1Hmc3LwYFTw3ybVid81Pny85iWbVGX_igutVwEgRBFlrpQ_jayUzHzS8wcYcWOgAQ7zSr7eV0YUOOiXe4J5kpVK1"
-                  />
-                </div>
-                <div
-                  class="p-6 bg-[#0e336a] text-white flex justify-between items-center"
-                >
-                  <span class="font-bold tracking-widest text-xs uppercase"
-                    >After 12 Months</span
-                  >
-                  <span class="material-symbols-outlined">verified</span>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <!-- FAQ Sanctuary -->
-          <section class="pb-12">
-            <h2 class="text-4xl font-headline font-bold mb-3">
-              How much do Dental Implants cost in Ontario?
-            </h2>
-            <p class="text-primary text-xl">
-              The cost of dental implants in Ontario depends on several factors,
-              including:
-            </p>
-            <div class="space-y-8 mt-7">
-              <div class="flex gap-6 items-start">
-                <div
-                  class="w-14 h-14 rounded-2xl bg-secondary-container flex items-center justify-center flex-none"
-                >
-                  <span class="material-symbols-outlined text-primary text-3xl"
-                    >psychology</span
-                  >
-                </div>
-                <div>
-                  <h4 class="text-xl font-bold text-primary mb-2">
-                    The type of implant
-                  </h4>
-                  <p class="text-secondary text-lg max-w-xl">
-                    there are different types of dental implants, with different
-                    materials and characteristics. Therefore, it’s cost may vary
-                    depending on the type chosen.
-                  </p>
-                </div>
-              </div>
-              <div class="flex gap-6 items-start">
-                <div
-                  class="w-14 h-14 rounded-2xl bg-secondary-container flex items-center justify-center flex-none"
-                >
-                  <span class="material-symbols-outlined text-primary text-3xl"
-                    >precision_manufacturing</span
-                  >
-                </div>
-                <div>
-                  <h4 class="text-xl font-bold text-primary mb-2">
-                    The number of implants needed
-                  </h4>
-                  <p class="text-secondary text-lg max-w-xl">
-                    if a person requires more than one dental implant, the total
-                    cost will be higher than if only one is needed.
-                  </p>
-                </div>
-              </div>
-              <div class="flex gap-6 items-start">
-                <div
-                  class="w-14 h-14 rounded-2xl bg-secondary-container flex items-center justify-center flex-none"
-                >
-                  <span class="material-symbols-outlined text-primary text-3xl"
-                    >location_on</span
-                  >
-                </div>
-                <div>
-                  <h4 class="text-xl font-bold text-primary mb-2">
-                    The location of the dental office
-                  </h4>
-                  <p class="text-secondary text-lg max-w-xl">
-                    the cost of dental implants in Ontario may vary depending on
-                    the city or country where the dental office is located.
-                  </p>
-                </div>
-              </div>
-              <div class="flex gap-6 items-start">
-                <div
-                  class="w-14 h-14 rounded-2xl bg-secondary-container flex items-center justify-center flex-none"
-                >
-                  <span class="material-symbols-outlined text-primary text-3xl"
-                    >verified_user</span
-                  >
-                </div>
-                <div>
-                  <h4 class="text-xl font-bold text-primary mb-2">
-                    The experience and qualification of the dentist
-                  </h4>
-                  <p class="text-secondary text-lg max-w-xl">
-                    a dentist with more experience and qualification will have a
-                    higher cost to place a dental implant than one with less
-                    experience.
-                  </p>
-                </div>
-              </div>
-              <div class="flex gap-6 items-start">
-                <div
-                  class="w-14 h-14 rounded-2xl bg-secondary-container flex items-center justify-center flex-none"
-                >
-                  <span class="material-symbols-outlined text-primary text-3xl"
-                    >neurology</span
-                  >
-                </div>
-                <div>
-                  <h4 class="text-xl font-bold text-primary mb-2">
-                    The complexity of the procedure
-                  </h4>
-                  <p class="text-secondary text-lg max-w-xl">
-                    in some cases, the placement of a dental implant may require
-                    additional procedures, which can increase the total cost.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="space-y-4 mt-10">
-              <details
-                class="group bg-surface-container-low rounded-[1.5rem] p-8 border border-transparent open:border-outline-variant/10 transition-all duration-300"
-              >
-                <summary
-                  class="flex justify-between items-center cursor-pointer list-none"
-                >
-                  <span class="text-xl font-bold font-headline"
-                    >How many hours a day should I wear my aligners?</span
-                  >
-                  <span
-                    class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180"
-                    >expand_more</span
-                  >
-                </summary>
-                <p class="mt-6 text-secondary leading-relaxed">
-                  For optimal results, aligners should be worn 20 to 22 hours
-                  per day, removing them only for eating, drinking, brushing,
-                  and flossing.
-                </p>
-              </details>
-              <details
-                class="group bg-surface-container-low rounded-[1.5rem] p-8 border border-transparent open:border-outline-variant/10 transition-all duration-300"
-              >
-                <summary
-                  class="flex justify-between items-center cursor-pointer list-none"
-                >
-                  <span class="text-xl font-bold font-headline"
-                    >Will the treatment be painful?</span
-                  >
-                  <span
-                    class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180"
-                    >expand_more</span
-                  >
-                </summary>
-                <p class="mt-6 text-secondary leading-relaxed">
-                  Most patients experience a sense of pressure rather than pain.
-                  This is a sign the aligners are working to move your teeth
-                  into their desired positions.
-                </p>
-              </details>
-              <details
-                class="group bg-surface-container-low rounded-[1.5rem] p-8 border border-transparent open:border-outline-variant/10 transition-all duration-300"
-              >
-                <summary
-                  class="flex justify-between items-center cursor-pointer list-none"
-                >
-                  <span class="text-xl font-bold font-headline"
-                    >Is Invisalign suitable for all ages?</span
-                  >
-                  <span
-                    class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180"
-                    >expand_more</span
-                  >
-                </summary>
-                <p class="mt-6 text-secondary leading-relaxed">
-                  Yes, from Invisalign First for children to treatments for
-                  adults of all ages, the technology is versatile enough to
-                  handle almost any orthodontic journey.
-                </p>
-              </details>
-            </div>
-          </section>
-          <!-- cta -->
+    <main class="min-h-screen flex flex-col md:flex-row">
+      <!-- Left: The Visual Sanctuary (60%) -->
+      <section
+        class="relative w-full md:w-[60%] h-[512px] md:h-screen sticky top-0 overflow-hidden"
+      >
+        <div class="absolute inset-0 z-0">
+          <img
+            alt="Professional, radiant image of happy dental clients sharing a joyful moment"
+            class="w-full h-full object-cover transform scale-110 transition-transform duration-[10s] ease-linear hover:scale-100"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuI6XDZb-YucVKVIDszj65aVGKb1pCJbfqTxhG6z-yu6mBeqsXjtRE_zAdLSsXnGDXUIVGYwzwtFHg3tVBe37d9sOCuU9WWvmPGEl5gHLGDME2p_1xMDyyw_0dgAtU6utbbJG9A2uVHedgRTwp3mUOXI2SlDBN41LX2MV-U37W5jH1nu6To1tMJ9RGHaK899VcIQHb-DhnuVokg-m4kdTa1qiyKpghqBNKFcEQANb0thZlooIuE6umco4m856JcdVQn4o92uUMiJ2J"
+          />
         </div>
-        <!-- Right Column: Sticky Booking Module (35%) -->
-        <div class="w-full lg:w-[35%]">
-          <div class="sticky" style="top: 8%">
-            <div
-              class="bg-chagger-blue text-white p-10 rounded-[3rem] editorial-shadow border border-outline-variant/5"
-            >
-              <div class="mb-10">
-                <h2
-                  class="text-3xl font-headline font-extrabold text-white mb-2"
-                >
-                  Book Appointment
-                </h2>
-                <p class="text-white/60 text-sm">
-                  Secure your private consultation with our specialists.
-                </p>
-              </div>
-              <form class="space-y-6">
-                <!-- Section: Identity -->
-                <div class="grid grid-cols-2 gap-4">
-                  <div class="space-y-2">
-                    <label
-                      class="text-[12px] font-bold uppercase tracking-widest text-white ml-1"
-                      >First Name</label
-                    >
-                    <input
-                      class="w-full glass-input rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary transition-all placeholder:text-secondary"
-                      placeholder="John"
-                      type="text"
-                    />
-                  </div>
-                  <div class="space-y-2">
-                    <label
-                      class="text-[12px] font-bold uppercase tracking-widest text-white ml-1"
-                      >Last Name</label
-                    >
-                    <input
-                      class="w-full bg-surface-container-high glass-input border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary/20 text-primary transition-all placeholder:text-secondary"
-                      placeholder="Doe"
-                      type="text"
-                    />
-                  </div>
-                </div>
-                <div class="space-y-2">
-                  <label
-                    class="text-[12px] font-bold uppercase tracking-widest text-white ml-1"
-                    >Email Address</label
-                  >
-                  <input
-                    class="w-full bg-surface-container-high glass-input border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary/20 transition-all placeholder:text-secondary"
-                    placeholder="john.doe@example.com"
-                    type="email"
-                  />
-                </div>
-                <div class="space-y-2">
-                  <label
-                    class="text-[12px] font-bold uppercase tracking-widest text-white ml-1"
-                    >Phone Number</label
-                  >
-                  <input
-                    class="w-full bg-surface-container-high border-none glass-input rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary/20 transition-all placeholder:text-secondary"
-                    placeholder="+1 (555) 000-0000"
-                    type="tel"
-                  />
-                </div>
-                <div class="space-y-2">
-                  <label
-                    class="text-[12px] font-bold uppercase tracking-widest text-white ml-1"
-                    >Address</label
-                  >
-                  <input
-                    class="w-full bg-surface-container-high border-none glass-input rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary/20 transition-all placeholder:text-secondary"
-                    placeholder="123 Serenity Way"
-                    type="text"
-                  />
-                </div>
-                <div class="grid grid-cols-2 gap-4">
-                  <div class="space-y-2">
-                    <label
-                      class="text-[12px] font-bold uppercase tracking-widest text-white ml-1"
-                      >City</label
-                    >
-                    <input
-                      class="w-full bg-surface-container-high border-none glass-input rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary/20 transition-all placeholder:text-secondary"
-                      placeholder="London"
-                      type="text"
-                    />
-                  </div>
-                  <div class="space-y-2">
-                    <label
-                      class="text-[12px] font-bold uppercase tracking-widest text-white ml-1"
-                      >Postal Code</label
-                    >
-                    <input
-                      class="w-full bg-surface-container-high border-none glass-input rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary/20 transition-all placeholder:text-secondary/80"
-                      placeholder="N6A 1A1"
-                      type="text"
-                    />
-                  </div>
-                </div>
-                <div class="space-y-2">
-                  <label
-                    class="text-[12px] font-bold uppercase tracking-widest text-white ml-1"
-                    >Preferred Location</label
-                  >
-                  <select
-                    class="w-full bg-surface-container-high border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary/20 text-on-surface transition-all appearance-none"
-                  >
-                    <option>London - Downtown</option>
-                    <option>Oakville - Sanctuary</option>
-                    <option>Toronto - Financial District</option>
-                  </select>
-                </div>
-                <!-- Callback Preferences -->
-                <div class="pt-4 space-y-4">
-                  <span
-                    class="text-[10px] font-bold uppercase tracking-widest text-white block ml-1"
-                    >Best Time for Call-Back</span
-                  >
-                  <div class="grid grid-cols-2 gap-3">
-                    <label
-                      class="flex items-center gap-3 p-3 rounded-xl bg-surface-container border border-transparent hover:border-primary/20 cursor-pointer transition-all"
-                    >
-                      <input
-                        class="rounded text-white focus:ring-primary/20"
-                        type="checkbox"
-                      />
-                      <span class="text-xs text-primary font-medium"
-                        >Morning</span
-                      >
-                    </label>
-                    <label
-                      class="flex items-center gap-3 p-3 rounded-xl bg-surface-container border border-transparent hover:border-primary/20 cursor-pointer transition-all"
-                    >
-                      <input
-                        class="rounded text-white focus:ring-primary/20"
-                        type="checkbox"
-                      />
-                      <span class="text-xs text-primary font-medium"
-                        >Afternoon</span
-                      >
-                    </label>
-                  </div>
-                </div>
-                <div class="pt-6">
-                  <button
-                    class="w-full bg-white text-primary py-5 rounded-full font-headline font-bold text-lg hover:bg-primary-container transition-all shadow-lg shadow-primary/20 flex items-center justify-center gap-3 active:scale-[0.98]"
-                    type="submit"
-                  >
-                    Book Appointment
-                    <span
-                      class="material-symbols-outlined"
-                      data-icon="arrow_forward"
-                      >arrow_forward</span
-                    >
-                  </button>
-                  <p
-                    class="text-[10px] text-center text-secondary mt-4 opacity-60"
-                  >
-                    By submitting, you agree to our clinical privacy protocols.
-                  </p>
-                </div>
-              </form>
-            </div>
-            <!-- Trust Factor -->
-            <div
-              class="mt-8 px-6 py-4 rounded-[2rem] bg-secondary-container/30 flex items-center gap-4"
-            >
-              <div
-                class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center"
-              >
-                <span
-                  class="material-symbols-outlined"
-                  data-icon="verified_user"
-                  >verified_user</span
-                >
-              </div>
-              <div>
-                <p class="text-xs font-bold text-primary">
-                  Invisalign Platinum Elite Provider
-                </p>
-                <p class="text-[10px] text-secondary">
-                  Top 1% of providers worldwide
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <section class="max-w-8xl mt-20 mx-auto px-8">
-        <h2
-          class="text-5xl md:text-6xl mb-10 text-center text-primary font-headline font-extrabold"
+        <div
+          class="absolute inset-0 bg-gradient-to-r from-primary/60 to-transparent z-10"
+        ></div>
+        <div
+          class="relative z-20 h-full flex flex-col justify-end p-12 md:p-24 max-w-3xl"
         >
-          Other Services
-        </h2>
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-stretch">
-          <!-- Card 1: Precision Bonding (Large Vertical) -->
-          <div
-            class="md:col-span-5 group relative overflow-hidden rounded-[2.5rem] min-h-[600px] shadow-sm transition-all duration-700"
+          <h1
+            class="font-headline text-5xl md:text-5xl font-extrabold text-white leading-tight tracking-tighter mb-6"
           >
-            <div class="absolute inset-0 z-0">
-              <img
-                class="w-full h-full object-cover transition-transform duration-[2s] ease-out group-hover:scale-110"
-                data-alt="Close-up of professional dental bonding procedure with focused blue curing light and dentist's steady gloved hands"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7-_J5CF-vraOPT-Ud0MdwSXJiKV4LCldNo-MZFAk5S2XgDhx7DzHEP14Jk5uYP1f8vy38tvgGIdMqLXdwhRZJnjbQJqOox1vzqcjIs0thy8PypsUOwAfXMkzO3IdQbZX5-EakG-Kpdt2KDbEcun9d9UDeilWWWftUmtrzE_jqrgNHFUWJ104WR87qttP7wTaB64Dzl6iCHVP2cbsvvXvm48tKpt24S43gettv3mELMjy16KjJ9b69JV72CoBE23JdkRAiVjINNq-E"
-              />
+            Redefining the <br />
+            Dental Experience.
+          </h1>
+          <p
+            class="text-lg md:text-xl text-white/90 font-light max-w-xl leading-relaxed"
+          >
+            Step into a space where technology meets tranquility. Your journey
+            to a masterpiece smile begins with a single, mindful choice.
+          </p>
+          <div class="mt-12 flex gap-8 items-center text-white/80">
+            <div class="flex flex-col">
+              <span class="text-3xl font-bold">15k+</span>
+              <span
+                class="text-xs uppercase tracking-widest font-semibold opacity-70"
+                >Smiles Transformed</span
+              >
             </div>
-            <div
-              class="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent opacity-60"
-            ></div>
-            <div
-              class="absolute inset-0 glass-primary translate-y-full group-hover:translate-y-0 transition-transform duration-700 ease-in-out p-12 flex flex-col justify-end text-white"
-            >
-              <h3 class="font-headline text-4xl font-bold mb-4">
-                Precision Bonding
-              </h3>
-              <p
-                class="text-on-primary-container text-lg mb-8 leading-relaxed font-light"
+            <div class="w-px h-12 bg-white/20"></div>
+            <div class="flex flex-col">
+              <span class="text-3xl font-bold">4.9/5</span>
+              <span
+                class="text-xs uppercase tracking-widest font-semibold opacity-70"
+                >Patient Rating</span
               >
-                Seamless restorations using advanced composite artistry to
-                perfect chips, gaps, and surface imperfections.
-              </p>
-              <div class="flex items-center gap-4 group/btn cursor-pointer">
-                <span
-                  class="w-12 h-12 rounded-full border border-on-primary-container flex items-center justify-center transition-all group-hover/btn:bg-on-primary-container group-hover/btn:text-primary"
-                >
-                  <span class="material-symbols-outlined">arrow_forward</span>
-                </span>
-                <span class="font-headline font-semibold tracking-tight"
-                  >Explore Procedure</span
-                >
-              </div>
-            </div>
-            <div
-              class="absolute bottom-10 left-10 text-white z-10 transition-opacity duration-500 group-hover:opacity-0"
-            >
-              <h3 class="font-headline text-3xl font-bold tracking-tight">
-                Precision Bonding
-              </h3>
-              <p class="opacity-80 font-light">Artistic Restorations</p>
-            </div>
-          </div>
-          <!-- Right Column: Nested Grid -->
-          <div class="md:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-8">
-            <!-- Card 2: Invisalign Mastery -->
-            <div
-              class="group relative overflow-hidden rounded-[2rem] h-[350px] shadow-sm"
-            >
-              <div class="absolute inset-0 z-0">
-                <img
-                  class="w-full h-full object-cover transition-transform duration-[2s] ease-out group-hover:scale-110"
-                  data-alt="Beautifully lit close-up of a clear orthodontic aligner being held by a patient with a soft-focus radiant smile in background"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBR1TwDU_jfvVfH1ij7ERVC4s_E9qfdGWqSgGWTWZfkUaFlczF2Yb4szN6eCM1a3GL08wQvrHTJrwMKcUVtkVPniYdLuMO_poN-ohVVzX1Ph1a1jd7QsxpWhXvm0dxe6-F8U6pzku7WfjUcGsEvX7OSK-iemUhIZx8Fh4dnoLG8KoTQXvHlQ5AlR4pbEBv6VEtoRvNcQd83DTS5IvNnQp7XHdwsTJV41GvG4tnYpTzMbZLs0l_EETOWB-fTWxd_RGVrzlrv-3Ti_1FT"
-                />
-              </div>
-              <div
-                class="absolute inset-0 glass-primary translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out p-8 flex flex-col justify-center text-white text-center"
-              >
-                <h3 class="font-headline text-2xl font-bold mb-2">
-                  Invisalign Mastery
-                </h3>
-                <p class="text-sm opacity-90 leading-relaxed font-light mb-6">
-                  Discrete orthodontic engineering for a perfectly aligned smile
-                  without the visual weight of traditional braces.
-                </p>
-                <span class="material-symbols-outlined mx-auto text-3xl"
-                  >auto_fix_high</span
-                >
-              </div>
-              <div
-                class="absolute bottom-6 left-6 text-white z-10 group-hover:opacity-0 transition-opacity"
-              >
-                <h3 class="font-headline text-xl font-bold">
-                  Invisalign Mastery
-                </h3>
-              </div>
-            </div>
-            <!-- Card 3: Signature Crowns -->
-            <div
-              class="group relative overflow-hidden rounded-[2rem] h-[350px] shadow-sm"
-            >
-              <div class="absolute inset-0 z-0">
-                <img
-                  class="w-full h-full object-cover transition-transform duration-[2s] ease-out group-hover:scale-110"
-                  data-alt="Detailed macro shot of a porcelain dental crown being crafted in a modern laboratory under precise clinical lighting"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvd3HENY3taXVTRabI2Uvfipj_odbJoMWlSha0w7YfIJlfnC9bAMx_cdyTAlGxLIb1A34B7lK666bqa-IY20XDFLpdNLB8nz9VlUt4Ei9srGFkIleSzBf-RgtcuNruXxsCEW1pwN2Lpg3rgncDo9hCxrINS6vjUKPfrOjg4DtzXRpVJ20rNWB0q7rCJ-R8NQGdLPbq0jYgcGIJZ3cS8AxGagaEZ0dUVetjhyD6gbWs2CNMfSilTCsgDL3VVO2i6ASe2L7K4sI2vqas"
-                />
-              </div>
-              <div
-                class="absolute inset-0 glass-primary translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out p-8 flex flex-col justify-center text-white text-center"
-              >
-                <h3 class="font-headline text-2xl font-bold mb-2">
-                  Signature Crowns
-                </h3>
-                <p class="text-sm opacity-90 leading-relaxed font-light mb-6">
-                  Custom-milled porcelain that mimics the natural translucency
-                  and strength of biological tooth enamel.
-                </p>
-                <span class="material-symbols-outlined mx-auto text-3xl"
-                  >workspace_premium</span
-                >
-              </div>
-              <div
-                class="absolute bottom-6 left-6 text-white z-10 group-hover:opacity-0 transition-opacity"
-              >
-                <h3 class="font-headline text-xl font-bold">
-                  Signature Crowns
-                </h3>
-              </div>
-            </div>
-            <!-- Card 4: Dental Implants (Spanning) -->
-            <div
-              class="md:col-span-2 group relative overflow-hidden rounded-[2.5rem] h-[400px] shadow-sm"
-            >
-              <div class="absolute inset-0 z-0">
-                <img
-                  class="w-full h-full object-cover object-top transition-transform duration-[2.5s] ease-out group-hover:scale-105"
-                  data-alt="Elegant portrait of a mature confident man smiling warmly in a bright modern clinical setting with soft natural light"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_qs-kL-AUOPiqUl4vmvoZVsKgodCH-jw9Wc3l8QW3TWp75OgWEwSvUvgeyohitaRGfyMthMYUU1ymOxKoSgoshkJihiJiPoi-_XnnsiAsqpfMVu4MUBj8vvqQluwJHtBzFZsjwrGqBNlAb4YTHJsQV9B_2z5v7IEr6cNddbqjsQjxmeZw8TUBc-nB9dVE8IXcsENx6kyKWJ0J8pqqQQkuVFTSWTzhTJGnv35k1IxqkBvpIlr9g1Xc8Z7yOuJrP4S_h1l1UvTW--Ad"
-                />
-              </div>
-              <div
-                class="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"
-              ></div>
-              <div
-                class="relative h-full p-12 flex flex-col justify-end max-w-lg transition-transform duration-700 translate-y-8 group-hover:translate-y-0"
-              >
-                <div
-                  class="bg-primary-container/80 backdrop-blur-md p-8 rounded-[2rem] border border-white/10 group-hover:bg-primary-container/80 transition-colors duration-500"
-                >
-                  <h3 class="font-headline text-3xl font-bold mb-2 text-white">
-                    Dental Implants
-                  </h3>
-                  <p
-                    class="text-on-primary-container text-base leading-relaxed font-light"
-                  >
-                    The gold standard in tooth replacement, offering permanent
-                    stability and life-changing aesthetics.
-                  </p>
-                  <div
-                    class="mt-6 flex items-center gap-3 text-white font-semibold group/link cursor-pointer"
-                  >
-                    <span class="text-sm uppercase tracking-widest"
-                      >Learn More</span
-                    >
-                    <span
-                      class="material-symbols-outlined translate-x-0 group-hover/link:translate-x-2 transition-transform"
-                      >trending_flat</span
-                    >
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
       </section>
-      <section class="max-w-8xl mx-auto px-2 py-14">
-        <div
-          class="bg-primary rounded-[4rem] overflow-hidden relative p-12 md:p-14 text-on-primary"
-        >
-          <div
-            class="absolute top-0 right-0 w-full h-full opacity-30 mix-blend-overlay"
-          >
-            <img
-              class="w-full h-full object-cover"
-              data-alt="Abstract macro shot of white fabric ripples and soft flowing movement, representing comfort and luxury"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBw5-MU5wqcJvoeWtGd7WTfwExiFoi9zSoeedUgQWXp--2h38tVWeeBP5B0T2nxFd-14DuxN_MM6bMf1qo9JVB_cJfpzeIYFYgHz1eUJLhA4Fzcnqfb3Ftsusbj9wu6QpATaoN-qSCkzqYJrtdBgVBunVhjLnzU5KfLxflC_ubGNk0MciRBAiGrTxgy7V7ZbU2T_2ML-IhQ5IIr7WAZBIyflpJTM0AyRwYLz72LJhZ5-6lwBTZIQkRb7ldes5zznivoUKCpp6AM0JRh"
-            />
+      <!-- Right: The Sophisticated Form (40%) -->
+      <section
+        class="w-full md:w-[40%] bg-chagger-blue flex flex-col pt-24 pb-12 px-8 md:px-12 overflow-y-auto custom-scrollbar text-white"
+      >
+        <div class="max-w-xl mx-auto w-full">
+          <div class="mb-10">
+            <h2 class="font-headline text-3xl font-bold text-white mb-2">
+              Reserve Your Appointment
+            </h2>
+            <p class="text-white/70 font-light">
+              Fill in your details below. Our concierge will contact you
+              shortly.
+            </p>
           </div>
-          <div
-            class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center"
-          >
-            <div class="space-y-10">
-              <h2
-                class="text-5xl md:text-7xl font-headline font-extrabold leading-tight tracking-wide"
+          <form class="space-y-8">
+            <!-- Patient Type -->
+            <div class="space-y-4">
+              <label
+                class="block font-headline font-bold text-sm text-white/90 uppercase tracking-widest"
+                >Patient Type</label
               >
-                Ready to begin your journey?
-              </h2>
-              <p
-                class="text-on-primary-container text-xl md:text-2xl font-light leading-relaxed"
+              <div class="flex gap-6">
+                <label
+                  class="relative flex items-center gap-3 cursor-pointer group"
+                >
+                  <input
+                    checked=""
+                    class="peer hidden"
+                    name="patient_type"
+                    type="radio"
+                    value="new"
+                  />
+                  <div
+                    class="w-5 h-5 rounded-full border-2 border-white/30 peer-checked:border-white peer-checked:border-[6px] transition-all"
+                  ></div>
+                  <span
+                    class="text-white/70 group-hover:text-white transition-colors"
+                    >New Patient</span
+                  >
+                </label>
+                <label
+                  class="relative flex items-center gap-3 cursor-pointer group"
+                >
+                  <input
+                    class="peer hidden"
+                    name="patient_type"
+                    type="radio"
+                    value="returning"
+                  />
+                  <div
+                    class="w-5 h-5 rounded-full border-2 border-white/30 peer-checked:border-white peer-checked:border-[6px] transition-all"
+                  ></div>
+                  <span
+                    class="text-white/70 group-hover:text-white transition-colors"
+                    >Returning Patient</span
+                  >
+                </label>
+              </div>
+            </div>
+            <!-- Select Location (New Field) -->
+            <div class="space-y-2">
+              <label
+                class="text-xs font-bold uppercase tracking-widest text-white/70 ml-1"
+                >Select Location</label
               >
-                Your journey to dental excellence begins with a single
-                conversation. Choose your time, and let us prepare your arrival.
+              <select
+                class="w-full glass-input rounded-xl px-4 py-4 focus:ring-0 appearance-none bg-no-repeat bg-[right_1rem_center]"
+              >
+                <option
+                  class="bg-chagger-blue text-white"
+                  disabled=""
+                  selected=""
+                  value=""
+                >
+                  Choose a clinic...
+                </option>
+                <option class="bg-chagger-blue text-white" value="burlington">
+                  Burlington
+                </option>
+                <option class="bg-chagger-blue text-white" value="oakville">
+                  Oakville
+                </option>
+                <option class="bg-chagger-blue text-white" value="mississauga">
+                  Mississauga
+                </option>
+              </select>
+            </div>
+            <!-- Personal Info -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="space-y-2">
+                <label
+                  class="text-xs font-bold uppercase tracking-widest text-white/70 ml-1"
+                  >First Name</label
+                >
+                <input
+                  class="w-full glass-input rounded-xl px-4 py-4"
+                  placeholder="John"
+                  type="text"
+                />
+              </div>
+              <div class="space-y-2">
+                <label
+                  class="text-xs font-bold uppercase tracking-widest text-white/70 ml-1"
+                  >Last Name</label
+                >
+                <input
+                  class="w-full glass-input rounded-xl px-4 py-4"
+                  placeholder="Doe"
+                  type="text"
+                />
+              </div>
+            </div>
+            <!-- Contact -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="space-y-2">
+                <label
+                  class="text-xs font-bold uppercase tracking-widest text-white/70 ml-1"
+                  >Phone Number</label
+                >
+                <input
+                  class="w-full glass-input rounded-xl px-4 py-4"
+                  placeholder="(555) 000-0000"
+                  type="tel"
+                />
+              </div>
+              <div class="space-y-2">
+                <label
+                  class="text-xs font-bold uppercase tracking-widest text-white/70 ml-1"
+                  >Email Address</label
+                >
+                <input
+                  class="w-full glass-input rounded-xl px-4 py-4"
+                  placeholder="john@example.com"
+                  type="email"
+                />
+              </div>
+            </div>
+            <!-- Address Cluster -->
+            <div class="space-y-6 pt-4 border-t border-white/10">
+              <div class="space-y-2">
+                <label
+                  class="text-xs font-bold uppercase tracking-widest text-white/70 ml-1"
+                  >Street Address</label
+                >
+                <input
+                  class="w-full glass-input rounded-xl px-4 py-4"
+                  placeholder="123 Wellness Way"
+                  type="text"
+                />
+              </div>
+              <div class="grid grid-cols-3 gap-4">
+                <div class="space-y-2 col-span-1">
+                  <label
+                    class="text-xs font-bold uppercase tracking-widest text-white/70 ml-1"
+                    >City</label
+                  >
+                  <input
+                    class="w-full glass-input rounded-xl px-4 py-4"
+                    placeholder="Oakville"
+                    type="text"
+                  />
+                </div>
+                <div class="space-y-2 col-span-1">
+                  <label
+                    class="text-xs font-bold uppercase tracking-widest text-white/70 ml-1"
+                    >State/Prov</label
+                  >
+                  <input
+                    class="w-full glass-input rounded-xl px-4 py-4"
+                    placeholder="ON"
+                    type="text"
+                  />
+                </div>
+                <div class="space-y-2 col-span-1">
+                  <label
+                    class="text-xs font-bold uppercase tracking-widest text-white/70 ml-1"
+                    >Zip Code</label
+                  >
+                  <input
+                    class="w-full glass-input rounded-xl px-4 py-4"
+                    placeholder="L6H 7G2"
+                    type="text"
+                  />
+                </div>
+              </div>
+            </div>
+            <!-- Schedule -->
+            <div class="grid grid-cols-1 gap-6 pt-4 border-t border-white/10">
+              <div class="space-y-2">
+                <label
+                  class="text-xs font-bold uppercase tracking-widest text-white/70 ml-1"
+                  >Preferred Date</label
+                >
+                <input
+                  class="w-full glass-input rounded-xl px-4 py-4 text-white scheme-dark"
+                  type="date"
+                />
+              </div>
+            </div>
+            <!-- Best Time to Call -->
+            <div class="space-y-4">
+              <label
+                class="block font-headline font-bold text-sm text-white uppercase tracking-widest"
+                >Best Time to Call</label
+              >
+              <div class="grid grid-cols-3 gap-4">
+                <label class="flex items-center gap-2 cursor-pointer group">
+                  <input
+                    class="w-5 h-5 rounded border-white/20 text-white focus:ring-white focus:ring-offset-0 bg-white/10 border-none transition-all"
+                    type="checkbox"
+                  />
+                  <span
+                    class="text-sm text-white/70 group-hover:text-white transition-colors"
+                    >Morning</span
+                  >
+                </label>
+                <label class="flex items-center gap-2 cursor-pointer group">
+                  <input
+                    class="w-5 h-5 rounded border-white/20 text-white focus:ring-white focus:ring-offset-0 bg-white/10 border-none transition-all"
+                    type="checkbox"
+                  />
+                  <span
+                    class="text-sm text-white/70 group-hover:text-white transition-colors"
+                    >Afternoon</span
+                  >
+                </label>
+                <label class="flex items-center gap-2 cursor-pointer group">
+                  <input
+                    class="w-5 h-5 rounded border-white/20 text-white focus:ring-white focus:ring-offset-0 bg-white/10 border-none transition-all"
+                    type="checkbox"
+                  />
+                  <span
+                    class="text-sm text-white/70 group-hover:text-white transition-colors"
+                    >Evening</span
+                  >
+                </label>
+              </div>
+            </div>
+            <!-- Message -->
+            <div class="space-y-2">
+              <label
+                class="text-xs font-bold uppercase tracking-widest text-white/70 ml-1"
+                >Message / Concerns</label
+              >
+              <textarea
+                class="w-full glass-input rounded-xl px-4 py-4 resize-none"
+                placeholder="Tell us how we can help..."
+                rows="4"
+              ></textarea>
+            </div>
+            <!-- Submit -->
+            <div class="pt-6">
+              <button
+                class="light-sweep w-full bg-white text-chagger-blue py-5 rounded-full font-headline font-bold text-lg hover:opacity-90 transition-all shadow-2xl shadow-black/20 flex items-center justify-center gap-3"
+                type="submit"
+              >
+                Confirm Appointment Request
+                <span class="material-symbols-outlined text-xl"
+                  >arrow_forward</span
+                >
+              </button>
+              <p class="text-center text-xs text-white/50 mt-6 font-light">
+                By booking, you agree to our
+                <a class="underline hover:text-white transition-colors" href="#"
+                  >Privacy Policy</a
+                >
+                regarding your clinical data.
               </p>
-              <div class="flex flex-wrap gap-6">
-                <button
-                  class="bg-surface text-primary px-10 py-5 rounded-full font-headline font-bold text-lg hover:shadow-2xl transition-all"
-                >
-                  Reserve My Experience
-                </button>
-                <button
-                  class="border border-on-primary/30 text-on-primary px-10 py-5 rounded-full font-headline font-bold text-lg hover:bg-white/10 transition-all"
-                >
-                  View Burlington Gallery
-                </button>
-              </div>
             </div>
-            <div
-              class="hidden lg:block space-y-12 border-l border-white/10 pl-16"
-            >
-              <div class="space-y-2">
-                <span
-                  class="text-xs font-bold uppercase tracking-[0.3em] opacity-60"
-                  >Location</span
-                >
-                <p class="text-2xl font-headline">
-                  123 Lakeshore Rd, Burlington
-                </p>
-              </div>
-              <div class="space-y-2">
-                <span
-                  class="text-xs font-bold uppercase tracking-[0.3em] opacity-60"
-                  >Concierge Hours</span
-                >
-                <p class="text-2xl font-headline">Mon–Fri: 8:00 AM – 7:00 PM</p>
-              </div>
-              <div class="space-y-2">
-                <span
-                  class="text-xs font-bold uppercase tracking-[0.3em] opacity-60"
-                  >Digital Reach</span
-                >
-                <p class="text-2xl font-headline underline underline-offset-8">
-                  hello@chaggerburlington.com
-                </p>
-              </div>
-            </div>
-          </div>
+          </form>
         </div>
       </section>
     </main>
@@ -1612,7 +1021,7 @@
           class="absolute inset-0 bg-gradient-to-b from-primary via-transparent to-primary"
         ></div>
       </div>
-      <div class="relative z-10 pt-24 pb-12 px-8 max-w-screen-2xl mx-auto">
+      <div class="relative z-10 pt-10 pb-12 px-8 max-w-screen-2xl mx-auto">
         <!-- Footer Heading Area -->
         <div
           class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8"
@@ -1627,7 +1036,7 @@
           <button
             class="bg-surface-container-lowest text-primary px-10 py-5 rounded-full font-headline font-bold text-lg shadow-[0_8px_32px_rgba(0,30,73,0.15)] hover:scale-105 active:scale-95 transition-all duration-300"
           >
-            Book Appointment
+            View All
           </button>
         </div>
         <!-- Floating Glassmorphism Contact Cards -->
@@ -1806,7 +1215,7 @@
           </div>
         </div>
         <!-- Mandatory Footer Component Structure -->
-        <footer class="pt-16 border-t border-on-primary-container/10">
+        <footer class="pt-6 border-t border-on-primary-container/10">
           <!-- Main Footer Grid -->
           <div class="max-w-9xl mx-auto px-8 py-10">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16">
@@ -2083,8 +1492,9 @@
         </footer>
       </div>
     </section>
+    <!-- Footer -->
     <script>
-      // navbar js
+      // nabr js
       /**
        * ChaggerNavHub - Scoped logic for the Navigation and UI interactions
        */

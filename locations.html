@@ -1,0 +1,1838 @@
+<!doctype html>
+
+<html class="scroll-smooth" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>The Clinical Sanctuary | Boutique Dental Collective</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;600;700;800&amp;family=Inter:wght@300;400;500&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#001e49",
+              "primary-container": "#0e336a",
+              "on-primary": "#ffffff",
+              "primary-fixed": "#d8e2ff",
+              secondary: "#4e6072",
+              surface: "#fcf9f5",
+              "surface-container": "#f0ede9",
+              "surface-container-high": "#eae8e4",
+              "surface-container-low": "#f6f3ef",
+              "outline-variant": "#c4c6d1",
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              "3xl": "2rem",
+              full: "9999px",
+            },
+            fontFamily: {
+              headline: ["Manrope"],
+              body: ["Inter"],
+              label: ["Inter"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 300,
+          "GRAD" 0,
+          "opsz" 24;
+      }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.4);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+      .hero-gradient {
+        background: radial-gradient(circle at center, #0e336a 0%, #001e49 100%);
+      }
+      .blueprint-grid {
+        background-size: 40px 40px;
+        background-image: radial-gradient(
+          circle,
+          rgba(229, 226, 222, 0.2) 1px,
+          transparent 1px
+        );
+      }
+      .perspective-1000 {
+        perspective: 1000px;
+      }
+
+      .tab-btn {
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .tab-btn.active {
+        background-color: #001e49;
+        color: white;
+        transform: scale(1.05);
+      }
+
+      .location-container {
+        display: none;
+        opacity: 0;
+        position: relative;
+        width: 100%;
+      }
+      .location-container.active {
+        display: block;
+        opacity: 1;
+      }
+
+      .sticky-tabs.is-sticky {
+        background: rgba(252, 249, 245, 0.95);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid rgba(0, 30, 73, 0.1);
+      }
+      .map-glow {
+        box-shadow: 0 0 40px rgba(216, 226, 255, 0.1);
+      }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      .glass-silk {
+        background: rgba(252, 249, 245, 0.7);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+      }
+      .bg-tertiary-fixed {
+        --tw-bg-opacity: 1;
+        background-color: rgb(238 224 212 / var(--tw-bg-opacity, 1));
+      }
+    </style>
+  </head>
+  <body
+    class="bg-surface text-on-surface font-body selection:bg-primary-fixed overflow-x-hidden"
+  >
+    <!-- TopNavBar -->
+    <nav
+      class="fixed top-0 w-full z-50 glass-silk shadow-sm shadow-[#001e49]/5 transition-all duration-300"
+    >
+      <div
+        class="flex justify-between items-center w-full px-8 py-4 max-w-screen-7xl mx-auto"
+      >
+        <div class="text-2xl font-bold tracking-tighter text-[#001e49]">
+          <img src="images/dental-logo.png" class="img-fluid" width="240" />
+        </div>
+        <div class="hidden md:flex items-center gap-8">
+          <a
+            class="font-manrope uppercase tracking-widest text-xs font-semibold text-[#0e336a] border-b-2 border-[#0e336a] pb-1"
+            href="#"
+            >Home</a
+          >
+          <a
+            class="font-manrope uppercase tracking-widest text-xs font-semibold text-[#4e6072] hover:text-[#0e336a] transition-colors"
+            href="#"
+            >Services</a
+          >
+          <a
+            class="font-manrope uppercase tracking-widest text-xs font-semibold text-[#4e6072] hover:text-[#0e336a] transition-colors"
+            href="#"
+            >About Us</a
+          >
+          <a
+            class="font-manrope uppercase tracking-widest text-xs font-semibold text-[#4e6072] hover:text-[#0e336a] transition-colors"
+            href="#"
+            >Locations</a
+          >
+          <a
+            class="font-manrope uppercase tracking-widest text-xs font-semibold text-[#4e6072] hover:text-[#0e336a] transition-colors"
+            href="#"
+            >Reviews</a
+          >
+        </div>
+        <button
+          class="flex gap-2 items-center justify-center bg-primary text-white text-on-primary px-6 py-2.5 rounded-full font-manrope font-semibold text-sm scale-95 active:scale-90 transition-transform duration-200 shadow-lg shadow-primary/10 hover:shadow-primary/20"
+        >
+          Book Appointment
+          <span
+            class="material-symbols-outlined"
+            data-icon="play_circle"
+            style="font-variation-settings: &quot;FILL&quot; 1"
+            >call</span
+          >
+        </button>
+      </div>
+    </nav>
+    <!-- Location Switcher Bar (Sticky) -->
+    <div
+      class="sticky w-full z-[100] py-3 border-b border-outline-variant/10 bg-white/90 backdrop-blur-md sticky-tabs transition-all duration-300"
+      id="location-bar"
+      style="bottom: 0%; position: fixed"
+    >
+      <div class="max-w-screen-xl mx-auto px-8">
+        <div
+          class="flex justify-center gap-2 md:gap-4 overflow-x-auto no-scrollbar"
+        >
+          <button
+            class="tab-btn px-10 py-3 rounded-full bg-surface-container-high text-secondary font-manrope font-bold whitespace-nowrap hover:bg-primary"
+            data-location="mississauga"
+            onclick="switchLocation('mississauga')"
+          >
+            Mississauga
+          </button>
+          <button
+            class="tab-btn px-10 py-3 rounded-full bg-surface-container-high text-secondary font-manrope font-bold whitespace-nowrap hover:bg-primary"
+            data-location="oakville"
+            onclick="switchLocation('oakville')"
+          >
+            Oakville
+          </button>
+          <button
+            class="tab-btn px-10 py-3 rounded-full bg-surface-container-high text-secondary font-manrope font-bold whitespace-nowrap hover:bg-primary"
+            data-location="burlington"
+            onclick="switchLocation('burlington')"
+          >
+            Burlington
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="main-content-wrapper">
+      <!-- MISSISSAUGA SECTION -->
+      <div class="location-container" id="location-mississauga">
+        <header
+          class="relative min-h-screen flex items-center overflow-hidden hero-gradient"
+        >
+          <div class="absolute inset-0 blueprint-grid"></div>
+          <div
+            class="container mx-auto px-8 relative z-10 grid lg:grid-cols-12 gap-16 items-center"
+          >
+            <!-- Left Content -->
+            <div class="lg:col-span-6 space-y-8 stagger-reveal">
+              <div
+                class="inline-flex items-center px-4 py-1.5 rounded-full bg-primary-container/30 border border-white/10 text-white text-xs font-medium tracking-widest uppercase"
+              >
+                Digital Sanctuary v3.0
+              </div>
+              <!-- Hero Titles per Location -->
+              <div class="location-content active" id="hero-title-mississauga">
+                <h1
+                  class="text-6xl md:text-8xl font-headline font-extrabold text-white leading-[0.9] tracking-tighter"
+                >
+                  Chagger <span class="text-primary-fixed">Dental</span> Clinic.
+                </h1>
+                <p
+                  class="text-lg md:text-xl text-primary-fixed/80 max-w-lg font-light leading-relaxed mt-8"
+                >
+                  A multi-dimensional clinical environment engineered for
+                  atmospheric calm in Mississauga. Surgical precision meets
+                  architectural serenity.
+                </p>
+              </div>
+              <div class="flex flex-wrap gap-4 pt-4">
+                <button
+                  class="glass-card px-8 py-4 rounded-full text-white font-semibold flex items-center gap-2 hover:bg-white hover:text-primary transition-all duration-500 group"
+                >
+                  <span class="material-symbols-outlined">explore</span>
+                  Explore Schematic
+                </button>
+                <div
+                  class="flex items-center gap-3 bg-white/5 p-2 rounded-full border border-white/10"
+                >
+                  <div class="flex -space-x-3">
+                    <img
+                      class="w-10 h-10 rounded-full border-2 border-primary-container"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGnXnXiN8X_PvYwHlqSILRRfKr0zG_o2REfTc2WYH9xyt0VfViMhN8HTuwvFo_2h7qcOKpTUWdYnIaK_GDfomptVQA2zEzU4kc-cx2xYLA-zSjNVBI9wjjr_KWv_Mw5tKuXT3zY0jBwvFbTx3u1_Xi_48SEopqkMkxLbdQ_aIK81yhPOX4azu3hdh1hXR1z35BhT0c9Tskgnu0VGp_yQ6MhLlRi2PEHzTtz483kNTQV6vmQssCcnfeJrmTZLB7-wxNkP073UpUY1FC"
+                    />
+                    <img
+                      class="w-10 h-10 rounded-full border-2 border-primary-container"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtaP9kKHJt2HC-PylE2WhsWOqU3UIhxns4f_ubVRFiiATd_ugPgTdFYNXPbl5h0HQBqVuI8mwURySm29_mKy3Wj3tudAIDpZ0t7lunUZA6Y4aBIZM1QuWBQoGHqUptPQtGYY57XMqfZYRuDhgcdSc9gu8Wo2CrPjWRkVnT-EK_MPDkN19Iw6yaNhazCwkUshj4PArz3GEJdH-ykH8wM0HOHq7LZ5BR-Ac5Mnh-CffmLHyoh_tUk2S6IRi8rtr1dmHUDpx7lhMIQSbC"
+                    />
+                  </div>
+                  <span class="text-white text-xs font-semibold pr-3"
+                    >Top Rated Care</span
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- Right Interactive Panel -->
+            <div class="lg:col-span-6 relative perspective-1000 group">
+              <div
+                class="interactive-panel glass-card rounded-[3rem] border border-white/20 p-6 shadow-2xl relative transition-all duration-700 map-glow"
+              >
+                <!-- Map Header -->
+                <div class="flex justify-between items-start mb-6">
+                  <div>
+                    <div class="flex items-center gap-2 mb-1">
+                      <span
+                        class="w-2.5 h-2.5 rounded-full bg-green-400 animate-pulse"
+                      ></span>
+                      <span
+                        class="text-xs font-bold text-white uppercase tracking-widest"
+                        >Live Status</span
+                      >
+                    </div>
+                    <div
+                      class="location-content active text-3xl font-headline font-bold text-white"
+                      id="status-mississauga"
+                    >
+                      Open Today
+                    </div>
+                  </div>
+                  <div class="text-right">
+                    <div
+                      class="text-[10px] text-primary-fixed uppercase tracking-widest font-bold"
+                    >
+                      Local Time
+                    </div>
+                    <div
+                      class="text-xl font-mono text-white local-time-display"
+                    >
+                      09:42 AM
+                    </div>
+                  </div>
+                </div>
+                <!-- Interactive Map Visual -->
+                <div
+                  class="relative h-[300px] w-full rounded-[2rem] overflow-hidden bg-slate-900 mb-6 border border-white/10 group/map"
+                >
+                  <img
+                    class="location-content active w-full h-full object-cover opacity-60 mix-blend-luminosity grayscale group-hover:scale-110 transition-transform duration-[2s]"
+                    id="map-mississauga"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFvzSsdTELNrnJaVj_I3NBt3A-RzWENXa_eLOMyfGINtIEGr1UAWtOLa9CdIkCeyCqms6mDHDsgz7nr1tdEEdN4DAJKPWw7tQyEJ_SSSgrj5Xggw8sZ5jsYx0pTHhS51V6N8HLUVNKx0noH96ijv2q31hBbcP0bDzE4R0ueUQjgiDEHTaedoNmXO6H_KNVvR9iKPzC7JunixM8xH--5LTbuYa6zaHewCga3rxySEj-1Qng7dA_nHX5VzNla9aEO1SRL8iKIXMl-yA7"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent"
+                  ></div>
+                  <div
+                    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+                  >
+                    <div class="relative">
+                      <div
+                        class="absolute inset-0 w-8 h-8 bg-primary-fixed rounded-full animate-ping opacity-20"
+                      ></div>
+                      <div
+                        class="relative w-8 h-8 bg-primary-fixed rounded-full flex items-center justify-center shadow-lg"
+                      >
+                        <span
+                          class="material-symbols-outlined text-primary text-sm font-bold"
+                          >location_on</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Availability Overlay -->
+                  <div
+                    class="absolute bottom-4 left-4 right-4 flex justify-between items-end"
+                  >
+                    <div
+                      class="glass-card px-4 py-2 rounded-xl text-xs font-bold text-white"
+                    >
+                      <span
+                        class="location-content active"
+                        id="coords-mississauga"
+                        >LAT: 43.5890 N | LNG: 79.6441 W</span
+                      >
+                    </div>
+                    <div class="bg-white/90 backdrop-blur px-4 py-2 rounded-xl">
+                      <div
+                        class="text-[10px] text-primary uppercase font-bold leading-none"
+                      >
+                        Availability
+                      </div>
+                      <div
+                        class="location-content active text-lg font-bold text-primary leading-none mt-1"
+                        id="slots-mississauga"
+                      >
+                        4 Slots Left
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Timings Row -->
+                <div class="grid grid-cols-2 gap-4">
+                  <div class="glass-card p-4 rounded-2xl border-white/10">
+                    <div
+                      class="text-[10px] text-primary-fixed uppercase font-bold mb-2"
+                    >
+                      Morning Shift
+                    </div>
+                    <div
+                      class="location-content active text-lg font-bold text-white"
+                      id="morning-mississauga"
+                    >
+                      08:00 - 14:00
+                    </div>
+                  </div>
+                  <div class="glass-card p-4 rounded-2xl border-white/10">
+                    <div
+                      class="text-[10px] text-primary-fixed uppercase font-bold mb-2"
+                    >
+                      Evening Shift
+                    </div>
+                    <div
+                      class="location-content active text-lg font-bold text-white"
+                      id="evening-mississauga"
+                    >
+                      15:00 - 20:00
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+        <section class="py-24 container mx-auto px-8">
+          <div class="max-w-4xl mx-auto text-center space-y-8">
+            <span
+              class="text-primary font-bold uppercase tracking-widest text-xs"
+              >The Clinical Standard</span
+            >
+            <h2
+              class="text-5xl md:text-6xl font-headline font-bold text-primary tracking-tight"
+            >
+              Engineered for Human Serenity in Mississauga.
+            </h2>
+            <p class="text-xl text-secondary leading-relaxed font-light">
+              Neutralizing clinical dread through sensory modulation and
+              sedation expertise tailored for our Mississauga guests.
+            </p>
+          </div>
+        </section>
+        <section class="bg-primary py-24 text-white">
+          <div
+            class="container mx-auto px-8 grid md:grid-cols-2 gap-16 items-center"
+          >
+            <div class="space-y-8">
+              <h2 class="text-5xl font-headline font-bold">
+                Immediate Family Response.
+              </h2>
+              <p class="text-lg text-primary-fixed/80">
+                Our Mississauga protocol merges generational care with emergency
+                surgical readiness. Minimal wait times for critical oral health
+                interventions.
+              </p>
+              <div class="flex gap-4">
+                <div class="bg-white/10 p-6 rounded-2xl border border-white/10">
+                  <span class="material-symbols-outlined text-primary-fixed"
+                    >emergency</span
+                  >
+                  <h4 class="font-bold mt-2">24/7 Hotline</h4>
+                </div>
+                <div class="bg-white/10 p-6 rounded-2xl border border-white/10">
+                  <span class="material-symbols-outlined text-primary-fixed"
+                    >child_care</span
+                  >
+                  <h4 class="font-bold mt-2">Kids Wing</h4>
+                </div>
+              </div>
+            </div>
+            <div class="rounded-3xl overflow-hidden shadow-2xl h-[400px]">
+              <img
+                class="w-full h-full object-cover"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMwdIFR6z1gm-4RpWqKQj2BGSm6cchcUB4QOP42SBa7qvDAamgeK1kOh9UZ78Q19ceb5hZ0_Da6AcJY8bp7NF8MpkYyyBhDE_75VapzfOXVNzMM6Ezv85Ug5h4Sgu5YnbzV-sZtsozIXFTJdQrG6_jHWyELfBfQCPptjZ2WYrW1w-glHJqnkL4d3kibyZ6Vm-XpUyz0bAZE2YMjod5GElD8TteyAee7jrzSCeUvbYYRYVLznkEsoxvzm0_C_HBZZWuHxLLK3y0vwtI"
+              />
+            </div>
+          </div>
+        </section>
+      </div>
+      <!-- OAKVILLE SECTION (Default Active) -->
+      <div class="location-container" id="location-oakville">
+        <header
+          class="relative min-h-screen flex items-center pt-0 overflow-hidden hero-gradient"
+        >
+          <div class="absolute inset-0 blueprint-grid"></div>
+          <div
+            class="container mx-auto px-8 relative z-10 grid lg:grid-cols-12 gap-16 items-center"
+          >
+            <!-- Left Content -->
+            <div class="lg:col-span-6 space-y-8 stagger-reveal">
+              <div
+                class="inline-flex items-center px-4 py-1.5 rounded-full bg-primary-container/30 border border-white/10 text-white text-xs font-medium tracking-widest uppercase"
+              >
+                Digital Sanctuary v3.0
+              </div>
+              <!-- Hero Titles per Location -->
+              <div class="location-content active" id="hero-title-mississauga">
+                <h1
+                  class="text-6xl md:text-6xl font-headline font-extrabold text-white leading-[0.9] tracking-tighter"
+                >
+                  Oakville<span class="text-primary-fixed"> ,Ontario</span>
+                </h1>
+                <p
+                  class="text-md md:text-md text-primary-fixed/80 max-w-lg font-light leading-relaxed mt-3"
+                >
+                  A multi-dimensional clinical environment engineered for
+                  atmospheric calm in Mississauga. Surgical precision meets
+                  architectural serenity.
+                </p>
+              </div>
+              <div class="flex flex-wrap gap-4">
+                <button
+                  class="glass-card px-8 py-4 rounded-full text-white font-semibold flex items-center gap-2 hover:bg-white hover:text-primary transition-all duration-500 group"
+                >
+                  <span class="material-symbols-outlined">explore</span>
+                  Explore Schematic
+                </button>
+                <div
+                  class="flex items-center gap-3 bg-white/5 p-2 rounded-full border border-white/10"
+                >
+                  <div class="flex -space-x-3">
+                    <img
+                      class="w-10 h-10 rounded-full border-2 border-primary-container"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGnXnXiN8X_PvYwHlqSILRRfKr0zG_o2REfTc2WYH9xyt0VfViMhN8HTuwvFo_2h7qcOKpTUWdYnIaK_GDfomptVQA2zEzU4kc-cx2xYLA-zSjNVBI9wjjr_KWv_Mw5tKuXT3zY0jBwvFbTx3u1_Xi_48SEopqkMkxLbdQ_aIK81yhPOX4azu3hdh1hXR1z35BhT0c9Tskgnu0VGp_yQ6MhLlRi2PEHzTtz483kNTQV6vmQssCcnfeJrmTZLB7-wxNkP073UpUY1FC"
+                    />
+                    <img
+                      class="w-10 h-10 rounded-full border-2 border-primary-container"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtaP9kKHJt2HC-PylE2WhsWOqU3UIhxns4f_ubVRFiiATd_ugPgTdFYNXPbl5h0HQBqVuI8mwURySm29_mKy3Wj3tudAIDpZ0t7lunUZA6Y4aBIZM1QuWBQoGHqUptPQtGYY57XMqfZYRuDhgcdSc9gu8Wo2CrPjWRkVnT-EK_MPDkN19Iw6yaNhazCwkUshj4PArz3GEJdH-ykH8wM0HOHq7LZ5BR-Ac5Mnh-CffmLHyoh_tUk2S6IRi8rtr1dmHUDpx7lhMIQSbC"
+                    />
+                  </div>
+                  <span class="text-white text-xs font-semibold pr-3"
+                    >Top Rated Care</span
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- Right Interactive Panel -->
+            <div class="lg:col-span-6 relative perspective-1000 group">
+              <div
+                class="interactive-panel glass-card rounded-[3rem] border border-white/20 p-6 shadow-2xl relative transition-all duration-700 map-glow"
+              >
+                <!-- Map Header -->
+                <div class="flex justify-between items-start mb-6">
+                  <div>
+                    <div class="flex items-center gap-2 mb-1">
+                      <span
+                        class="w-2.5 h-2.5 rounded-full bg-green-400 animate-pulse"
+                      ></span>
+                      <span
+                        class="text-xs font-bold text-white uppercase tracking-widest"
+                        >Live Status</span
+                      >
+                    </div>
+                    <div
+                      class="location-content active text-2xl font-headline font-bold text-white"
+                      id="status-mississauga"
+                    >
+                      Oakville
+                    </div>
+                  </div>
+                  <div class="text-right">
+                    <div
+                      class="text-[10px] text-primary-fixed uppercase tracking-widest font-bold"
+                    >
+                      Local Time
+                    </div>
+                    <div
+                      class="text-xl font-mono text-white local-time-display"
+                    >
+                      09:42 AM
+                    </div>
+                  </div>
+                </div>
+                <!-- Interactive Map Visual -->
+                <div
+                  class="relative h-[300px] w-full rounded-[2rem] overflow-hidden bg-slate-900 mb-6 border border-white/10 group/map"
+                >
+                  <img
+                    class="location-content active w-full h-full object-cover opacity-60 mix-blend-luminosity grayscale group-hover:scale-110 transition-transform duration-[2s]"
+                    id="map-mississauga"
+                    src="https://images.unsplash.com/photo-1514565131-fce0801e5785?auto=format&fit=crop&q=80&w=1000"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent"
+                  ></div>
+                  <div
+                    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+                  >
+                    <div class="relative">
+                      <div
+                        class="absolute inset-0 w-8 h-8 bg-primary-fixed rounded-full animate-ping opacity-20"
+                      ></div>
+                      <div
+                        class="relative w-8 h-8 bg-primary-fixed rounded-full flex items-center justify-center shadow-lg"
+                      >
+                        <span
+                          class="material-symbols-outlined text-primary text-sm font-bold"
+                          >location_on</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Availability Overlay -->
+                  <div
+                    class="absolute bottom-4 left-4 right-4 flex justify-between items-end"
+                  >
+                    <div
+                      class="glass-card px-4 py-2 rounded-xl text-xs font-bold text-white"
+                    >
+                      <span
+                        class="location-content active"
+                        id="coords-mississauga"
+                        >LAT: 43.5890 N | LNG: 79.6441 W</span
+                      >
+                    </div>
+                    <div class="bg-white/90 backdrop-blur px-4 py-2 rounded-xl">
+                      <div
+                        class="text-[10px] text-primary uppercase font-bold leading-none"
+                      >
+                        Availability
+                      </div>
+                      <div
+                        class="location-content active text-md font-bold text-primary leading-none mt-1"
+                        id="slots-mississauga"
+                      >
+                        4 Slots Left
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Timings Row -->
+                <div class="grid grid-cols-2 gap-4">
+                  <div class="glass-card p-4 rounded-2xl border-white/10">
+                    <div
+                      class="text-[10px] text-primary/60 uppercase font-bold tracking-wide"
+                    >
+                      Morning Shift
+                    </div>
+                    <div
+                      class="location-content active text-lg font-bold text-primary"
+                      id="morning-mississauga"
+                    >
+                      08:00 - 14:00
+                    </div>
+                  </div>
+                  <div class="glass-card p-4 rounded-2xl border-white/10">
+                    <div
+                      class="text-[10px] text-primary/60 tracking-wide uppercase font-bold"
+                    >
+                      Evening Shift
+                    </div>
+                    <div
+                      class="location-content active text-lg font-bold text-primary"
+                      id="evening-mississauga"
+                    >
+                      15:00 - 20:00
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+        <section class="py-4 mx-auto px-8">
+          <div class="max-w-4xl mx-auto text-center">
+            <h2
+              class="text-5xl md:text-5xl font-headline mt-10 font-bold text-primary tracking-tight"
+            >
+              Chagger Dental: Family & Emergency Oakville Dentist Oak Park
+            </h2>
+          </div>
+          <!-- first row -->
+          <div class="max-w-8xl mx-auto px-8 mt-10">
+            <div class="grid lg:grid-cols-12 gap-16 items-center">
+              <div class="lg:col-span-5 flex flex-col gap-4">
+                <p class="text-lg text-on-surface-variant leading-relaxed">
+                  Since our inception, our Chagger Dental team has consisted of
+                  the best dental hygienists, family dentists, and oral surgeons
+                  found in Oakville and beyond. Just as patients choose their
+                  local Oakville dentist with care, we choose our team with care
+                  to ensure each member fits the Chagger Dentistry standard:
+                  knowledge, compassion, care and passion for oral health. It is
+                  of utmost importance that each member of our team upholds the
+                  values and abides by our philosophy, “To create a dental
+                  experience that caters to your individual needs in a
+                  comfortable and relaxed manner coupled with Dental
+                  Technology.” Each member of our team has been selected with
+                  care to ensure current and future patients can be confident
+                  they have chosen the best Oakville dentist in Ontario.
+                </p>
+                <div class="space-y-6">
+                  <div
+                    class="flex items-start gap-4 p-6 rounded-2xl bg-surface-container-low hover:bg-surface-container-high transition-colors duration-300"
+                  >
+                    <span
+                      class="material-symbols-outlined text-primary-container text-3xl"
+                      >map</span
+                    >
+                    <div>
+                      <h4 class="font-headline font-bold text-primary">
+                        Address
+                      </h4>
+                      <p class="text-secondary">
+                        1234 Lakeshore Road, Unit 5<br />Burlington, ON L7R 1B2
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="lg:col-span-7 relative group">
+                <div
+                  class="absolute -inset-4 bg-primary/5 rounded-[2.5rem] blur-3xl group-hover:bg-primary/10 transition-all duration-700"
+                ></div>
+                <div
+                  class="relative bg-surface-container-lowest rounded-[2rem] overflow-hidden clinical-shadow map-parallax transition-transform duration-700 hover:scale-[1.02]"
+                >
+                  <img
+                    alt="stylized aerial map view of Burlington Ontario featuring the waterfront and local landmarks in a clean minimalist design"
+                    class="w-full h-[600px] object-cover hover:grayscale-0 transition-all duration-1000"
+                    data-alt="stylized aerial map view of Burlington Ontario featuring the waterfront and local landmarks in a clean minimalist design"
+                    data-location="Burlington, Ontario"
+                    src="images/chag.webp"
+                  />
+                  <div
+                    class="absolute inset-0 bg-primary/10 pointer-events-none"
+                  ></div>
+                  <div
+                    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+                  >
+                    <div class="relative">
+                      <div
+                        class="absolute inset-0 animate-ping bg-primary rounded-full opacity-75"
+                      ></div>
+                      <div
+                        class="relative bg-primary text-white p-4 rounded-full shadow-2xl flex items-center justify-center"
+                      >
+                        <span
+                          class="material-symbols-outlined text-3xl"
+                          style="font-variation-settings: &quot;FILL&quot; 1"
+                          >medical_services</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end -->
+
+          <!-- new row -->
+          <div
+            class="px-8 max-w-screen-2xl mt-10 mb-10 mx-auto flex flex-col md:flex-row gap-16 items-center"
+          >
+            <div class="flex-1 order-1 md:order-2">
+              <h2 class="text-5xl font-headline font-bold text-primary mb-8">
+                Discover a Comfortable Dental Experience
+              </h2>
+              <p class="text-lg text-secondary leading-relaxed mb-8">
+                For your first visit, your Oakville dentist will provide a
+                thorough oral exam, checking you for gum disease, tooth decay,
+                cavities, and other issues that can affect both your mouth and
+                your general health. Then you and the Oakville dentist will
+                speak about a treatment plan. They’ll help you figure out
+                exactly what procedures you’ll need, what order to complete them
+                in, and how much each will cost so you can budget
+                accordingly.<br /><br />
+                You may have your teeth cleaned during your first appointment,
+                or the cleaning may be scheduled for a future date. This first
+                appointment may last up to an hour and a half from start to
+                finish, to ensure we give your mouth our full attention.
+              </p>
+            </div>
+            <div class="flex-1 order-2 md:order-1">
+              <div class="grid grid-cols-12 gap-4">
+                <div
+                  class="col-span-8 rounded-2xl overflow-hidden aspect-square"
+                >
+                  <img
+                    class="w-full h-full object-cover"
+                    data-alt="relaxing dental patient receiving gentle care in a high-tech treatment room with garden views"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDwzqJDDJNHqVVfJ_tUNNdX3Q1ipv-mjMGnZKhQwSPllWcNbuo4bYDdxWZ0d3TbLcCrG67YlUGKCwhmUb1hxkYPyaQIMDxuTpcH1AGpCBVpwIVxeuKaL3VOX1QRR-RwCsCUokvzL9R6tkkBMiWb7_3p_2mzm_2bt6ngfEIxautcise5tlu_d2UXhqLM8wJ7jgpeofo7V_IygWpWAgkwtRV9xjXncYRAyofSE3L94Sl1JvDSNY_E7zxKg1MFsBjUfG4t-_C73wk1LyJ"
+                  />
+                </div>
+                <div class="col-span-4 flex flex-col gap-4">
+                  <div
+                    class="bg-tertiary-fixed h-1/2 rounded-2xl flex items-center justify-center p-6 text-center"
+                  >
+                    <span class="text-on-tertiary-fixed font-headline font-bold"
+                      >Heated Blankets</span
+                    >
+                  </div>
+                  <div
+                    class="bg-primary h-1/2 rounded-2xl flex items-center justify-center p-6 text-center"
+                  >
+                    <span class="text-on-primary font-headline font-bold"
+                      >Netflix Concierge</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- anxious row -->
+          <div class="max-w-screen-2xl mx-auto px-8 space-y-32 mb-10">
+            <!-- Jitters & Anxiety Section -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+              <div class="lg:col-span-5 space-y-8">
+                <h2
+                  class="text-5xl font-headline font-bold text-primary leading-tight"
+                >
+                  Feeling Anxious About Dental Work?
+                </h2>
+                <p class="text-secondary leading-relaxed text-lg">
+                  If you are avoiding scheduling a dental appointment because of
+                  dental anxiety, it’s time to make a phone call. At Chagger
+                  Dental, we focus on the overall wellbeing of our patients. We
+                  completely understand that some dental procedures can cause
+                  individuals to feel quite anxious. For these individuals, we
+                  offer sedation dentistry to assist with both your mental
+                  health needs and your oral health.<br /><br />
+                  Our practice provides several sedation options, including an
+                  oral sedation pill, nitrous oxide, or intravenous sedation. No
+                  matter which option you choose, we’ll work with you to make
+                  your dental work as stress free as possible. Dental work can
+                  be a bit overwhelming, and we also understand that a major
+                  component in reducing the anxiety around dental procedures is
+                  education. As part of our focus on relaxed dental care, we
+                  provide multiple dental education videos on our website as
+                  well.
+                </p>
+              </div>
+              <div class="lg:col-span-7 grid grid-cols-2 gap-4">
+                <div class="space-y-4">
+                  <img
+                    alt="Relaxed patient wearing high-end headphones in a dental suite"
+                    class="w-full h-80 object-cover rounded-3xl"
+                    data-alt="a peaceful patient in a dental chair wearing sleek noise-canceling headphones with eyes closed in a bright minimalist clinic"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDG16LAk7E5FiSDW_5wsp1NfZv_SF2a3hAZRRMrl8yiUifPMBIV_Bzf-q3tCKK7WZr5SJ8YG5DCBIeJDpAZDaUgMSpDsCg3c92mWh6R8JRyXC2w9VghLrBCjSSpE2ugvtlOV4FGwwAdYSlh0zBkOd9_XRiE4LyssqiSpbxRwpoBiupStOLZ7bmjjjGGpzJ_l2rYNqVegIvJ5oLs63ItLjP9gPzVSm9X0sb9K-RK_IN79TLj73FOLoFyv45ul98XhBdFFxAKfDHjpfKB"
+                  />
+                  <img
+                    alt="Clinical instruments in a warm light setting"
+                    class="w-full h-48 object-cover rounded-3xl"
+                    data-alt="warmly lit close up of dental instruments on a clean white tray with a soft focus plant in the background"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPYVrMybz9jEKG2eEeoXhuGpX2dEddTfXK7Uvxjt93Vu02LjnQFJtu3P7vWdc2z6O3jsLjMnydehwj3_xHfnW5Jb-YU9AW6VzUKlwdzdwf5ck8e73o64V56xz55qcLNQ5MsnDJr29EGJqPbHFf1NNpJtW1qjD-y9tDc3hiHQjLxoZbZFMVnth1zXKGaTjTiNYwDY3doJmL7grFQnGAGK1KzGgwNpoDZxxDow7NM8XDu1LTtZXgNR8XVyBDJFCfm8w0-qkmjeT8laz5"
+                  />
+                </div>
+                <div class="pt-12 space-y-4">
+                  <img
+                    alt="Abstract light installation in a clinic"
+                    class="w-full h-48 object-cover rounded-3xl"
+                    data-alt="abstract artistic architectural lighting installation in a medical hallway creating soft shadows and warmth"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAO5v3LdevwtO-bIvOg-tO_C_aXLgE2Ton1qvT6xTXeM8mkH-dCdV-z4Ok2cNnOBkInngTBda6pRFzikJUxkoMKDiAnwMBvA2L3eqNyrd4r-BzA2zv0TznLZDVtWd3EkqMenhZQtND7Gh0R26-0ncHzX-faGm5FRIR0sxoAq0SUGGs7FPLxTV9mtWYzUk477wOEfzJ6NMxzd4I2pQvoWcACJA6LnbUe4L4O57-BQglyzQkE1hfqGKUBlDh-EMkRD-y5jAkk6UJMUmuL"
+                  />
+                  <img
+                    alt="Modern waiting area with soft textures"
+                    class="w-full h-80 object-cover rounded-3xl"
+                    data-alt="modern luxury dental waiting area with velvet curved sofas and floor-to-ceiling glass looking out at trees"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8M5BoRCPtxJ06YwPbIRpPVafGlgr4LNQUkwrdRLxsKiSE28cNwA4O3GGFPnhNjSwYK_GD6Gn8aH8Y-FFLd5CmZzGlme5kH8pEnCt9EJDZnDZi1trmELH267ZOS_5bH6SUYEaDlNdWnMYQdZNs6IotWOOGnAgMI144HqrBz3BmpMXCjqx3c7xeGdHAnfiqM45o9juMXLTffEOcx7rg4JcwMbfGWg06QZve4rkFWhIAhj35omjdzLcRB67uEilpz0CqzlBx9OLSCiuh"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="bg-primary text-white py-12 overflow-hidden">
+          <div class="max-w-screen-2xl mx-auto px-8 mb-10">
+            <div class="mb-20 text-center max-w-3xl mx-auto">
+              <h2
+                class="text-5xl md:text-7xl font-headline font-extrabold tracking-tighter mb-6"
+              >
+                Emergency Dental Services in Oakville
+              </h2>
+            </div>
+            <!-- Chapter: Jitters & Anxiety -->
+            <div
+              class="grid grid-cols-1 md:grid-cols-2 gap-20 items-center mb-10"
+            >
+              <div>
+                <h3 class="text-4xl font-headline font-bold mb-6">
+                  Emergency Care<br />
+                  When You Need It Most
+                </h3>
+                <p
+                  class="text-on-primary-container opacity-70 text-lg leading-relaxed mb-8"
+                >
+                  Our specialized 'Anxiety Neutralization' protocol involves
+                  non-pharmacological sensory management combined with gentle
+                  sedative options. We believe fear is a lack of control; we
+                  give you the remote.
+                </p>
+                <ul class="space-y-4">
+                  <li class="flex items-center gap-3 opacity-70">
+                    <span
+                      class="material-symbols-outlined text-primary-fixed-dim"
+                      >verified</span
+                    >
+                    Immediate Pain Relief Solutions
+                  </li>
+                  <li class="flex items-center gap-3 opacity-70">
+                    <span
+                      class="material-symbols-outlined text-primary-fixed-dim"
+                      >verified</span
+                    >
+                    Advanced Emergency Treatment Technology
+                  </li>
+                  <li class="flex items-center gap-3 opacity-70">
+                    <span
+                      class="material-symbols-outlined text-primary-fixed-dim"
+                      >verified</span
+                    >
+                    Comfort-Focused Urgent Care
+                  </li>
+                </ul>
+              </div>
+              <div class="relative">
+                <div
+                  class="absolute -inset-4 bg-primary-container/30 rounded-3xl blur-3xl"
+                ></div>
+                <div
+                  class="refractive-card p-4 rounded-3xl overflow-hidden relative border border-white/10"
+                >
+                  <img
+                    class="w-full h-80 object-cover rounded-2xl"
+                    data-alt="peaceful close up of a woman with her eyes closed, wearing high-end headphones in a softly lit clinical setting"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCK506a8XbQsBQVE3bK1aJdCgbc_Iae-mXSDuSpUvrNKIT0U_nD_vdpcnLjbNVObxOO7OSRqu61jZK2oAlEMckQMlqhdJ6UESJEcMVV8D43I1BRo8REQaxTNDAAeDJz5nUz22lrXUOWs8kvdI-U77plBrwOH4se6j8rcJPvLhTh-6ElVzVpdzIadM5v_K-SZjzvc5fLvA57uVGUe4_SKk8_51_5EGu1ZaKDlsxYOywgyehEUjnqt2joDj1dHniaw7B6_v4x7h69f-6-"
+                  />
+                </div>
+              </div>
+            </div>
+            <!-- Chapter: Emergency & Cosmetic -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <!-- Emergency Card -->
+              <div
+                class="bg-white/10 backdrop-blur-md p-10 rounded-[2.5rem] border border-white/5 group hover:bg-white/10 transition-colors"
+              >
+                <span
+                  class="material-symbols-outlined text-5xl text-primary-fixed-dim mb-6"
+                  >bolt</span
+                >
+                <h4 class="text-2xl font-headline font-bold mb-4">
+                  01 — Emergency Care With Extended Hours
+                </h4>
+                <p
+                  class="text-on-primary-container opacity-70 leading-relaxed mb-8"
+                >
+                  Chagger Dental Oakville, on Oak Park is here to help you if
+                  you experience a dental emergency. If a circumstance puts you
+                  in need of emergency dental services, you’ll be glad to have
+                  them available at short notice! Chagger Dental Oakville is
+                  here to help with our extended hours and weekend availability.
+                </p>
+                <button
+                  class="text-primary-fixed font-bold flex items-center gap-2 group-hover:translate-x-2 transition-transform"
+                >
+                  Get Immediate Care
+                  <span class="material-symbols-outlined">arrow_forward</span>
+                </button>
+              </div>
+              <!-- Cosmetic Card -->
+              <div
+                class="bg-white/10 backdrop-blur-md p-10 rounded-[2.5rem] border border-white/5 group hover:bg-white/10 transition-colors"
+              >
+                <span
+                  class="material-symbols-outlined text-5xl text-primary-fixed-dim mb-6"
+                  >auto_awesome</span
+                >
+                <h4 class="text-2xl font-headline font-bold mb-4">
+                  02 — Chipped or Knocked-Out Tooth?
+                </h4>
+                <p
+                  class="text-on-primary-container opacity-70 leading-relaxed mb-8"
+                >
+                  A situation in which accidental chipping or loss of an adult
+                  permanent tooth occurs, it is important to act as quickly as
+                  possible. Knowing repair and replacement options is essential
+                  to your oral health.
+                </p>
+                <button
+                  class="text-primary-fixed font-bold flex items-center gap-2 group-hover:translate-x-2 transition-transform"
+                >
+                  View Archive
+                  <span class="material-symbols-outlined">arrow_forward</span>
+                </button>
+              </div>
+              <!-- Ortho Card -->
+              <div
+                class="bg-white/10 backdrop-blur-md p-10 rounded-[2.5rem] border border-white/5 group hover:bg-white/10 transition-colors"
+              >
+                <span
+                  class="material-symbols-outlined text-5xl text-primary-fixed-dim mb-6"
+                  >align_items_stretch</span
+                >
+                <h4 class="text-2xl font-headline font-bold mb-4">
+                  03 — Severe Tooth Pain? Act Fast
+                </h4>
+                <p
+                  class="text-on-primary-container opacity-70 leading-relaxed mb-8"
+                >
+                  Another situation that may cause a need for emergency
+                  dentistry is when an individual is coping with sudden severe
+                  pain. If you are experiencing pain severe enough that it is
+                  causing loss of sleep it’s time to see Oakville dentist at
+                  Chagger Dental. We can locate the cause of the pain and then
+                  medicate it appropriately or do a procedure if necessary in
+                  order to eliminate the source of pain.
+                </p>
+                <button
+                  class="text-primary-fixed font-bold flex items-center gap-2 group-hover:translate-x-2 transition-transform"
+                >
+                  Smile Design
+                  <span class="material-symbols-outlined">arrow_forward</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- try section -->
+        <section class="px-8 py-10 bg-surface-container-low">
+          <div class="text-center max-w-3xl mx-auto mb-10">
+            <h2
+              class="text-6xl font-headline font-extrabold mb-5 text-primary tracking-tighter"
+            >
+              Clear Aligner Orthodontics at Chagger Dental
+            </h2>
+            <p class="text-secondary text-lg">
+              Our approach to clear aligner therapy goes beyond straightening.
+              We utilize 4D biomechanical mapping to ensure every movement is
+              anatomically perfect.
+            </p>
+          </div>
+          <div class="max-w-7xl mx-auto space-y-12">
+            <!-- Emergency -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+              <div
+                class="order-2 lg:order-1 relative rounded-[2.5rem] overflow-hidden aspect-[4/3]"
+              >
+                <img
+                  class="w-full h-full object-cover"
+                  data-alt="professional dentist in scrubs performing a precise dental procedure under bright medical lights"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgWCELsJXiJtI_DSwXHUDasBeiXb8N3Mw1pyvqK0L8_uTysnGIvINhUr-qLPqQ0ceAuBxWD7tABkWVm9nGSmdUpa6Hrz9VMW6CeVefbR90qU-2F9evBotWvztxSkhprGWZm2s3rhw86VOntQObmFhofcpkuj-XCBK_T8YJyFvWNvif1GlOhksqU9Q1Jd8psOPFskqlSsZXXjvhh_3Z8nTaF180LuJEZLsB_2xN_28R11sUZZMHGYhJRbwgpgIxoEht3Lv_1EZgvGHe
+                "
+                />
+              </div>
+              <div class="order-1 lg:order-2">
+                <h2 class="text-4xl font-headline font-bold text-primary mb-6">
+                  Comfortable Clear Aligners
+                </h2>
+                <p class="text-lg text-secondary mb-8">
+                  Patients who opt for Invisalign, SureSmile, or ClearCorrect
+                  may find that realigning their teeth is more comfortable than
+                  traditional braces, especially when working with our skilled
+                  dentists on the Chagger Dental team. Aligner therapy utilizes
+                  clear trays that have been molded to fit precisely how your
+                  teeth should be aligned. You’ll be fitted with multiple
+                  aligners over time, with each designed to move your teeth
+                  slightly closer to where they should ideally be positioned.
+                  The aligners are worn all day; patients are typically told to
+                  remove their aligners when they eat and sleep.
+                </p>
+                <button
+                  class="bg-error bg-primary text-white px-8 py-4 rounded-full font-bold hover:shadow-lg transition-all"
+                >
+                  Know More
+                </button>
+              </div>
+            </div>
+            <!-- Cosmetic -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+              <div class="order-1">
+                <h2 class="text-4xl font-headline font-bold text-primary mb-6">
+                  Why Choose Clear Aligners?
+                </h2>
+                <p class="text-lg text-secondary mb-8">
+                  Aligner therapy has multiple advantages over traditional
+                  braces. First, because the are completely transparent, no one
+                  knows that you have them on your teeth. Also, because they are
+                  fitted over an entire row of your teeth all at once, you don’t
+                  have to worry about small pieces of food getting stuck in them
+                  as you do with braces. Invisalign, ClearCorrect and SureSmile
+                  is usually reported as more comfortable than normal braces, as
+                  it doesn’t typically cause pain or aching.
+                </p>
+                <div class="flex gap-4">
+                  <div
+                    class="px-6 py-3 bg-white rounded-full text-primary border border-primary/10 shadow-sm"
+                  >
+                    Veneers
+                  </div>
+                  <div
+                    class="px-6 py-3 bg-white rounded-full text-primary border border-primary/10 shadow-sm"
+                  >
+                    Bonding
+                  </div>
+                  <div
+                    class="px-6 py-3 bg-white rounded-full text-primary border border-primary/10 shadow-sm"
+                  >
+                    Gum Contouring
+                  </div>
+                </div>
+              </div>
+              <div
+                class="order-2 relative rounded-[2.5rem] overflow-hidden aspect-[4/3]"
+              >
+                <img
+                  class="w-full h-full object-cover"
+                  data-alt="extreme close up of a perfect healthy white smile with natural lighting and soft focus background"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDn1OMc7y7NZdMgOkKmNRlHBHTAW5y1tks_sF0fyCIFrw17ATsuYqiQHBDyyW2v0OWMQcR81Kui5WCqIS6CYmcr5pSzTi59eBs1Dhs8-glvBhWO70_Dr9TQiGqUCyaS1x1SGsjhbNreB_8G1KQWCBeZoNwbWg25CR9bzyMqCZ07bBu2xUjGLbNab-Fe7FKXWLSgW9U7kXvYEXcluGvuK76a4kPqI73ZZKNRjzzQ1FQi5x9uPyU0hJ8RyMl4Kus8MmnVNoxc3akXocTN"
+                />
+              </div>
+            </div>
+            <!-- Invisalign -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+              <div
+                class="order-2 lg:order-1 relative rounded-[2.5rem] overflow-hidden aspect-[4/3]"
+              >
+                <img
+                  class="w-full h-full object-cover"
+                  data-alt="close up of hand holding a clear dental aligner tray against a clean white background"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJ83Ozup1NC-q_kWzNyq7eDU5iUt8p17e6IYfiNg-lfZqemau_sHZ_STPn25bgyRuKYmt8gTRDUYPi8jDm5j4yInNN_Xv4m8_qpmtWg-mm05Z9mEuBkmflhETlTypvjJHGsd_EIzPXwRPcl56Nm7qhD-VOdgOTn0M_-nQ5-R4ZFBWw4FLH0yb4sVtpRR9bBBKBFv4Bo-1pT4O4odDKnFjPhTy2FV9Pf0j4nM4MFIbMg_WEw0TD5EYgabnaKnN3HwCEjGqDsJiL3o5t"
+                />
+              </div>
+              <div class="order-1 lg:order-2">
+                <h2 class="text-4xl font-headline font-bold text-primary mb-6">
+                  Personalised Treatment
+                </h2>
+                <p class="text-lg text-secondary mb-8">
+                  The length of treatment is unique to each smile and is
+                  dependent on the hours of wear per day, as well as the extent
+                  of realignment required.
+                </p>
+                <button
+                  class="bg-primary text-on-primary px-10 py-5 rounded-full font-bold"
+                >
+                  Book Free Consult
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="max-w-7xl mx-auto px-6 md:px-12 text-center">
+            <div
+              class="bg-surface-container-low rounded-[3rem] p-12 md:p-24 relative overflow-hidden"
+            >
+              <div
+                class="absolute top-0 right-0 w-96 h-96 bg-primary-fixed opacity-10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"
+              ></div>
+              <h2
+                class="text-5xl font-extrabold text-primary mb-6 tracking-tighter"
+              >
+                Pondering Cosmetic Dentistry?
+              </h2>
+              <p class="text-lg text-secondary mx-auto mb-12">
+                There are numerous cosmetic dentistry options for you to explore
+                with your dentist Oakville to help you create a beautiful smile
+                to greet the world with. Cosmetic dental work can range from
+                basic procedures like whitening one’s teeth to a total smile
+                makeover using veneers or inlays. We offer the following
+                cosmetic dentistry procedures at Chagger Dental Oakville:
+              </p>
+              <div class="grid grid-cols-2 md:grid-cols-6 gap-4 mb-12">
+                <button
+                  class="bg-primary text-white p-6 rounded-2xl shadow-sm hover:shadow-md hover:bg-white hover:text-primary transition-all group border-2 border-primary"
+                >
+                  <span
+                    class="material-symbols-outlined block text-3xl mb-2 group-hover:scale-110 transition-transform"
+                    >medical_services</span
+                  >
+                  <span class="text-sm font-bold">Onlays/Inlays</span>
+                </button>
+                <button
+                  class="bg-primary text-white p-6 rounded-2xl shadow-sm hover:shadow-md hover:bg-white hover:text-primary transition-all group border-2 border-primary"
+                >
+                  <span
+                    class="material-symbols-outlined block text-3xl mb-2 group-hover:scale-110 transition-transform"
+                    >medical_services</span
+                  >
+                  <span class="text-sm font-bold">Crowns </span>
+                </button>
+                <button
+                  class="bg-primary text-white p-6 rounded-2xl shadow-sm hover:shadow-md hover:bg-white hover:text-primary transition-all group border-2 border-primary"
+                >
+                  <span
+                    class="material-symbols-outlined block text-3xl mb-2 group-hover:scale-110 transition-transform"
+                    >medical_services</span
+                  >
+                  <span class="text-sm font-bold">Bridges</span>
+                </button>
+                <button
+                  class="bg-primary text-white p-6 rounded-2xl shadow-sm hover:shadow-md hover:bg-white hover:text-primary transition-all group border-2 border-primary"
+                >
+                  <span
+                    class="material-symbols-outlined block text-3xl mb-2 group-hover:scale-110 transition-transform"
+                    >medical_services</span
+                  >
+                  <span class="text-sm font-bold">Bonding </span>
+                </button>
+                <button
+                  class="bg-primary text-white p-6 rounded-2xl shadow-sm hover:shadow-md hover:bg-white hover:text-primary transition-all group border-2 border-primary"
+                >
+                  <span
+                    class="material-symbols-outlined block text-3xl mb-2 group-hover:scale-110 transition-transform"
+                    >medical_services</span
+                  >
+                  <span class="text-sm font-bold">Veneers </span>
+                </button>
+                <button
+                  class="bg-primary text-white p-6 rounded-2xl shadow-sm hover:shadow-md hover:bg-white hover:text-primary transition-all group border-2 border-primary"
+                >
+                  <span
+                    class="material-symbols-outlined block text-3xl mb-2 group-hover:scale-110 transition-transform"
+                    >medical_services</span
+                  >
+                  <span class="text-sm font-bold">Implants </span>
+                </button>
+              </div>
+              <button
+                class="bg-white text-primary border-2 border-primary p-6 rounded-2xl shadow-sm hover:shadow-md hover:bg-white hover:text-primary transition-all group border-2 border-primary"
+              >
+                View Services
+              </button>
+            </div>
+          </div>
+        </section>
+        <!-- other locations -->
+        <section class="py-12 px-8">
+          <div class="max-w-8xl mx-auto">
+            <h2
+              class="text-4xl font-headline font-bold text-primary mb-16 text-center"
+            >
+              Other Locations
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <!-- Card 1 -->
+              <div
+                class="group bg-white shadow-2xl rounded-[2rem] overflow-hidden transition-all duration-500 hover:-translate-y-4 hover:shadow-2xl"
+              >
+                <div class="h-64 overflow-hidden">
+                  <img
+                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    data-alt="modern office building exterior in Burlington with glass facade and blue sky"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAE_dqTUDmt9UJ2PQXNVTo6nIlFCk53WbHxVT30woKPaAhm9J-H5LnotGlM5PFRafxO8TYOhE9EJ3dKBRWxRDneG8vX4OH3SYhhU_fCH55WQfNL_UGRSED7UzVIO3CNXBfW7yKwZCC_lpBnz0qIbjoULAvCR2wNy5I4SPDyvgTnArgOZvpxcPRkDa-978kKu93YWmmu44iqD7Xvp1HOdF3IeDCkx1QRDL8wGVZakmKRl3Mgbi9nAQ4tUvUoSkugZ1vCVZIAdndjF6HM"
+                  />
+                </div>
+                <div class="p-8">
+                  <h3 class="text-2xl font-bold text-primary mb-2">
+                    Burlington Central
+                  </h3>
+                  <p class="text-secondary mb-6">
+                    Our flagship clinic serving the Burlington waterfront
+                    community for over 15 years.
+                  </p>
+                  <a
+                    class="text-primary font-bold flex items-center gap-2 group/link"
+                    href="#"
+                  >
+                    Explore Location
+                    <span
+                      class="material-symbols-outlined group-hover/link:translate-x-2 transition-transform"
+                      >arrow_forward</span
+                    >
+                  </a>
+                </div>
+              </div>
+              <!-- Card 2 -->
+              <div
+                class="group bg-white rounded-[2rem] overflow-hidden transition-all duration-500 hover:-translate-y-4 hover:shadow-2xl"
+              >
+                <div class="h-64 overflow-hidden">
+                  <img
+                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    data-alt="luxurious corporate office building at sunset with warm orange reflections"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDY46uKgznV9AkAO35GUtbA5AsYyw4HORzBh0ReHLQqQteomRzUecH7W3MUGViOwimzRTFAAKXFgnhg7Ym9aOfNWWtl6PXHv5hZ10ngBmF08Oi9F_7YPzP3wEK4KuqMuxca7f4KWp3SmmUDPRCkzbJ6ssuV-zGGEigV2iYd_EdpzFCy5DNza5V0MZDLeMG6Pzioi1sbtcjfRPNQ-EvuQZP4SMhlAkWs7BM1d0gNFMXpRTf_R2ROc83Wnue17HeeJ4cnpHh-xvNs4ZA9"
+                  />
+                </div>
+                <div class="p-8">
+                  <h3 class="text-2xl font-bold text-primary mb-2">
+                    Mississauga Square
+                  </h3>
+                  <p class="text-secondary mb-6">
+                    A high-tech urban facility located in the heart of the
+                    Mississauga financial district.
+                  </p>
+                  <a
+                    class="text-primary font-bold flex items-center gap-2 group/link"
+                    href="#"
+                  >
+                    Explore Location
+                    <span
+                      class="material-symbols-outlined group-hover/link:translate-x-2 transition-transform"
+                      >arrow_forward</span
+                    >
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- contact -->
+        <section class="py-32 px-8 bg-primary relative overflow-hidden">
+          <div
+            class="absolute inset-0 bg-gradient-to-tr from-primary to-primary-container"
+          ></div>
+          <div class="max-w-4xl mx-auto relative z-10">
+            <div class="text-center mb-16">
+              <h2 class="text-5xl font-headline font-extrabold text-white mb-6">
+                Booking Concierge
+              </h2>
+              <p class="text-on-primary-container text-xl max-w-2xl mx-auto">
+                Your journey to a healthier, brighter smile starts with a simple
+                conversation. Let our patient coordinators curate your first
+                visit.
+              </p>
+            </div>
+            <div
+              class="glass-panel bg-white/10 p-12 rounded-[3rem] border border-white/20 backdrop-blur-xl"
+            >
+              <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Field 1 -->
+                <div>
+                  <label
+                    class="block text-sm font-label text-white/70 mb-2 px-1"
+                    >Full Name</label
+                  >
+                  <input
+                    class="w-full bg-white/10 border-none rounded-xl text-white placeholder-white/40 focus:ring-2 focus:ring-primary-fixed py-4"
+                    placeholder="Enter your name"
+                    type="text"
+                  />
+                </div>
+                <!-- Field 2 -->
+                <div>
+                  <label
+                    class="block text-sm font-label text-white/70 mb-2 px-1"
+                    >Email Address</label
+                  >
+                  <input
+                    class="w-full bg-white/10 border-none rounded-xl text-white placeholder-white/40 focus:ring-2 focus:ring-primary-fixed py-4"
+                    placeholder="email@example.com"
+                    type="email"
+                  />
+                </div>
+                <!-- Field 3 -->
+                <div>
+                  <label
+                    class="block text-sm font-label text-white/70 mb-2 px-1"
+                    >Phone Number</label
+                  >
+                  <input
+                    class="w-full bg-white/10 border-none rounded-xl text-white placeholder-white/40 focus:ring-2 focus:ring-primary-fixed py-4"
+                    placeholder="+1 (555) 000-0000"
+                    type="tel"
+                  />
+                </div>
+                <!-- Field 4 -->
+                <div>
+                  <label
+                    class="block text-sm font-label text-white/70 mb-2 px-1"
+                    >Preferred Location</label
+                  >
+                  <select
+                    class="w-full bg-white/10 border-none rounded-xl text-white/70 focus:ring-2 focus:ring-primary-fixed py-4"
+                  >
+                    <option class="bg-primary-container">
+                      Oakville (Oak Park)
+                    </option>
+                    <option class="bg-primary-container">Burlington</option>
+                    <option class="bg-primary-container">Mississauga</option>
+                  </select>
+                </div>
+                <!-- Field 5 -->
+                <div class="md:col-span-2">
+                  <label
+                    class="block text-sm font-label text-white/70 mb-2 px-1"
+                    >Interest / Reason for Visit</label
+                  >
+                  <div class="flex flex-wrap gap-3 mt-2">
+                    <button
+                      class="px-4 py-2 rounded-full border border-white/20 text-sm text-white hover:bg-white/20"
+                      type="button"
+                    >
+                      General Checkup
+                    </button>
+                    <button
+                      class="px-4 py-2 rounded-full border border-white/20 text-sm text-white hover:bg-white/20"
+                      type="button"
+                    >
+                      Emergency Pain
+                    </button>
+                    <button
+                      class="px-4 py-2 rounded-full border border-white/20 text-sm text-white hover:bg-white/20"
+                      type="button"
+                    >
+                      Cosmetic Consultation
+                    </button>
+                    <button
+                      class="px-4 py-2 rounded-full border border-white/20 text-sm text-white hover:bg-white/20"
+                      type="button"
+                    >
+                      Invisalign
+                    </button>
+                    <button
+                      class="px-4 py-2 rounded-full border border-white/20 text-sm text-white hover:bg-white/20"
+                      type="button"
+                    >
+                      Anxiety/Sedation
+                    </button>
+                  </div>
+                </div>
+                <!-- Field 6 -->
+                <div class="md:col-span-2">
+                  <label
+                    class="block text-sm font-label text-white/70 mb-2 px-1"
+                    >Additional Notes</label
+                  >
+                  <textarea
+                    class="w-full bg-white/10 border-none rounded-2xl text-white placeholder-white/40 focus:ring-2 focus:ring-primary-fixed py-4"
+                    placeholder="Tell us about your dental goals or any concerns..."
+                    rows="4"
+                  ></textarea>
+                </div>
+                <div class="md:col-span-2 pt-6">
+                  <button
+                    class="w-full py-6 bg-white text-primary font-bold text-xl rounded-full hover:bg-surface-container-low transition-colors shadow-2xl"
+                  >
+                    Request My Sanctuary Visit
+                  </button>
+                  <p
+                    class="text-center text-white/50 text-xs mt-6 uppercase tracking-widest"
+                  >
+                    Confidential &amp; Secure Patient Intake
+                  </p>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+      </div>
+      <!-- BURLINGTON SECTION -->
+      <div class="location-container" id="location-burlington">
+        <header
+          class="relative min-h-[90vh] flex items-center overflow-hidden hero-gradient"
+        >
+          <div class="absolute inset-0 blueprint-grid"></div>
+          <div
+            class="container mx-auto px-8 relative z-10 grid lg:grid-cols-12 gap-16 items-center py-20"
+          >
+            <div class="lg:col-span-6 space-y-8">
+              <div
+                class="inline-flex items-center px-4 py-1.5 rounded-full bg-primary-container/30 border border-white/10 text-white text-xs font-medium tracking-widest uppercase"
+              >
+                Digital Lab v1.5
+              </div>
+              <h1
+                class="text-6xl md:text-8xl font-headline font-extrabold text-white leading-[0.9] tracking-tighter"
+              >
+                Burlington <span class="text-primary-fixed">Digital</span> Lab.
+              </h1>
+              <p
+                class="text-lg md:text-xl text-primary-fixed/80 max-w-lg font-light leading-relaxed"
+              >
+                The clinical vanguard of Burlington. 100% digital workflows
+                integrated into a sanctuary of modern healthcare and rapid 3D
+                diagnostics.
+              </p>
+              <div class="flex flex-wrap gap-4 pt-4">
+                <button
+                  class="glass-card px-8 py-4 rounded-full text-white font-semibold flex items-center gap-2 hover:bg-white hover:text-primary transition-all duration-500 group"
+                >
+                  <span class="material-symbols-outlined">biotech</span> 3D
+                  Workflow
+                </button>
+              </div>
+            </div>
+            <div class="lg:col-span-6 relative perspective-1000">
+              <div
+                class="glass-card rounded-[3rem] p-8 border border-white/20 shadow-2xl map-glow"
+              >
+                <div class="flex justify-between items-start mb-6">
+                  <div>
+                    <div class="flex items-center gap-2 mb-1">
+                      <span class="w-2.5 h-2.5 rounded-full bg-red-400"></span>
+                      <span
+                        class="text-xs font-bold text-white uppercase tracking-widest"
+                        >Live Status</span
+                      >
+                    </div>
+                    <div class="text-3xl font-headline font-bold text-white">
+                      Fully Booked
+                    </div>
+                  </div>
+                  <div class="text-right">
+                    <div
+                      class="text-[10px] text-primary-fixed uppercase tracking-widest font-bold"
+                    >
+                      Local Time
+                    </div>
+                    <div
+                      class="text-xl font-mono text-white local-time-display"
+                    >
+                      00:00 AM
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="h-64 bg-slate-900 rounded-3xl mb-6 relative overflow-hidden"
+                >
+                  <img
+                    class="w-full h-full object-cover opacity-50 grayscale"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuC678lMPIJMryvJMYu_zyAUyuqTWeLIH8QXDeB-j4J47etSqnexeCiweV7JPZcQS0k-RDvKWJEsOUnk_I8-_zICj0SPaFlK5Uczr-DJ4hniQmHBANNCvri9VogLtlJpEMEnq2qUy8PAj1SKNUm_9N6-PKVyfHkAdd4OnYXJ5dmiPPLyX3X-zxGSlnSSn2Zh_o2Krc6Xuau9etqQqgxS0ZeqFJzFKLwWCpEM_O0Y4vpNzxYKiELQcb03_XaRL5zKkCtXYf45LYgaq4ru"
+                  />
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                  <div class="glass-card p-4 rounded-2xl border-white/10">
+                    <div
+                      class="text-[10px] text-primary-fixed uppercase font-bold mb-1"
+                    >
+                      Morning
+                    </div>
+                    <div class="text-lg font-bold text-white">
+                      07:30 - 12:00
+                    </div>
+                  </div>
+                  <div class="glass-card p-4 rounded-2xl border-white/10">
+                    <div
+                      class="text-[10px] text-primary-fixed uppercase font-bold mb-1"
+                    >
+                      Evening
+                    </div>
+                    <div class="text-lg font-bold text-white">
+                      13:00 - 19:30
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+        <section class="py-24 container mx-auto px-8">
+          <div class="max-w-4xl mx-auto text-center space-y-8">
+            <span
+              class="text-primary font-bold uppercase tracking-widest text-xs"
+              >Innovation Hub</span
+            >
+            <h2
+              class="text-5xl md:text-6xl font-headline font-bold text-primary tracking-tight"
+            >
+              The Digital Vanguard of Burlington.
+            </h2>
+            <p class="text-xl text-secondary leading-relaxed font-light">
+              Burlington's most technologically advanced clinic, offering
+              paperless workflows, 3D printed aesthetics, and AI-driven
+              diagnostics.
+            </p>
+          </div>
+        </section>
+        <section class="bg-primary py-24 text-white">
+          <div
+            class="container mx-auto px-8 grid md:grid-cols-2 gap-16 items-center"
+          >
+            <div class="space-y-8">
+              <h2 class="text-5xl font-headline font-bold">
+                Rapid Tech Response.
+              </h2>
+              <p class="text-lg text-primary-fixed/80">
+                Burlington's most advanced triage. Using instant 3D scans to
+                diagnose and treat emergencies with unprecedented speed and
+                accuracy.
+              </p>
+              <div class="flex gap-4">
+                <div class="bg-white/10 p-6 rounded-2xl border border-white/10">
+                  <span class="material-symbols-outlined text-primary-fixed"
+                    >scan</span
+                  >
+                  <h4 class="font-bold mt-2">Instant Imaging</h4>
+                </div>
+                <div class="bg-white/10 p-6 rounded-2xl border border-white/10">
+                  <span class="material-symbols-outlined text-primary-fixed"
+                    >rocket_launch</span
+                  >
+                  <h4 class="font-bold mt-2">Fast-Track Labs</h4>
+                </div>
+              </div>
+            </div>
+            <div class="rounded-3xl overflow-hidden shadow-2xl h-[400px]">
+              <img
+                class="w-full h-full object-cover"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC678lMPIJMryvJMYu_zyAUyuqTWeLIH8QXDeB-j4J47etSqnexeCiweV7JPZcQS0k-RDvKWJEsOUnk_I8-_zICj0SPaFlK5Uczr-DJ4hniQmHBANNCvri9VogLtlJpEMEnq2qUy8PAj1SKNUm_9N6-PKVyfHkAdd4OnYXJ5dmiPPLyX3X-zxGSlnSSn2Zh_o2Krc6Xuau9etqQqgxS0ZeqFJzFKLwWCpEM_O0Y4vpNzxYKiELQcb03_XaRL5zKkCtXYf45LYgaq4ru"
+              />
+            </div>
+          </div>
+        </section>
+      </div>
+      <!-- GLOBAL BOOKING FORM (Always Visible but tailored by JS) -->
+      <section class="container mx-auto px-8 mb-20 py-20" id="booking-section">
+        <div
+          class="glass-card rounded-[3rem] p-8 md:p-20 shadow-2xl relative overflow-hidden border border-primary/5"
+        >
+          <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-16 space-y-4">
+              <h2
+                class="text-5xl font-headline font-extrabold text-primary tracking-tighter"
+              >
+                Concierge Booking.
+              </h2>
+              <p class="text-secondary text-lg" id="booking-subtitle">
+                Secure your slot within our clinical ecosystem.
+              </p>
+            </div>
+            <form
+              class="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+              onsubmit="
+                event.preventDefault();
+                alert('Booking request dispatched.');
+              "
+            >
+              <div class="space-y-6">
+                <div
+                  class="text-xs font-bold tracking-widest text-secondary uppercase"
+                >
+                  01 Identity
+                </div>
+                <input
+                  class="w-full bg-white border-0 rounded-xl px-4 py-4 focus:ring-2 focus:ring-primary shadow-sm"
+                  placeholder="Full Name"
+                  required=""
+                  type="text"
+                />
+                <input
+                  class="w-full bg-white border-0 rounded-xl px-4 py-4 focus:ring-2 focus:ring-primary shadow-sm"
+                  placeholder="Email Address"
+                  required=""
+                  type="email"
+                />
+                <input
+                  class="w-full bg-white border-0 rounded-xl px-4 py-4 focus:ring-2 focus:ring-primary shadow-sm"
+                  placeholder="Phone Number"
+                  type="tel"
+                />
+                <input
+                  class="w-full bg-white border-0 rounded-xl px-4 py-4 focus:ring-2 focus:ring-primary shadow-sm"
+                  onfocus="this.type = 'date'"
+                  placeholder="Date of Birth"
+                  type="text"
+                />
+              </div>
+              <div class="space-y-6">
+                <div
+                  class="text-xs font-bold tracking-widest text-secondary uppercase"
+                >
+                  02 Clinical
+                </div>
+                <select
+                  class="w-full bg-white border-0 rounded-xl px-4 py-4 focus:ring-2 focus:ring-primary shadow-sm"
+                  id="booking-location-select"
+                  onchange="switchLocation(this.value)"
+                >
+                  <option value="mississauga">Mississauga Sanctuary</option>
+                  <option value="oakville">Oakville Collective</option>
+                  <option value="burlington">Burlington Digital Lab</option>
+                </select>
+                <select
+                  class="w-full bg-white border-0 rounded-xl px-4 py-4 focus:ring-2 focus:ring-primary shadow-sm"
+                >
+                  <option value="">Procedure Type</option>
+                  <option>Cosmetic Reconstruction</option>
+                  <option>Emergency Triage</option>
+                  <option>Routine Maintenance</option>
+                  <option>Orthodontic Consult</option>
+                </select>
+                <textarea
+                  class="w-full bg-white border-0 rounded-xl px-4 py-4 focus:ring-2 focus:ring-primary shadow-sm h-[132px]"
+                  placeholder="Specific concerns or medical history..."
+                ></textarea>
+              </div>
+              <div class="space-y-6">
+                <div
+                  class="text-xs font-bold tracking-widest text-secondary uppercase"
+                >
+                  03 Logistics
+                </div>
+                <input
+                  class="w-full bg-white border-0 rounded-xl px-4 py-4 focus:ring-2 focus:ring-primary shadow-sm"
+                  required=""
+                  type="datetime-local"
+                />
+                <div
+                  class="flex items-center gap-3 px-4 py-2 bg-primary/5 rounded-xl border border-primary/10"
+                >
+                  <input
+                    class="rounded border-gray-300 text-primary focus:ring-primary"
+                    id="insurance"
+                    type="checkbox"
+                  />
+                  <label class="text-sm text-secondary" for="insurance"
+                    >Verify private insurance</label
+                  >
+                </div>
+                <div
+                  class="flex items-center gap-3 px-4 py-2 bg-primary/5 rounded-xl border border-primary/10"
+                >
+                  <input
+                    class="rounded border-gray-300 text-primary focus:ring-primary"
+                    id="sedation"
+                    type="checkbox"
+                  />
+                  <label class="text-sm text-secondary" for="sedation"
+                    >Require sedation consult</label
+                  >
+                </div>
+                <button
+                  class="w-full bg-primary text-on-primary px-8 py-5 rounded-xl font-headline font-bold shadow-xl hover:bg-primary-container hover:scale-[1.02] active:scale-95 transition-all mt-4"
+                >
+                  Dispatch Request
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+    <footer
+      class="w-full rounded-t-[3rem] bg-stone-100 mt-20 border-t border-outline-variant/10"
+    >
+      <div
+        class="flex flex-col md:flex-row justify-between items-center px-12 py-16 max-w-screen-2xl mx-auto text-sm font-manrope"
+      >
+        <div>
+          <div class="font-bold text-primary text-2xl mb-2">The Sanctuary.</div>
+          <p class="text-slate-600">
+            © 2024 Private Dental Collective. Chagger Group.
+          </p>
+        </div>
+        <div class="flex gap-10 text-slate-600 mt-8 md:mt-0">
+          <a class="hover:text-primary transition-colors" href="#">Privacy</a>
+          <a class="hover:text-primary transition-colors" href="#"
+            >Accessibility</a
+          >
+          <a class="font-bold text-primary hover:underline" href="#"
+            >Patient Portal</a
+          >
+        </div>
+      </div>
+    </footer>
+    <script>
+      gsap.registerPlugin(ScrollTrigger);
+
+      let currentLoc = "";
+
+      function switchLocation(locKey) {
+        if (currentLoc === locKey) return;
+
+        const containers = document.querySelectorAll(".location-container");
+        const target = document.getElementById(`location-${locKey}`);
+        const tabs = document.querySelectorAll(".tab-btn");
+        const select = document.getElementById("booking-location-select");
+        const subtitle = document.getElementById("booking-subtitle");
+
+        // Update UI state
+        tabs.forEach((t) => t.classList.remove("active"));
+        document
+          .querySelector(`[data-location="${locKey}"]`)
+          .classList.add("active");
+        select.value = locKey;
+
+        // Subtitle Update
+        const subtitles = {
+          mississauga:
+            "Secure your slot within our Mississauga clinical ecosystem.",
+          oakville:
+            "Request an exclusive consultation at our Oakville collective.",
+          burlington: "Join the Burlington digital patient queue.",
+        };
+        subtitle.innerText =
+          subtitles[locKey] ||
+          "Secure your slot within our clinical ecosystem.";
+
+        // Smooth Cross-Fade Transition
+        const activeContainer = document.querySelector(
+          ".location-container.active",
+        );
+
+        if (activeContainer) {
+          gsap.to(activeContainer, {
+            opacity: 0,
+            y: -10,
+            duration: 0.3,
+            ease: "power2.in",
+            onComplete: () => {
+              activeContainer.classList.remove("active");
+              showNew(target);
+            },
+          });
+        } else {
+          showNew(target);
+        }
+
+        function showNew(el) {
+          el.classList.add("active");
+          gsap.fromTo(
+            el,
+            { opacity: 0, y: 10 },
+            {
+              opacity: 1,
+              y: 0,
+              duration: 0.5,
+              ease: "power2.out",
+              onComplete: () => {
+                currentLoc = locKey;
+                ScrollTrigger.refresh();
+              },
+            },
+          );
+        }
+      }
+
+      function initGlobal() {
+        // Oakville as default on load
+        switchLocation("oakville");
+
+        // Local Time Update
+        const updateTime = () => {
+          const now = new Date();
+          const timeStr = now.toLocaleTimeString([], {
+            hour: "2-digit",
+            minute: "2-digit",
+          });
+          document
+            .querySelectorAll(".local-time-display")
+            .forEach((el) => (el.innerText = timeStr));
+        };
+        setInterval(updateTime, 1000);
+        updateTime();
+
+        // Reveal Animations
+        gsap.utils.toArray("section").forEach((section) => {
+          gsap.from(section, {
+            scrollTrigger: {
+              trigger: section,
+              start: "top 85%",
+              toggleActions: "play none none none",
+            },
+            opacity: 0,
+            y: 40,
+            duration: 1,
+            ease: "power3.out",
+          });
+        });
+
+        // Sticky Tab Logic styling
+        ScrollTrigger.create({
+          trigger: "#main-content-wrapper",
+          start: "top top+=80",
+          onEnter: () =>
+            document.getElementById("location-bar").classList.add("is-sticky"),
+          onLeaveBack: () =>
+            document
+              .getElementById("location-bar")
+              .classList.remove("is-sticky"),
+        });
+      }
+
+      window.addEventListener("load", initGlobal);
+    </script>
+  </body>
+</html>
