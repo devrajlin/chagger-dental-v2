@@ -159,6 +159,20 @@
         --tw-bg-opacity: 1;
         background-color: rgb(14 51 106 / var(--tw-bg-opacity, 1));
       }
+      /* other services css */
+      .glass-primary {
+        background: rgba(14, 51, 106, 0.75);
+        backdrop-filter: blur(16px);
+      }
+      .tonal-shift-surface-container-low {
+        background-color: #f6f3ef;
+      }
+      .surface-dim-tonal-grounding {
+        background-color: #dcdad6;
+      }
+      .perspective-text {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+      }
     </style>
   </head>
   <body
@@ -172,14 +186,14 @@
         class="flex justify-between items-center max-w-screen-2xl mx-auto px-6 h-full"
       >
         <!-- Brand Identity -->
-        <a class="flex items-center gap-3 shrink-0" href="../index.html">
+        <a class="flex items-center gap-3 shrink-0" href="#">
           <img src="../images/dental-logo.png" class="img-fluid" width="240" />
         </a>
         <!-- Desktop Navigation Links -->
         <div class="hidden md:flex items-center gap-10 h-full">
           <a
             class="font-manrope tracking-widest text-sm chg-nav-link chg-nav-active-nav-link"
-            href="../index.html"
+            href="#"
             >HOME</a
           >
           <!-- SERVICES Full-Width Mega Menu -->
@@ -187,33 +201,31 @@
             class="h-full flex items-center chg-nav-link-group static"
             id="chg-nav-services-nav"
           >
-            <a href="../services.html"
-              ><div class="flex items-center gap-1 cursor-pointer py-2 group">
-                <span
-                  class="font-manrope tracking-widest text-sm chg-nav-link group-hover:text-primary transition-colors uppercase"
-                  >Services</span
-                >
-                <span
-                  class="material-symbols-outlined text-lg text-secondary group-hover:text-primary transition-transform duration-300"
-                  >expand_more</span
-                >
-              </div></a
-            >
+            <div class="flex items-center gap-1 cursor-pointer py-2 group">
+              <span
+                class="font-manrope tracking-widest text-sm chg-nav-link group-hover:text-primary transition-colors uppercase"
+                >Services</span
+              >
+              <span
+                class="material-symbols-outlined text-lg text-secondary group-hover:text-primary transition-transform duration-300"
+                >expand_more</span
+              >
+            </div>
             <div
-              class="chg-nav-dropdown-container z-[100] absolute top-[70px] left-0 right-0 w-full flex justify-center bg-white border-b border-primary/5"
+              class="chg-nav-dropdown-container absolute top-[88px] left-0 right-0 w-full flex justify-center bg-white border-b border-primary/5"
               id="chg-nav-services-dropdown"
             >
               <div class="max-w-7xl w-full px-6 py-12">
                 <div class="grid grid-cols-3 gap-8">
                   <!-- Invisalign -->
                   <a
-                    class="flex items-start gap-5 p-5 rounded-xl hover:bg-blue-100 transition-all group"
-                    href="../services/invisalign.html"
+                    class="flex items-start gap-5 p-5 rounded-xl hover:bg-surface-container-low transition-all group"
+                    href="#"
                   >
                     <img
                       alt="Invisalign"
                       class="w-24 h-24 rounded-lg object-cover shrink-0 shadow-sm"
-                      src="../images/services/invisalign-new.jpg"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuDs5SFTRtndPcUpePFJp1E7VpjWDS6F39rvDeUQy-qDz1o4vGMVPYfJG-aJsoeEOU2ZEz5Pql3srhS8eIEZYRaR7PK785qYENow6wqh-XjfUugZwg2HsOniOdO-ImU-RjmaPojpF0eGuxLbJmknBzrmAykYq4bcfR3wZ4gCIlii4Dg-NpollSlZZCWd726czJwLSD4bD-sULd4t-s8S7SwzxF9UklOU9hWtdnjX2ls6EDygib_to0-pq9s0M3M4s4fBKq7yx_zIqwrX"
                     />
                     <div>
                       <div class="flex items-center gap-2 mb-2">
@@ -233,13 +245,13 @@
                   </a>
                   <!-- Dental Implants -->
                   <a
-                    class="flex items-start gap-5 p-5 rounded-xl hover:bg-blue-100 transition-all group"
-                    href="../services/dental-implants.html"
+                    class="flex items-start gap-5 p-5 rounded-xl hover:bg-surface-container-low transition-all group"
+                    href="#"
                   >
                     <img
                       alt="Implants"
                       class="w-24 h-24 rounded-lg object-cover shrink-0 shadow-sm"
-                      src="../images/services/dental_implant.png"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9pJ1xjQldOr7cm_gk-tQ1F6U7ybwfpeK25xzpGtcLaoYaUOCmzCUI93jJRHWXYfuY5gaFBKxtLI9hj83dkdbaezDTcMGAoajB4pw2gjO3QPD31nyNOI7MAYwYUeAgeAdm4x1xeVj-QkXuU6WnrLIVPYrqq1zdPvQ9CC382GMK3h13iuus9PDb4XzUPMsliqrp4JR16dBTs9Oet5NsHvJEpsrsjKFikCpkYaf9TMoiAXmsZpcH5DvPhujZRKQ3qehgjdUSdKlo_aoM"
                     />
                     <div>
                       <div class="flex items-center gap-2 mb-2">
@@ -259,13 +271,13 @@
                   </a>
                   <!-- Dental Crowns -->
                   <a
-                    class="flex items-start gap-5 p-5 rounded-xl hover:bg-blue-100 transition-all group"
-                    href="../services/dental-crowns.html"
+                    class="flex items-start gap-5 p-5 rounded-xl hover:bg-surface-container-low transition-all group"
+                    href="#"
                   >
                     <img
                       alt="Crowns"
                       class="w-24 h-24 rounded-lg object-cover shrink-0 shadow-sm"
-                      src="../images/dental-crown.png"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVgxXRDBUE1w1o1eSNizCa4b-Sj52AwlFt0qfS1j2tW9K84wptE9mAYmn5griD6LfH5_eFeDTn2JO_nah6VwQ6EbQGfL56ZTXQVRPeAtEgxuTP0gQdnvAMH_1YT5hAiD5PNaY60RNSbqCIzyZTqkOytrR51wdxWPyc9vKnqFsS_91XMncM-PTvdaxWBXNXFUifHvH-1t9alH1k-M7aQPwqEr4sQDPVLGam4C0XdGLD9K9KRkS7v7etCCAkZVHEpFp2G8YwGbtqMSS_"
                     />
                     <div>
                       <div class="flex items-center gap-2 mb-2">
@@ -285,13 +297,13 @@
                   </a>
                   <!-- CEREC Crown -->
                   <a
-                    class="flex items-start gap-5 p-5 rounded-xl hover:bg-blue-100 transition-all group"
-                    href="../services/cerec-crown.html"
+                    class="flex items-start gap-5 p-5 rounded-xl hover:bg-surface-container-low transition-all group"
+                    href="#"
                   >
                     <img
                       alt="CEREC"
                       class="w-24 h-24 rounded-lg object-cover shrink-0 shadow-sm"
-                      src="../images/services/cerec-crown.jpg"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbUuzPmcJ78JT_YGuF9Fb7IdFzZ-1WofR3aPySjO44SdclN6jAUfwj_7FhUp9H3_8AHRXQXEKKKpLGF7nbqQMnun77Rtp6gPBlyBneDzztCB_p6FWOjCbCMeDF-smbIHRGKDtIJzi4hbNZUbRaX-_o5gOXfQ6qSGVbIdsviz4MGiUsYoLiNKboGXaiH9__Qw9KZyTY4SfwhXvf4X_tMUD4kziSEd8VRw0GDCl6z660NxKoejtaVj8bM7UtYxpjEJM1W2fcgU7WPNra"
                     />
                     <div>
                       <div class="flex items-center gap-2 mb-2">
@@ -310,13 +322,13 @@
                   </a>
                   <!-- Teeth Whitening -->
                   <a
-                    class="flex items-start gap-5 p-5 rounded-xl hover:bg-blue-100 transition-all group"
-                    href="../services/teeth-whitening.html"
+                    class="flex items-start gap-5 p-5 rounded-xl hover:bg-surface-container-low transition-all group"
+                    href="#"
                   >
                     <img
                       alt="Teeth Whitening"
                       class="w-24 h-24 rounded-lg object-cover shrink-0 shadow-sm"
-                      src="../images/white-6.jpg"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyIY4TP6ZsTi5Qy4FDML3x8ulMjgmrHYSW5zg-JWenYUJ6VUg8UEzPCZi1rFIYQn7HknDgskjCl0goh5lHAHWRsEVfsnIA5zcPI-7cieEGtC5UI6K7evCsm2pc-taLMzrMVfwcl2p1u4_EPY2fkz9UpOoXBS4kvjXFjQRt6_rqvMJDqMBzrkhqM79tpXiMu7ASsNewKC9Btqiok55XbHoLLGclIOltIS9FcMM-ObOHRl2Vd-PWKh79SBMNMZmDH1h6JwORvTTraq58"
                     />
                     <div>
                       <div class="flex items-center gap-2 mb-2">
@@ -336,13 +348,13 @@
                   </a>
                   <!-- Denture Services -->
                   <a
-                    class="flex items-start gap-5 p-5 rounded-xl hover:bg-blue-100 transition-all group"
-                    href="../services/denture-services.html"
+                    class="flex items-start gap-5 p-5 rounded-xl hover:bg-surface-container-low transition-all group"
+                    href="#"
                   >
                     <img
                       alt="Denture"
                       class="w-24 h-24 rounded-lg object-cover shrink-0 shadow-sm"
-                      src="../images/custom.png"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsZ6kZ7ZHp5wLRriwXCH7gmA7saQqjM4ONWlHsyUdy1Mus7kN1mN7X-YEJp_vMuWDn1b3vH6gg42nJCjalMNnGdyanv85saEfwakMfyzIi9uzVJK7QiM8h647I9d4IeP1YcjhVQHsvWk10DVDaH_DIsG_Q2cMRv0DSTsPsFuz0ceBvDCfHbjg0gbbRbk_auK9xrYUanKHZhcREPUN6TPKbxq3L-cxTACJoK0N7mQfHER-VhehFSTumsgGh6qJBMVdGjC8FVdITZAkI"
                     />
                     <div>
                       <div class="flex items-center gap-2 mb-2">
@@ -365,7 +377,7 @@
                 >
                   <a
                     class="bg-primary text-white px-10 py-3 rounded-full font-bold text-sm flex items-center gap-2 hover:shadow-lg hover:shadow-primary/20 transition-all"
-                    href="../services.html"
+                    href="#"
                   >
                     View All Clinical Services
                     <span class="material-symbols-outlined text-sm"
@@ -376,9 +388,7 @@
               </div>
             </div>
           </div>
-          <a
-            class="font-manrope tracking-widest text-sm chg-nav-link"
-            href="../about_us.html"
+          <a class="font-manrope tracking-widest text-sm chg-nav-link" href="#"
             >ABOUT US</a
           >
           <!-- LOCATIONS Dropdown -->
@@ -405,8 +415,8 @@
               >
                 <div class="p-2">
                   <a
-                    class="flex items-center gap-4 p-4 rounded-lg hover:bg-blue-100 group transition-all"
-                    href="../burlington-location.html"
+                    class="flex items-center gap-4 p-4 rounded-lg hover:bg-surface-container-low group transition-all"
+                    href="#"
                   >
                     <span
                       class="material-symbols-outlined text-primary/60 group-hover:text-primary"
@@ -419,8 +429,8 @@
                     >
                   </a>
                   <a
-                    class="flex items-center gap-4 p-4 rounded-lg hover:bg-blue-100 group transition-all"
-                    href="../oakville-location.html"
+                    class="flex items-center gap-4 p-4 rounded-lg hover:bg-surface-container-low group transition-all"
+                    href="#"
                   >
                     <span
                       class="material-symbols-outlined text-primary/60 group-hover:text-primary"
@@ -433,8 +443,8 @@
                     >
                   </a>
                   <a
-                    class="flex items-center gap-4 p-4 rounded-lg hover:bg-blue-100 group transition-all"
-                    href="../mississauga-location.html"
+                    class="flex items-center gap-4 p-4 rounded-lg hover:bg-surface-container-low group transition-all"
+                    href="#"
                   >
                     <span
                       class="material-symbols-outlined text-primary/60 group-hover:text-primary"
@@ -448,11 +458,11 @@
                   </a>
                 </div>
                 <div
-                  class="bg-blue-100 p-4 flex justify-center border-t border-primary/5"
+                  class="bg-surface-container-low p-4 flex justify-center border-t border-primary/5"
                 >
                   <a
                     class="flex items-center gap-2 text-sm font-bold text-primary hover:gap-3 transition-all"
-                    href="../locations_page.html"
+                    href="#"
                   >
                     See All Locations
                     <span class="material-symbols-outlined text-sm"
@@ -463,22 +473,18 @@
               </div>
             </div>
           </div>
-          <a
-            class="font-manrope tracking-widest text-sm chg-nav-link"
-            href="../reviews.html"
+          <a class="font-manrope tracking-widest text-sm chg-nav-link" href="#"
             >REVIEWS</a
           >
         </div>
         <!-- Action Cluster -->
         <div class="flex items-center gap-4">
-          <a href="../book-appointment.html"
-            ><button
-              class="hidden md:flex bg-primary text-white px-7 py-2 rounded-full font-bold text-sm items-center gap-2 shadow-lg shadow-primary/20 hover:shadow-primary/30 active:scale-95 transition-all duration-300"
-            >
-              Book Appointment
-              <span class="material-symbols-outlined text-2xl">call</span>
-            </button></a
+          <button
+            class="hidden md:flex bg-primary text-white px-7 py-2 rounded-full font-bold text-sm items-center gap-2 shadow-lg shadow-primary/20 hover:shadow-primary/30 active:scale-95 transition-all duration-300"
           >
+            Book Appointment
+            <span class="material-symbols-outlined text-2xl">call</span>
+          </button>
           <!-- Mobile Menu Trigger -->
           <button
             class="md:hidden p-2 text-primary active:scale-90 transition-transform flex items-center justify-center"
@@ -500,7 +506,7 @@
         <div class="flex-1 overflow-y-auto px-8 py-10 flex flex-col">
           <a
             class="text-2xl font-extrabold text-primary border-b border-primary/5 pb-4 mb-8"
-            href="../index.html"
+            href="#"
             >HOME</a
           >
           <!-- Mobile Services Section -->
@@ -521,7 +527,7 @@
             >
               <a
                 class="text-lg font-bold text-secondary flex items-center gap-4"
-                href="../services/invisalign.html"
+                href="#"
                 ><span class="material-symbols-outlined text-primary/40"
                   >align_items_stretch</span
                 >
@@ -529,7 +535,7 @@
               >
               <a
                 class="text-lg font-bold text-secondary flex items-center gap-4"
-                href="../services/dental-implants.html"
+                href="#"
                 ><span class="material-symbols-outlined text-primary/40"
                   >medical_services</span
                 >
@@ -537,15 +543,15 @@
               >
               <a
                 class="text-lg font-bold text-secondary flex items-center gap-4"
-                href="../services/dental-crowns.html"
+                href="#"
                 ><span class="material-symbols-outlined text-primary/40"
-                  >dentistry</span
+                  >medical_services</span
                 >
                 Dental Crowns</a
               >
               <a
                 class="text-lg font-bold text-secondary flex items-center gap-4"
-                href="../services/cerec-crown.html"
+                href="#"
                 ><span class="material-symbols-outlined text-primary/40"
                   >precision_manufacturing</span
                 >
@@ -553,7 +559,7 @@
               >
               <a
                 class="text-lg font-bold text-secondary flex items-center gap-4"
-                href="../services/teeth-whitening.html"
+                href="#"
                 ><span class="material-symbols-outlined text-primary/40"
                   >flare</span
                 >
@@ -561,7 +567,7 @@
               >
               <a
                 class="text-lg font-bold text-secondary flex items-center gap-4"
-                href="../services/denture-services.html"
+                href="#"
                 ><span class="material-symbols-outlined text-primary/40"
                   >format_paint</span
                 >
@@ -569,7 +575,7 @@
               >
               <a
                 class="text-sm font-bold text-primary mt-2 flex items-center gap-2"
-                href="../services.html"
+                href="#"
                 >View All Services
                 <span class="material-symbols-outlined text-xs"
                   >arrow_forward</span
@@ -579,7 +585,7 @@
           </div>
           <a
             class="text-2xl font-extrabold text-primary border-b border-primary/5 pb-4 mb-8"
-            href="../about_us.html"
+            href="#"
             >ABOUT US</a
           >
           <!-- Mobile Locations Section -->
@@ -600,7 +606,7 @@
             >
               <a
                 class="text-lg font-bold text-secondary flex items-center gap-4"
-                href="../burlington-location.html"
+                href="#"
                 ><span class="material-symbols-outlined text-primary/40"
                   >location_on</span
                 >
@@ -608,7 +614,7 @@
               >
               <a
                 class="text-lg font-bold text-secondary flex items-center gap-4"
-                href="../oakville-location.html"
+                href="#"
                 ><span class="material-symbols-outlined text-primary/40"
                   >apartment</span
                 >
@@ -616,7 +622,7 @@
               >
               <a
                 class="text-lg font-bold text-secondary flex items-center gap-4"
-                href="../mississauga-location.html"
+                href="#"
                 ><span class="material-symbols-outlined text-primary/40"
                   >health_and_safety</span
                 >
@@ -626,19 +632,17 @@
           </div>
           <a
             class="text-2xl font-extrabold text-primary border-b border-primary/5 pb-4 mb-8"
-            href="../reviews.html"
+            href="#"
             >REVIEWS</a
           >
           <!-- Book Appointment as final item -->
           <div class="mt-4 pb-10">
-            <a href="../book-appointment.html"
-              ><button
-                class="w-full bg-primary text-white py-5 rounded-full font-bold text-lg shadow-xl shadow-primary/20 flex items-center justify-center gap-3 active:scale-95 transition-transform"
-              >
-                Book Appointment
-                <span class="material-symbols-outlined">calendar_today</span>
-              </button></a
+            <button
+              class="w-full bg-primary text-white py-5 rounded-full font-bold text-lg shadow-xl shadow-primary/20 flex items-center justify-center gap-3 active:scale-95 transition-transform"
             >
+              Book Appointment
+              <span class="material-symbols-outlined">calendar_today</span>
+            </button>
           </div>
         </div>
       </div>
@@ -654,7 +658,7 @@
                 alt="Radiant Smile"
                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 data-alt="Close-up of a stunningly bright and healthy human smile with almost invisible clear aligners in soft, natural studio lighting"
-                src="../images/services/dental-bridge.avif"
+                src="../images/services/ortho3.jpg"
               />
               <div
                 class="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent"
@@ -663,7 +667,7 @@
                 <h1
                   class="text-5xl md:text-5xl font-headline font-extrabold text-white tracking-tighter leading-[0.9] text-balance"
                 >
-                  Dental Bridges
+                  Orthodontics
                 </h1>
               </div>
             </div>
@@ -673,167 +677,120 @@
             <div
               class="absolute -top-20 -left-20 w-64 h-64 bg-primary-container/10 rounded-full blur-3xl"
             ></div>
-            <div class="relative z-10">
+            <div class="space-y-8 relative z-10">
               <h2
                 class="text-4xl font-headline font-bold text-primary tracking-tight"
               >
-                Transform Your Smile with Premier Dental Bridge Services
+                Learn About Orthodontic Treatment and Aligner Therapy
               </h2>
-              <p class="text-secondary body-lg leading-relaxed mt-3">
-                A Dental Bridge is a form of Restorative Dentistry and Cosmetic
-                Dentistry that can fill the gap of missing teeth and function as
-                natural teeth. A Dental Bridge consists of an anchor to the
-                surrounding teeth and a false tooth that fits between to fill
-                the gap. A Dental Bridge is permanent, meaning it will not be
-                difficult to eat, as it will not come loose or move around.
+              <p class="text-secondary text-lg body-lg leading-relaxed">
+                Orthodontic is an area of Cosmetic Dentistry that deals with the
+                jaw and teeth. When teeth or jaws are not positioned properly,
+                seeing an orthodontist is imperative because crooked and spaced
+                teeth make cleaning difficult, which can progress to gum disease
+                and tooth decay.
+
+                <br /><br />
+                Crooked teeth can cause additional stress on some jaw muscles,
+                leading to TMJ syndrome. Neck pain, and back and shoulder pain
+                can occur as well. A Chagger Dental specialist will look at your
+                teeth, and a treatment plan will be made to go forward. You and
+                your dentist will work collaboratively to decide which method of
+                orthodontic will be best for you.
               </p>
-              <h2 class="text-4xl font-headline font-bold mb-4 mt-10">
-                Benefits of Dental Bridges Services
+            </div>
+            <div class="mt-8 relative z-10">
+              <h2
+                class="text-4xl mb-5 font-headline font-bold text-primary tracking-tight"
+              >
+                Why Have Orthodontic Treatment?
               </h2>
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="flex items-center gap-4 group cursor-default">
-                  <span
-                    class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500"
-                  >
-                    <span class="material-symbols-outlined">brush</span>
-                  </span>
-                  <span class="font-headline font-semibold text-primary"
-                    >Restore your smile</span
-                  >
-                </div>
-                <div class="flex items-center gap-4 group cursor-default">
-                  <span
-                    class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500"
-                  >
-                    <span class="material-symbols-outlined">architecture</span>
-                  </span>
-                  <span class="font-headline font-semibold text-primary"
-                    >Restore the ability to<br />
-                    properly chew and speak</span
+              <p class="text-secondary text-lg body-lg leading-relaxed">
+                There are many benefits of receiving orthodontic treatment, such
+                as improving the appearance of your smile and having aligned
+                teeth for easier oral maintenance and home care.
+
+                <br /><br />
+                There are a number of conditions that makes you the ideal
+                candidate for treatment. In fact, there are several conditions,
+                mostly including the occlusion of your teeth;
+              </p>
+            </div>
+            <div class="space-y-8 mt-7">
+              <div class="flex gap-6 items-start">
+                <div
+                  class="w-14 h-14 rounded-2xl bg-secondary-container flex items-center justify-center flex-none"
+                >
+                  <span class="material-symbols-outlined text-primary text-3xl"
+                    >auto_awesome</span
                   >
                 </div>
-                <div class="flex items-center gap-4 group cursor-default">
-                  <span
-                    class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500"
-                  >
-                    <span class="material-symbols-outlined">auto_awesome</span>
-                  </span>
-                  <span class="font-headline font-semibold text-primary"
-                    >Maintain the shape of your face
-                  </span>
-                </div>
-                <div class="flex items-center gap-4 group cursor-default">
-                  <span
-                    class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500"
-                  >
-                    <span class="material-symbols-outlined">auto_awesome</span>
-                  </span>
-                  <span class="font-headline font-semibold text-primary"
-                    >Distribute the forces in your bite<br />
-                    properly by replacing missing teeth
-                  </span>
+                <div>
+                  <h4 class="text-xl font-bold text-primary mb-2">Overbite</h4>
+                  <p class="text-secondary text-lg max-w-xl">
+                    This is a condition in which the upper teeth overlap the
+                    lower teeth.
+                  </p>
                 </div>
               </div>
-              <h2 class="text-4xl font-headline font-bold mt-10">
-                Types of Dental Implants
-              </h2>
-              <p class="text-lg text-secondary font-manrope mt-2">
-                Three types of dental bridges as an alternative to dental
-                implants:
-              </p>
-              <div class="grid grid-cols-1 md:grid-cols-2 mt-5 gap-8">
+              <div class="flex gap-6 items-start">
                 <div
-                  class="p-10 rounded-[2rem] bg-surface-container-low flex flex-col items-start gap-6 border-none hover:translate-y-[-4px] transition-transform duration-500"
+                  class="w-14 h-14 rounded-2xl bg-secondary-container flex items-center justify-center flex-none"
                 >
-                  <div
-                    class="w-16 h-16 rounded-full bg-surface-container-lowest flex items-center justify-center shadow-sm"
+                  <span class="material-symbols-outlined text-primary text-3xl"
+                    >auto_awesome</span
                   >
-                    <span
-                      class="material-symbols-outlined text-primary text-3xl"
-                      data-icon="toys"
-                      >toys</span
-                    >
-                  </div>
-                  <h3 class="text-2xl font-headline font-bold text-primary">
-                    Tooth-supported fixed bridges
-                  </h3>
-                  <p class="text-secondary leading-relaxed">
-                    Uses healthy surrounding teeth to attach and support the
-                    bridge. These are the most common type of bridge. These are
-                    traditional dental bridges and are the most common today.
+                </div>
+                <div>
+                  <h4 class="text-xl font-bold text-primary mb-2">Underbite</h4>
+                  <p class="text-secondary text-lg max-w-xl">
+                    This is the opposite of an overbite. It is a malocclusion in
+                    which the lower teeth extend further than your upper teeth.
                   </p>
                 </div>
+              </div>
+              <div class="flex gap-6 items-start">
                 <div
-                  class="p-10 rounded-[2rem] bg-secondary-container/40 flex flex-col items-start gap-6 border-none hover:translate-y-[-4px] transition-transform duration-500"
+                  class="w-14 h-14 rounded-2xl bg-secondary-container flex items-center justify-center flex-none"
                 >
-                  <div
-                    class="w-16 h-16 rounded-full bg-surface-container-lowest flex items-center justify-center shadow-sm"
+                  <span class="material-symbols-outlined text-primary text-3xl"
+                    >auto_awesome</span
                   >
-                    <span
-                      class="material-symbols-outlined text-primary text-3xl"
-                      data-icon="cloud"
-                      >cloud</span
-                    >
-                  </div>
-                  <h3 class="text-2xl font-headline font-bold text-primary">
-                    Removable partial/complete dentures
-                  </h3>
-                  <p class="text-secondary leading-relaxed">
-                    This artificial tooth sits on top of the gums where the
-                    missing teeth were and need to be taken out to clean the
-                    false teeth.
+                </div>
+                <div>
+                  <h4 class="text-xl font-bold text-primary mb-2">
+                    Cross bite
+                  </h4>
+                  <p class="text-secondary text-lg max-w-xl">
+                    This is when the upper teeth do not align with the lower
+                    teeth when biting down.
                   </p>
                 </div>
+              </div>
+              <div class="flex gap-6 items-start">
                 <div
-                  class="p-10 rounded-[2rem] bg-primary-fixed-dim/30 flex flex-col items-start gap-6 border-none hover:translate-y-[-4px] transition-transform duration-500"
+                  class="w-14 h-14 rounded-2xl bg-secondary-container flex items-center justify-center flex-none"
                 >
-                  <div
-                    class="w-16 h-16 rounded-full bg-surface-container-lowest flex items-center justify-center shadow-sm"
+                  <span class="material-symbols-outlined text-primary text-3xl"
+                    >auto_awesome</span
                   >
-                    <span
-                      class="material-symbols-outlined text-primary text-3xl"
-                      data-icon="verified_user"
-                      >verified_user</span
-                    >
-                  </div>
-                  <h3 class="text-2xl font-headline font-bold text-primary">
-                    Resin bonded bridges
-                  </h3>
-                  <p class="text-secondary leading-relaxed">
-                    Also known as a Maryland bridge, this is used for replacing
-                    your front teeth and is attached to your healthy adjacent
-                    teeth with metal or porcelain wings on each side. This
-                    dental bridge is specifically used for your front teeth, as
-                    they could not withhold the strong impact of chewing much
-                    like your back wisdom teeth.
-                  </p>
                 </div>
-                <div
-                  class="p-10 rounded-[2rem] bg-surface-container-high flex flex-col items-start gap-6 border-none hover:translate-y-[-4px] transition-transform duration-500"
-                >
-                  <div
-                    class="w-16 h-16 rounded-full bg-surface-container-lowest flex items-center justify-center shadow-sm"
-                  >
-                    <span
-                      class="material-symbols-outlined text-primary text-3xl"
-                      data-icon="auto_awesome"
-                      >auto_awesome</span
-                    >
-                  </div>
-                  <h3 class="text-2xl font-headline font-bold text-primary">
-                    Sensory Calm
-                  </h3>
-                  <p class="text-secondary leading-relaxed">
-                    Dimmable lighting and noise-canceling headsets provide a
-                    sanctuary for children with sensory sensitivities.
+                <div>
+                  <h4 class="text-xl font-bold text-primary mb-2">Open bite</h4>
+                  <p class="text-secondary text-lg max-w-xl">
+                    This condition is defined as having a space between the
+                    biting surfaces, which can either be on the surfaces of the
+                    side teeth or front teeth, when the back teeth bite
+                    together.<br /><br />
+                    Other conditions that make you a candidate for orthodontic
+                    is spacing, crowding, impacted teeth, and more.
                   </p>
                 </div>
               </div>
             </div>
           </section>
-
           <!-- The Sanctuary Journey -->
-          <section class="py-6">
+          <section class="py-1">
             <div
               class="relative space-y-8 before:content-[''] before:absolute before:left-[1.25rem] before:top-4 before:bottom-4 before:w-[2px] before:bg-surface-container-highest"
             >
@@ -845,79 +802,148 @@
                   1
                 </div>
                 <h3 class="text-2xl font-bold text-primary mb-4">
-                  Exploring Dental Bridge Services for a Seamless Smile
-                  Transformation
+                  How Does Treatment Work
                 </h3>
-                <p class="text-secondary text-lg leading-relaxed max-w-3xl">
-                  Your first visit with your dental professional will include a
-                  fitting for your bridge. You will be given a temporary bridge
-                  to protect your teeth and gums and is to be worn while the
-                  permanent bridge is sent to the dental laboratory to be made.
-                  During the second visit, your temporary bridge will be removed
-                  and the new bridge will be checked and adjusted to your
-                  prepared teeth. Multiple dental visits may be required to
-                  check the fit of the metal framework and bite to fit properly,
-                  avoiding giving you any mouth sores. This is dependent on each
-                  individual’s case. After a couple weeks, the bridge is
-                  cemented into place.
+                <p class="text-secondary leading-relaxed text-lg">
+                  There are many devices that can help reposition the teeth as
+                  well as retain muscles. This includes devices that are
+                  removable or fixed. The devices work by placing pressure on
+                  your jaw and pressure on your teeth. As for what approach will
+                  be taken, this depends on what the orthodontist recommends
+                  during your orthodontic screening, and how severe your
+                  specific problem is.
                 </p>
               </div>
               <!-- Step 2 -->
               <div class="relative pl-16 group">
                 <div
-                  class="absolute left-0 w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center font-bold z-10 transition-transform duration-500 group-hover:scale-110"
+                  class="absolute left-0 w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center font-bold z-10"
                 >
                   2
                 </div>
                 <h3 class="text-2xl font-bold text-primary mb-4">
-                  Maintaining a Dental Bridge
+                  Fixed Appliances: Braces
                 </h3>
-                <p class="text-secondary leading-relaxed text-lg max-w-3xl">
-                  Chagger Dental strongly emphasizes the importance of keeping
-                  the remaining teeth healthy and strong as the bridge depends
-                  on the surrounding teeth. Brushing twice a day and flossing
-                  and using an antiseptic mouthwash daily help prevent tooth
-                  decay and gum disease that can lead to tooth loss. Your
-                  dentist or oral care professional can demonstrate how to
-                  properly brush and floss teeth. Dental bridges can last up to
-                  15 years, with good oral hygiene and regular checkups.<br /><br />
-                  If you think you are a candidate for a dental bridge, speak to
-                  your dental care professional at your next visit to discuss
-                  which dental treatment option is best for you.
+                <p class="text-secondary leading-relaxed text-lg">
+                  BracesThere are are number of fixed devices, such as braces.
+                  Braces consist of brackets, wires and bands, which are placed
+                  around the tooth or teeth needing adjustment. The bands or
+                  wires serve as anchors, while the teeth are fused to metal
+                  brackets. Arch wires are tightened, which places tension on
+                  the teeth and eventually this moves the teeth into the correct
+                  position. As for how long braces take for completion is case
+                  specific and depends on the amount of movement needing to be
+                  done. Also, monthly visits to have the wires tightened and
+                  examined by professionals is essential.Special Fixed
+                  AppliancesThese are designed to get thumb sucking habits under
+                  control. They are attached to the teeth via bands. However,
+                  they are not comfortable to wear when eating.Fixed Space
+                  MaintainersThese are used to keep the space open in the mouth
+                  of a child who has lost a tooth prematurely. A band is used as
+                  an anchor for the tooth located near the empty spot. A wire is
+                  also used.
                 </p>
               </div>
               <!-- Step 3 -->
               <div class="relative pl-16 group">
                 <div
-                  class="absolute left-0 w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center font-bold z-10 transition-transform duration-500 group-hover:scale-110"
+                  class="absolute left-0 w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center font-bold z-10"
                 >
                   3
                 </div>
                 <h3 class="text-2xl font-bold text-primary mb-4">
-                  How much does a dental bridge cost?
+                  Removable Appliances: Aligner Therapy
                 </h3>
-                <p class="text-secondary leading-relaxed max-w-3xl text-lg">
-                  A fixed dental bridge (i.e., a non-removable bridge, cemented
-                  into place) is an important procedure option for those with
-                  missing teeth. If a missing tooth is not replaced, then
-                  problems such as trouble chewing and speaking, as well as
-                  shifting teeth, may occur. The dental bridge cost may seem
-                  expensive, but dental insurance can significantly reduce the
-                  cost. A Delta Dental insurance plan typically covers 50% to
-                  80% of the total your dental bridge cost depending on
-                  specifics of your dental plan.<br /><br />
-                  The dental bridge cost procedure is dependent on a variety of
-                  factors, but here is a general cost estimate based on internal
-                  data from Delta Dental:<br /><br />
-                  Average out-of-network cost for dental bridge for a three-unit
-                  bridge (i.e. two crowns and a poetic) to replace one missing
-                  tooth is $3,965.
+                <p class="text-secondary leading-relaxed text-lg">
+                  AlignersAligner Therapy is a alternative to braces and are
+                  commonly known as an Invisalign, SureSmile, and ClearCorrect.
+                  However, they are nearly invisible, which is why they are
+                  popular among adults. Also, they can be removed when a person
+                  wants to eat or brush their teeth.
                 </p>
+              </div>
+              <div class="relative pl-16 group">
+                <div
+                  class="absolute left-0 w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center font-bold z-10"
+                >
+                  4
+                </div>
+                <h3 class="text-2xl font-bold text-primary mb-4">
+                  Removable Appliances: Aligner Therapy
+                </h3>
+                <p class="text-secondary leading-relaxed text-lg">
+                  For those who aren’t very keen to wear braces, there are
+                  removable space maintainers, which are similar to fixed space
+                  maintainers. They are removable and they fit right over the
+                  jaw. They are made with wire branches or plastic branches.<br /><br />
+                  Jaw repositioning devices are used on either the lower jaw or
+                  the top jaw. They are used to train the jaw to close to a
+                  proper position. Sometimes they are used by those who have TMJ
+                  (temporomandibular joint).<br /><br />
+                  There are lip and cheek bumpers too, which keep your lips or
+                  your cheeks away from your teeth. Besides that, there is a
+                  palatal expander, which is worn on the upper jaw arch. This
+                  device is a plastic plate and it’s designed to make the
+                  palatal area wider.<br /><br />
+                  Another popular option is removable retainers. The retainers
+                  are designed to prevent your natural teeth from going back
+                  into their improper position. If need be, the orthodontist can
+                  modify them for those who want to prevent thumb sucking.<br /><br />
+                  Your specialist will recommend what treatment should be done
+                  for you. They may recommend only one type of treatment or
+                  provide range of options to give their patients healthy
+                  smiles. If you believe you’d benefit from orthodontic
+                  treatment, schedule an appointment with Chagger Dental for an
+                  orthodontic consultation today.
+                </p>
+              </div>
+              <!-- Step 5 -->
+              <div class="relative pl-16 group">
+                <div
+                  class="absolute left-0 w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center font-bold z-10"
+                >
+                  5
+                </div>
+                <h3 class="text-2xl font-bold text-primary mb-4">
+                  How much does cost of Orthodontics Treatment?
+                </h3>
+                <p class="text-secondary leading-relaxed text-lg">
+                  Many people wonder how much cost of orthodontics in Ontario.
+                  As we have seen, the price depends on various variables.
+                  However, we offer you an approximate idea of ​​how much cost
+                  of orthodontics in our country:
+                </p>
+                <ul
+                  class="items-center gap-2 text-sm text-gray-500 mt-8 space-y-4 px-5"
+                >
+                  <li
+                    class="text-secondary leading-relaxed text-lg list-disc list-outside"
+                  >
+                    Metal braces – Approximately between $3,000 to $8,000 or
+                    more
+                  </li>
+                  <li
+                    class="text-secondary leading-relaxed text-lg list-disc list-outside"
+                  >
+                    Ceramic braces – Approximately between 4,000 to $8,000
+                  </li>
+                  <li
+                    class="text-secondary leading-relaxed text-lg list-disc list-outside"
+                  >
+                    Lingual Braces – Approximately between $8,000 to 10,000
+                  </li>
+                  <li
+                    class="text-secondary leading-relaxed text-lg list-disc list-outside"
+                  >
+                    Invisalign Clear Aligners – Approximately between 4,000 to
+                    $7,500
+                  </li>
+                </ul>
               </div>
             </div>
             <!-- transformation -->
             <h2 class="text-4xl font-headline font-bold mt-10">
-              Artistic Transformations
+              Artistic Transformations: Before and After
             </h2>
             <div class="grid grid-cols-1 md:grid-cols-2 mt-5 gap-8">
               <div
@@ -966,106 +992,13 @@
           <!-- FAQ Sanctuary -->
           <section class="pb-12">
             <h2 class="text-4xl font-headline font-bold mb-3">
-              How much do Dental Implants cost in Ontario?
+              Frequently Asked Questions
             </h2>
-            <p class="text-primary text-xl">
+            <!-- <p class="text-primary text-xl">
               The cost of dental implants in Ontario depends on several factors,
               including:
-            </p>
-            <div class="space-y-8 mt-7">
-              <div class="flex gap-6 items-start">
-                <div
-                  class="w-14 h-14 rounded-2xl bg-secondary-container flex items-center justify-center flex-none"
-                >
-                  <span class="material-symbols-outlined text-primary text-3xl"
-                    >psychology</span
-                  >
-                </div>
-                <div>
-                  <h4 class="text-xl font-bold text-primary mb-2">
-                    The type of implant
-                  </h4>
-                  <p class="text-secondary">
-                    there are different types of dental implants, with different
-                    materials and characteristics. Therefore, it’s cost may vary
-                    depending on the type chosen.
-                  </p>
-                </div>
-              </div>
-              <div class="flex gap-6 items-start">
-                <div
-                  class="w-14 h-14 rounded-2xl bg-secondary-container flex items-center justify-center flex-none"
-                >
-                  <span class="material-symbols-outlined text-primary text-3xl"
-                    >precision_manufacturing</span
-                  >
-                </div>
-                <div>
-                  <h4 class="text-xl font-bold text-primary mb-2">
-                    The number of implants needed
-                  </h4>
-                  <p class="text-secondary">
-                    if a person requires more than one dental implant, the total
-                    cost will be higher than if only one is needed.
-                  </p>
-                </div>
-              </div>
-              <div class="flex gap-6 items-start">
-                <div
-                  class="w-14 h-14 rounded-2xl bg-secondary-container flex items-center justify-center flex-none"
-                >
-                  <span class="material-symbols-outlined text-primary text-3xl"
-                    >location_on</span
-                  >
-                </div>
-                <div>
-                  <h4 class="text-xl font-bold text-primary mb-2">
-                    The location of the dental office
-                  </h4>
-                  <p class="text-secondary">
-                    the cost of dental implants in Ontario may vary depending on
-                    the city or country where the dental office is located.
-                  </p>
-                </div>
-              </div>
-              <div class="flex gap-6 items-start">
-                <div
-                  class="w-14 h-14 rounded-2xl bg-secondary-container flex items-center justify-center flex-none"
-                >
-                  <span class="material-symbols-outlined text-primary text-3xl"
-                    >verified_user</span
-                  >
-                </div>
-                <div>
-                  <h4 class="text-xl font-bold text-primary mb-2">
-                    The experience and qualification of the dentist
-                  </h4>
-                  <p class="text-secondary">
-                    a dentist with more experience and qualification will have a
-                    higher cost to place a dental implant than one with less
-                    experience.
-                  </p>
-                </div>
-              </div>
-              <div class="flex gap-6 items-start">
-                <div
-                  class="w-14 h-14 rounded-2xl bg-secondary-container flex items-center justify-center flex-none"
-                >
-                  <span class="material-symbols-outlined text-primary text-3xl"
-                    >neurology</span
-                  >
-                </div>
-                <div>
-                  <h4 class="text-xl font-bold text-primary mb-2">
-                    The complexity of the procedure
-                  </h4>
-                  <p class="text-secondary">
-                    in some cases, the placement of a dental implant may require
-                    additional procedures, which can increase the total cost.
-                  </p>
-                </div>
-              </div>
-            </div>
+            </p> -->
+
             <div class="space-y-4 mt-10">
               <details
                 class="group bg-surface-container-low rounded-[1.5rem] p-8 border border-transparent open:border-outline-variant/10 transition-all duration-300"
@@ -1507,504 +1440,200 @@
         </div>
       </section>
     </main>
-    <!-- World-Class Interactive Map Footer Section -->
-    <section class="relative bg-primary overflow-hidden">
-      <!-- Stylized Monochromatic Map Background -->
-      <div
-        class="absolute inset-0 z-0 opacity-20 grayscale transition-all duration-700 hover:grayscale-0"
+    <section class="max-w-8xl mt-20 mx-auto px-8 mb-10">
+      <h2
+        class="text-5xl md:text-6xl mb-10 text-center text-primary font-headline font-extrabold"
       >
-        <img
-          alt="stylized monochromatic satellite map of a modern urban landscape with intricate street patterns and water features"
-          class="w-full h-full object-cover"
-          data-alt="stylized monochromatic satellite map of a modern urban landscape with intricate street patterns and water features"
-          data-location="Toronto"
-          src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNtwNxX8mRrlVFiT5fJuvIUXU15yKB_e24w-vLQVD_itARERtqcMaQtCexkxD0fsHWaQUjXoj7aZmEo6RuG0qlar9V9ePT19Sa4oOtBoXle3nFAlw2256KoTE2Gbj721uPUoQlTi84J_I-rGN41QfzKmja6yAmCRMfcF-v7Zhl4Ttx2DL6jsVcF07j6-shOHMbnGEe5_Bt_HpI2jPssjOkwzFyrypU-HQwCPcPgnzSDUd1CnJxEIVoTLJBxNJh3w40nZQFr6RGB2kZ"
-        />
+        Other Services
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-stretch">
+        <!-- Card 1: Precision Bonding (Large Vertical) -->
         <div
-          class="absolute inset-0 bg-gradient-to-b from-primary via-transparent to-primary"
-        ></div>
-      </div>
-      <div class="relative z-10 pt-24 pb-12 px-8 max-w-screen-2xl mx-auto">
-        <!-- Footer Heading Area -->
-        <div
-          class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8"
+          class="md:col-span-5 group relative overflow-hidden rounded-[2.5rem] min-h-[600px] shadow-sm transition-all duration-700"
         >
-          <div class="max-w-xl">
-            <h2
-              class="font-headline text-4xl md:text-5xl font-bold text-on-primary leading-tight"
-            >
-              Our Locations
-            </h2>
+          <div class="absolute inset-0 z-0">
+            <img
+              class="w-full h-full object-cover transition-transform duration-[2s] ease-out group-hover:scale-110"
+              data-alt="Close-up of professional dental bonding procedure with focused blue curing light and dentist's steady gloved hands"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7-_J5CF-vraOPT-Ud0MdwSXJiKV4LCldNo-MZFAk5S2XgDhx7DzHEP14Jk5uYP1f8vy38tvgGIdMqLXdwhRZJnjbQJqOox1vzqcjIs0thy8PypsUOwAfXMkzO3IdQbZX5-EakG-Kpdt2KDbEcun9d9UDeilWWWftUmtrzE_jqrgNHFUWJ104WR87qttP7wTaB64Dzl6iCHVP2cbsvvXvm48tKpt24S43gettv3mELMjy16KjJ9b69JV72CoBE23JdkRAiVjINNq-E"
+            />
           </div>
-          <a href="../book-appointment.html"
-            ><button
-              class="bg-surface-container-lowest text-primary px-10 py-5 rounded-full font-headline font-bold text-lg shadow-[0_8px_32px_rgba(0,30,73,0.15)] hover:scale-105 active:scale-95 transition-all duration-300"
-            >
-              Book Appointment
-            </button></a
-          >
-        </div>
-        <!-- Floating Glassmorphism Contact Cards -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <!-- Location Card 1 -->
           <div
-            class="glass-card p-8 rounded-xl border border-on-primary-container/90 group cursor-pointer hover:border-on-primary-container/30 transition-all duration-500"
-            data-aos="slide-up"
+            class="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent opacity-60"
+          ></div>
+          <div
+            class="absolute inset-0 glass-primary translate-y-full group-hover:translate-y-0 transition-transform duration-700 ease-in-out p-12 flex flex-col justify-end text-white"
           >
-            <div class="flex justify-between items-start mb-6">
-              <div class="p-3 bg-primary-container rounded-lg">
-                <span
-                  class="material-symbols-outlined text-on-primary-container"
-                  style="font-variation-settings: &quot;FILL&quot; 1"
-                  >medical_services</span
-                >
-              </div>
-              <a href="../locations_page.html"
-                ><span
-                  class="text-xs font-label uppercase tracking-widest text-on-primary-container/60"
-                  >View All</span
-                ></a
-              >
-            </div>
-            <h3 class="font-headline text-2xl font-bold text-on-primary mb-2">
-              Oakville
+            <h3 class="font-headline text-4xl font-bold mb-4">
+              Dental Bonding
             </h3>
-            <p class="text-on-primary-container/80 mb-2 leading-relaxed">
-              231 Oak Park Blvd., Suite #108,<br />
-              Oakville, ON L6H 7S8
-            </p>
-            <div class="space-y-3 mb-4">
-              <div class="flex items-center gap-3">
+            <a href="../services/bonding.html"
+              ><div
+                class="mt-1 mb-4 flex items-center text-center align-items-center gap-3 text-white font-semibold group/link cursor-pointer"
+              >
+                <span class="text-sm uppercase tracking-widest"
+                  >Learn More</span
+                >
                 <span
-                  class="material-symbols-outlined text-white/60 text-sm"
-                  data-icon="mail"
-                  >mail</span
+                  class="material-symbols-outlined translate-x-0 group-hover/link:translate-x-2 transition-transform"
+                  >trending_flat</span
                 >
-                <span class="text-primary-fixed-dim text-sm"
-                  >info@chaggerdental.com</span
-                >
-              </div>
-              <div class="flex items-center gap-3">
-                <span
-                  class="material-symbols-outlined text-white/60 text-sm"
-                  data-icon="call"
-                  >call</span
-                >
-                <span class="text-primary-fixed-dim text-sm">905-257-2221</span>
-              </div>
-            </div>
-            <div
-              class="flex items-center gap-4 text-on-primary text-sm font-semibold group-hover:gap-6 transition-all"
+              </div></a
             >
-              <a
-                href="https://www.google.ca/maps/place/Chagger+Dental/@43.4826322,-79.7163223,17z/data=!3m1!4b1!4m6!3m5!1s0x882b42caf3425545:0x7ebbd6544dc2ec11!8m2!3d43.4826322!4d-79.7163223!16s%2Fg%2F1thss03c?entry=ttu&g_ep=EgoyMDI2MDMzMS4wIKXMDSoASAFQAw%3D%3D"
-                target="_blank"
-                ><span>View on Map</span></a
-              >
-              <span class="material-symbols-outlined text-sm"
-                >arrow_forward</span
-              >
-            </div>
+            <p
+              class="text-on-primary-container text-lg mb-8 leading-relaxed font-light"
+            >
+              Seamless restorations using advanced composite artistry to perfect
+              chips, gaps, and surface imperfections.
+            </p>
           </div>
-          <!-- Location Card 2 -->
           <div
-            class="glass-card p-8 rounded-xl border border-on-primary-container/90 group cursor-pointer hover:border-on-primary-container/30 transition-all duration-500"
-            data-aos="slide-up"
+            class="absolute bottom-10 left-10 text-white z-10 transition-opacity duration-500 group-hover:opacity-0"
           >
-            <div class="flex justify-between items-start mb-6">
-              <div class="p-3 bg-primary-container rounded-lg">
-                <span
-                  class="material-symbols-outlined text-on-primary-container"
-                  style="font-variation-settings: &quot;FILL&quot; 1"
-                  >medical_services</span
-                >
-              </div>
-              <a href="../locations_page.html"
-                ><span
-                  class="text-xs font-label uppercase tracking-widest text-on-primary-container/60"
-                  >View All</span
-                ></a
-              >
-            </div>
-            <h3 class="font-headline text-2xl font-bold text-on-primary mb-2">
-              Burlington
+            <h3 class="font-headline text-3xl font-bold tracking-tight">
+              Dental Bonding
             </h3>
-            <p class="text-on-primary-container/80 mb-6 leading-relaxed">
-              2455 Appleby Line, Suite #C08,<br />
-              Burlington, ON L7L 0B6.
-            </p>
-            <div class="space-y-3 mb-4">
-              <div class="flex items-center gap-3">
-                <span
-                  class="material-symbols-outlined text-white/60 text-sm"
-                  data-icon="mail"
-                  >mail</span
-                >
-                <span class="text-primary-fixed-dim text-sm"
-                  >info@chaggerdental.com</span
-                >
-              </div>
-              <div class="flex items-center gap-3">
-                <span
-                  class="material-symbols-outlined text-white/60 text-sm"
-                  data-icon="call"
-                  >call</span
-                >
-                <span class="text-primary-fixed-dim text-sm">905-336-0600</span>
-              </div>
-            </div>
-            <div
-              class="flex items-center gap-4 text-on-primary text-sm font-semibold group-hover:gap-6 transition-all"
-            >
-              <a
-                href="https://www.google.ca/maps/place/Chagger+Dental-Burlington/@43.4052011,-79.8075672,17z/data=!3m1!4b1!4m5!3m4!1s0x882b6137ad406ce9:0x74f409715649e1e0!8m2!3d43.4051972!4d-79.8053785?shorturl=1"
-                target="_blank"
-                ><span>View on Map</span></a
-              >
-              <span class="material-symbols-outlined text-sm"
-                >arrow_forward</span
-              >
-            </div>
-          </div>
-          <!-- Location Card 3 -->
-          <div
-            class="glass-card p-8 rounded-xl border border-on-primary-container/90 group cursor-pointer hover:border-on-primary-container/30 transition-all duration-500"
-            data-aos="slide-up"
-          >
-            <div class="flex justify-between items-start mb-6">
-              <div class="p-3 bg-primary-container rounded-lg">
-                <span
-                  class="material-symbols-outlined text-on-primary-container"
-                  style="font-variation-settings: &quot;FILL&quot; 1"
-                  >medical_services</span
-                >
-              </div>
-              <a href="../locations_page.html"
-                ><span
-                  class="text-xs font-label uppercase tracking-widest text-on-primary-container/60"
-                  >View All</span
-                ></a
-              >
-            </div>
-            <h3 class="font-headline text-2xl font-bold text-on-primary mb-2">
-              Mississauga
-            </h3>
-            <p class="text-on-primary-container/80 mb-6 leading-relaxed">
-              3427 Derry Rd East, Suite #201,<br />
-              Mississauga, ON L4T 4H7
-            </p>
-            <div class="space-y-3 mb-4">
-              <div class="flex items-center gap-3">
-                <span
-                  class="material-symbols-outlined text-white/60 text-sm"
-                  data-icon="mail"
-                  >mail</span
-                >
-                <span class="text-primary-fixed-dim text-sm"
-                  >info@chaggerdental.com</span
-                >
-              </div>
-              <div class="flex items-center gap-3">
-                <span
-                  class="material-symbols-outlined text-white/60 text-sm"
-                  data-icon="call"
-                  >call</span
-                >
-                <span class="text-primary-fixed-dim text-sm"
-                  >905-672-22441</span
-                >
-              </div>
-            </div>
-            <div
-              class="flex items-center gap-4 text-on-primary text-sm font-semibold group-hover:gap-6 transition-all"
-            >
-              <a
-                href="https://www.google.com/maps/place/Chagger+Dental+Clinic+Mississauga/@43.7134378,-79.6324435,21z/data=!3m1!5s0x882b3be939451297:0xcf596aedfc8d3b37!4m14!1m7!3m6!1s0x882b3be924af2acd:0xb214cd5c8fcbf2ce!2sChagger+Dental+Clinic+Mississauga!8m2!3d43.7134099!4d-79.6324203!16s%2Fg%2F1v42gfnn!3m5!1s0x882b3be924af2acd:0xb214cd5c8fcbf2ce!8m2!3d43.7134099!4d-79.6324203!16s%2Fg%2F1v42gfnn?hl=en&entry=ttu&g_ep=EgoyMDI1MTAxMi4wIKXMDSoASAFQAw%3D%3D"
-                target="_blank"
-                ><span>View on Map</span></a
-              >
-              <span class="material-symbols-outlined text-sm"
-                >arrow_forward</span
-              >
-            </div>
+            <p class="opacity-80 font-light">Artistic Restorations</p>
           </div>
         </div>
-        <!-- Mandatory Footer Component Structure -->
-        <footer class="pt-16 border-t border-on-primary-container/10">
-          <!-- Main Footer Grid -->
-          <div class="max-w-9xl mx-auto px-8 py-10">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16">
-              <!-- Column 1: Brand & Philosophy -->
-              <div class="space-y-8">
-                <div class="flex flex-col gap-4">
-                  <img
-                    src="../images/dental-logo-footer.png"
-                    class="img-fluid"
-                  />
-                  <p
-                    class="text-primary-fixed-dim leading-relaxed font-light text-sm"
-                  >
-                    © Chagger Dental. Providing modern, compassionate dentistry
-                    for healthy, confident smiles. Emergency care, family
-                    dentistry, and advanced treatments—all under one roof.
-                  </p>
-                </div>
-                <!-- Social Proof Badges -->
-                <div class="flex gap-4 items-center">
-                  <div
-                    class="h-12 w-12 rounded-xl bg-white/10 flex items-center justify-center backdrop-blur-md"
-                  >
-                    <span
-                      class="material-symbols-outlined text-white"
-                      data-icon="verified"
-                      style="font-variation-settings: &quot;FILL&quot; 1"
-                      >verified</span
-                    >
-                  </div>
-                  <div
-                    class="h-12 w-12 rounded-xl bg-white/10 flex items-center justify-center backdrop-blur-md"
-                  >
-                    <span
-                      class="material-symbols-outlined text-white"
-                      data-icon="stars"
-                      style="font-variation-settings: &quot;FILL&quot; 1"
-                      >stars</span
-                    >
-                  </div>
-                  <div
-                    class="h-12 w-12 rounded-xl bg-white/10 flex items-center justify-center backdrop-blur-md"
-                  >
-                    <span
-                      class="material-symbols-outlined text-white"
-                      data-icon="health_and_safety"
-                      style="font-variation-settings: &quot;FILL&quot; 1"
-                      >health_and_safety</span
-                    >
-                  </div>
-                </div>
-              </div>
-              <!-- Column 2: Clinical Services -->
-              <div>
-                <h3
-                  class="font-headline text-xs uppercase tracking-[0.2em] text-white/40 mb-8 font-bold"
+        <!-- Right Column: Nested Grid -->
+        <div class="md:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Card 2: Invisalign Mastery -->
+          <div
+            class="group relative overflow-hidden rounded-[2rem] h-[350px] shadow-sm"
+          >
+            <div class="absolute inset-0 z-0">
+              <img
+                class="w-full h-full object-cover transition-transform duration-[2s] ease-out group-hover:scale-110"
+                data-alt="Beautifully lit close-up of a clear orthodontic aligner being held by a patient with a soft-focus radiant smile in background"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBR1TwDU_jfvVfH1ij7ERVC4s_E9qfdGWqSgGWTWZfkUaFlczF2Yb4szN6eCM1a3GL08wQvrHTJrwMKcUVtkVPniYdLuMO_poN-ohVVzX1Ph1a1jd7QsxpWhXvm0dxe6-F8U6pzku7WfjUcGsEvX7OSK-iemUhIZx8Fh4dnoLG8KoTQXvHlQ5AlR4pbEBv6VEtoRvNcQd83DTS5IvNnQp7XHdwsTJV41GvG4tnYpTzMbZLs0l_EETOWB-fTWxd_RGVrzlrv-3Ti_1FT"
+              />
+            </div>
+            <div
+              class="absolute inset-0 glass-primary translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out p-8 flex flex-col justify-center text-white text-center"
+            >
+              <h3 class="font-headline text-2xl font-bold mb-2">Invisalign</h3>
+              <p class="text-sm opacity-90 leading-relaxed font-light mb-6">
+                Discrete orthodontic engineering for a perfectly aligned smile
+                without the visual weight of traditional braces.
+              </p>
+              <span class="material-symbols-outlined mx-auto text-3xl"
+                >auto_fix_high</span
+              >
+              <a href="../services/invisalign.html"
+                ><div
+                  class="mt-6 flex items-center text-center align-items-center gap-3 text-white font-semibold group/link cursor-pointer"
                 >
-                  Services
-                </h3>
-                <ul class="space-y-4">
-                  <li>
-                    <a
-                      class="text-primary-fixed-dim hover:text-white transition-colors flex items-center gap-2 group"
-                      href="../services/denture-services.html"
-                      ><span
-                        class="h-px w-0 group-hover:w-4 bg-primary-fixed-dim transition-all"
-                      ></span
-                      >Denture Services</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      class="text-primary-fixed-dim hover:text-white transition-colors flex items-center gap-2 group"
-                      href="../services/cosmetic-dentistry.html"
-                      ><span
-                        class="h-px w-0 group-hover:w-4 bg-primary-fixed-dim transition-all"
-                      ></span
-                      >Cosmetic Dentistry</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      class="text-primary-fixed-dim hover:text-white transition-colors flex items-center gap-2 group"
-                      href="../services/invisalign.html"
-                      ><span
-                        class="h-px w-0 group-hover:w-4 bg-primary-fixed-dim transition-all"
-                      ></span
-                      >Invisalign</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      class="text-primary-fixed-dim hover:text-white transition-colors flex items-center gap-2 group"
-                      href="../services/teeth-whitening.html"
-                      ><span
-                        class="h-px w-0 group-hover:w-4 bg-primary-fixed-dim transition-all"
-                      ></span
-                      >Teeth Whitening</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      class="text-primary-fixed-dim hover:text-white transition-colors flex items-center gap-2 group"
-                      href="../services/orthodontics.html"
-                      ><span
-                        class="h-px w-0 group-hover:w-4 bg-primary-fixed-dim transition-all"
-                      ></span
-                      >Orthodontics</a
-                    >
-                  </li>
-                </ul>
-              </div>
-              <!-- Column 3: Locations (Micro-Maps) -->
-              <div>
-                <h3
-                  class="font-headline text-xs uppercase tracking-[0.2em] text-white/40 mb-8 font-bold"
-                >
-                  Quick Links
-                </h3>
-                <div class="space-y-6">
-                  <ul class="space-y-4">
-                    <li>
-                      <a
-                        class="text-primary-fixed-dim hover:text-white transition-colors flex items-center gap-2 group"
-                        href="../index.html"
-                        ><span
-                          class="h-px w-0 group-hover:w-4 bg-primary-fixed-dim transition-all"
-                        ></span
-                        >Home</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        class="text-primary-fixed-dim hover:text-white transition-colors flex items-center gap-2 group"
-                        href="../about_us.html"
-                        ><span
-                          class="h-px w-0 group-hover:w-4 bg-primary-fixed-dim transition-all"
-                        ></span
-                        >About Us</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        class="text-primary-fixed-dim hover:text-white transition-colors flex items-center gap-2 group"
-                        href="../services.html"
-                        ><span
-                          class="h-px w-0 group-hover:w-4 bg-primary-fixed-dim transition-all"
-                        ></span
-                        >Services</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        class="text-primary-fixed-dim hover:text-white transition-colors flex items-center gap-2 group"
-                        href="../locations_page.html"
-                        ><span
-                          class="h-px w-0 group-hover:w-4 bg-primary-fixed-dim transition-all"
-                        ></span
-                        >Locations</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        class="text-primary-fixed-dim hover:text-white transition-colors flex items-center gap-2 group"
-                        href="../reviews.html"
-                        ><span
-                          class="h-px w-0 group-hover:w-4 bg-primary-fixed-dim transition-all"
-                        ></span
-                        >Reviews</a
-                      >
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <!-- Column 4: Reach Out -->
-              <div class="space-y-8">
-                <div>
-                  <h3
-                    class="font-headline text-xs uppercase tracking-[0.2em] text-white/40 mb-8 font-bold"
+                  <span class="text-sm uppercase tracking-widest"
+                    >Learn More</span
                   >
-                    Contact
-                  </h3>
-                  <div class="space-y-4">
-                    <div class="flex items-center gap-3">
-                      <span
-                        class="material-symbols-outlined text-white/60 text-sm"
-                        data-icon="mail"
-                        >mail</span
-                      >
-                      <span class="text-primary-fixed-dim text-sm"
-                        >info@chaggerdental.com</span
-                      >
-                    </div>
-                    <div class="flex items-center gap-3">
-                      <span
-                        class="material-symbols-outlined text-white/60 text-sm"
-                        data-icon="call"
-                        >call</span
-                      >
-                      <span class="text-primary-fixed-dim text-sm"
-                        >905-257-2221</span
-                      >
-                    </div>
-                  </div>
-                </div>
-                <div class="pt-6">
-                  <h3
-                    class="font-headline text-xs uppercase tracking-[0.2em] text-white/40 mb-4 font-bold"
+                  <span
+                    class="material-symbols-outlined translate-x-0 group-hover/link:translate-x-2 transition-transform"
+                    >trending_flat</span
                   >
-                    Follow Us
-                  </h3>
-                  <div class="flex gap-4">
-                    <a
-                      class="text-white/40 hover:text-white transition-colors"
-                      href="#"
-                      ><span
-                        class="material-symbols-outlined"
-                        data-icon="public"
-                        >public</span
-                      ></a
-                    >
-                    <a
-                      class="text-white/40 hover:text-white transition-colors"
-                      href="#"
-                      ><span class="material-symbols-outlined" data-icon="share"
-                        >share</span
-                      ></a
-                    >
-                    <a
-                      class="text-white/40 hover:text-white transition-colors"
-                      href="#"
-                      ><span class="material-symbols-outlined" data-icon="chat"
-                        >chat</span
-                      ></a
-                    >
-                  </div>
-                </div>
-              </div>
+                </div></a
+              >
+            </div>
+            <div
+              class="absolute bottom-6 left-6 text-white z-10 group-hover:opacity-0 transition-opacity"
+            >
+              <h3 class="font-headline text-xl font-bold">Invisalign</h3>
             </div>
           </div>
-          <!-- Tonal Shift Copyright Bar -->
-          <div class="w-full bg-[#00173a] border-t border-white/5">
+          <!-- Card 3: Signature Crowns -->
+          <div
+            class="group relative overflow-hidden rounded-[2rem] h-[350px] shadow-sm"
+          >
+            <div class="absolute inset-0 z-0">
+              <img
+                class="w-full h-full object-cover transition-transform duration-[2s] ease-out group-hover:scale-110"
+                data-alt="Detailed macro shot of a porcelain dental crown being crafted in a modern laboratory under precise clinical lighting"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvd3HENY3taXVTRabI2Uvfipj_odbJoMWlSha0w7YfIJlfnC9bAMx_cdyTAlGxLIb1A34B7lK666bqa-IY20XDFLpdNLB8nz9VlUt4Ei9srGFkIleSzBf-RgtcuNruXxsCEW1pwN2Lpg3rgncDo9hCxrINS6vjUKPfrOjg4DtzXRpVJ20rNWB0q7rCJ-R8NQGdLPbq0jYgcGIJZ3cS8AxGagaEZ0dUVetjhyD6gbWs2CNMfSilTCsgDL3VVO2i6ASe2L7K4sI2vqas"
+              />
+            </div>
             <div
-              class="max-w-7xl mx-auto px-8 py-8 flex flex-col md:flex-row justify-between items-center gap-6"
+              class="absolute inset-0 glass-primary translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out p-8 flex flex-col justify-center text-white text-center"
             >
-              <div class="flex flex-col md:flex-row items-center gap-8">
-                <p
-                  class="font-label text-[12px] uppercase tracking-widest text-white/30"
+              <h3 class="font-headline text-2xl font-bold mb-2">
+                Dental Crowns
+              </h3>
+              <p class="text-sm opacity-90 leading-relaxed font-light mb-6">
+                Custom-milled porcelain that mimics the natural translucency and
+                strength of biological tooth enamel.
+              </p>
+              <span class="material-symbols-outlined mx-auto text-3xl"
+                >workspace_premium</span
+              >
+              <a href="../services/dental-crowns.html"
+                ><div
+                  class="mt-6 flex items-center text-center align-items-center gap-3 text-white font-semibold group/link cursor-pointer"
                 >
-                  © 2026 Chagger Dental. All rights reserved.
-                </p>
-                <div class="flex gap-6"></div>
-              </div>
+                  <span class="text-sm uppercase tracking-widest"
+                    >Learn More</span
+                  >
+                  <span
+                    class="material-symbols-outlined translate-x-0 group-hover/link:translate-x-2 transition-transform"
+                    >trending_flat</span
+                  >
+                </div></a
+              >
+            </div>
+            <div
+              class="absolute bottom-6 left-6 text-white z-10 group-hover:opacity-0 transition-opacity"
+            >
+              <h3 class="font-headline text-xl font-bold">Dental Crowns</h3>
+            </div>
+          </div>
+          <!-- Card 4: Dental Implants (Spanning) -->
+          <div
+            class="md:col-span-2 group relative overflow-hidden rounded-[2.5rem] h-[400px] shadow-sm"
+          >
+            <div class="absolute inset-0 z-0">
+              <img
+                class="w-full h-full object-cover object-top transition-transform duration-[2.5s] ease-out group-hover:scale-105"
+                data-alt="Elegant portrait of a mature confident man smiling warmly in a bright modern clinical setting with soft natural light"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_qs-kL-AUOPiqUl4vmvoZVsKgodCH-jw9Wc3l8QW3TWp75OgWEwSvUvgeyohitaRGfyMthMYUU1ymOxKoSgoshkJihiJiPoi-_XnnsiAsqpfMVu4MUBj8vvqQluwJHtBzFZsjwrGqBNlAb4YTHJsQV9B_2z5v7IEr6cNddbqjsQjxmeZw8TUBc-nB9dVE8IXcsENx6kyKWJ0J8pqqQQkuVFTSWTzhTJGnv35k1IxqkBvpIlr9g1Xc8Z7yOuJrP4S_h1l1UvTW--Ad"
+              />
+            </div>
+            <div
+              class="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"
+            ></div>
+            <div
+              class="relative h-full p-12 flex flex-col justify-end max-w-lg transition-transform duration-700 translate-y-8 group-hover:translate-y-0"
+            >
               <div
-                class="flex items-center gap-4 grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all duration-500"
+                class="bg-primary-container/80 backdrop-blur-md p-8 rounded-[2rem] border border-white/10 group-hover:bg-primary-container/80 transition-colors duration-500"
               >
-                <a
-                  class="font-label text-[12px] uppercase tracking-widest text-white/50 hover:text-white transition-colors"
-                  href="#"
-                  >Privacy Policy</a
+                <h3 class="font-headline text-3xl font-bold mb-2 text-white">
+                  Dental Implants
+                </h3>
+                <p
+                  class="text-on-primary-container text-base leading-relaxed font-light"
                 >
-                <a
-                  class="font-label text-[12px] uppercase tracking-widest text-white/50 hover:text-white transition-colors"
-                  href="#"
-                  >Terms of Service</a
+                  The gold standard in tooth replacement, offering permanent
+                  stability and life-changing aesthetics.
+                </p>
+                <a href="../services/dental-implants.html"
+                  ><div
+                    class="mt-6 flex items-center text-center align-items-center gap-3 text-white font-semibold group/link cursor-pointer"
+                  >
+                    <span class="text-sm uppercase tracking-widest"
+                      >Learn More</span
+                    >
+                    <span
+                      class="material-symbols-outlined translate-x-0 group-hover/link:translate-x-2 transition-transform"
+                      >trending_flat</span
+                    >
+                  </div></a
                 >
               </div>
             </div>
           </div>
-        </footer>
+        </div>
       </div>
     </section>
     <script>
-      // navbar js
+      // nabr js
       /**
        * ChaggerNavHub - Scoped logic for the Navigation and UI interactions
        */
@@ -2148,7 +1777,7 @@
       document.addEventListener("DOMContentLoaded", () => {
         ChaggerNavHub.init();
       });
-      // end of navbar js
+      // end of nabbar js
     </script>
   </body>
 </html>

@@ -1,0 +1,2382 @@
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Chagger Dental | The Clinical Sanctuary</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-tertiary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-fixed": "#211a13",
+                        "tertiary-fixed": "#eee0d4",
+                        "on-primary-container": "#809ddb",
+                        "on-secondary-fixed-variant": "#36495a",
+                        "on-secondary-container": "#546678",
+                        "surface-container-highest": "#e5e2de",
+                        "surface-bright": "#fcf9f5",
+                        "primary-container": "#0e336a",
+                        "background": "#fcf9f5",
+                        "primary": "#001e49",
+                        "surface-container": "#f0ede9",
+                        "outline-variant": "#c4c6d1",
+                        "tertiary-container": "#3b332b",
+                        "tertiary": "#251e16",
+                        "primary-fixed-dim": "#adc6ff",
+                        "on-error": "#ffffff",
+                        "on-tertiary-container": "#a79b90",
+                        "on-background": "#1c1c1a",
+                        "on-primary-fixed": "#001a41",
+                        "on-surface": "#1c1c1a",
+                        "primary-fixed": "#d8e2ff",
+                        "surface-dim": "#dcdad6",
+                        "inverse-surface": "#31302e",
+                        "on-primary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "outline": "#747781",
+                        "tertiary-fixed-dim": "#d1c4b8",
+                        "secondary": "#4e6072",
+                        "surface-container-high": "#eae8e4",
+                        "on-primary-fixed-variant": "#26467d",
+                        "inverse-primary": "#adc6ff",
+                        "on-secondary-fixed": "#091d2c",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-low": "#f6f3ef",
+                        "secondary-container": "#d1e5fa",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed": "#d1e5fa",
+                        "surface-tint": "#405e97",
+                        "on-error-container": "#93000a",
+                        "inverse-on-surface": "#f3f0ec",
+                        "surface": "#fcf9f5",
+                        "surface-variant": "#e5e2de",
+                        "secondary-fixed-dim": "#b5c9dd",
+                        "on-surface-variant": "#434750",
+                        "on-tertiary-fixed-variant": "#4e453c"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+        .glass-nav { background: rgba(252, 249, 245, 0.7); backdrop-filter: blur(20px); }
+        .clinical-shadow { box-shadow: 0 32px 64px -12px rgba(28, 28, 26, 0.06); }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .glass-ribbon {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .ribbon-zone:hover .zone-bg {
+            opacity: 1;
+            transform: scale(1.05);
+        }
+        .ribbon-zone:hover {
+            flex-grow: 1.5;
+        }
+        .slide-container {
+            display: flex;
+            transition: transform 0.8s cubic-bezier(0.65, 0, 0.35, 1);
+            height: 100%;
+            width: 400%;
+        }
+        .slide {
+            width: 25%;
+            height: 100%;
+            flex-shrink: 0;
+        }
+        .dot.active {
+            width: 3rem;
+            background-color: white;
+        }
+         .glass-silk {
+            background: rgba(252, 249, 245, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .hero-overlay {
+            background: linear-gradient(to right, rgba(0, 30, 73, 0.95) 0%, rgb(0 0 0 / 44%) 50%, rgb(0 30 73 / 0%) 100%);
+        }
+        .slide-transition {
+            transition: opacity 0.6s ease-in-out;
+        }
+        .glass-hover {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+       
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .service-card:hover .service-overlay {
+            opacity: 1;
+        }
+        .service-card:hover .service-content {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        .glass-overlay {
+            background: rgba(14, 51, 106, 0.85); /* Chagger blue overlay #0E336A */
+            backdrop-filter: blur(8px);
+        }
+        .learn-more-glow:hover {
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+        }
+         .glass-card {
+            background: rgba(14, 51, 106, 0.4);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .glass-card2 {
+            background: rgba(0, 30, 73, 0.85);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: inset 0 0 20px rgba(14, 51, 106, 0.3);
+        }
+        .perspective-1000 {
+            perspective: 1000px;
+        }
+        .tilt-card {
+            transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.5s ease;
+        }
+        .tilt-card:hover {
+            transform: translateY(-10px) rotateX(2deg) rotateY(-2deg);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+        .monochrome-to-color {
+            filter: grayscale(100%);
+            transition: filter 0.6s ease;
+        }
+        .tilt-card:hover .monochrome-to-color {
+            filter: grayscale(0%);
+        }
+        .glass-footer {
+        background: rgba(0, 30, 73, 0.98);
+        backdrop-filter: blur(20px);
+      }
+       .blueprint-grid {
+            background-image: radial-gradient(circle, #0e336a 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .glass-panel {
+            background: rgba(14, 51, 106, 0.75);
+            backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        input[type="radio"], input[type="checkbox"] {
+            background-color: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.2);
+            color: #adc6ff;
+        }
+        input[type="radio"]:checked, input[type="checkbox"]:checked {
+            background-color: #adc6ff;
+            border-color: #adc6ff;
+        }
+        input[type="date"]::-webkit-calendar-picker-indicator {
+            filter: invert(1);
+            opacity: 0.5;
+            cursor: pointer;
+        }
+        /* Custom scrollbar for clinical inquiries */
+        textarea::-webkit-scrollbar {
+            width: 4px;
+        }
+        textarea::-webkit-scrollbar-thumb {
+            background: rgba(173, 198, 255, 0.2);
+            border-radius: 2px;
+        }
+        .glass-card3 {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .schematic-bg {
+      background-image: radial-gradient(circle at 2px 2px, rgba(14, 51, 106, 0.05) 1px, transparent 0);
+      background-size: 24px 24px;
+    }
+    .card-hover-effect:hover .schematic-line {
+      stroke: #809ddb;
+      stroke-dashoffset: 0;
+    }
+    .schematic-line {
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 1000;
+      transition: stroke-dashoffset 1.5s ease-in-out, stroke 0.3s ease;
+    }
+     .glass-card4 {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .silk-bg {
+            background: radial-gradient(circle at center, #fcf9f5 0%, #f0ede9 100%);
+        }
+        /* why us card css */
+        .artistry-card {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .artistry-card:hover {
+            background-color: #ffffff;
+            transform: translateY(-8px);
+        }
+        .artistry-card:hover .text-white {
+            color: #0E336A;
+        }
+        .artistry-card:hover .card-icon {
+            color: #fff;
+        }
+        .artistry-card:hover .card-button {
+            border-color: #fff;
+            color: #fff;
+        }
+        .image-overlay {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .artistry-card:hover .image-overlay {
+            opacity: 1;
+            background-color: rgba(14, 51, 106, 0.85);
+            backdrop-filter: blur(8px);
+        }
+        /* Smooth expansion for description */
+        .artistry-description {
+            transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1), color 0.5s ease;
+            max-height: 4.5rem; /* Approximately 3 lines of text */
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+        }
+        .artistry-card:hover .artistry-description {
+            max-height:30rem; /* Sufficient to show full content */
+            -webkit-line-clamp: unset;
+        }
+        /* Ensuring text stays white/readable on hover with the blur */
+        .artistry-card:hover .text-white\/70 {
+            color: rgba(255, 255, 255, 0.9);
+        }
+        .artistry-card:hover h3.text-white {
+            color: #ffffff !important;
+        }
+        /* extra keywords css */
+        .video-placeholder {
+            background: #001e49;
+            position: relative;
+            overflow: hidden;
+        }
+        .video-placeholder::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(45deg, rgba(0,0,0,0.2), transparent);
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float {
+            animation: float 5s ease-in-out infinite;
+        }
+        .glass-icon-container {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+        }
+       
+        .smooth-transition {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        /* end of it */
+        /* faq css */
+        .oracle-gradient {
+            background: radial-gradient(circle at center, #0e336a 0%, #001e49 100%);
+        }
+        .glass-orb {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .floating-1 { animation: float 10s ease-in-out infinite; }
+        .floating-2 { animation: float 14s ease-in-out infinite reverse; }
+        .floating-3 { animation: float 12s ease-in-out infinite 2s; }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0) translateX(0); }
+            33% { transform: translateY(-20px) translateX(10px); }
+            66% { transform: translateY(10px) translateX(-15px); }
+        }
+
+        @keyframes bob {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-30px); }
+        }
+
+        .bobbing-tooth {
+            animation: bob 6s ease-in-out infinite;
+        }
+
+        .orb-content-expand {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 1.2s cubic-bezier(0.4, 0, 0.2, 1), opacity 1.2s ease;
+            opacity: 0;
+        }
+
+        .orb-parent:hover .orb-content-expand {
+            max-height: 500px;
+            opacity: 1;
+        }
+
+        .orb-parent:hover .orb-image {
+            transform: scale(1.1);
+            filter: grayscale(0%);
+        }
+
+        .orb-image {
+            transition: transform 1.2s cubic-bezier(0.4, 0, 0.2, 1), filter 1.2s ease;
+            filter: grayscale(40%);
+        }
+        /* end of faq */
+        /* trust cards */
+         .glass-card6 {
+            background: rgba(0, 48, 119, 0.88);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .glass-card6:hover {
+            background: rgba(255, 255, 255, 0.95);
+            transform: translateY(-8px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary-fixed-dim selection:text-primary overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 glass-silk shadow-sm shadow-[#001e49]/5 transition-all duration-300">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-screen-7xl mx-auto">
+<div class="text-2xl font-bold tracking-tighter text-[#001e49]">
+              <img src="images/dental-logo.png" class="img-fluid" width="240" />
+            </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-manrope uppercase tracking-widest text-xs font-semibold text-[#0e336a] border-b-2 border-[#0e336a] pb-1" href="#">Home</a>
+<a class="font-manrope uppercase tracking-widest text-xs font-semibold text-[#4e6072] hover:text-[#0e336a] transition-colors" href="#">Services</a>
+<a class="font-manrope uppercase tracking-widest text-xs font-semibold text-[#4e6072] hover:text-[#0e336a] transition-colors" href="#">About Us</a>
+<a class="font-manrope uppercase tracking-widest text-xs font-semibold text-[#4e6072] hover:text-[#0e336a] transition-colors" href="#">Locations</a>
+<a class="font-manrope uppercase tracking-widest text-xs font-semibold text-[#4e6072] hover:text-[#0e336a] transition-colors" href="#">Reviews</a>
+</div>
+<button class="flex gap-2 items-center justify-center bg-primary text-on-primary px-6 py-2.5 rounded-full font-manrope font-semibold text-sm scale-95 active:scale-90 transition-transform duration-200 shadow-lg shadow-primary/10 hover:shadow-primary/20">
+                Book Appointment
+            <span class="material-symbols-outlined" data-icon="play_circle" style="font-variation-settings: 'FILL' 1;">call</span>
+
+            </button>
+</div>
+</nav>
+<!-- Cinematic Hero Slider Section -->
+<section class="overflow-hidden">
+<div class="slide-container h-full" id="hero-slider">
+<!-- Slide 1 -->
+<div class="slide relative">
+<img alt="Confident Smile" class="w-full h-full object-cover" src="images/hero-new.png"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-primary/30"></div>
+<div class="absolute inset-0 flex items-center px-12 md:px-24">
+<div class="max-w-4xl">
+<span class="inline-block px-4 py-1.5 mb-6 rounded-full bg-white/20 backdrop-blur-md text-primary border border-primary/30 font-label tracking-widest text-xs font-semibold uppercase">Welcome To Chagger Dental Services</span>
+<h1 class="text-6xl md:text-5xl font-headline font-extrabold text-primary leading-tight tracking-tight mb-8 drop-shadow-xl">Where Confident<br> Smiles Begin.</h1>
+<!-- <p class="text-xl md:text-sm text-primary/40 font-body max-w-2xl leading-relaxed mb-10">Discover a dental experience designed to lower your heart rate and<br> elevate your expectations. World-class care in an environment of absolute calm.</p> -->
+<div class="flex items-center gap-6">
+<button class="px-8 py-4 bg-primary text-on-primary rounded-full font-bold text-md flex items-center gap-3 transition-transform hover:scale-105 active:scale-95 shadow-2xl">Start Your Journey <span class="material-symbols-outlined">arrow_forward</span></button>
+<button class="flex items-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-xl border border-primary/30 text-primary rounded-full font-bold text-md transition-transform hover:scale-105">View Services <span class="material-symbols-outlined">home_repair_service</span></button>
+</div>
+</div>
+</div>
+</div>
+<!-- Slide 2 -->
+<div class="slide relative">
+<img alt="Clinical Excellence" class="w-full h-full object-cover" src="images/hero-new3.png"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-primary/30"></div>
+<div class="absolute inset-0 flex items-center px-12 md:px-24">
+<div class="max-w-4xl">
+<span class="inline-block px-4 py-1.5 mb-6 rounded-full bg-white/20 backdrop-blur-md text-primary border border-primary/30 font-label tracking-widest text-xs font-semibold uppercase">Next-Gen Precision</span>
+<h2 class="text-6xl md:text-5xl font-headline font-extrabold text-primary leading-tight tracking-tight mb-8 drop-shadow-xl">Modern Care. <br/> Gentle Hands.</h2>
+<!-- <p class="text-xl md:text-sm text-primary/40 font-body max-w-2xl leading-relaxed mb-10">Combining advanced digital dentistry with a master's touch for results that are as functional as they are beautiful.</p> -->
+<div class="flex items-center gap-6">
+<button class="px-8 py-4 bg-primary text-on-primary rounded-full font-bold text-md flex items-center gap-3 transition-transform hover:scale-105 active:scale-95 shadow-2xl">Explore Technology <span class="material-symbols-outlined">biotech</span></button>
+<button class="flex items-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-xl border border-primary/30 text-primary rounded-full font-bold text-md transition-transform hover:scale-105">View Services <span class="material-symbols-outlined">home_repair_service</span></button>
+
+</div>
+</div>
+</div>
+</div>
+<!-- Slide 3 -->
+<div class="slide relative">
+<img alt="Comfort Environment" class="w-full h-full object-cover" src="images/hero-new-5.png"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-primary/30"></div>
+<div class="absolute inset-0 flex items-center px-12 md:px-24">
+<div class="max-w-4xl">
+<span class="inline-block px-4 py-1.5 mb-6 rounded-full bg-white/20 backdrop-blur-md text-primary border border-primary/30 font-label tracking-widest text-xs font-semibold uppercase">Patient Focused</span>
+<h2 class="text-6xl md:text-5xl font-headline font-extrabold text-primary leading-tight tracking-tight mb-8 drop-shadow-xl">World-Class <br/>Professionals.</h2>
+<!-- <p class="text-xl md:text-2xl text-white/90 font-body max-w-2xl leading-relaxed mb-10">From noise-cancelling headphones to sedation options, we've thought of every detail to ensure your total comfort.</p> -->
+<div class="flex items-center gap-6">
+<button class="px-8 py-4 bg-primary text-on-primary rounded-full font-bold text-md flex items-center gap-3 transition-transform hover:scale-105 active:scale-95 shadow-2xl">About Us <span class="material-symbols-outlined">spa</span></button>
+<button class="flex items-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-xl border border-primary/30 text-primary rounded-full font-bold text-md transition-transform hover:scale-105">View Services <span class="material-symbols-outlined">home_repair_service</span></button>
+
+</div>
+</div>
+</div>
+</div>
+<!-- Slide 4 -->
+<div class="slide relative">
+<img alt="Happy Patient" class="w-full h-full object-cover" src="images/hero-new-4.png"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-primary/30"></div>
+<div class="absolute inset-0 flex items-center px-12 md:px-24">
+<div class="max-w-4xl">
+<span class="inline-block px-4 py-1.5 mb-6 rounded-full bg-white/20 backdrop-blur-md text-primary border border-primary/30 font-label tracking-widest text-xs font-semibold uppercase">Patient Focused</span>
+<h2 class="text-6xl md:text-5xl font-headline font-extrabold text-primary leading-tight tracking-tight mb-8 drop-shadow-xl">Comprehensive <br/>Dental Care</h2>
+<!-- <p class="text-xl md:text-2xl text-white/90 font-body max-w-2xl leading-relaxed mb-10">From noise-cancelling headphones to sedation options, we've thought of every detail to ensure your total comfort.</p> -->
+<div class="flex items-center gap-6">
+<button class="px-8 py-4 bg-primary text-on-primary rounded-full font-bold text-md flex items-center gap-3 transition-transform hover:scale-105 active:scale-95 shadow-2xl">Why Chagger <span class="material-symbols-outlined">spa</span></button>
+<button class="flex items-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-xl border border-primary/30 text-primary rounded-full font-bold text-md transition-transform hover:scale-105">View Services <span class="material-symbols-outlined">home_repair_service</span></button>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Slider Controls -->
+<div class="absolute inset-y-0 left-8 flex items-center z-20">
+<button class="w-10 h-10 rounded-full border border-primary/50 bg-primary backdrop-blur-md text-white flex items-center justify-center transition-all hover:bg-white/20 hover:text-primary group" onclick="prevSlide()">
+<span class="material-symbols-outlined text-2xl group-hover:-translate-x-1  transition-transform">chevron_left</span>
+</button>
+</div>
+<div class="absolute inset-y-0 right-8 flex items-center z-20">
+<button class="w-10 h-10 rounded-full border border-primary/50 bg-primary backdrop-blur-md text-white flex items-center justify-center transition-all hover:bg-white/20 group" onclick="nextSlide()">
+<span class="material-symbols-outlined text-2xl group-hover:translate-x-1 transition-transform">chevron_right</span>
+</button>
+</div>
+<!-- Pagination Dots -->
+<!-- <div class="absolute bottom-44 left-1/2 -translate-x-1/2 flex items-center gap-4 z-20">
+<button class="dot h-1 w-8 bg-white/30 rounded-full transition-all duration-300 active" onclick="goToSlide(0)"></button>
+<button class="dot h-1 w-8 bg-white/30 rounded-full transition-all duration-300" onclick="goToSlide(1)"></button>
+<button class="dot h-1 w-8 bg-white/30 rounded-full transition-all duration-300" onclick="goToSlide(2)"></button>
+<button class="dot h-1 w-8 bg-white/30 rounded-full transition-all duration-300" onclick="goToSlide(3)"></button>
+</div> -->
+</section>
+<!-- Cinematic Ribbon (Bottom Anchor) -->
+<section class="absolute bottom-0 w-full z-40">
+<div class="flex h-32 glass-ribbon border-t border-white/10 overflow-hidden backdrop-blur-2xl">
+<!-- Zone 1 -->
+<div class="ribbon-zone group relative flex-1 flex flex-col items-center justify-center px-4 cursor-pointer transition-all duration-500 ease-out hover:bg-primary/20 border-r border-white/10 overflow-hidden">
+<div class="zone-bg absolute inset-0 opacity-0 transition-all duration-700 pointer-events-none">
+<img alt="Finance" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUWTCOrwlr3QGUvrm1d2RTJsUaYkBfoiJWJd1-8d0jrhudyQLOIfckiFbTYd6eDQ7Tl9EiidDxW2RNZJ2mNtclRKXWmx54l7HVAo_34noimPzFm2OH3oMohtnuzMlwjoxKEEA3XD_-O4y0eIdoK15twuzInZe8LZSiUcQl7Nb2y9Wo4k3rPKJH4GGwYVEzt3kH3912JbCkvajpFmpI39G_N9TFvksj9PSeUcOCoA1QM_Vz-bE3Q0gpzW5-E534-YPcrAavCZPOnuzV"/>
+<div class="absolute inset-0 bg-primary/40"></div>
+</div>
+<div class="relative z-10 flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-white mb-2 text-3xl">payments</span>
+<h4 class="font-headline font-bold text-sm text-white uppercase tracking-widest">Financial Ease</h4>
+<p class="text-white/60 text-[10px] uppercase tracking-[0.2em] font-label mt-1 group-hover:text-white/90 transition-colors">Direct Billing</p>
+</div>
+</div>
+<!-- Zone 2 -->
+<div class="ribbon-zone group relative flex-1 flex flex-col items-center justify-center px-4 cursor-pointer transition-all duration-500 ease-out hover:bg-primary/20 border-r border-white/10 overflow-hidden">
+<div class="zone-bg absolute inset-0 opacity-0 transition-all duration-700 pointer-events-none">
+<img alt="Mastery" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB44uCHQoZCTDGo71Ow2eCU6J6P4_6-UCN2M1oh1nQ5xLodBaVBQhKme31VIdXl2iTyQkDAe6Wrn-ALbz_pSOs1-9pK1lQ9ntMpHYMApmeiVX98gwJa7ucRVuq4pwPLxi7yDd_Dr25wF2wBeiEhqiKoTiRpYDjSmLsT5pMCd6QVsRNKoLhFaBq2WoMA_2soR5e3DJDctVOYAHt3fd6Vd_tzr9w7Mz5t_hEnUbc-1MDnD9qOYTxXN2sRPL-mYNgEYGjrfKtljYfirZ0h"/>
+<div class="absolute inset-0 bg-primary/40"></div>
+</div>
+<div class="relative z-10 flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-white mb-2 text-3xl">biotech</span>
+<h4 class="font-headline font-bold text-sm text-white uppercase tracking-widest">Clinical Mastery</h4>
+<p class="text-white/60 text-[10px] uppercase tracking-[0.2em] font-label mt-1 group-hover:text-white/90 transition-colors">3D Precision</p>
+</div>
+</div>
+<!-- Zone 3 -->
+<div class="ribbon-zone group relative flex-1 flex flex-col items-center justify-center px-4 cursor-pointer transition-all duration-500 ease-out hover:bg-primary/20 border-r border-white/10 overflow-hidden">
+<div class="zone-bg absolute inset-0 opacity-0 transition-all duration-700 pointer-events-none">
+<img alt="Gentle" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTTT0ZAXhjGENtgkiPvXqxCW_AF6NAGXHqElCoPMUIBRASblCoEcMvlrGhIobYdoh_Ivo5DDRL34NjO72UPg3AH9BGvRHqCW68MC3aQykZn7pBriGJWoKHMn_xzHCZedcZVa7NVJqEQdHw4PfHSqiHdLAAgDeTovf0cz-qCjn5VMHmiXbr00Ih3mmJga3QgiCsB0_Xb3vZV6mKUIB9Yzmb2uNEDX80x4yKWZMwDCLgS-ABsiReHJJ4uVkbxSJcdLNM_PEwhy57RzAz"/>
+<div class="absolute inset-0 bg-primary/40"></div>
+</div>
+<div class="relative z-10 flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-white mb-2 text-3xl">spa</span>
+<h4 class="font-headline font-bold text-sm text-white uppercase tracking-widest">Gentle Entry</h4>
+<p class="text-white/60 text-[10px] uppercase tracking-[0.2em] font-label mt-1 group-hover:text-white/90 transition-colors">Anxiety-Free</p>
+</div>
+</div>
+<!-- Zone 4 -->
+<div class="ribbon-zone group relative flex-1 flex flex-col items-center justify-center px-4 cursor-pointer transition-all duration-500 ease-out hover:bg-primary/20 overflow-hidden">
+<div class="zone-bg absolute inset-0 opacity-0 transition-all duration-700 pointer-events-none">
+<img alt="Access" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvCLDfYoUpqzBEGw9GFAt4yAjGWtelNiLo0N7CS6GG-ZLL8eNJLglt0UsYXAiy2X-NravNJ63LS76mUMvy7EJ0LLbbPV8utp5kJu6fL53kaAVdEf2oCNDUmLko7FMLenP6GcDqrYhlu8O8dxy3D5uJAb-Z2PyD1qfuTq84nb0yi37L7HJ3Aqphgnbfkd-mUn5A9Aqv8BAQCcPf3DzLFYpwmVN1CBuVqERZSWTN3WvkPeJFrI7EKTfiIqtQ8DIC22eEd7rnQJLFK0Tu"/>
+<div class="absolute inset-0 bg-primary/40"></div>
+</div>
+<div class="relative z-10 flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-white mb-2 text-3xl">calendar_month</span>
+<h4 class="font-headline font-bold text-sm text-white uppercase tracking-widest">Infinite Access</h4>
+<p class="text-white/60 text-[10px] uppercase tracking-[0.2em] font-label mt-1 group-hover:text-white/90 transition-colors">24/7 Support</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Feature Bento Grid -->
+
+
+
+<!-- About Us Section -->
+<section class="mt-10 bg-surface">
+  
+<div class="max-w-7xl mx-auto mt-10">
+
+<!-- Section Header: Editorial Typography -->
+<div class="mb-16 text-center md:text-center">
+<span class="inline-block py-1 px-3 rounded-full bg-secondary-container text-on-secondary-fixed-variant text-xs font-bold tracking-widest uppercase font-label">
+                   About Us
+                </span>
+<h1 class="text-5xl md:text-6xl font-headline font-light tracking-tight text-primary leading-[1.1]">
+                   Welcome to <span class="italic font-serif">Chagger Dental Clinic</span>
+                </h1>
+<p class="mt-6 text-md text-secondary max-w-4xl mx-auto font-body leading-relaxed">
+    At Chagger Dental, we value your smile above anything else. By using cutting-edge technology
+and pain-free treatments, our experienced Oakville dental staff strives to alleviate customers&#39;
+anxieties. As a patient of our Oakville dentistry, you can be certain that you will get the utmost
+care in a soothing and pleasant setting. It is our pleasure to serve as your family&#39;s dentist in
+Oakville.
+                </p>
+</div>
+<!-- Main CTA Container: Asymmetric Bento Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+<!-- Profile Image & Trust Badges Column -->
+<div class="lg:col-span-7 relative group">
+<div class="overflow-hidden rounded-[2.5rem] bg-surface-container-low aspect-[4/5] md:aspect-[16/10] lg:aspect-auto h-full" data-aos="zoom-in">
+<img alt="Professional portrait of Dr. Chagger" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Close-up professional portrait of a warm, friendly dental director in a bright, modern white clinical setting with soft teal accents and natural light" src="images/chagger1.png"/>
+<!-- Floating Trust Badges -->
+<div class="absolute bottom-8 left-8 flex flex-col gap-4">
+<div class="glass-card4 p-4 rounded-2xl shadow-xl shadow-primary/5 border border-white/20 flex items-center gap-3">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="workspace_premium">workspace_premium</span>
+</div>
+<div>
+<p class="text-[10px] uppercase tracking-tighter text-secondary font-bold">Experience</p>
+<p class="text-lg font-headline font-bold text-primary">25+ Years</p>
+</div>
+</div>
+<div class="glass-card4 p-4 rounded-2xl shadow-xl shadow-primary/5 border border-white/20 flex items-center gap-3">
+<div class="w-12 h-12 rounded-full bg-[#e0f2f1] flex items-center justify-center">
+<span class="material-symbols-outlined text-[#00695c]" data-icon="verified_user">verified_user</span>
+</div>
+<div>
+<p class="text-[10px] uppercase tracking-tighter text-secondary font-bold">Standard</p>
+<p class="text-lg font-headline font-bold text-primary">Elite Care</p>
+</div>
+</div>
+</div>
+<!-- Service Overlay Detail -->
+<div class="absolute bottom-8 right-8 glass-card4 py-3 px-6 rounded-full border border-white/30 text-primary font-medium flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-[#00695c]"></span>
+                            Direct Billing Available
+                        </div>
+</div>
+</div>
+<!-- Content & Action Column -->
+<div class="lg:col-span-5 flex flex-col justify-between gap-8">
+<!-- Feature Card 1 -->
+<div class="bg-surface-container-low p-10 rounded-[2.5rem] flex-1 flex flex-col justify-center">
+<h2 class="text-3xl font-headline font-semibold text-primary mb-6">Experience the Sanctuary Approach</h2>
+<ul class="space-y-6">
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-on-primary-container" data-icon="spa">spa</span>
+<p class="text-secondary leading-snug">Designed for patients who value a serene, anxiety-free clinical environment.</p>
+</li>
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-on-primary-container" data-icon="psychology">psychology</span>
+<p class="text-secondary leading-snug">Patient-centric planning that prioritizes your long-term wellness over short-term fixes.</p>
+</li>
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-on-primary-container" data-icon="biotech">biotech</span>
+<p class="text-secondary leading-snug">Seamless integration of painless technology with a gentle, human touch.</p>
+</li>
+</ul>
+</div>
+<!-- CTA Action Card -->
+<div class="bg-primary-container p-10 rounded-[2.5rem] text-white overflow-hidden relative group" data-aos="zoom-in">
+<!-- Abstract Soft Teal Glow -->
+<div class="absolute -top-24 -right-24 w-64 h-64 bg-[#00695c]/20 blur-[80px] rounded-full"></div>
+<div class="relative z-10">
+<h3 class="text-2xl font-headline font-medium mb-8">Ready to start your journey to a confident smile?</h3>
+<div class="flex flex-wrap items-center gap-6">
+<button class="group/btn flex align-items-center relative bg-surface text-primary px-8 py-4 rounded-full font-headline font-bold transition-all duration-300 hover:shadow-[0_20px_40px_rgba(0,0,0,0.2)] hover:-translate-y-1 overflow-hidden">
+<span class="relative z-10">Know More</span><span class="material-symbols-outlined">chevron_right</span>
+<div class="absolute inset-0 bg-gradient-to-r from-surface-container-highest to-surface opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300"></div>
+</button>
+<div class="flex -space-x-3">
+<div class="w-10 h-10 rounded-full border-2 border-primary-container bg-surface-variant overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Female doctor headshot portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCy2Q-x_RO91U6j2bD4V368kBUn8IMGar4wIuR-I6SaP_vfHY47G_qqCGJ6tgDAknnn_SrhjDqpeGVBk_4m9XzXNwgyZx_cgFwN0HN_S3fuxRGBmSIY5cQAdpIdQQid4UEZa4CLuTS6GaWgnJd02WjBIhA66t676AENwLfEP79P3SWXNX13Gg7Qw6Vhr18b_pFXP65etyaKVCpgakcCgwora6wtVKrR0Ir8T19iyddwNbx_iINP24Iws4H69D945YztKQ6fayAV5nkM"/>
+</div>
+<div class="w-10 h-10 rounded-full border-2 border-primary-container bg-surface-variant overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Male physician headshot portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmCliPjAxmviKJC9MucZJqgixn9lRCr54dJpDsHO0NTmO6uwADxSOQhpaMYgLjLAZE-lgQzUeI9TYfVeSNyHtV-rwwVZzozmRtPdwqOV0SdHozSkK94TMggYKdOhWg9hsY-eaKQ1ZPokjlf7LW7qt2s7AHExsy_JcfT05L7B6riOxfbGqqUEmA_ozkkBvdZHvTyhOgu6RwWluFtFAx4qw5f5pObvRDZKnwdFxEi6upvs2DJMC5O2_BFfRtN8fbKj3MpF3iFL26f4hL"/>
+</div>
+<div class="w-10 h-10 rounded-full border-2 border-primary-container text-primary bg-surface-variant flex items-center justify-center text-[10px] font-bold">
+                                        +12
+                                    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="relative max-w-7xl mx-auto mt-20 items-center rounded-2xl min-h-[500px] flex items-center overflow-hidden bg-surface-container-low mb-24">
+<!-- Background Imagery: Asymmetric Layout -->
+<div class="absolute right-0 top-0 w-full md:w-2/3 h-full overflow-hidden">
+<img alt="" class="w-full h-full object-cover" data-alt="high-fashion editorial close-up of a person with a perfect radiant smile, soft warm lighting, cinematic studio environment" src="images/chagger-hall.png"/>
+<!-- Tonal Overlay for Text Legibility -->
+<div class="absolute inset-0 bg-gradient-to-r from-surface-container-low via-surface-container-low/10 to-transparent"></div>
+</div>
+<!-- Content Overlay -->
+<div class="relative z-10 w-full md:w-1/2 px-8 md:px-16 py-20 flex flex-col gap-2">
+<div class="flex flex-col gap-2">
+<span class="label-md uppercase tracking-[0.2em] text-secondary font-label font-semibold">The Smile Architect</span>
+
+</div>
+<div>
+<h2 class="text-4xl font-headline font-bold text-primary mb-2">The Clinical Philosophy</h2>
+<p class="text-on-surface-variant text-sm leading-relaxed max-w-xl">
+                                Our practice is built on the belief that dental care should be an experience of absolute calm. We've eliminated the clinical sterile feel in favor of a warm, editorial atmosphere where your comfort is our primary metric of success.
+                            </p>
+</div>
+<div class="mt-4 flex gap-8">
+<div>
+<div class="text-4xl font-headline font-extrabold text-primary">15k+</div>
+<div class="text-sm font-label uppercase tracking-widest text-secondary mt-1">Transformations</div>
+</div>
+<div>
+<div class="text-4xl font-headline font-extrabold text-primary">24yr</div>
+<div class="text-sm font-label uppercase tracking-widest text-secondary mt-1">Expertise</div>
+</div>
+</div>
+<!-- Reassurance Chips -->
+<div class="flex gap-3 mt-8">
+<div class="bg-secondary-container px-4 py-2 rounded-full flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="text-xs font-semibold uppercase tracking-wider text-on-secondary-fixed-variant">Aesthetic Excellence</span>
+</div>
+<div class="bg-secondary-container px-4 py-2 rounded-full flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="spa" style="font-variation-settings: 'FILL' 1;">spa</span>
+<span class="text-xs font-semibold uppercase tracking-wider text-on-secondary-fixed-variant">Pain-Free Tech</span>
+</div>
+</div>
+</div>
+</section>
+
+<!-- why choose us -->
+ <section class="py-32 bg-primary">
+<!-- why choose us cards -->
+<div class="max-w-7xl mx-auto mb-20">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
+<div class="max-w-6xl">
+<span class="inline-block py-1 px-3 rounded-full bg-secondary-container text-on-secondary-fixed-variant text-xs font-bold tracking-widest uppercase font-label">
+                   Why Choose Us
+                </span>
+<h1 class="text-5xl md:text-6xl font-headline mt-3 font-light tracking-tight text-white leading-[1.1]">
+                   Why <span class="italic font-serif">Chagger Dental Clinic</span>
+                </h1>
+<p class="text-on-primary-container/80 max-w-2xl mt-3  text-lg leading-relaxed">
+                        A curated suite of specialized treatments where medical precision meets aesthetic vision. Each procedure is a masterpiece of modern dentistry.
+                    </p>
+</div>
+<div class="hidden md:block">
+<div class="flex items-center space-x-4 text-on-primary-container">
+<span class="text-sm font-label uppercase tracking-widest">Scroll to Explore</span>
+<div class="w-12 h-[1px] bg-on-primary-container/30"></div>
+</div>
+</div>
+</div>
+<!-- Collection Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Card 1: Cosmetic Artistry -->
+<div class="artistry-card group relative overflow-hidden rounded-[2rem] bg-white/5 p-8 flex flex-col h-[600px] border border-white/10 hover:shadow-[0_32px_64px_-16px_rgba(0,0,0,0.4)]" data-aos="slide-up" data-aos-delay="0">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover artistry-image" data-alt="close up high fashion editorial shot of a woman smiling radiantly with perfect white teeth soft warm lighting" src="images/team.jpg"/>
+<div class="image-overlay absolute inset-0 bg-[#0E336A]/60 transition-opacity duration-500"></div>
+</div>
+<div class="relative z-10 h-full flex flex-col">
+<div class="mb-auto">
+<span class="material-symbols-outlined card-icon text-white text-4xl mb-6 transition-colors duration-500">
+                                brush
+                            </span>
+</div>
+<div>
+<h3 class="text-2xl font-headline font-bold text-white mb-4 transition-colors duration-500">
+                                First Rate Professionals
+                            </h3>
+<div class="artistry-description">
+<p class="text-white/70 text-md mb-8 font-body leading-relaxed group-hover:text-white/70 duration-500">
+    A team of professionals who are both kind and well-versed in dental care will attend to your
+needs at Chagger Dental. You can trust that our Oakville dental staff will provide you with the
+attention you need as we walk you through all of your treatment options.
+                                </p>
+</div>
+<!-- <a class="card-button inline-flex items-center space-x-3 text-white border border-white/20 rounded-full px-6 py-3 text-sm font-semibold uppercase tracking-wider transition-all duration-500 hover:text-white mt-4 hover:text-white hover:text-[#0E336A]" href="#">
+<span>Discover Artistry</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a> -->
+</div>
+</div>
+</div>
+<!-- Card 2: Restorative Precision -->
+<div class="artistry-card group relative overflow-hidden rounded-[2rem] bg-white/5 p-8 flex flex-col h-[600px] border border-white/10 hover:shadow-[0_32px_64px_-16px_rgba(0,0,0,0.4)]" data-aos="slide-up" data-aos-delay="100">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover artistry-image" data-alt="close up of a modern dental microscope and surgical equipment in a high end clinical setting cool blue light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEoieM6v9N9SPsyGxNaYp9fSrYYxXQnt0SYpoIeVXVUwaGQjcTOQiXwGJkTFSFX3qlyx1UjV0k9G9Fo7cgCBpIvy6RtMLv4P1Ubk0jgo0ZEaJwcWBXcSJvuC0sWXTIE67SUxsYllw4GuIlQbLe9SrjYzV9NLVOeazV4t8THDIDFKNTMjxSz41X_5NvGBc8__e-2lBYU9LBpgcVZL3Sqs-7BQpL43IV_oBCv5Au7o63cB5cWOXGvJXPoqrV0C8L14qb0NWX3gllZQtg"/>
+<div class="image-overlay absolute inset-0 bg-[#0E336A]/60 transition-opacity duration-500"></div>
+</div>
+<div class="relative z-10 h-full flex flex-col">
+<div class="mb-auto">
+<span class="material-symbols-outlined card-icon text-white text-4xl transition-colors  duration-500">
+                                biotech
+                            </span>
+</div>
+<div>
+<h3 class="text-2xl font-headline font-bold text-white mb-4 transition-colors duration-500">
+                               A Variety of Dental Services in Oakville
+                            </h3>
+<div class="artistry-description">
+<p class="text-white/70 mb-8 font-body text-md leading-relaxed group-hover:text-white/70 duration-900">
+    Nothing compares to the ease of having all of your requirements met in one location. We think
+that when you see our Oakville dentist, you should have the convenience of having your teeth
+cleaned whenever you&#39;d want, having them cared for when needed, and having a wide range of
+alternatives to achieve peak oral health. Our Oakville dentistry has the knowledge, expertise,
+and technology necessary to meet all of your requirements in one location. Our goal at Chagger
+Dental is to be your &quot;one-stop shop&quot; for dental care in Oakville.
+dental transformations.
+                                </p>
+</div>
+
+</div>
+</div>
+</div>
+<!-- Card 3: Orthodontic Blueprints -->
+<div class="artistry-card group relative overflow-hidden rounded-[2rem] bg-white/5 p-8 flex flex-col h-[600px] border border-white/10 hover:shadow-[0_32px_64px_-16px_rgba(0,0,0,0.4)]" data-aos="slide-up" data-aos-delay="200">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover artistry-image" data-alt="abstract digital 3D scan of teeth for invisalign blueprints futuristic blue light interface clinical design" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqWYPMF8ibEA8KNMFhQ1-9oeudOeNWQO9KozF6jRVbr3X-f3zdpxwq1E0dA76xeVvknXPJNh48h-lZpQjDHXYZH9tRct_M8N3XiChMBasKQ2NJ-czISsgKuhpTv12D6hgYYQUxxlAcQ3NozKE15XlYtCUJfpub06UXhEQ8arPwMXxAy6AiYpP8iqgz_hT7v27U_qg18G8WqoOYR-r9MmPsQJ4irsDjWncXGBk_OxoIdy5Z6zW68SGjNfQH2NZ-hDmGOP5thkXBlq65"/>
+<div class="image-overlay absolute inset-0 bg-[#0E336A]/60 transition-opacity duration-500"></div>
+</div>
+<div class="relative z-10 h-full flex flex-col">
+<div class="mb-auto">
+<span class="material-symbols-outlined card-icon text-white text-4xl mb-6 transition-colors duration-500">
+                                architecture
+                            </span>
+</div>
+<div>
+<h3 class="text-2xl font-headline font-bold text-white mb-4 transition-colors duration-500">
+                               Care &amp; Safety of Our Clients
+                            </h3>
+<div class="artistry-description">
+<p class="text-white/70 mb-8 font-body text-md leading-relaxed group-hover:text-white/70 duration-500">
+    Your comfort and safety are our number one priority at our Oakville dentistry. The ideal dentist
+in Oakville, in our opinion, is the one who provides skilled care, ensures your safety, and assists
+you in achieving your smile objectives. For this reason, we make every effort to guarantee that
+our staff interacts with you in an open and friendly manner. If you are looking for family dental
+care in Oakville for children, elderly patients, or patients with special requirements, look no further than Chagger Dental. We take extra effort to guarantee that these patients get
+specialized treatment tailored to their unique requirements.
+                                </p>
+</div>
+<!-- <a class="card-button inline-flex items-center space-x-3 text-white border border-white/20 rounded-full px-6 py-3 text-sm font-semibold uppercase tracking-wider transition-all duration-500 hover:text-white mt-4 hover:bg-white hover:text-[#0E336A]" href="#">
+<span>Explore Blueprints</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a> -->
+</div>
+</div>
+</div>
+</div>
+</div>
+ <!--  end of it -->
+
+<!-- Main Services Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch max-w-7xl mx-auto relative">
+<!-- Left Flank: Cards -->
+<div class="lg:col-span-3 flex flex-col gap-8">
+<!-- Dental Implants -->
+<div class="group p-8 mt-3 rounded-[2rem] border border-white/10 shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer overflow-hidden relative bg-[#0E336A]/90 backdrop-blur-xl hover:-translate-y-2" data-aos="zoom-in">
+<div class="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-40 transition-opacity">
+<span class="material-symbols-outlined text-6xl text-white" data-icon="settings_backup_restore">settings_backup_restore</span>
+</div>
+<div class="relative z-10 space-y-6">
+<div class="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center text-white border border-white/80">
+<span class="material-symbols-outlined text-3xl" data-icon="dentistry">dentistry</span>
+</div>
+<div>
+<h3 class="font-headline text-2xl font-bold text-white/80 mb-2">Precision Digital Imaging & 3D Diagnostics</h3>
+<!-- <p class="text-white/80 text-sm leading-relaxed">Restore functional integrity and aesthetic harmony with titanium foundations.</p> -->
+</div>
+<div class="flex items-center gap-2 text-white/40 font-bold text-xs uppercase tracking-wider group-hover:gap-4 transition-all">
+<span>Know More</span>
+<span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+<div class="absolute inset-0 border border-white/20 rounded-[2rem] pointer-events-none shadow-[inset_0_1px_1px_rgba(255,255,255,0.2)]"></div>
+</div>
+<!-- Braces -->
+<div class="group p-8 rounded-[2rem] border border-white/10 shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer overflow-hidden relative bg-[#0E336A]/90 backdrop-blur-xl hover:-translate-y-2" data-aos="zoom-in">
+<div class="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-40 transition-opacity">
+<span class="material-symbols-outlined text-6xl text-white" data-icon="grid_view">grid_view</span>
+</div>
+<div class="relative z-10 space-y-6">
+<div class="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center text-white border border-white/80">
+<span class="material-symbols-outlined text-3xl" data-icon="architecture">architecture</span>
+</div>
+<div>
+<h3 class="font-headline text-2xl font-bold text-white/80 mb-2">Comfort-Focused Laser Dentistry</h3>
+<!-- <p class="text-white/80 text-sm leading-relaxed">Precision alignment solutions for perfectly balanced dental architecture.</p> -->
+</div>
+<div class="flex items-center gap-2 text-white/40 font-bold text-xs uppercase tracking-wider group-hover:gap-4 transition-all">
+<span>Know More</span>
+<span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+<div class="absolute inset-0 border border-white/20 rounded-[2rem] pointer-events-none shadow-[inset_0_1px_1px_rgba(255,255,255,0.2)]"></div>
+</div>
+</div>
+<!-- Central High-Impact Visual -->
+<div class="lg:col-span-6 relative group rounded-[3rem] overflow-hidden shadow-2xl min-h-[600px] bg-primary" data-aos="zoom-in">
+<img alt="Modern dental clinic" class="absolute inset-0 w-full h-full object-cover opacity-80 mix-blend-luminosity group-hover:scale-105 transition-transform duration-1000" data-alt="Ultra-modern dental clinic suite with sun-drenched minimalist interiors, sleek white medical equipment, and floor-to-ceiling windows showing soft greenery." src="images/full-sec.png"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent opacity-60"></div>
+<div class="absolute bottom-0 left-0 w-full p-10 space-y-8">
+<div class="max-w-md">
+<h2 class="text-white font-headline text-4xl font-extrabold mb-4 leading-tight">Cutting-Edge Tech</h2>
+
+
+</div>
+<!-- Operational Status Bar -->
+<div class="bg-white/20 backdrop-blur-md rounded-2xl p-4 flex items-center justify-between border border-white/20" style="margin-top: 0px;">
+<div class="flex items-center gap-4">
+<!-- <div class="relative">
+<div class="w-3 h-3 bg-emerald-400 rounded-full animate-pulse shadow-[0_0_12px_rgba(52,211,153,0.8)]"></div>
+</div> -->
+<span class="text-white/90 font-label text-sm tracking-wide">
+    <p class="text-white text-sm leading-relaxed">The field of dentistry is constantly evolving. We are committed to staying on top of the latest
+advancements in the field so that we can provide you with the safest and most painless
+treatments possible. Furthermore, our cosmetic dental procedures in Oakville may help you
+feel and look your best by enhancing your smile.</p>
+</span>
+</div>
+
+</div>
+</div>
+</div>
+<!-- Right Flank: Cards -->
+<div class="lg:col-span-3 flex flex-col gap-8">
+<!-- Pediatric Dentistry -->
+<div class="group mt-3 p-8 rounded-[2rem] border border-white/10 shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer overflow-hidden relative bg-[#0E336A]/90 backdrop-blur-xl hover:-translate-y-2" data-aos="zoom-in">
+<div class="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-40 transition-opacity">
+<span class="material-symbols-outlined text-6xl text-white" data-icon="child_care">child_care</span>
+</div>
+<div class="relative z-10 space-y-6">
+<div class="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center text-white border border-white/80">
+<span class="material-symbols-outlined text-3xl" data-icon="face_6">face_6</span>
+</div>
+<div>
+<h3 class="font-headline text-2xl font-bold text-white/80 mb-2">AI-Guided Smile Design & Treatment Planning</h3>
+<!-- <p class="text-white/80 text-sm leading-relaxed">Nurturing young smiles with gentle techniques and a magical touch.</p> -->
+</div>
+<div class="flex items-center gap-2 text-white/40 font-bold text-xs uppercase tracking-wider group-hover:gap-4 transition-all">
+<span>Know More</span>
+<span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+<div class="absolute inset-0 border border-white/20 rounded-[2rem] pointer-events-none shadow-[inset_0_1px_1px_rgba(255,255,255,0.2)]"></div>
+</div>
+<!-- Teeth Whitening -->
+<div class="group p-8 rounded-[2rem] border border-white/10 shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer overflow-hidden relative bg-[#0E336A]/90 backdrop-blur-xl hover:-translate-y-2" data-aos="zoom-in">
+<div class="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-40 transition-opacity">
+<span class="material-symbols-outlined text-6xl text-white" data-icon="auto_awesome">auto_awesome</span>
+</div>
+<div class="relative z-10 space-y-6">
+<div class="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center text-white border border-white/80">
+<span class="material-symbols-outlined text-3xl" data-icon="brightness_high">brightness_high</span>
+</div>
+<div>
+<h3 class="font-headline text-2xl font-bold text-white/80 mb-2"> Advanced CAD/CAM</h3>
+<!-- <p class="text-white/80 text-sm leading-relaxed">Advanced brilliance treatments for a luminous, professional-grade radiance.</p> -->
+</div>
+<div class="flex items-center gap-2 text-white/40 font-bold text-xs uppercase tracking-wider group-hover:gap-4 transition-all">
+<span>Know More</span>
+<span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+<div class="absolute inset-0 border border-white/20 rounded-[2rem] pointer-events-none shadow-[inset_0_1px_1px_rgba(255,255,255,0.2)]"></div>
+</div>
+</div>
+</div>
+
+
+
+</section>
+<!-- end of why choose us -->
+
+<!-- why exactly us -->
+ <section class="py-32 bg-surface">
+<div class="max-w-7xl mx-auto px-8 relative">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+<div class="grid grid-cols-2 gap-6">
+<div class="space-y-6">
+<img alt="Clinic lobby" class="rounded-[2rem] aspect-[3/4] object-cover clinical-shadow" src="images/chagger.png" data-aos="zoom-in" />
+<img alt="Scientific tools" class="rounded-[2rem] aspect-square object-cover clinical-shadow" src="images/chag.webp" data-aos="zoom-in" />
+</div>
+<div class="space-y-6 translate-y-12">
+<img alt="Consultation room" class="rounded-[2rem] aspect-square object-cover clinical-shadow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-f3ypRX2OS1GGUTuSMapQ7n-o9fOj4HJdfcMPl_OKFoYejZ1acKN3EmH0OkGdQVE_ASWJcMNeJdke7msWPxQMj42mlZ6Zp2yus6TQFTWDRvFIclO4o_FNQxYzySQJ4dZEB4NsJnOBp6c1aH78a5agMmdmFbgzNn-sszFzjoz3zwxCczN1DcOrq-VVpTa4tBQ7a8F_OuzDF9BG9OPZDLeux8kPM5gpbn1tbNiPS0iS8IXawJJ825BObhON9-ao2XGb7LaqnQkFWQTn" data-aos="zoom-in" />
+<img alt="Clinic exterior" class="rounded-[2rem] aspect-[3/4] object-cover clinical-shadow" src="images/chag-int.png" data-aos="zoom-in" />
+</div>
+</div>
+<div class="space-y-10">
+<span class="inline-block py-1 px-3 rounded-full bg-secondary-container text-on-secondary-fixed-variant text-xs font-bold tracking-widest uppercase font-label">
+                  The Chagger Difference
+                </span><h2 class="text-5xl font-headline font-bold text-primary tracking-tight" style="margin-top: 20px;">We Are Your Oakville Dental Professionals</h2>
+
+<p class="text-md text-secondary leading-relaxed" style="margin-top: 20px;">We understand that most people don&#39;t look forward to going to the dentist. We&#39;ve gone above
+and beyond to make sure that your experience is top-notch. Our dentist located in Oakville, is
+staffed with experienced professionals. We offer a full range of general, emergency, and
+cosmetic dental treatments. We offer a wide range of services, including dental implants,
+porcelain veneers, teeth whitening, root canal treatment, cosmetic dentistry, dental
+emergencies, exams and cleanings, and more. We know that every patient has different dental
+needs, so we will work with you to create a treatment plan that will give you the best oral
+health possible.
+    <br><br>
+Chagger Dental is an Oakville dentist that puts its clients&#39; needs first, and we are very proud of
+that. We offer flexible appointment times so you can get the care you need when it works for
+you. We also offer financing options and accept most dental insurance plans to make it easier
+for you to pay for your treatment. In the end, our clinic is dedicated to provide top-notch,
+compassionate dental treatment. We always work to improve patient education by guiding
+patients through their course of dental therapy step-by-step. Our friendly team takes the time to listen, answer questions, and ensure you feel comfortable at every visit. We use modern technology and gentle techniques to make treatments efficient and stress-free. From preventive care to advanced procedures, we tailor every treatment plan to your unique smile.</p>
+
+</div>
+</div>
+
+<!-- Decorative Icon -->
+<div class="hidden lg:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-5 pointer-events-none">
+<span class="material-symbols-outlined text-[30rem]" style="font-variation-settings: 'FILL' 1;">dentistry</span>
+</div>
+</div>
+
+
+
+<div class="max-w-7xl mx-auto px-8 relative mt-20 mb-0">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Card 1: Smile Architecture -->
+<div class="group card-hover-effect relative overflow-hidden bg-primary rounded-[2rem] p-8 min-h-[450px] flex flex-col justify-between transition-all duration-500 hover:bg-surface-container-lowest hover:scale-[1.05] hover:shadow-2xl hover:shadow-primary/10" data-aos="slide-up" data-aos-delay="0">
+<!-- Schematic Lines (Absolute Positioned) -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none opacity-20 group-hover:opacity-100" fill="none" viewbox="0 0 400 600" xmlns="http://www.w3.org/2000/svg">
+<path class="schematic-line" d="M0 100H400M50 0V600M350 0V600M0 500H400M100 200L300 400M300 200L100 400" stroke="white" stroke-width="0.5"></path>
+<circle class="schematic-line" cx="200" cy="300" r="80" stroke="white" stroke-width="0.5"></circle>
+</svg>
+<div class="relative z-10">
+<div class="w-12 h-12 rounded-xl bg-primary-container flex items-center justify-center mb-6 group-hover:bg-secondary-container transition-colors duration-500">
+<span class="material-symbols-outlined text-on-primary-container text-2xl" data-icon="architecture">architecture</span>
+</div>
+<h3 class="font-headline text-2xl font-bold text-on-primary group-hover:text-primary transition-colors duration-500 mb-4">Our Vision</h3>
+<p class="text-on-primary-container group-hover:text-secondary transition-colors duration-500 leading-relaxed">
+   To create confident, healthy smiles through compassionate, modern care while becoming the most trusted lifelong dental home for families.
+            </p>
+</div>
+<div class="relative z-10 mt-8">
+<div class="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-on-primary/60 group-hover:text-primary/60">
+<span class="w-2 h-2 rounded-full bg-on-primary-container animate-pulse"></span>
+              Vision: 100%
+            </div>
+</div>
+</div>
+<!-- Card 2: Clinical Excellence Metrics -->
+<div class="group card-hover-effect relative overflow-hidden bg-primary rounded-[2rem] p-8 min-h-[450px] flex flex-col justify-between transition-all duration-500 hover:bg-surface-container-lowest hover:scale-[1.05] hover:shadow-2xl hover:shadow-primary/10" data-aos="slide-up" data-aos-delay="100">
+<svg class="absolute inset-0 w-full h-full pointer-events-none opacity-20 group-hover:opacity-100" fill="none" viewbox="0 0 400 600" xmlns="http://www.w3.org/2000/svg">
+<path class="schematic-line" d="M20 300C20 300 100 100 200 100C300 100 380 300 380 300C380 300 300 500 200 500C100 500 20 300 20 300Z" stroke="white" stroke-width="0.5"></path>
+<path class="schematic-line" d="M200 100V500M20 300H380" stroke="white" stroke-width="0.5"></path>
+<circle class="schematic-line" cx="200" cy="300" r="120" stroke="white" stroke-width="0.5"></circle>
+</svg>
+<div class="relative z-10">
+<div class="w-12 h-12 rounded-xl bg-primary-container flex items-center justify-center mb-6 group-hover:bg-secondary-container transition-colors duration-500">
+<span class="material-symbols-outlined text-on-primary-container text-2xl" data-icon="monitoring">monitoring</span>
+</div>
+<h3 class="font-headline text-2xl font-bold text-on-primary group-hover:text-primary transition-colors duration-500 mb-4">Our Mission
+</h3>
+<p class="text-on-primary-container group-hover:text-secondary transition-colors duration-500 leading-relaxed">
+    To deliver personalized, technology-driven dental care focused on comfort, education, and long-term oral health for every patient.
+            </p>
+</div>
+<div class="relative z-10 mt-8">
+<div class="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-on-primary/60 group-hover:text-primary/60">
+<span class="w-2 h-2 rounded-full bg-on-primary-container animate-pulse"></span>
+              Mission: 100%
+            </div>
+</div>
+</div>
+<!-- Card 3: Safety Protocols -->
+<div class="group card-hover-effect relative overflow-hidden bg-primary rounded-[2rem] p-8 min-h-[450px] flex flex-col justify-between transition-all duration-500 hover:bg-surface-container-lowest hover:scale-[1.05] hover:shadow-2xl hover:shadow-primary/10" data-aos="slide-up" data-aos-delay="100">
+<svg class="absolute inset-0 w-full h-full pointer-events-none opacity-20 group-hover:opacity-100" fill="none" viewbox="0 0 400 600" xmlns="http://www.w3.org/2000/svg">
+<rect class="schematic-line" height="400" stroke="white" stroke-width="0.5" width="300" x="50" y="100"></rect>
+<path class="schematic-line" d="M50 200H350M50 300H350M50 400H350" stroke="white" stroke-width="0.5"></path>
+<path class="schematic-line" d="M150 100V500M250 100V500" stroke="white" stroke-width="0.5"></path>
+</svg>
+<div class="relative z-10">
+<div class="w-12 h-12 rounded-xl bg-primary-container flex items-center justify-center mb-6 group-hover:bg-secondary-container transition-colors duration-500">
+<span class="material-symbols-outlined text-on-primary-container text-2xl" data-icon="verified_user">verified_user</span>
+</div>
+<h3 class="font-headline text-2xl font-bold text-on-primary group-hover:text-primary transition-colors duration-500 mb-4">Our Goal
+</h3>
+<p class="text-on-primary-container group-hover:text-secondary transition-colors duration-500 leading-relaxed">
+    To help every patient achieve and maintain a healthy, confident smile in a comfortable and welcoming environment.
+            </p>
+</div>
+<div class="relative z-10 mt-8">
+<div class="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-on-primary/60 group-hover:text-primary/60">
+<span class="w-2 h-2 rounded-full bg-on-primary-container animate-pulse"></span>
+              Our Goal
+            </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+ <!-- end of it -->
+
+<!-- Services Section -->
+<section class="relative bg-primary py-24 px-6 md:px-12 lg:px-24">
+<div class="max-w-[1920px] mx-auto">
+<div class="flex flex-col items-center mb-16">
+<div class="flex items-center gap-4 mb-4">
+<div class="h-[1px] w-12 bg-white/30"></div>
+<span class="text-white/60 text-xs font-bold tracking-widest uppercase">[SERVICES]</span>
+<div class="h-[1px] w-12 bg-white/30"></div>
+</div>
+<h2 class="text-5xl lg:text-6xl font-headline font-extrabold leading-tight max-w-6xl font-extrabold text-white tracking-tighter">
+                       Delivering<span class="text-blue-400"> Dentistry </span> at Its Finest.
+                    </h2>
+</div>
+<div class="mx-auto">
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Cosmetic Card -->
+<div class="md:col-span-2 relative group rounded-[2rem] overflow-hidden md:aspect-auto h-[420px]" data-aos="zoom-in">
+<img alt="smiling woman showing white teeth" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Beautiful close-up of a person with perfectly white teeth and a natural smile, glowing in warm soft sunlight" src="images/s2.png"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-10">
+<h3 class="text-3xl font-headline font-bold text-white mb-2">General Dentistry</h3>
+<p class="text-primary-fixed-dim max-w-4xl">Regular checkups and cleanings are the most important parts of preventive dentistry. Our
+hygienists carefully remove plaque and tartar, and our dentists do thorough dental exams and
+cancer screenings.</p>
+</div>
+</div>
+<!-- Implants Card -->
+
+<div class="bg-[#0e336a] text-white rounded-[2rem] p-10 flex flex-col justify-between group" data-aos="zoom-in">
+<div class="flex justify-between items-start">
+<img src="images/ortho.jpg" class="h-[200px] w-full rounded-2xl object-cover transition-transform duration-700 group-hover:scale-105" />
+</div>
+<div>
+<h3 class="text-2xl font-headline font-bold mb-1">Orthodontics</h3>
+<p class="text-primary-fixed-dim opacity-80 leading-relaxed">Straighten teeth and correct bite issues with traditional braces or modern clear aligner systems.</p>
+</div>
+ <!-- <button class="w-full py-4 border border-outline rounded-full font-bold text-white hover:bg-primary hover:text-white hover:border-primary transition-all duration-300">Learn More</button> -->
+
+</div>
+<!-- Ortho Card -->
+<div class="bg-[#0e336a] text-white rounded-[2rem] p-10 flex flex-col justify-between group" data-aos="zoom-in">
+<div class="flex justify-between items-start">
+<img src="images/white-6.jpg" class="h-[200px] w-full rounded-2xl mb-4 object-cover transition-transform duration-700 group-hover:scale-105" />
+</div>
+<div>
+<h3 class="text-2xl font-headline font-bold mb-1">Teeth Whitening</h3>
+<p class="text-primary-fixed-dim opacity-80 leading-relaxed">Achieve a brighter, more confident smile with professional teeth whitening, designed to safely remove stains and enhance your natural brilliance.
+</p>
+</div>
+</div>
+<!-- Preventive Card -->
+<div class="md:col-span-2 relative group rounded-[2rem] overflow-hidden h-[450px]" data-aos="zoom-in">
+<img alt="modern dental tools in tray" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Artistic high-key photography of modern surgical tools neatly arranged on a white tray, looking clean and clinical" src="images/hero1.jpg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent"></div>
+<div class="absolute inset-0 p-10 flex items-center justify-between">
+<div class=" absolute bottom-0 left-0 p-10">
+<h3 class="text-3xl font-headline font-bold text-white mb-2">Cosmetic Dentistry</h3>
+<p class="text-primary-fixed-dim">Transform your smile with advanced cosmetic dentistry.
+We offer professional whitening, custom veneers, and complete smile makeovers.
+Achieve a brighter, more confident smile tailored just for you.
+</p>
+</div>
+<div class="w-16 h-16 rounded-full bg-primary flex items-center justify-center text-white scale-0 group-hover:scale-100 transition-transform duration-500">
+<span class="material-symbols-outlined">add</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-end mb-4 mt-20 gap-8">
+<div class="max-w-xl">
+<h2 class="text-4xl font-headline font-extrabold text-white mb-6">World-Class Dental Services.</h2>
+<p class=" text-white/60 text-md tracking-widest">Specialized care delivered through an architectural lens of comfort and precision.</p>
+</div>
+<a class="text-white font-bold border-b-2 border-white pb-1 font-headline flex items-center gap-2 group" href="#">
+                        Explore All Services
+                        <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
+</a>
+</div>
+<!-- Slider Container -->
+<div class="relative group">
+<div class="flex overflow-x-auto no-scrollbar snap-x snap-mandatory gap-6 pb-12 scroll-smooth" id="sliderContainer">
+<!-- Card: Invisalign -->
+<div class="service-card flex-none w-full md:w-[calc(33.333%-16px)] aspect-[3/4] rounded-[2.5rem] overflow-hidden relative snap-start group shadow-2xl transition-transform duration-500">
+<img alt="Invisalign" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVBi3x-Pj2XFUA_Y2Cs856l7boFQKUYRQcqBRXseTjI9yhZt9Xh4VDC6RZnD50fvcSaHPRteUKDmHPelCKkElejGhaH5h3ZO7twbmnOxgwHAuKZVfrtCvaFjpNQ5AIfDN9Vgx8lZrcbKVzQcpcHIwnEKpUKxpobZ57qXHWKVaA3dnYApDx8ULTrPo8A2zncKlv7qpS2rnFxD8SVGJdXyttK-lEvAbgVQbikYxPcJ76sjDfwRQ8w0P62ZJh0EBx2Z_jtUWtMb3n4ikL"/>
+<!-- Initial Label -->
+<div class="absolute bottom-10 left-10 right-10 flex justify-between items-center transition-opacity duration-300 group-hover:opacity-0">
+<h3 class="text-white text-2xl font-headline font-bold">Invisalign</h3>
+<div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">north_east</span>
+</div>
+</div>
+<!-- Hover Overlay -->
+<div class="service-overlay absolute inset-0 glass-overlay opacity-0 transition-opacity duration-500 flex flex-col justify-end p-10">
+<div class="service-content transform translate-y-8 opacity-0 transition-all duration-700">
+<h3 class="text-white text-3xl font-headline font-bold mb-4">Invisalign</h3>
+<p class="text-white/80 text-lg leading-relaxed mb-8">
+                                    Straighten your smile discreetly with custom-made clear aligners that blend seamlessly with your lifestyle.
+                                </p>
+<a class="inline-flex items-center justify-center bg-white/10 border border-white/20 text-white px-8 py-3 rounded-full font-bold transition-all learn-more-glow group/link" href="#">
+                                    Learn More 
+                                    <span class="material-symbols-outlined ml-2 transition-transform group-hover/link:translate-x-2">arrow_right_alt</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Card: Dental Implants -->
+<div class="service-card flex-none w-full md:w-[calc(33.333%-16px)] aspect-[3/4] rounded-[2.5rem] overflow-hidden relative snap-start group shadow-2xl transition-transform duration-500">
+<img alt="Dental Implants" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxDuKYIkjgAEZ8QNruiga2XdXEm8upIWb-1SChL4zleSSoWUm3BDJxoxaO5V50IC5Ed4OwQ1O-I4C8ixPxNasA-iiIn_emXE2XHD0oVlpLzo24eg0_VTttuJV7NMCAD7Rt63CmEogv8liA313z0SgiwCMi9SvaLFLBO3_biIM7ko4hbiBJxYz0SlqGvQu7yNrbP_Q3jpbvuNA9DOZ-LX3xz7EQEw9sRXw8w7-I4xc_voMTV_1F-SYPMicSUtNPbpl-8JB-dUYSDvAj"/>
+<div class="absolute bottom-10 left-10 right-10 flex justify-between items-center transition-opacity duration-300 group-hover:opacity-0">
+<h3 class="text-white text-2xl font-headline font-bold">Dental Implants</h3>
+<div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">north_east</span>
+</div>
+</div>
+<div class="service-overlay absolute inset-0 glass-overlay opacity-0 transition-opacity duration-500 flex flex-col justify-end p-10">
+<div class="service-content transform translate-y-8 opacity-0 transition-all duration-700">
+<h3 class="text-white text-3xl font-headline font-bold mb-4">Dental Implants</h3>
+<p class="text-white/80 text-lg leading-relaxed mb-8">
+                                    Restore your confidence and oral health with permanent, natural-looking tooth replacements.
+                                </p>
+<a class="inline-flex items-center justify-center bg-white/10 border border-white/20 text-white px-8 py-3 rounded-full font-bold transition-all learn-more-glow group/link" href="#">
+                                    Learn More 
+                                    <span class="material-symbols-outlined ml-2 transition-transform group-hover/link:translate-x-2">arrow_right_alt</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Card: Teeth Whitening -->
+<div class="service-card flex-none w-full md:w-[calc(33.333%-16px)] aspect-[3/4] rounded-[2.5rem] overflow-hidden relative snap-start group shadow-2xl transition-transform duration-500">
+<img alt="Teeth Whitening" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCm0XQxyd-qOCKMqmfkHeFzWD4ifAXKcfVK7NU_cMRc02eyJxtLpeCZkll2tRGoZei_A9l4RxEvSYFuwoCI4h-OjO4JzAMJv0mB-vSTy1cKNBAH2Psi0pQNWfnLJpoYS9cz_psxeIJMC4P1fn0P1m_SHwZTAL6ayIOPign4Pc4bBqy4Ib6l3drzQP8mxeSazjOSkrn4vFVGjRygl20m0IykYQpF52df7d6yn73Q6oDBxTyNDGnc90pMoyxP7GWcJzpGA4LdHyXKZst"/>
+<div class="absolute bottom-10 left-10 right-10 flex justify-between items-center transition-opacity duration-300 group-hover:opacity-0">
+<h3 class="text-white text-2xl font-headline font-bold">Teeth Whitening</h3>
+<div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">north_east</span>
+</div>
+</div>
+<div class="service-overlay absolute inset-0 glass-overlay opacity-0 transition-opacity duration-500 flex flex-col justify-end p-10">
+<div class="service-content transform translate-y-8 opacity-0 transition-all duration-700">
+<h3 class="text-white text-3xl font-headline font-bold mb-4">Teeth Whitening</h3>
+<p class="text-white/80 text-lg leading-relaxed mb-8">
+                                    Professional grade whitening treatments that brighten your smile safely and effectively.
+                                </p>
+<a class="inline-flex items-center justify-center bg-white/10 border border-white/20 text-white px-8 py-3 rounded-full font-bold transition-all learn-more-glow group/link" href="#">
+                                    Learn More 
+                                    <span class="material-symbols-outlined ml-2 transition-transform group-hover/link:translate-x-2">arrow_right_alt</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Card: Pediatric Dentistry -->
+<div class="service-card flex-none w-full md:w-[calc(33.333%-16px)] aspect-[3/4] rounded-[2.5rem] overflow-hidden relative snap-start group shadow-2xl transition-transform duration-500">
+<img alt="Pediatric Dentistry" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGN0WdrAVGlwFJO1gs9ZAw6da6Eykx5Ed8JPPsXzibR0gI8sMR_eixxhL8szGBJRGrpjhFKaoAWztcHDfep_jbZnUlLIq1guA7KSifngbQcoL23TyBEQKIQliNlwY8G0S-WqPOldYMt-R4ipwEDq1d9gc3KjffQebcV3tG2jI5xhouekUvThF_XqbKcuu5vaq42pYmN5V6XC7HZvVDDBCdqBSjanE0F2BKoo-V0k3c8iM6dR1VzUhZIPbNBuoLNBU-nJa63LLWGaCq"/>
+<div class="absolute bottom-10 left-10 right-10 flex justify-between items-center transition-opacity duration-300 group-hover:opacity-0">
+<h3 class="text-white text-2xl font-headline font-bold">Pediatric Dentistry</h3>
+<div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">north_east</span>
+</div>
+</div>
+<div class="service-overlay absolute inset-0 glass-overlay opacity-0 transition-opacity duration-500 flex flex-col justify-end p-10">
+<div class="service-content transform translate-y-8 opacity-0 transition-all duration-700">
+<h3 class="text-white text-3xl font-headline font-bold mb-4">Pediatric Dentistry</h3>
+<p class="text-white/80 text-lg leading-relaxed mb-8">
+                                    Gentle and fun dental care specifically designed for our youngest patients to build healthy habits early.
+                                </p>
+<a class="inline-flex items-center justify-center bg-white/10 border border-white/20 text-white px-8 py-3 rounded-full font-bold transition-all learn-more-glow group/link" href="#">
+                                    Learn More 
+                                    <span class="material-symbols-outlined ml-2 transition-transform group-hover/link:translate-x-2">arrow_right_alt</span>
+</a>
+</div>
+</div>
+</div>
+<!-- dental restroration -->
+<div class="service-card flex-none w-full md:w-[calc(33.333%-16px)] aspect-[3/4] rounded-[2.5rem] overflow-hidden relative snap-start group shadow-2xl transition-transform duration-500">
+<img alt="Pediatric Dentistry" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="images/services/dental-res.png"/>
+<div class="absolute bottom-10 left-10 right-10 flex justify-between items-center transition-opacity duration-300 group-hover:opacity-0">
+<h3 class="text-primary text-2xl font-headline font-bold">Dental Restoration</h3>
+<div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">north_east</span>
+</div>
+</div>
+<div class="service-overlay absolute inset-0 glass-overlay opacity-0 transition-opacity duration-500 flex flex-col justify-end p-10">
+<div class="service-content transform translate-y-8 opacity-0 transition-all duration-700">
+<h3 class="text-white text-3xl font-headline font-bold mb-4">Dental Restoration</h3>
+<p class="text-white/80 text-lg leading-relaxed mb-8">
+Cavities are common, but they are also very easy to treat. We offer long-lasting, tooth-colored
+fillings that match your smile and stop decay from getting worse.</p>
+<a class="inline-flex items-center justify-center bg-white/10 border border-white/20 text-white px-8 py-3 rounded-full font-bold transition-all learn-more-glow group/link" href="#">
+                                    Learn More 
+                                    <span class="material-symbols-outlined ml-2 transition-transform group-hover/link:translate-x-2">arrow_right_alt</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Bridges and Crowns -->
+<div class="service-card flex-none w-full md:w-[calc(33.333%-16px)] aspect-[3/4] rounded-[2.5rem] overflow-hidden relative snap-start group shadow-2xl transition-transform duration-500">
+<img alt="Pediatric Dentistry" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="images/bridge.jpg"/>
+<div class="absolute bottom-10 left-10 right-10 flex justify-between items-center transition-opacity duration-300 group-hover:opacity-0">
+<h3 class="text-primary text-2xl font-headline font-bold">Bridges and Crowns</h3>
+<div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">north_east</span>
+</div>
+</div>
+<div class="service-overlay absolute inset-0 glass-overlay opacity-0 transition-opacity duration-500 flex flex-col justify-end p-10">
+<div class="service-content transform translate-y-8 opacity-0 transition-all duration-700">
+<h3 class="text-white text-3xl font-headline font-bold mb-4">Bridges and Crowns</h3>
+<p class="text-white/80 text-lg leading-relaxed mb-8">
+    Crowns and bridges can fix a tooth that is weak or missing by making it look and work better.
+Using digital imaging, we promise a result that is both accurate and looks real.
+                                </p>
+<a class="inline-flex items-center justify-center bg-white/10 border border-white/20 text-white px-8 py-3 rounded-full font-bold transition-all learn-more-glow group/link" href="#">
+                                    Learn More 
+                                    <span class="material-symbols-outlined ml-2 transition-transform group-hover/link:translate-x-2">arrow_right_alt</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Tooth Extractions -->
+<div class="service-card flex-none w-full md:w-[calc(33.333%-16px)] aspect-[3/4] rounded-[2.5rem] overflow-hidden relative snap-start group shadow-2xl transition-transform duration-500">
+<img alt="Pediatric Dentistry" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="images/extra.jpg"/>
+<div class="absolute bottom-10 left-10 right-10 flex justify-between items-center transition-opacity duration-300 group-hover:opacity-0">
+<h3 class="text-primary text-2xl font-headline font-bold">Tooth Extractions</h3>
+<div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">north_east</span>
+</div>
+</div>
+<div class="service-overlay absolute inset-0 glass-overlay opacity-0 transition-opacity duration-500 flex flex-col justify-end p-10">
+<div class="service-content transform translate-y-8 opacity-0 transition-all duration-700">
+<h3 class="text-white text-3xl font-headline font-bold mb-4">Tooth Extractions</h3>
+<p class="text-white/80 text-lg leading-relaxed mb-8">
+   When a tooth can&#39;t be saved, we prioritize your comfort by doing painless extractions. Our
+team offers replacement options like dental implants.
+                                </p>
+<a class="inline-flex items-center justify-center bg-white/10 border border-white/20 text-white px-8 py-3 rounded-full font-bold transition-all learn-more-glow group/link" href="#">
+                                    Learn More 
+                                    <span class="material-symbols-outlined ml-2 transition-transform group-hover/link:translate-x-2">arrow_right_alt</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Teeth Whitening -->
+<div class="service-card flex-none w-full md:w-[calc(33.333%-16px)] aspect-[3/4] rounded-[2.5rem] overflow-hidden relative snap-start group shadow-2xl transition-transform duration-500">
+<img alt="Pediatric Dentistry" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="images/white2.webp"/>
+<div class="absolute bottom-10 left-10 right-10 flex justify-between items-center transition-opacity duration-300 group-hover:opacity-0">
+<h3 class="text-primary text-2xl font-headline font-bold">Teeth Whitening</h3>
+<div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">north_east</span>
+</div>
+</div>
+<div class="service-overlay absolute inset-0 glass-overlay opacity-0 transition-opacity duration-500 flex flex-col justify-end p-10">
+<div class="service-content transform translate-y-8 opacity-0 transition-all duration-700">
+<h3 class="text-white text-3xl font-headline font-bold mb-4">Teeth Whitening</h3>
+<p class="text-white/80 text-lg leading-relaxed mb-8">
+   Keep your teeth bright and clean by going through our teeth whitening procedure. In a way
+that is both safe and effective, the procedure will improve your
+                                </p>
+<a class="inline-flex items-center justify-center bg-white/10 border border-white/20 text-white px-8 py-3 rounded-full font-bold transition-all learn-more-glow group/link" href="#">
+                                    Learn More 
+                                    <span class="material-symbols-outlined ml-2 transition-transform group-hover/link:translate-x-2">arrow_right_alt</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Gum Disease Care -->
+<div class="service-card flex-none w-full md:w-[calc(33.333%-16px)] aspect-[3/4] rounded-[2.5rem] overflow-hidden relative snap-start group shadow-2xl transition-transform duration-500">
+<img alt="Pediatric Dentistry" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="images/gun.jpg"/>
+<div class="absolute bottom-10 left-10 right-10 flex justify-between items-center transition-opacity duration-300 group-hover:opacity-0">
+<h3 class="text-primary text-2xl font-headline font-bold">Gum Disease Care</h3>
+<div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">north_east</span>
+</div>
+</div>
+<div class="service-overlay absolute inset-0 glass-overlay opacity-0 transition-opacity duration-500 flex flex-col justify-end p-10">
+<div class="service-content transform translate-y-8 opacity-0 transition-all duration-700">
+<h3 class="text-white text-3xl font-headline font-bold mb-4">Gum Disease Care</h3>
+<p class="text-white/80 text-lg leading-relaxed mb-8">
+   This disorder, also known as periodontal disease, starts when bacteria invade the gum tissue
+around the teeth. More germs gather in the pockets created when the gums separate from the
+teeth. The infection worsens over time and finally makes its way to the bone. It may cause
+decay, gum recession, and ultimately tooth loss if left untreated.
+                                </p>
+<a class="inline-flex items-center justify-center bg-white/10 border border-white/20 text-white px-8 py-3 rounded-full font-bold transition-all learn-more-glow group/link" href="#">
+                                    Learn More 
+                                    <span class="material-symbols-outlined ml-2 transition-transform group-hover/link:translate-x-2">arrow_right_alt</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Wisdom Teeth -->
+<div class="service-card flex-none w-full md:w-[calc(33.333%-16px)] aspect-[3/4] rounded-[2.5rem] overflow-hidden relative snap-start group shadow-2xl transition-transform duration-500">
+<img alt="Pediatric Dentistry" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="images/wisdom.jpg"/>
+<div class="absolute bottom-10 left-10 right-10 flex justify-between items-center transition-opacity duration-300 group-hover:opacity-0">
+<h3 class="text-primary text-2xl font-headline font-bold">Wisdom Teeth</h3>
+<div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">north_east</span>
+</div>
+</div>
+<div class="service-overlay absolute inset-0 glass-overlay opacity-0 transition-opacity duration-500 flex flex-col justify-end p-10">
+<div class="service-content transform translate-y-8 opacity-0 transition-all duration-700">
+<h3 class="text-white text-3xl font-headline font-bold mb-4">Wisdom Teeth</h3>
+<p class="text-white/80 text-lg leading-relaxed mb-8">
+   If wisdom teeth are not addressed, they may cause unanticipated discomfort, crowding, or
+difficulties. Our knowledgeable staff at Chagger Dental in Oakville keeps a close eye on your
+wisdom teeth and gives you precise, sensitive treatment to stop problems before they start.
+                                </p>
+<a class="inline-flex items-center justify-center bg-white/10 border border-white/20 text-white px-8 py-3 rounded-full font-bold transition-all learn-more-glow group/link" href="#">
+                                    Learn More 
+                                    <span class="material-symbols-outlined ml-2 transition-transform group-hover/link:translate-x-2">arrow_right_alt</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Dental Emergencies -->
+<div class="service-card flex-none w-full md:w-[calc(33.333%-16px)] aspect-[3/4] rounded-[2.5rem] overflow-hidden relative snap-start group shadow-2xl transition-transform duration-500">
+<img alt="Pediatric Dentistry" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="images/custom.png"/>
+<div class="absolute bottom-10 left-10 right-10 flex justify-between items-center transition-opacity duration-300 group-hover:opacity-0">
+<h3 class="text-primary text-2xl font-headline font-bold">Dental Emergencies</h3>
+<div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">north_east</span>
+</div>
+</div>
+<div class="service-overlay absolute inset-0 glass-overlay opacity-0 transition-opacity duration-500 flex flex-col justify-end p-10">
+<div class="service-content transform translate-y-8 opacity-0 transition-all duration-700">
+<h3 class="text-white text-3xl font-headline font-bold mb-4">Dental Emergencies</h3>
+<p class="text-white/80 text-lg leading-relaxed mb-8">
+   From toothaches to knocked-out teeth, accidents happen. We provide same-day emergency
+dentistry in Oakville so you won&#39;t ever have to endure agony or a long wait to get fixed up.
+                                </p>
+<a class="inline-flex items-center justify-center bg-white/10 border border-white/20 text-white px-8 py-3 rounded-full font-bold transition-all learn-more-glow group/link" href="#">
+                                    Learn More 
+                                    <span class="material-symbols-outlined ml-2 transition-transform group-hover/link:translate-x-2">arrow_right_alt</span>
+</a>
+</div>
+</div>
+</div>
+
+
+</div>
+<!-- Navigation Controls -->
+<div class="flex justify-center gap-4 mt-8">
+<button class="w-12 h-12 flex items-center justify-center rounded-full border border-white/20 text-white hover:bg-white/10 transition-all duration-300" id="prevBtn">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-12 h-12 flex items-center justify-center rounded-full border border-white/20 text-white hover:bg-white/10 transition-all duration-300" id="nextBtn">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+<div class="text-center mt-6 text-white/60 font-headline font-bold text-sm tracking-widest" id="sliderCounter">01 / 04</div>
+</div>
+</div>
+</section>
+
+<!-- keywords divison 2 -->
+ <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 mt-20 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+    <!-- left div -->
+ <div class="relative">
+<div class="relative z-10 rounded-[3rem] overflow-hidden shadow-2xl aspect-[4/5]">
+<div class="absolute inset-0 flex items-center justify-center bg-black/20 group cursor-pointer z-20">
+<div class="w-20 h-20 rounded-full bg-white/20 backdrop-blur-xl border border-white/40 flex items-center justify-center text-white hover:bg-white/40 hover:scale-110 transition-all duration-500">
+<span class="material-symbols-outlined text-4xl fill-1">play_arrow</span>
+</div>
+</div>
+<img alt="Cinematic dental clinic interior" class="w-full h-full object-cover mix-blend-overlay opacity-90" src="images/offc2.png"/>
+</div>
+<!-- Badge moved back to overlay video section -->
+<div class="absolute -bottom-8 -right-8 w-52 h-52 bg-[#001e49] rounded-full flex flex-col justify-center items-center text-white p-6 z-30 shadow-2xl ring-8 ring-white border-2 border-white/20 backdrop-blur-sm transform hover:scale-105 transition-transform duration-500 animate-float">
+<div class="flex items-center justify-center gap-1 mb-1">
+<span class="text-6xl font-headline font-extrabold tracking-tighter bg-clip-text text-transparent bg-gradient-to-b from-white to-secondary-fixed">25</span>
+<span class="text-3xl font-headline font-bold text-secondary-fixed mb-4">+</span>
+</div>
+<div class="w-12 h-0.5 bg-secondary-fixed/40 mb-3"></div>
+<span class="text-[11px] font-bold font-label uppercase tracking-[0.3em] text-center leading-tight text-white/90">
+                        Years Of<br/>Clinical<br/>Excellence
+                    </span>
+</div>
+<div class="absolute -top-10 -left-10 w-40 h-40 bg-primary/5 rounded-full blur-3xl -z-0"></div>
+<div class="absolute -bottom-10 -right-10 w-64 h-64 bg-secondary-container/20 rounded-full blur-3xl -z-0"></div>
+</div>
+<!-- right div -->
+<div class="relative space-y-10">
+<div class="space-y-4">
+<div class="flex items-center gap-3">
+<span class="w-8 h-px bg-primary/40"></span>
+<h4 class="text-primary font-bold text-xs tracking-[0.4em] uppercase font-label">The Chagger Legacy</h4>
+</div>
+<h2 class="text-5xl lg:text-6xl font-headline font-extrabold text-primary leading-tight tracking-tighter">
+                       Our<span class="text-primary/40"> Dental Clinic</span> <br/> in Oakville
+                    </h2>
+</div>
+<div class="relative">
+<p class="text-md text-secondary leading-relaxed font-body">
+    Chagger Dental is committed to giving each and every one of our patients the best possible
+dental treatment at our Oakville dentist. Your comfort, health, and smile will be our top
+priorities as soon as you walk into our Oakville dentistry. Our staff will greet you and make sure
+everything is prepared for your stay. In order to maintain optimal oral health, our dental
+hygienists will clean and preserve your teeth. Naturally, our dentists will work with you to
+achieve any functional or aesthetic objectives you may have while troubleshooting and
+preventing any dental problems from impeding your healthy smile."
+<br><br>
+Our Oakville dentist provides a wide variety of dental treatments, from general and minimally
+invasive dentistry to dental implants, emergency care, and pediatric dentistry. Your experience
+will always be as pleasant as possible. Every single person on our team is dedicated to
+excellence, our key focus is your lovely smile and helping you maintain consistent oral health.
+
+                        </p>
+
+</div>
+</div>
+
+</div>
+<!-- extra cards -->
+ <div class="max-w-7xl mt-20 px-8 mx-auto relative">
+    <!-- Cards Grid - Updated to 4 columns on large screens -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-6">
+<!-- Card 1: Sonic Isolation -->
+<div class="group bg-[#0E336A] transition-all duration-500 hover:bg-white rounded-[2rem] p-8 card-transition flex flex-col h-[460px] border border-white/10 hover:border-transparent hover:shadow-[0_40px_80px_-15px_rgba(0,30,73,0.15)] overflow-hidden" data-aos="slide-up">
+<div class="mb-8 overflow-hidden rounded-2xl h-56 shrink-0">
+<img alt="Premium noise cancelling headphones" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="images/access.png"/>
+</div>
+<div class="flex-grow">
+<span class="material-symbols-outlined text-on-primary-container group-hover:text-primary text-3xl mb-4 block">brand_awareness</span>
+<h3 class="text-xl font-headline font-bold text-white group-hover:text-[#0E336A] mb-4">Convenience &
+Accessibility</h3>
+
+</div>
+
+</div>
+<!-- Card 2: Visual Calm -->
+<div class="group bg-[#0E336A] transition-all duration-500 hover:bg-white rounded-[2rem] p-8 card-transition flex flex-col h-[460px] border border-white/10 hover:border-transparent hover:shadow-[0_40px_80px_-15px_rgba(0,30,73,0.15)] overflow-hidden" data-aos="slide-up">
+<div class="mb-8 overflow-hidden rounded-2xl h-56 shrink-0">
+<img alt="Sovereign architecture" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="images/custom.png"/>
+</div>
+<div class="flex-grow">
+<span class="material-symbols-outlined text-on-primary-container group-hover:text-primary text-3xl mb-4 block">architecture</span>
+<h3 class="text-xl font-headline font-bold text-white group-hover:text-[#0E336A] mb-4">Comprehensive care
+in one place</h3>
+
+</div>
+
+</div>
+<!-- Card 3: Aromatic Calm -->
+<div class="group bg-[#0E336A] transition-all duration-500 hover:bg-white rounded-[2rem] p-8 card-transition flex flex-col h-[460px] border border-white/10 hover:border-transparent hover:shadow-[0_40px_80px_-15px_rgba(0,30,73,0.15)] overflow-hidden" data-aos="slide-up">
+<div class="mb-8 overflow-hidden rounded-2xl h-56 shrink-0">
+<img alt="Aromatic essential oils" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="images/bill.webp"/>
+</div>
+<div class="flex-grow">
+<span class="material-symbols-outlined text-on-primary-container group-hover:text-primary text-3xl mb-4 block">spa</span>
+<h3 class="text-xl font-headline font-bold text-white group-hover:text-[#0E336A] mb-4">Direct Billing To Most
+Providers</h3>
+
+</div>
+
+</div>
+<!-- Card 4: Concierge Care -->
+<div class="group bg-[#0E336A] transition-all duration-500 hover:bg-white rounded-[2rem] p-8 card-transition flex flex-col h-[460px] border border-white/10 hover:border-transparent hover:shadow-[0_40px_80px_-15px_rgba(0,30,73,0.15)] overflow-hidden" data-aos="slide-up">
+<div class="mb-8 overflow-hidden rounded-2xl h-56 shrink-0">
+<img alt="Concierge hospitality" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="images/hero2.png"/>
+</div>
+<div class="flex-grow">
+<span class="material-symbols-outlined text-on-primary-container group-hover:text-primary text-3xl mb-4 block">support_agent</span>
+<h3 class="text-xl font-headline font-bold text-white group-hover:text-[#0E336A] mb-4">Modern and state of the art
+treatment and technology</h3>
+
+</div>
+
+</div>
+</div>
+</div>
+ <!-- end of extra cards -->
+ <!-- end of it -->
+
+<!-- The Community CTA Badge Section -->
+<section class="max-w-7xl mx-auto px-8 py-20">
+<div class="relative rounded-[3rem] overflow-hidden bg-primary-container text-white p-12 md:p-24 shadow-[0_32px_64px_rgba(0,30,73,0.15)]" data-aos="zoom-in">
+<!-- Background Gradient Texture -->
+<div class="absolute inset-0 bg-gradient-to-br from-primary-container via-primary to-primary opacity-90"></div>
+<div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="space-y-10">
+<div class="inline-flex items-center gap-3 glass-card px-5 py-2 rounded-full border border-white/10">
+<span class="flex -space-x-2">
+<img class="w-8 h-8 rounded-full border-2 border-primary object-cover" data-alt="portrait of a smiling female doctor in white coat" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsYu3ZV_Xda6QEjd4Q1_71b7I1e4em7Swp_wHuaowkhhwt1_E8-qfl86Ou_xGAfv436xGWMonNNhMZfkuy5y7mJWFIh_cMTFL_A_VLrEg3UBqhyKzZyUsfX15gYzezvBHGt0sVv5P2PpN-7f6utt6q0svpHdJlBiimdcxor0F1xpQZRoW2j4iz7teqkUuy1It60Bwob_qWiCcSLdqQzxF1jjJAr4tw1awuQD7iMj4iB5gTWSgDW6xn2jL7OIkK9cQtquVxMinrbh1w"/>
+<img class="w-8 h-8 rounded-full border-2 border-primary object-cover" data-alt="smiling male dentist with glasses" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcPIlCEGfjkGUP1FWO3PhsMLYtt-9gbeJjyfBf1gkdD_YQPo_VjxSt1AZ07iWxPc_CRBrnP54ihStgCgqqVU9CGjvqNEdK90NH6xOKMYh8LjAmH3GXPK-oaq4cTh66BTidLqsnMsu814iNyBeQ6HZXogX6mmlM-WPLg_ckmyhftd2vsEtlA0anDmLSY2nCA4gRa9trSPVekinCo6N7AU7Or_WtfISjY6Iu8s27DLROGWakQ5QwV7b59YJHpKTSX4S-8bq4zQqm7tEb"/>
+<img class="w-8 h-8 rounded-full border-2 border-primary object-cover" data-alt="professional medical assistant smiling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDr4Lhe2KmS26KK_INAVzJ-LFBof1nygNrYF6BJSOdsd25sJdhFWam3xxOigzFrANf2vZMz2yHh_f0ywK0Qbd48xTcQ8Tq_nmUrzBWZTPje5H2JpC98S2ECjO0AjNFCoILlnUrsn6c78yYfftiFuByXPFKwLyUPvxep1NgBOvIhrD_QFkJeDFceAqW4ukGvJK1mER9UvIiucA1PS_I32L2ys1w4Rl7w2-jaNgzv2w5aQrnI4PZnsKuzCfvpqaIuG7OP6Aj0FW5Rluib"/>
+</span>
+<span class="text-xs font-label font-semibold tracking-wider text-white">JOIN OUR 2,000+ COMMUNITY</span>
+</div>
+<h2 class="text-5xl md:text-6xl font-headline font-bold tracking-tight leading-tight">
+                            Meet the hearts behind your <span class="text-primary-fixed-dim">perfect smile</span>.
+                        </h2>
+<p class="text-lg text-white/80 max-w-md leading-relaxed">
+                            Our team of experts doesn't just treat teeth—we care for people. Discover the warmth, expertise, and dedication that makes The Sanctuary truly special.
+                        </p>
+<div class="flex flex-wrap gap-6">
+<button class="bg-white text-primary px-8 py-4 rounded-full font-headline font-bold text-lg hover:scale-105 transition-all shadow-lg active:scale-95">
+                                Meet the Experts
+                            </button>
+<button class="flex items-center gap-3 px-8 py-4 rounded-full border border-white/20 hover:bg-white/10 transition-colors font-headline font-semibold">
+<span class="material-symbols-outlined" data-icon="play_circle" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+                                Our Story
+                            </button>
+</div>
+</div>
+<div class="relative">
+<!-- Main Team Group Shot with Parallax-like styling (via layout and rotation) -->
+<div class="relative z-20 transform -rotate-2 hover:rotate-0 transition-all duration-1000">
+<div class="rounded-[2.5rem] overflow-hidden shadow-2xl aspect-video border-8 border-white/5">
+<img class="w-full h-full object-cover" data-alt="a friendly diverse group of dental professionals smiling together in a brightly lit modern office setting, wearing professional scrubs and lab coats" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxyqi7tYtTSRlqDxbjqFCcIwPoyMhbnGp3UTKuZSTVvHi_PstM5J4VUj2DG4r6QtGQXIz5gSkyQ2LSF76Hck502sM6-fLp7FyphWZEG8SCw8A0B6jw2a16UPaewP6gcfmV6KOp9EPfRrg7t57uM0JFsjVvhw7pUyu8NLclnZUeXMyGOZgz_eBM72eukRxeqXZ0y7ld5uCcASkWjPnGM1scvHoLmfGSwxjxc-HuF78mNxKFXwNvoE6rt34ulrY53c3KQjIqlUuxVe3a"/>
+</div>
+</div>
+<!-- Floating Accents for Parallax effect feel -->
+<div class="absolute -top-12 -right-8 w-48 h-48 bg-white/10 rounded-full blur-3xl"></div>
+<div class="absolute -bottom-16 -left-12 p-8 glass-card3 rounded-[2rem] shadow-2xl z-30 max-w-[240px] border border-white/20">
+<div class="flex items-center gap-2 text-primary mb-2">
+<span class="material-symbols-outlined text-3xl" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-headline font-bold">4.9/5 Rating</span>
+</div>
+<p class="text-xs text-secondary leading-normal">
+                                "The warmest welcome I've ever had at a dentist. They truly care about your anxiety levels."
+                            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- faq section -->
+<main class="oracle-gradient min-h-screen relative flex flex-col items-center justify-center px-6 py-20 overflow-hidden">
+<!-- Atmospheric Background Elements -->
+<div class="absolute inset-0 z-0">
+<div class="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-primary-container/30 rounded-full blur-[120px]"></div>
+<div class="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-on-primary-container/10 rounded-full blur-[100px]"></div>
+</div>
+<!-- Editorial Header -->
+<div class="relative z-10 text-center mb-24 max-w-3xl">
+<span class="inline-block px-4 py-1.5 rounded-full bg-on-primary-container/10 text-on-primary-container text-[10px] font-bold tracking-[0.2em] uppercase mb-6">The FAQ Portal</span>
+<h1 class="font-headline text-5xl md:text-7xl font-extrabold text-white tracking-tighter mb-8 leading-[1.1]">
+                Your Path to <br/> <span class="text-on-primary-container">Clinical Clarity.</span>
+</h1>
+<p class="text-on-primary-container/80 text-lg md:text-xl font-body text-md leading-relaxed">
+                Interact with the orbs to unveil the philosophy and science behind the Chagger Dental experience.
+            </p>
+</div>
+<!-- Floating Orbs Grid/Layout -->
+<div class="relative z-10 w-full max-w-7xl grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
+<!-- Column 1 -->
+<div class="flex flex-col gap-12 mt-12">
+<!-- Orb 1 -->
+<div class="orb-parent floating-1 group relative">
+<div class="glass-orb p-8 rounded-[2.5rem] transition-all duration-500 hover:bg-white/10 hover:shadow-[0_20px_50px_rgba(0,0,0,0.3)] cursor-pointer" data-aos="zoom-in">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 rounded-full bg-white flex items-center justify-center text-on-primary-container">
+<span class="material-symbols-outlined" data-weight="fill">clinical_notes</span>
+</div>
+<h3 class="font-headline text-xl text-white font-bold">First Visit Flow</h3>
+</div>
+<p class="text-on-primary-container text-white/80 font-medium mb-4">What can I expect during my initial sanctuary assessment?</p>
+<div class="orb-content-expand">
+<div class="pt-6 border-t border-white/10">
+<p class="text-white/70 text-sm leading-relaxed mb-6">
+                                    Your first appointment is a comprehensive 90-minute immersion. We utilize 3D intraoral scanning and high-definition photography to co-create your dental roadmap in a pressure-free environment.
+                                </p>
+<div class="rounded-2xl overflow-hidden h-40">
+<img class="orb-image w-full h-full object-cover" data-alt="Modern dental diagnostic suite with clean lines, soft lighting, and high-tech digital screens displaying dental scans" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDW2gc0M4g2x0ywk0cMtWFn9TfyXducT8fn2K_q3CnjcqsIlOV1NXuAzvjEUOQXXebOVIrcZQ0diZ_b6KKgA4T-iKl_YBDq7KGO2k9-BLdOjXWZk9fBIBLrApcmRyudFLE3P6Ml7iAHKkhppDnpKcKSrIQh6v0LQYcn0K4kLQIhWdqICWHTjjs2_aF8UwrFWd8BmNIWCe_l9sGOYoMoEwsCsHL4dQo_NMsZMl5HAqE15dNC7EhchVJECQFKgAQNXdW8zip6M3wxue5w"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Orb 2 -->
+<div class="orb-parent floating-2 group relative">
+<div class="glass-orb p-8 rounded-[2.5rem] transition-all duration-500 hover:bg-white/10 hover:shadow-[0_20px_50px_rgba(0,0,0,0.3)] cursor-pointer" data-aos="zoom-in">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 rounded-full bg-white flex items-center justify-center text-on-primary-container">
+<span class="material-symbols-outlined" data-weight="fill">verified_user</span>
+</div>
+<h3 class="font-headline text-xl text-white font-bold">Safe Sedation</h3>
+</div>
+<p class="text-on-primary-container text-white/80 font-medium mb-4">I have high anxiety. How do you ensure my comfort?</p>
+<div class="orb-content-expand">
+<div class="pt-6 border-t border-white/10">
+<p class="text-white/70 text-sm leading-relaxed mb-6">
+                                    We specialize in "Anxiety-Managed Care." From light oral sedation to full IV conscious sedation monitored by board-certified professionals, we tailor the depth of calm to your specific needs.
+                                </p>
+<div class="rounded-2xl overflow-hidden h-40">
+<img class="orb-image w-full h-full object-cover" data-alt="Patient resting comfortably in a soft leather dental chair with noise-canceling headphones and a warm blanket in a peaceful clinic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDv4L33dyx5-CAqVUZPua56TMDpPypmEFxZLSA7Pt4CCQXib47o52nCkIWmVsjf7lfQ0dE4WPzyw-zwmWjkIceHuCI-xYuZcQyFig5nSUqW38umg6YgzxKgnMLdeCm51tofDS7vSq8nBWwUSmeM2UOqUH-MndSWVvBXP1V_1TtrHE8UEy8b9m2ItC9HY_lFGNO_efCCZiH_CwHtV1UPPkrXIRH3sxrFt0ZE0eijKoBiSPvpggHjnF0XirwQP6lxp6DnzQ_ZR7IMoYre"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Column 2 (Center - Offset) -->
+<div class="flex flex-col gap-12 md:-mt-12">
+<!-- Orb 3 -->
+<div class="orb-parent floating-3 group relative">
+<div class="glass-orb p-8 rounded-[2.5rem] transition-all duration-500 hover:bg-white/10 hover:shadow-[0_20px_50px_rgba(0,0,0,0.3)] cursor-pointer" data-aos="zoom-in">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 rounded-full bg-white flex items-center justify-center text-on-primary-container">
+<span class="material-symbols-outlined" data-weight="fill">diamond</span>
+</div>
+<h3 class="font-headline text-xl text-white font-bold">The Aesthetic Edge</h3>
+</div>
+<p class="text-on-primary-container text-white/80 font-medium mb-4">How do you achieve natural-looking veneer results?</p>
+<div class="orb-content-expand">
+<div class="pt-6 border-t border-white/10">
+<p class="text-white/70 text-sm leading-relaxed mb-6">
+                                    Our "Bio-Mimetic" approach matches porcelain translucency to your natural enamel. We don't just build teeth; we design smiles that complement your unique facial architecture and skin tone.
+                                </p>
+<div class="rounded-2xl overflow-hidden h-40">
+<img class="orb-image w-full h-full object-cover" data-alt="Extreme close-up of a flawless healthy smile showing perfect natural tooth texture and translucent edges" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUZbo7ZZraYGklNE8j2hFye6pQ5_ySwD27T0D2WFQaBMgRRWBSAcQh8IcgadC_zKDZXCMQ9N3YEQ9Anni8oQ3BOCRkS5ZFSij_KCr0x8iliFcXVfthjuSDPo-2o3ylHX0pomOTu0EA56nnGGt9eoBoqTtPvAzEVnUjjGjsE4H13guOxyRm-8PdjDhLKSpvzrHAD7UzXoGiQxayvSGetpXupbyNjrwAOeW5HtEPARl7I7muLaFOhi3FBJJydSvCRMWD6ISZ3IWchSUM"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Center Decorative Element -->
+<div class="flex flex-col items-center justify-center py-12 relative z-20">
+<img alt="Tooth Icon" class="w-80 h-80 object-contain bobbing-tooth drop-shadow-[0_0_15px_rgba(173,198,255,0.5)]" src="images/tooth-2.png"/>
+</div>
+<!-- Orb 4 -->
+<div class="orb-parent floating-1 group relative">
+<div class="glass-orb p-8 rounded-[2.5rem] transition-all duration-500 hover:bg-white/10 hover:shadow-[0_20px_50px_rgba(0,0,0,0.3)] cursor-pointer" style="margin-top: -40px;">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 rounded-full bg-white flex items-center justify-center text-on-primary-container">
+<span class="material-symbols-outlined" data-weight="fill">biotech</span>
+</div>
+<h3 class="font-headline text-xl text-white font-bold">Tech Philosophy</h3>
+</div>
+<p class="text-on-primary-container text-white/80 font-medium mb-4">Is laser dentistry really more effective than traditional methods?</p>
+<div class="orb-content-expand">
+<div class="pt-6 border-t border-white/10">
+<p class="text-white/70 text-sm leading-relaxed mb-6">
+                                    Absolutely. Our WaterLase technology reduces the need for drills and needles, offering faster healing times and sterile precision that traditional tools simply cannot match.
+                                </p>
+<div class="rounded-2xl overflow-hidden h-40">
+<img class="orb-image w-full h-full object-cover" data-alt="Futuristic dental laser tool emitting a soft blue light in a pristine laboratory setting with bokeh background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQa46af4e9YXE3XZOXD_rFMgp0uQugvbHx0WAD8BJJhzpvM8WWYR4rTe531t4mijdZVaErKbXbIE76f3w71NOcJBq5L2YZf8jpRjhc9Tg6EMBSitbmlwZ30oL2biiA8bHKiMqeoxdfk9Uh7nJcucsvbsG003_KI9eFfhrth3yibi47mhxu6P53JFYKo8hhlqqGmdZAqD9g6iao7WWBOR5d05jeD1LUEhrMts2ucm-5aCW3H2K8TdFdRWWChEmDqPnUwOhLnp_SQphS"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Column 3 -->
+<div class="flex flex-col gap-12 mt-24 md:mt-0">
+<!-- Orb 5 -->
+<div class="orb-parent floating-2 group relative">
+<div class="glass-orb p-8 rounded-[2.5rem] transition-all duration-500 hover:bg-white/10 hover:shadow-[0_20px_50px_rgba(0,0,0,0.3)] cursor-pointer" data-aos="zoom-in">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 rounded-full bg-white flex items-center justify-center text-on-primary-container">
+<span class="material-symbols-outlined" data-weight="fill">account_balance_wallet</span>
+</div>
+<h3 class="font-headline text-xl text-white font-bold">Financial Flux</h3>
+</div>
+<p class="text-on-primary-container text-white/80 font-medium mb-4">Do you offer flexible investment options for large procedures?</p>
+<div class="orb-content-expand">
+<div class="pt-6 border-t border-white/10">
+<p class="text-white/70 text-sm leading-relaxed mb-6">
+                                    Yes. We believe quality care should be accessible. We offer interest-free sanctuary payment plans and direct insurance billing to streamline your administrative experience.
+                                </p>
+<div class="rounded-2xl overflow-hidden h-40">
+<img class="orb-image w-full h-full object-cover" data-alt="Clean minimalist desk with a sleek pen and high-quality paper, lit by warm afternoon sun through a window" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPufIy2v_ttoEX5weGI6Ogez_G88-13qfOKWPA5EG-SqT7Usqap3xfjcyUkpzxP3nf1Ox8p0Av2TzS8NArpN96yR47aEKI4iOZnz4bVpH3OEcL_BvrGKf9-NapvNbHCHrVQgYGqTuopEMnI_i4Zft3GAAgmvWt_hOlRCh1Tns8EzbSc4M9lWAEXZKr4WwaJfttIGlXB5dsZ9-_JFj7he-hTSCez1ijaOfGBOOv4f2BqYzQYofQiw02BYA1H8_2PwVLoIqBXY-5DU-v"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Orb 6 -->
+<div class="orb-parent floating-3 group relative">
+<div class="glass-orb p-8 rounded-[2.5rem] transition-all duration-500 hover:bg-white/10 hover:shadow-[0_20px_50px_rgba(0,0,0,0.3)] cursor-pointer" data-aos="zoom-in">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 rounded-full bg-white flex items-center justify-center text-on-primary-container">
+<span class="material-symbols-outlined" data-weight="fill">emergency</span>
+</div>
+<h3 class="font-headline text-xl text-white font-bold">The Urgent Link</h3>
+</div>
+<p class="text-on-primary-container text-white/80 font-medium mb-4">What happens if I have a dental emergency after hours?</p>
+<div class="orb-content-expand">
+<div class="pt-6 border-t border-white/10">
+<p class="text-white/70 text-sm leading-relaxed mb-6">
+                                    Our sanctuary never truly closes for our patients of record. A direct clinical concierge line is available 24/7 to provide guidance and emergency triage within 4 hours.
+                                </p>
+<div class="rounded-2xl overflow-hidden h-40">
+<img class="orb-image w-full h-full object-cover" data-alt="Calm clinical hallway at night with soft architectural accent lighting and a sense of quiet security" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCb-ih3t2Y2bpNddUSaiunDhx2jE4bpPzdFdOO3WJ-OcsVp7nyeFCdTxfkW6NfhWxISeiivMZi7bxnxp6LL69RaYifVIs71d5yIOHdcL8wXihr5qoz7m4WQO00bJsEZqMRluMFPs4FEAlaK_dgkmjzP3lmoqED5FXt2Y0L_LJufvUAgerZn6TZu8vO1Uz4IJ5gIllapFK2FjBb8IU0q5RO947HQZx4ZRNWDFCrjNORSwTMmOhTGMZy35qzttWoArkN-X99m_8vWI_93"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Back to Reality / Contact Trigger -->
+<!-- Support CTA Section -->
+<div class="mt-20 max-w-4xl w-full p-12 rounded-[2.5rem] bg-primary-container relative overflow-hidden text-center group">
+<!-- Decorative image/bg -->
+<div class="absolute inset-0 opacity-20 group-hover:scale-110 transition-transform duration-[2000ms] ease-out">
+<img alt="Close up of refractive glass texture" class="w-full h-full object-cover" data-alt="abstract close-up of a high-end refractive glass prism with elegant light leaks and soft blue shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8VTSDYtT5VVUqgJQ7sjTt5hKU3j3c5B1jOSVgGT1rCqgAu2tMeHBg--kisWNGY1cfhPBr_XYYvxaY440mwXXmSeIUelU1uUEydN8ZbzS16yt5D5ZCb0uGsIaWUBwbHrf0zSuq6WHRw6t3O_2709JC3NtotJOUl0GlOaA8x-3glgJ4WYCZfkpe5V43_oUyNisgv5hqYM8hhRxZANO86qAS3wsArvZphAnpWx6CUIP9E2Nd6iyi5lNVcRTsvHTuMWMdU-u-5HJFizyf"/>
+</div>
+<div class="relative z-10">
+<h2 class="font-headline text-3xl md:text-4xl font-bold text-on-primary mb-6">Still Seeking Clarity?</h2>
+<p class="font-body text-on-primary-container text-white/80 text-lg mb-10 max-w-xl mx-auto">
+                    Our Clinical Directors are available for private digital consultations to address any specific inquiries regarding your sanctuary journey.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+    <button class="flex gap-3 bg-surface-container-lowest text-primary font-label font-bold px-10 py-5 rounded-full hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] transition-all duration-300 active:scale-95">
+                                  Inquire Privately
+                                  <span class="material-symbols-outlined" data-icon="play_circle" style="font-variation-settings: 'FILL' 1;">support_agent</span>
+
+                            </button>
+<button class="flex gap-3 bg-white/10 backdrop-blur-md border border-white/20 text-on-primary font-label font-bold px-10 py-5 rounded-full hover:bg-white/20 transition-all duration-300 active:scale-95">
+                        Clinical Standards
+                                                          <span class="material-symbols-outlined" data-icon="play_circle" style="font-variation-settings: 'FILL' 1;">arrow_right_alt</span>
+
+                    </button>
+</div>
+</div>
+</div>
+</main>
+<!-- end of faq section -->
+
+
+<!-- Testimonials -->
+<!-- Hero Section for Testimonials -->
+<header class="max-w-7xl mx-auto px-8 mb-20 mt-20">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-8">
+<div class="max-w-2xl">
+<span class="text-primary font-label tracking-[0.2em] uppercase text-xs mb-4 block">Patient Experience</span>
+<h1 class="text-5xl md:text-7xl font-extrabold font-headline tracking-tighter text-primary leading-tight">
+                        Voices of Absolute <span class="text-primary/40">Confidence</span>
+</h1>
+</div>
+<div class="flex items-center gap-4 pb-2">
+<div class="flex -space-x-3">
+<img class="w-12 h-12 rounded-full border-4 border-surface object-cover" data-alt="portrait of a smiling middle-aged man with graying hair in soft studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDe1-TsyV4kbcsn8UGwb3wFMkiGC8Gwnd_fj09_d_gbucC38b7IzNcU8k_j9Tm4J3j2-ZuO-YvJWLrpKs1dBEJVE5jyiZhE47hdI7gJaQnP3ATks4CpwnAGRFHL8oiZd_LQbySvGYOd3F7L4BOBF4nUHyyGHa8dyxhyHjlLIEF7LDYsoWyLEacGyUkwyVdWBwn7mnDQVHpuJgmFRSekbu-DSy0EereY0d33slgC9HUqUWBpeaFUWJ2xVUBirUczfm-GFPBsZrnStEjm"/>
+<img class="w-12 h-12 rounded-full border-4 border-surface object-cover" data-alt="portrait of a professional woman smiling warmly against a blurred office background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5r9uFoodoirbuPHEMPbprK868IPeDwIlWMPy5959r12WmKVuHfl1PRQ9ZzxkgHBsSZ2G5lR8Ad0lITY0T1oR2N-5P9kLYsxvxsy35aLT3OYbrNQCZSOIoOC-84_jwlO1FVtVnOKR45_wEWLqzuyHSv5W2AXMyP3jKBBaub214x5mqy2-l7syCh1COKvfpHAnx-hnlKXKbE6o2vOphbWLSeu2db71ArH3ylZEeyUL097NxcHZ4U9_BysXPytcHzJY1dg7_F8edbDES"/>
+<img class="w-12 h-12 rounded-full border-4 border-surface object-cover" data-alt="portrait of a young man with a friendly expression in natural daylight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJqeMlVy2-PD3UOi9kyloOrzUrlg8B6owkbZfe-QMefj72A82Np-ZRhmes8ti_oT0g3waclLdbk9Ikth6v0usnCpbr1GOEODX3EblYktP9B-rEL9y801G_0WVqJFnfpTToxT6ZabKg4DNPWfX3ZWR59is6pf-ADERUf2WLMI2clYFLXEw303Sjz8sfgT_fiEl66E8A_omlHrBwWQoGzR9t_5zEmoW8qoaSy7ugpk3OnP6QRwj2L-4tDNB93QJ5g8i_MlVd37x-sWC9"/>
+</div>
+<div>
+<p class="font-headline font-bold text-primary">4.9/5 Rating</p>
+<p class="text-sm text-secondary">From 2,500+ procedures</p>
+</div>
+</div>
+</div>
+</header>
+<!-- Testimonial Bento Grid -->
+<section class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-12 gap-6 perspective-1000">
+<!-- Featured Large Card -->
+<div class="md:col-span-8 group">
+<div class="bg-primary-container tilt-card h-full rounded-3xl p-10 flex flex-col justify-between relative overflow-hidden" data-aos="zoom-in">
+<div class="relative z-10">
+<div class="flex items-center gap-1 mb-6 text-on-primary-container">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<blockquote class="text-2xl md:text-3xl font-headline font-semibold text-white leading-relaxed mb-8">
+                            "The Clinical Sanctuary redefined my perception of dentistry. From the serene atmosphere to the precision of the laser whitening, it felt more like a spa day than a medical appointment."
+                        </blockquote>
+</div>
+<div class="flex items-center justify-between relative z-10">
+<div class="flex items-center gap-4">
+<div class="w-16 h-16 rounded-full overflow-hidden border-2 border-white/20">
+<img class="monochrome-to-color w-full h-full object-cover" data-alt="artistic close-up portrait of a woman looking thoughtfully away, soft lighting, high-end photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtUBS9g1FmXxfR7IyU-_NC7tvtAAirPTR-jVOJgOIvKXUgeVVcxabZNaV7QgmB-wDtcT4npLu_n6zT-XO0rQaRUj51vsQeTX5ndbIpG1geFIwuyyNWX_ci11xAyZJewAYGC-RZ3hzhtfO-OmcaIVOFVDiksFN7foyM4RBCYWdZu5Qe4hP00PtXjpMUG1RyJsi323CcQDUVriK0MxePTozm8eZia7-ihfnKQPs-bQKivkCo-aJVZXLzxYkuuS-hK5wKFKus5PGvdbST"/>
+</div>
+<div>
+<h4 class="text-white font-headline font-bold">Helena Chambers</h4>
+<p class="text-on-primary-container text-sm">Cosmetic Restoration Patient</p>
+</div>
+</div>
+<div class="flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full">
+<span class="material-symbols-outlined text-white text-sm" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="text-white text-xs font-label uppercase tracking-wider">Verified Patient</span>
+</div>
+</div>
+<!-- Ambient Glow -->
+<div class="absolute top-[-20%] right-[-10%] w-96 h-96 bg-primary-container rounded-full blur-[120px] opacity-40"></div>
+</div>
+</div>
+<!-- Side Card 1 -->
+<div class="md:col-span-4 group">
+<div class="bg-primary-container tilt-card h-full rounded-3xl p-10 flex flex-col justify-between relative overflow-hidden" data-aos="zoom-in">
+<div>
+<div class="flex gap-1 text-on-primary-container mb-4">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-white font-body text-lg leading-snug italic">
+                            "Invisalign journey was seamless. The digital mapping made every step predictable and painless."
+                        </p>
+</div>
+<div class="flex items-center gap-4 mt-8">
+<div class="w-12 h-12 rounded-full overflow-hidden border border-white/20">
+<img class="monochrome-to-color w-full h-full object-cover" data-alt="modern businessman portrait in monochrome style transition to color, sharp focus" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEjmHxVQlQaHl4dgtJBJzD5dFQVShn--JtBSQcppl4ADgWEnr-_SPLPvEEBcpYbZRAa9Aj3ke9XQ14JNMdGsFK-DAnxEI0IIS-ZiFv9pXtSpLUC996b9kAIhV3IvC8HQORyu4kVDK-7RkwspSU41FaVKPc5tlGzKaoszt3_73o9PqcC0xrhjNu-gzlGUlQeUEh23veak_BfF8Gsg-gK3bAdgWCImgLim_T_9VJkpwj6lf8eP2VKkhd-xpXrEZnKnCG-POVuy_FX7TG"/>
+</div>
+<div>
+<p class="text-white text-sm font-bold">Marcus Thorne</p>
+<p class="text-on-primary-container text-xs">Orthodontic Treatment</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Row Card 1 -->
+<div class="md:col-span-4 group">
+<div class="bg-primary-container tilt-card h-full rounded-3xl p-10 flex flex-col justify-between relative overflow-hidden" data-aos="zoom-in">
+<div class="flex gap-1 text-on-primary-container mb-4">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-white/90 text-base leading-relaxed mb-6">
+                        "The ceramic veneers look so natural, even my closest friends couldn't tell. Pure artistry."
+                    </p>
+<div class="mt-auto flex items-center gap-4">
+<div class="w-12 h-12 rounded-full overflow-hidden border border-white/20">
+<img class="monochrome-to-color w-full h-full object-cover" data-alt="professional woman smiling warmly with glowing skin in elegant setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfDVraR9bPh25Bp2MgtseAVBYyta3a9VPxf-gEt6GoE8Gyu_mY-w79iGKlYJsBIIbMk7x9v6m4i8xUijHDofssh8gZXoPewrERSt8rtJ-qT6qnWjUJTaD9mJBypbPzn_4aQGAyALqGuxhHpklVaYZbvGvcOa4AkhTQg3G6NBgDNMoI65gbDCOLOk4iyDiK-h9M4Rdrf0LMspWuU_okBVsBSQdDHXySJ8UH0pOEMsVYqvTfb0ZSs0Nxbw2WBs7CWpSdCoHCXXi6EB1a"/>
+</div>
+<div>
+<p class="text-white text-sm font-bold">Sarah Jenkins</p>
+<p class="text-on-primary-container text-xs">Veneer Specialist</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Row Featured -->
+<div class="md:col-span-8 group">
+<div class="bg-primary-container tilt-card h-full rounded-3xl p-10 flex flex-col md:flex-row gap-8 relative overflow-hidden" data-aos="zoom-in">
+<div class="flex-1 z-10">
+<div class="inline-block bg-white/10 px-3 py-1 rounded-full mb-6">
+<span class="text-[10px] text-white tracking-widest uppercase font-label">Advanced Implants</span>
+</div>
+<p class="text-white text-xl font-headline italic mb-8">
+                            "I waited years to address my missing molars. Dr. Chagger's approach was surgical excellence combined with empathetic care. The final results are life-changing."
+                        </p>
+<div class="flex items-center gap-4">
+<div class="w-14 h-14 rounded-full overflow-hidden border-2 border-primary">
+<img class="monochrome-to-color w-full h-full object-cover" data-alt="confident professional man in his 50s smiling with natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdHurx1bpfuFK9glKSCVwEkmmGFNQMHti88AWkAby1JOubTmLhFcHmKPTz6QgYAvL3HAvJiUbkI3O_mnaeTGVIcHe6Voz_Ymw555sjPwp3ZKkXqJcsLWuJqLiks8HpuZ3DsoJTHmGQpVypKf1LQxzf87lAoB8py9PRJrIIY6FBockJkebfq63wKS_QoUY_Z6uQ1UkAIwOxz6Olkq2kpNGXxBNbEr6bUxR30w63C_6HB7VySjDZ3T0k3pa77mMDqQpIISpLFosDMvzn"/>
+</div>
+<div>
+<p class="text-white font-bold">David Richardson</p>
+<p class="text-on-primary-container text-sm">Full Arch Restoration</p>
+</div>
+</div>
+</div>
+<div class="hidden md:block w-48 relative z-10">
+<div class="absolute inset-0 bg-gradient-to-t from-primary-container to-transparent z-20"></div>
+<img class="w-full h-full object-cover rounded-2xl grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700" data-alt="macro close-up of high-quality dental ceramic implant models on a minimalist blue surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAl79kmGvEe4qUsbGfF4k8lXtwARJOSfYIjInHJrV-FMKf5hckP4-LNtN9KlhVntBsHOYQr0eQ-uoI7o0RSvPWHZghTMMuQsweT24EVC_qkaalnohtadZvRaAz16tMoai2ouRilGnaJcBGCM5KhxVt6SVV7yDdMmwHXI-rUs3Q-9MFaCqnqHYYMcTBMYmKzwvf18SWygnEBXlFInQN9ua7hzoFgjWVc0SdOEENvWihQE0ZRue1wFiOe787E4cFbroW2i8j2yv9VbJhZ"/>
+</div>
+<!-- Decorative Radial -->
+<div class="absolute -bottom-20 -left-20 w-80 h-80 bg-blue-500/20 rounded-full blur-[80px]"></div>
+</div>
+</div>
+</section>
+<!-- Trust Badges -->
+<section class="max-w-7xl mx-auto px-8 mt-24">
+<div class="bg-surface-container rounded-3xl p-8 flex flex-wrap justify-around items-center gap-8 opacity-70">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-3xl">verified_user</span>
+<span class="font-headline font-bold text-primary/80 uppercase tracking-tighter text-sm">Board Certified</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-3xl">health_and_safety</span>
+<span class="font-headline font-bold text-primary/80 uppercase tracking-tighter text-sm">Pain-Free Tech</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-3xl">workspace_premium</span>
+<span class="font-headline font-bold text-primary/80 uppercase tracking-tighter text-sm">Elite Invisalign Provider</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-3xl">thumb_up</span>
+<span class="font-headline font-bold text-primary/80 uppercase tracking-tighter text-sm">98% Satisfaction</span>
+</div>
+</div>
+</section>
+
+
+
+<!-- cta badge -->
+ <section class="mt-10">
+    <div class="mb-16 text-center">
+<span class="font-label text-xs uppercase tracking-[0.2em] text-secondary font-bold mb-4 block">Immediate Assistance</span>
+<h1 class="font-headline text-5xl md:text-7xl font-extrabold text-primary tracking-tighter leading-tight mb-6">
+                Urgent Care <br/>When You Need It Most.
+            </h1>
+<p class="max-w-2xl mx-auto text-secondary text-lg leading-relaxed">
+                Dental emergencies don't wait. Neither do we. Our sanctuary is equipped for immediate clinical intervention in a calming, pain-free environment.
+            </p>
+</div>
+
+<!-- Emergency Care CTA Badge (The Primary Task) -->
+<div class="relative w-full max-w-7xl mx-auto rounded-[2rem] overflow-hidden bg-surface-container-low shadow-2xl group" data-aos="zoom-in">
+<div class="flex flex-col md:flex-row min-h-[500px]">
+<!-- Image Side -->
+<div class="relative w-full md:w-1/2 overflow-hidden">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Close-up of professional dentist in sterile blue scrubs reassuring a patient in a sunlit modern clinic, cinematic lighting, shallow depth of field" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYEAOuCg03glgWRVwoodsCu5WeWT4_ru0gR76f4-4ebI_PLNn20gtrXn2d0xjPoGgUd-jvn9DC08xbhojEF1iTDgdeftA9DWSbcXssLZM8F-rtqxT9yXlYajwBbHTkm8N3CNZml_5XMIEvEWM8XKNQdmgswf71h48HNZRABY4sQp_JQ_ADmRCxXCoQhuOZh9oMG8tyhzCRMkkqT90rDna9ootUHiQe-E-hnivw5K79DawhjFkVfK777T3LUQcINZtgGyJVRggOhCMp"/>
+<div class="absolute inset-0 bg-gradient-to-r from-transparent to-surface-container-low/20"></div>
+<div class="absolute bottom-6 left-6 flex gap-2">
+<span class="bg-primary/90 text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full backdrop-blur-md">Level 1 Trauma Ready</span>
+<span class="bg-white/90 text-primary text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full backdrop-blur-md">24/7 Response</span>
+</div>
+</div>
+<!-- Content Side -->
+<div class="w-full md:w-1/2 p-10 md:p-16 flex flex-col justify-center items-start bg-surface-container-low relative">
+<div class="mb-8">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-error text-3xl" data-icon="e911_emergency" style="font-variation-settings: 'FILL' 1;">e911_emergency</span>
+<span class="font-headline font-extrabold text-primary text-2xl tracking-tight">Clinical Priority</span>
+</div>
+<h2 class="font-headline text-4xl font-bold text-tertiary leading-tight mb-4">
+                            Dental Emergency? <br/><span class="text-primary-container">We're on standby.</span>
+</h2>
+<ul class="space-y-3 text-secondary mb-10">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="check_circle">check_circle</span>
+                                Severe Tooth Pain &amp; Swelling
+                            </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="check_circle">check_circle</span>
+                                Broken or Knocked-out Teeth
+                            </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="check_circle">check_circle</span>
+                                Abscess &amp; Infection Control
+                            </li>
+</ul>
+</div>
+<div class="w-full flex flex-col sm:flex-row items-center gap-6">
+<!-- Glowing Pulse CTA -->
+<button class="pulse-glow relative flex items-center justify-center gap-3 bg-primary text-on-primary px-10 py-5 rounded-full font-headline font-black text-lg group/btn overflow-hidden transition-all active:scale-95 w-full sm:w-auto">
+<span class="material-symbols-outlined" data-icon="call" style="font-variation-settings: 'FILL' 1;">call</span>
+                            Call Now
+                        </button>
+<div class="flex flex-col">
+<span class="text-xs font-label uppercase tracking-widest text-secondary font-bold">Direct Line</span>
+<span class="text-xl font-headline font-bold text-primary tracking-tighter">1-800-SANCTUARY</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+ </section>
+
+<!-- Contact Form -->
+<section class="mt-20 mb-20">
+    <div class="pt-24 min-h-screen flex items-center justify-center p-4 md:p-8">
+
+    <div class="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 bg-surface-container-lowest rounded-3xl overflow-hidden shadow-[0_32px_64px_rgba(0,30,73,0.06)]" data-aos="zoom-in">
+<!-- Left Column: Branding & Visuals -->
+<div class="relative min-h-[400px] lg:min-h-[700px] flex flex-col justify-end p-8 md:p-16 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="Professional dentist smiling in a bright, modern high-end dental clinic with architectural lighting and warm wood accents" src="images/contact2.png"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent"></div>
+</div>
+<div class="relative z-10 space-y-6">
+<div class="inline-flex items-center px-4 py-1.5 rounded-full bg-secondary-container/30 backdrop-blur-md text-on-primary text-xs font-label uppercase tracking-widest border border-white/10">
+                        Premium Dental Care
+                    </div>
+<h1 class="text-4xl md:text-6xl font-headline font-extrabold text-on-primary leading-[1.1] tracking-tight">
+                        Schedule Your Visit Today
+                    </h1>
+<p class="text-lg md:text-xl text-on-primary/80 font-body max-w-md leading-relaxed">
+                        Experience dental excellence in a sanctuary of calm. Your journey to a confident, healthy smile begins with a personalized consultation.
+                    </p>
+<div class="flex items-center gap-4 pt-4">
+<div class="flex -space-x-3">
+<img class="w-10 h-10 rounded-full border-2 border-primary object-cover" data-alt="Female clinical professional smiling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXxUfCdcCuAcjqT-jpUfGUTyyTc3SSSKw6qZ-oJtqBHG1ifwtB0cYA_HksrmpLe9YuXi-U-cK-wpKt6MibUJi3hirO3ErGvj-UYaTwqHHuWdXZy7Y9jUNFXpt4aiIo-3e1xUzhj2wRF9A6fEDZLuJml2d_Ou5H8-hijiMFnPCE2IdZAQ6X78-a8J6j0jjToKFr12D7bzStFyYWS3xpllCa0hYqqQQmjOmwumc36bVrlQv8-Apa-nD84wvRzwsSPN48t07Fy9heGPT6"/>
+<img class="w-10 h-10 rounded-full border-2 border-primary object-cover" data-alt="Male dentist in clinical attire" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3fN-efYo9toGNl0IscG-kbrRSdaBEvM0y505x0bcAA57ZU2nLF5Ih_kiERYC2ZHUMn1fh3cy64cLIHqk_mS9Ljn2vIwqHX-0feWPv2DZSV7qcJ0xXMKYis1VWiWalebIJVa5m9RAchUTeDFa3Qqhn3LJZ8IP98uwMN5OfDhPaC9YWb5U3joGZSJgMcYrxSZCGlkpc1EIbnyWcy5PdUasBIfzTw3iwv7JO0hsMnGjAcW0MDRKpldS-NaXjcT9yE31yYappyV8GSo96"/>
+<img class="w-10 h-10 rounded-full border-2 border-primary object-cover" data-alt="Smiling female dental assistant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhDzQ4MuJoqgFZRdL7YhtNfXcU_8-nyOLDomMyvtc8AJUcZvcZLXt4QiMQ9Tkv0V2KkwNJJNWrZMH8oThCCzShob6hPji-qGCrUpwSwYr9CJBMJTdhG7MP02g29Uv-CktIIHGlboD8I9Mx2oDE3EDOuPPg9FppyBrt51POQuRxGs_QbskSO5ReiO2jglA93HWADQGr6k8oOuEwJkxBk83vufnmVB4FsJK0920WlLGJHpTJiCKDviUMVPqD159FhZDN4wMlJgBDSpB0"/>
+</div>
+<span class="text-on-primary/90 text-sm font-medium">Joined by 2,000+ happy patients</span>
+</div>
+</div>
+</div>
+<!-- Right Column: Booking Form -->
+<div class="bg-secondary-container/40 p-8 md:p-16 flex flex-col justify-center">
+<div class="max-w-md mx-auto w-full space-y-8">
+<div class="space-y-2">
+<h2 class="text-3xl font-headline font-bold text-primary">Request Appointment</h2>
+<p class="text-secondary font-body">Complete the details below and our team will contact you shortly.</p>
+</div>
+<form class="space-y-5">
+<div class="space-y-1">
+<label class="text-xs font-label font-bold uppercase tracking-wider text-primary opacity-60 ml-1">Full Name</label>
+<input class="w-full px-5 py-4 rounded-xl border-none bg-surface-container-lowest text-on-surface focus:ring-2 focus:ring-primary/20 transition-all placeholder:text-outline/50" placeholder="John Doe" type="text"/>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+<div class="space-y-1">
+<label class="text-xs font-label font-bold uppercase tracking-wider text-primary opacity-60 ml-1">Email Address</label>
+<input class="w-full px-5 py-4 rounded-xl border-none bg-surface-container-lowest text-on-surface focus:ring-2 focus:ring-primary/20 transition-all placeholder:text-outline/50" placeholder="john@example.com" type="email"/>
+</div>
+<div class="space-y-1">
+<label class="text-xs font-label font-bold uppercase tracking-wider text-primary opacity-60 ml-1">Phone Number</label>
+<input class="w-full px-5 py-4 rounded-xl border-none bg-surface-container-lowest text-on-surface focus:ring-2 focus:ring-primary/20 transition-all placeholder:text-outline/50" placeholder="+1 (555) 000-0000" type="tel"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+<div class="space-y-1">
+<label class="text-xs font-label font-bold uppercase tracking-wider text-primary opacity-60 ml-1">Check Out Date</label>
+<input class="w-full px-5 py-4 rounded-xl border-none bg-surface-container-lowest text-on-surface focus:ring-2 focus:ring-primary/20 transition-all" type="date"/>
+</div>
+<div class="space-y-1">
+<label class="text-xs font-label font-bold uppercase tracking-wider text-primary opacity-60 ml-1">Select Services</label>
+<select class="w-full px-5 py-4 rounded-xl border-none bg-surface-container-lowest text-on-surface focus:ring-2 focus:ring-primary/20 transition-all appearance-none cursor-pointer">
+<option>General Consultation</option>
+<option>Cosmetic Dentistry</option>
+<option>Dental Implants</option>
+<option>Teeth Whitening</option>
+<option>Emergency Care</option>
+</select>
+</div>
+</div>
+<div class="space-y-1">
+<label class="text-xs font-label font-bold uppercase tracking-wider text-primary opacity-60 ml-1">Write Your Comment Here</label>
+<textarea class="w-full px-5 py-4 rounded-xl border-none bg-surface-container-lowest text-on-surface focus:ring-2 focus:ring-primary/20 transition-all placeholder:text-outline/50 resize-none" placeholder="How can we help you?" rows="4"></textarea>
+</div>
+<button class="w-full bg-[#0e336a] text-on-primary py-5 rounded-full font-headline font-bold text-lg hover:opacity-90 transition-all shadow-[0_12px_24px_rgba(14,51,106,0.2)] active:scale-[0.98]" type="submit">
+                            Book Appointment
+                        </button>
+</form>
+<div class="flex items-center justify-center gap-2 text-xs text-secondary font-medium">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+                        Your data is secured with clinical-grade encryption.
+                    </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- World-Class Interactive Map Footer Section -->
+<section class="relative bg-primary overflow-hidden">
+<!-- Stylized Monochromatic Map Background -->
+<div class="absolute inset-0 z-0 opacity-20 grayscale transition-all duration-700 hover:grayscale-0">
+<img alt="stylized monochromatic satellite map of a modern urban landscape with intricate street patterns and water features" class="w-full h-full object-cover" data-alt="stylized monochromatic satellite map of a modern urban landscape with intricate street patterns and water features" data-location="Toronto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNtwNxX8mRrlVFiT5fJuvIUXU15yKB_e24w-vLQVD_itARERtqcMaQtCexkxD0fsHWaQUjXoj7aZmEo6RuG0qlar9V9ePT19Sa4oOtBoXle3nFAlw2256KoTE2Gbj721uPUoQlTi84J_I-rGN41QfzKmja6yAmCRMfcF-v7Zhl4Ttx2DL6jsVcF07j6-shOHMbnGEe5_Bt_HpI2jPssjOkwzFyrypU-HQwCPcPgnzSDUd1CnJxEIVoTLJBxNJh3w40nZQFr6RGB2kZ"/>
+<div class="absolute inset-0 bg-gradient-to-b from-primary via-transparent to-primary"></div>
+</div>
+<div class="relative z-10 pt-24 pb-12 px-8 max-w-screen-2xl mx-auto">
+<!-- Footer Heading Area -->
+<div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+<div class="max-w-xl">
+<span class="font-label text-on-primary-container text-sm tracking-[0.2em] uppercase mb-4 block">Our Presence</span>
+<h2 class="font-headline text-4xl md:text-5xl font-bold text-on-primary leading-tight">Find your nearest Sanctuary clinic.</h2>
+</div>
+<button class="bg-surface-container-lowest text-primary px-10 py-5 rounded-full font-headline font-bold text-lg shadow-[0_8px_32px_rgba(0,30,73,0.15)] hover:scale-105 active:scale-95 transition-all duration-300">
+                    Book Appointment
+                </button>
+</div>
+<!-- Floating Glassmorphism Contact Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Location Card 1 -->
+<div class="glass-card p-8 rounded-xl border border-on-primary-container/90 group cursor-pointer hover:border-on-primary-container/30 transition-all duration-500" data-aos="slide-up">
+<div class="flex justify-between items-start mb-6">
+<div class="p-3 bg-primary-container rounded-lg">
+<span class="material-symbols-outlined text-on-primary-container" style="font-variation-settings: 'FILL' 1;">medical_services</span>
+</div>
+<span class="text-xs font-label uppercase tracking-widest text-on-primary-container/60">Open Now</span>
+</div>
+<h3 class="font-headline text-2xl font-bold text-on-primary mb-2">Downtown Core</h3>
+<p class="text-on-primary-container/80 mb-6 leading-relaxed">Suite 402, 120 Bay Street<br/>Toronto, ON M5J 2R8</p>
+<div class="flex items-center gap-4 text-on-primary text-sm font-semibold group-hover:gap-6 transition-all">
+<span>View on Map</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</div>
+</div>
+<!-- Location Card 2 -->
+<div class="glass-card p-8 rounded-xl border border-on-primary-container/90 group cursor-pointer hover:border-on-primary-container/30 transition-all duration-500" data-aos="slide-up">
+<div class="flex justify-between items-start mb-6">
+<div class="p-3 bg-primary-container rounded-lg">
+<span class="material-symbols-outlined text-on-primary-container" style="font-variation-settings: 'FILL' 1;">medical_services</span>
+</div>
+<span class="text-xs font-label uppercase tracking-widest text-on-primary-container/60">Closing Soon</span>
+</div>
+<h3 class="font-headline text-2xl font-bold text-on-primary mb-2">Oakville West</h3>
+<p class="text-on-primary-container/80 mb-6 leading-relaxed">2480 Third Line<br/>Oakville, ON L6M 4G8</p>
+<div class="flex items-center gap-4 text-on-primary text-sm font-semibold group-hover:gap-6 transition-all">
+<span>View on Map</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</div>
+</div>
+<!-- Location Card 3 -->
+<div class="glass-card p-8 rounded-xl border border-on-primary-container/90 group cursor-pointer hover:border-on-primary-container/30 transition-all duration-500" data-aos="slide-up">
+<div class="flex justify-between items-start mb-6">
+<div class="p-3 bg-primary-container rounded-lg">
+<span class="material-symbols-outlined text-on-primary-container" style="font-variation-settings: 'FILL' 1;">medical_services</span>
+</div>
+<span class="text-xs font-label uppercase tracking-widest text-on-primary-container/60">Emergency 24/7</span>
+</div>
+<h3 class="font-headline text-2xl font-bold text-on-primary mb-2">Mississauga South</h3>
+<p class="text-on-primary-container/80 mb-6 leading-relaxed">152 Lakeshore Rd E<br/>Mississauga, ON L5G 1E8</p>
+<div class="flex items-center gap-4 text-on-primary text-sm font-semibold group-hover:gap-6 transition-all">
+<span>View on Map</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Mandatory Footer Component Structure -->
+<footer class="pt-16 border-t border-on-primary-container/10">
+<!-- Main Footer Grid -->
+<div class="max-w-9xl mx-auto px-8 py-10">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16">
+<!-- Column 1: Brand & Philosophy -->
+<div class="space-y-8">
+<div class="flex flex-col gap-4">
+    <img src="images/dental-logo-footer.png" class="img-fluid" />
+<p class="text-primary-fixed-dim leading-relaxed font-light text-sm">
+                A sanctuary of dental innovation where clinical precision meets patient-centric comfort. We are committed to aesthetic excellence and lasting oral health.
+              </p>
+</div>
+<!-- Social Proof Badges -->
+<div class="flex gap-4 items-center">
+<div class="h-12 w-12 rounded-xl bg-white/10 flex items-center justify-center backdrop-blur-md">
+<span class="material-symbols-outlined text-white" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<div class="h-12 w-12 rounded-xl bg-white/10 flex items-center justify-center backdrop-blur-md">
+<span class="material-symbols-outlined text-white" data-icon="stars" style="font-variation-settings: 'FILL' 1;">stars</span>
+</div>
+<div class="h-12 w-12 rounded-xl bg-white/10 flex items-center justify-center backdrop-blur-md">
+<span class="material-symbols-outlined text-white" data-icon="health_and_safety" style="font-variation-settings: 'FILL' 1;">health_and_safety</span>
+</div>
+</div>
+</div>
+<!-- Column 2: Clinical Services -->
+<div>
+<h3 class="font-headline text-xs uppercase tracking-[0.2em] text-white/40 mb-8 font-bold">Services</h3>
+<ul class="space-y-4">
+<li><a class="text-primary-fixed-dim hover:text-white transition-colors flex items-center gap-2 group" href="#"><span class="h-px w-0 group-hover:w-4 bg-primary-fixed-dim transition-all"></span>General Dentistry</a></li>
+<li><a class="text-primary-fixed-dim hover:text-white transition-colors flex items-center gap-2 group" href="#"><span class="h-px w-0 group-hover:w-4 bg-primary-fixed-dim transition-all"></span>Cosmetic Procedures</a></li>
+<li><a class="text-primary-fixed-dim hover:text-white transition-colors flex items-center gap-2 group" href="#"><span class="h-px w-0 group-hover:w-4 bg-primary-fixed-dim transition-all"></span>Dental Implants</a></li>
+<li><a class="text-primary-fixed-dim hover:text-white transition-colors flex items-center gap-2 group" href="#"><span class="h-px w-0 group-hover:w-4 bg-primary-fixed-dim transition-all"></span>Orthodontics</a></li>
+<li><a class="text-primary-fixed-dim hover:text-white transition-colors flex items-center gap-2 group" href="#"><span class="h-px w-0 group-hover:w-4 bg-primary-fixed-dim transition-all"></span>Sedation Dentistry</a></li>
+</ul>
+</div>
+<!-- Column 3: Locations (Micro-Maps) -->
+<div>
+<h3 class="font-headline text-xs uppercase tracking-[0.2em] text-white/40 mb-8 font-bold">Get Directions</h3>
+<div class="space-y-6">
+<div class="group flex gap-4">
+<div class="w-16 h-16 rounded-lg overflow-hidden shrink-0 border border-white/10">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-80" data-alt="minimalist street map of downtown oakville with soft blue and grey tones" data-location="Oakville, Canada" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB342vMJ70mrmSNUobd5U7gTqd2wGefTS-xAiTwlThO0BU6q2L_Re4QuhZTc8XXJxL87TSY--zeobJB8wDAFD-r3OQ9GiWnutOkVxzC9CjOCFXlcllfUiF3kKXAa_TGVmfP7OIa1-QKAo0prfg469uq2wO75tczrrbSjJiNrwv5_u0mQKInJrfLp0-vpMJAwwyrQZMQ9qqCnT4UbaiuIFw5XDU19VqwPc3zdlV-CR8U6woA5B8ffc1e20AuUr3SE6xWGk1hJpuy35S9"/>
+</div>
+<div>
+<p class="text-white font-semibold text-sm">Oakville Sanctuary</p>
+<p class="text-white/50 text-xs mt-1">123 Lakeshore Rd E.</p>
+<a class="text-xs text-primary-fixed-dim underline mt-2 block" href="#">Directions</a>
+</div>
+</div>
+<div class="group flex gap-4">
+<div class="w-16 h-16 rounded-lg overflow-hidden shrink-0 border border-white/10">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-80" data-alt="minimalist street map of mississauga city center with clinical blue aesthetic" data-location="Mississauga, Canada" src="https://lh3.googleusercontent.com/aida-public/AB6AXuACVkrQW6BzoCWGTxVJP7oIPpYNnrHtzpPvnmvrzZmORNQl_umsTQPosyz_uO9-yRAYqNowA66rHBOFD_CYf6XJ-pwa_7PESdz1hW17uF0QUsooKtDNJ4rWlgzDwb7670BpG8lfwl7YiAT3PXDo2aOH8LxEhy0-uFNs8rq-HOwht9uBKD1h_wUeqHzW7sfG2YU7Asv2zm8LRsbDGtbrmsLpSq_Kpl8ekHYWrcpeEXEuI7IH9aws6CihwuCAeAXncrfgnCK69tJJXCSW"/>
+</div>
+<div>
+<p class="text-white font-semibold text-sm">Mississauga North</p>
+<p class="text-white/50 text-xs mt-1">4550 Hurontario St.</p>
+<a class="text-xs text-primary-fixed-dim underline mt-2 block" href="#">Directions</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Column 4: Reach Out -->
+<div class="space-y-8">
+<div>
+<h3 class="font-headline text-xs uppercase tracking-[0.2em] text-white/40 mb-8 font-bold">Contact</h3>
+<div class="space-y-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-white/60 text-sm" data-icon="mail">mail</span>
+<span class="text-primary-fixed-dim text-sm">concierge@chaggerdental.com</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-white/60 text-sm" data-icon="call">call</span>
+<span class="text-primary-fixed-dim text-sm">+1 (905) 555-0192</span>
+</div>
+</div>
+</div>
+<div class="pt-6">
+<h3 class="font-headline text-xs uppercase tracking-[0.2em] text-white/40 mb-4 font-bold">Follow Us</h3>
+<div class="flex gap-4">
+<a class="text-white/40 hover:text-white transition-colors" href="#"><span class="material-symbols-outlined" data-icon="public">public</span></a>
+<a class="text-white/40 hover:text-white transition-colors" href="#"><span class="material-symbols-outlined" data-icon="share">share</span></a>
+<a class="text-white/40 hover:text-white transition-colors" href="#"><span class="material-symbols-outlined" data-icon="chat">chat</span></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Tonal Shift Copyright Bar -->
+<div class="w-full bg-[#00173a] border-t border-white/5">
+<div class="max-w-7xl mx-auto px-8 py-8 flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex flex-col md:flex-row items-center gap-8">
+<p class="font-label text-[10px] uppercase tracking-widest text-white/30">
+              © 2026 Chagger Dental. All rights reserved.
+            </p>
+<div class="flex gap-6">
+<a class="font-label text-[10px] uppercase tracking-widest text-white/30 hover:text-white transition-colors" href="#">Privacy Policy</a>
+<a class="font-label text-[10px] uppercase tracking-widest text-white/30 hover:text-white transition-colors" href="#">Terms of Service</a>
+<a class="font-label text-[10px] uppercase tracking-widest text-white/30 hover:text-white transition-colors" href="#">Clinical Standards</a>
+</div>
+</div>
+<div class="flex items-center gap-4 grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all duration-500">
+<span class="text-[10px] uppercase tracking-[0.2em] text-white/30 font-bold">Certified Partner of</span>
+<div class="h-6 w-24 bg-white/20 rounded-md"></div>
+</div>
+</div>
+</div>
+
+</footer>
+</div>
+</section>
+<!-- Footer -->
+ <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script>
+     AOS.init({
+    duration:1200
+  });
+    // hero slider
+   let currentSlide = 0;
+    const totalSlides = 4;
+    const slider = document.getElementById('hero-slider');
+    const dots = document.querySelectorAll('.dot');
+
+    function updateSlider() {
+        slider.style.transform = `translateX(-${currentSlide * 25}%)`;
+        dots.forEach((dot, index) => {
+            if (index === currentSlide) {
+                dot.classList.add('active');
+            } else {
+                dot.classList.remove('active');
+            }
+        });
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        updateSlider();
+    }
+
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        updateSlider();
+    }
+
+    function goToSlide(index) {
+        currentSlide = index;
+        updateSlider();
+    }
+
+    // Auto-advance
+    let autoPlay = setInterval(nextSlide, 6000);
+
+    // Reset timer on manual interaction
+    function resetTimer() {
+        clearInterval(autoPlay);
+        autoPlay = setInterval(nextSlide, 6000);
+    }
+
+    document.querySelectorAll('button').forEach(btn => {
+        btn.addEventListener('click', resetTimer);
+    });
+
+    // --- Services Slider ---
+    document.addEventListener('DOMContentLoaded', function() {
+        const slider = document.getElementById('sliderContainer');
+        const nextBtn = document.getElementById('nextBtn');
+        const prevBtn = document.getElementById('prevBtn');
+        const counter = document.getElementById('sliderCounter');
+        const cards = slider.children;
+        const totalCards = cards.length;
+
+        function updateCounter() {
+            const scrollLeft = slider.scrollLeft;
+            const cardWidth = cards[0].offsetWidth + 24; // card width + gap
+            const currentIndex = Math.round(scrollLeft / cardWidth);
+            counter.innerText = `${(currentIndex + 1).toString().padStart(2, '0')} / ${totalCards.toString().padStart(2, '0')}`;
+        }
+
+        nextBtn.addEventListener('click', () => {
+            const cardWidth = cards[0].offsetWidth + 24;
+            slider.scrollLeft += cardWidth;
+            setTimeout(updateCounter, 400); 
+        });
+
+        prevBtn.addEventListener('click', () => {
+            const cardWidth = cards[0].offsetWidth + 24;
+            slider.scrollLeft -= cardWidth;
+            setTimeout(updateCounter, 400);
+        });
+
+        slider.addEventListener('scroll', () => {
+            clearTimeout(slider.scrollTimeout);
+            slider.scrollTimeout = setTimeout(updateCounter, 50);
+        });
+
+        updateCounter();
+    });
+
+    // Handle Navbar Glass effect on scroll
+    window.addEventListener('scroll', () => {
+        const nav = document.querySelector('nav');
+        if (window.scrollY > 50) {
+            nav.classList.add('shadow-md');
+        } else {
+            nav.classList.remove('shadow-md');
+        }
+    });
+
+    // animations
+    const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.remove('opacity-0', 'translate-y-10');
+      entry.target.classList.add('opacity-100', 'translate-y-0');
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.scroll-animate').forEach(el => observer.observe(el));
+</script>
+</body></html>

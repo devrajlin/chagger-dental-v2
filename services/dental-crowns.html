@@ -159,6 +159,20 @@
         --tw-bg-opacity: 1;
         background-color: rgb(14 51 106 / var(--tw-bg-opacity, 1));
       }
+      /* other services css */
+      .glass-primary {
+        background: rgba(14, 51, 106, 0.75);
+        backdrop-filter: blur(16px);
+      }
+      .tonal-shift-surface-container-low {
+        background-color: #f6f3ef;
+      }
+      .surface-dim-tonal-grounding {
+        background-color: #dcdad6;
+      }
+      .perspective-text {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+      }
     </style>
   </head>
   <body
@@ -172,14 +186,14 @@
         class="flex justify-between items-center max-w-screen-2xl mx-auto px-6 h-full"
       >
         <!-- Brand Identity -->
-        <a class="flex items-center gap-3 shrink-0" href="#">
+        <a class="flex items-center gap-3 shrink-0" href="../index.html">
           <img src="../images/dental-logo.png" class="img-fluid" width="240" />
         </a>
         <!-- Desktop Navigation Links -->
         <div class="hidden md:flex items-center gap-10 h-full">
           <a
             class="font-manrope tracking-widest text-sm chg-nav-link chg-nav-active-nav-link"
-            href="#"
+            href="../index.html"
             >HOME</a
           >
           <!-- SERVICES Full-Width Mega Menu -->
@@ -187,31 +201,33 @@
             class="h-full flex items-center chg-nav-link-group static"
             id="chg-nav-services-nav"
           >
-            <div class="flex items-center gap-1 cursor-pointer py-2 group">
-              <span
-                class="font-manrope tracking-widest text-sm chg-nav-link group-hover:text-primary transition-colors uppercase"
-                >Services</span
-              >
-              <span
-                class="material-symbols-outlined text-lg text-secondary group-hover:text-primary transition-transform duration-300"
-                >expand_more</span
-              >
-            </div>
+            <a href="../services.html"
+              ><div class="flex items-center gap-1 cursor-pointer py-2 group">
+                <span
+                  class="font-manrope tracking-widest text-sm chg-nav-link group-hover:text-primary transition-colors uppercase"
+                  >Services</span
+                >
+                <span
+                  class="material-symbols-outlined text-lg text-secondary group-hover:text-primary transition-transform duration-300"
+                  >expand_more</span
+                >
+              </div></a
+            >
             <div
-              class="chg-nav-dropdown-container absolute top-[88px] left-0 right-0 w-full flex justify-center bg-white border-b border-primary/5"
+              class="chg-nav-dropdown-container z-[100] absolute top-[70px] left-0 right-0 w-full flex justify-center bg-white border-b border-primary/5"
               id="chg-nav-services-dropdown"
             >
               <div class="max-w-7xl w-full px-6 py-12">
                 <div class="grid grid-cols-3 gap-8">
                   <!-- Invisalign -->
                   <a
-                    class="flex items-start gap-5 p-5 rounded-xl hover:bg-surface-container-low transition-all group"
-                    href="#"
+                    class="flex items-start gap-5 p-5 rounded-xl hover:bg-blue-100 transition-all group"
+                    href="../services/invisalign.html"
                   >
                     <img
                       alt="Invisalign"
                       class="w-24 h-24 rounded-lg object-cover shrink-0 shadow-sm"
-                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuDs5SFTRtndPcUpePFJp1E7VpjWDS6F39rvDeUQy-qDz1o4vGMVPYfJG-aJsoeEOU2ZEz5Pql3srhS8eIEZYRaR7PK785qYENow6wqh-XjfUugZwg2HsOniOdO-ImU-RjmaPojpF0eGuxLbJmknBzrmAykYq4bcfR3wZ4gCIlii4Dg-NpollSlZZCWd726czJwLSD4bD-sULd4t-s8S7SwzxF9UklOU9hWtdnjX2ls6EDygib_to0-pq9s0M3M4s4fBKq7yx_zIqwrX"
+                      src="../images/services/invisalign-new.jpg"
                     />
                     <div>
                       <div class="flex items-center gap-2 mb-2">
@@ -231,13 +247,13 @@
                   </a>
                   <!-- Dental Implants -->
                   <a
-                    class="flex items-start gap-5 p-5 rounded-xl hover:bg-surface-container-low transition-all group"
-                    href="#"
+                    class="flex items-start gap-5 p-5 rounded-xl hover:bg-blue-100 transition-all group"
+                    href="../services/dental-implants.html"
                   >
                     <img
                       alt="Implants"
                       class="w-24 h-24 rounded-lg object-cover shrink-0 shadow-sm"
-                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9pJ1xjQldOr7cm_gk-tQ1F6U7ybwfpeK25xzpGtcLaoYaUOCmzCUI93jJRHWXYfuY5gaFBKxtLI9hj83dkdbaezDTcMGAoajB4pw2gjO3QPD31nyNOI7MAYwYUeAgeAdm4x1xeVj-QkXuU6WnrLIVPYrqq1zdPvQ9CC382GMK3h13iuus9PDb4XzUPMsliqrp4JR16dBTs9Oet5NsHvJEpsrsjKFikCpkYaf9TMoiAXmsZpcH5DvPhujZRKQ3qehgjdUSdKlo_aoM"
+                      src="../images/services/dental_implant.png"
                     />
                     <div>
                       <div class="flex items-center gap-2 mb-2">
@@ -257,13 +273,13 @@
                   </a>
                   <!-- Dental Crowns -->
                   <a
-                    class="flex items-start gap-5 p-5 rounded-xl hover:bg-surface-container-low transition-all group"
-                    href="#"
+                    class="flex items-start gap-5 p-5 rounded-xl hover:bg-blue-100 transition-all group"
+                    href="../services/dental-crowns.html"
                   >
                     <img
                       alt="Crowns"
                       class="w-24 h-24 rounded-lg object-cover shrink-0 shadow-sm"
-                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVgxXRDBUE1w1o1eSNizCa4b-Sj52AwlFt0qfS1j2tW9K84wptE9mAYmn5griD6LfH5_eFeDTn2JO_nah6VwQ6EbQGfL56ZTXQVRPeAtEgxuTP0gQdnvAMH_1YT5hAiD5PNaY60RNSbqCIzyZTqkOytrR51wdxWPyc9vKnqFsS_91XMncM-PTvdaxWBXNXFUifHvH-1t9alH1k-M7aQPwqEr4sQDPVLGam4C0XdGLD9K9KRkS7v7etCCAkZVHEpFp2G8YwGbtqMSS_"
+                      src="../images/dental-crown.png"
                     />
                     <div>
                       <div class="flex items-center gap-2 mb-2">
@@ -283,13 +299,13 @@
                   </a>
                   <!-- CEREC Crown -->
                   <a
-                    class="flex items-start gap-5 p-5 rounded-xl hover:bg-surface-container-low transition-all group"
-                    href="#"
+                    class="flex items-start gap-5 p-5 rounded-xl hover:bg-blue-100 transition-all group"
+                    href="../services/cerec-crown.html"
                   >
                     <img
                       alt="CEREC"
                       class="w-24 h-24 rounded-lg object-cover shrink-0 shadow-sm"
-                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbUuzPmcJ78JT_YGuF9Fb7IdFzZ-1WofR3aPySjO44SdclN6jAUfwj_7FhUp9H3_8AHRXQXEKKKpLGF7nbqQMnun77Rtp6gPBlyBneDzztCB_p6FWOjCbCMeDF-smbIHRGKDtIJzi4hbNZUbRaX-_o5gOXfQ6qSGVbIdsviz4MGiUsYoLiNKboGXaiH9__Qw9KZyTY4SfwhXvf4X_tMUD4kziSEd8VRw0GDCl6z660NxKoejtaVj8bM7UtYxpjEJM1W2fcgU7WPNra"
+                      src="../images/services/cerec-crown.jpg"
                     />
                     <div>
                       <div class="flex items-center gap-2 mb-2">
@@ -308,13 +324,13 @@
                   </a>
                   <!-- Teeth Whitening -->
                   <a
-                    class="flex items-start gap-5 p-5 rounded-xl hover:bg-surface-container-low transition-all group"
-                    href="#"
+                    class="flex items-start gap-5 p-5 rounded-xl hover:bg-blue-100 transition-all group"
+                    href="../services/teeth-whitening.html"
                   >
                     <img
                       alt="Teeth Whitening"
                       class="w-24 h-24 rounded-lg object-cover shrink-0 shadow-sm"
-                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyIY4TP6ZsTi5Qy4FDML3x8ulMjgmrHYSW5zg-JWenYUJ6VUg8UEzPCZi1rFIYQn7HknDgskjCl0goh5lHAHWRsEVfsnIA5zcPI-7cieEGtC5UI6K7evCsm2pc-taLMzrMVfwcl2p1u4_EPY2fkz9UpOoXBS4kvjXFjQRt6_rqvMJDqMBzrkhqM79tpXiMu7ASsNewKC9Btqiok55XbHoLLGclIOltIS9FcMM-ObOHRl2Vd-PWKh79SBMNMZmDH1h6JwORvTTraq58"
+                      src="../images/white-6.jpg"
                     />
                     <div>
                       <div class="flex items-center gap-2 mb-2">
@@ -334,13 +350,13 @@
                   </a>
                   <!-- Denture Services -->
                   <a
-                    class="flex items-start gap-5 p-5 rounded-xl hover:bg-surface-container-low transition-all group"
-                    href="#"
+                    class="flex items-start gap-5 p-5 rounded-xl hover:bg-blue-100 transition-all group"
+                    href="../services/denture-services.html"
                   >
                     <img
                       alt="Denture"
                       class="w-24 h-24 rounded-lg object-cover shrink-0 shadow-sm"
-                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsZ6kZ7ZHp5wLRriwXCH7gmA7saQqjM4ONWlHsyUdy1Mus7kN1mN7X-YEJp_vMuWDn1b3vH6gg42nJCjalMNnGdyanv85saEfwakMfyzIi9uzVJK7QiM8h647I9d4IeP1YcjhVQHsvWk10DVDaH_DIsG_Q2cMRv0DSTsPsFuz0ceBvDCfHbjg0gbbRbk_auK9xrYUanKHZhcREPUN6TPKbxq3L-cxTACJoK0N7mQfHER-VhehFSTumsgGh6qJBMVdGjC8FVdITZAkI"
+                      src="../images/custom.png"
                     />
                     <div>
                       <div class="flex items-center gap-2 mb-2">
@@ -363,7 +379,7 @@
                 >
                   <a
                     class="bg-primary text-white px-10 py-3 rounded-full font-bold text-sm flex items-center gap-2 hover:shadow-lg hover:shadow-primary/20 transition-all"
-                    href="#"
+                    href="../services.html"
                   >
                     View All Clinical Services
                     <span class="material-symbols-outlined text-sm"
@@ -374,7 +390,9 @@
               </div>
             </div>
           </div>
-          <a class="font-manrope tracking-widest text-sm chg-nav-link" href="#"
+          <a
+            class="font-manrope tracking-widest text-sm chg-nav-link"
+            href="../about_us.html"
             >ABOUT US</a
           >
           <!-- LOCATIONS Dropdown -->
@@ -401,8 +419,8 @@
               >
                 <div class="p-2">
                   <a
-                    class="flex items-center gap-4 p-4 rounded-lg hover:bg-surface-container-low group transition-all"
-                    href="#"
+                    class="flex items-center gap-4 p-4 rounded-lg hover:bg-blue-100 group transition-all"
+                    href="../burlington-location.html"
                   >
                     <span
                       class="material-symbols-outlined text-primary/60 group-hover:text-primary"
@@ -415,8 +433,8 @@
                     >
                   </a>
                   <a
-                    class="flex items-center gap-4 p-4 rounded-lg hover:bg-surface-container-low group transition-all"
-                    href="#"
+                    class="flex items-center gap-4 p-4 rounded-lg hover:bg-blue-100 group transition-all"
+                    href="../oakville-location.html"
                   >
                     <span
                       class="material-symbols-outlined text-primary/60 group-hover:text-primary"
@@ -429,8 +447,8 @@
                     >
                   </a>
                   <a
-                    class="flex items-center gap-4 p-4 rounded-lg hover:bg-surface-container-low group transition-all"
-                    href="#"
+                    class="flex items-center gap-4 p-4 rounded-lg hover:bg-blue-100 group transition-all"
+                    href="../mississauga-location.html"
                   >
                     <span
                       class="material-symbols-outlined text-primary/60 group-hover:text-primary"
@@ -444,11 +462,11 @@
                   </a>
                 </div>
                 <div
-                  class="bg-surface-container-low p-4 flex justify-center border-t border-primary/5"
+                  class="bg-blue-100 p-4 flex justify-center border-t border-primary/5"
                 >
                   <a
                     class="flex items-center gap-2 text-sm font-bold text-primary hover:gap-3 transition-all"
-                    href="#"
+                    href="../locations_page.html"
                   >
                     See All Locations
                     <span class="material-symbols-outlined text-sm"
@@ -459,18 +477,22 @@
               </div>
             </div>
           </div>
-          <a class="font-manrope tracking-widest text-sm chg-nav-link" href="#"
+          <a
+            class="font-manrope tracking-widest text-sm chg-nav-link"
+            href="../reviews.html"
             >REVIEWS</a
           >
         </div>
         <!-- Action Cluster -->
         <div class="flex items-center gap-4">
-          <button
-            class="hidden md:flex bg-primary text-white px-7 py-2 rounded-full font-bold text-sm items-center gap-2 shadow-lg shadow-primary/20 hover:shadow-primary/30 active:scale-95 transition-all duration-300"
+          <a href="../book-appointment.html"
+            ><button
+              class="hidden md:flex bg-primary text-white px-7 py-2 rounded-full font-bold text-sm items-center gap-2 shadow-lg shadow-primary/20 hover:shadow-primary/30 active:scale-95 transition-all duration-300"
+            >
+              Book Appointment
+              <span class="material-symbols-outlined text-2xl">call</span>
+            </button></a
           >
-            Book Appointment
-            <span class="material-symbols-outlined text-2xl">call</span>
-          </button>
           <!-- Mobile Menu Trigger -->
           <button
             class="md:hidden p-2 text-primary active:scale-90 transition-transform flex items-center justify-center"
@@ -492,7 +514,7 @@
         <div class="flex-1 overflow-y-auto px-8 py-10 flex flex-col">
           <a
             class="text-2xl font-extrabold text-primary border-b border-primary/5 pb-4 mb-8"
-            href="#"
+            href="../index.html"
             >HOME</a
           >
           <!-- Mobile Services Section -->
@@ -513,7 +535,7 @@
             >
               <a
                 class="text-lg font-bold text-secondary flex items-center gap-4"
-                href="#"
+                href="../services/invisalign.html"
                 ><span class="material-symbols-outlined text-primary/40"
                   >align_items_stretch</span
                 >
@@ -521,7 +543,7 @@
               >
               <a
                 class="text-lg font-bold text-secondary flex items-center gap-4"
-                href="#"
+                href="../services/dental-implants.html"
                 ><span class="material-symbols-outlined text-primary/40"
                   >medical_services</span
                 >
@@ -529,15 +551,15 @@
               >
               <a
                 class="text-lg font-bold text-secondary flex items-center gap-4"
-                href="#"
+                href="../services/dental-crowns.html"
                 ><span class="material-symbols-outlined text-primary/40"
-                  >medical_services</span
+                  >dentistry</span
                 >
                 Dental Crowns</a
               >
               <a
                 class="text-lg font-bold text-secondary flex items-center gap-4"
-                href="#"
+                href="../services/cerec-crown.html"
                 ><span class="material-symbols-outlined text-primary/40"
                   >precision_manufacturing</span
                 >
@@ -545,7 +567,7 @@
               >
               <a
                 class="text-lg font-bold text-secondary flex items-center gap-4"
-                href="#"
+                href="../services/teeth-whitening.html"
                 ><span class="material-symbols-outlined text-primary/40"
                   >flare</span
                 >
@@ -553,7 +575,7 @@
               >
               <a
                 class="text-lg font-bold text-secondary flex items-center gap-4"
-                href="#"
+                href="../services/denture-services.html"
                 ><span class="material-symbols-outlined text-primary/40"
                   >format_paint</span
                 >
@@ -561,7 +583,7 @@
               >
               <a
                 class="text-sm font-bold text-primary mt-2 flex items-center gap-2"
-                href="#"
+                href="../services.html"
                 >View All Services
                 <span class="material-symbols-outlined text-xs"
                   >arrow_forward</span
@@ -571,7 +593,7 @@
           </div>
           <a
             class="text-2xl font-extrabold text-primary border-b border-primary/5 pb-4 mb-8"
-            href="#"
+            href="../about_us.html"
             >ABOUT US</a
           >
           <!-- Mobile Locations Section -->
@@ -592,7 +614,7 @@
             >
               <a
                 class="text-lg font-bold text-secondary flex items-center gap-4"
-                href="#"
+                href="../burlington-location.html"
                 ><span class="material-symbols-outlined text-primary/40"
                   >location_on</span
                 >
@@ -600,7 +622,7 @@
               >
               <a
                 class="text-lg font-bold text-secondary flex items-center gap-4"
-                href="#"
+                href="../oakville-location.html"
                 ><span class="material-symbols-outlined text-primary/40"
                   >apartment</span
                 >
@@ -608,7 +630,7 @@
               >
               <a
                 class="text-lg font-bold text-secondary flex items-center gap-4"
-                href="#"
+                href="../mississauga-location.html"
                 ><span class="material-symbols-outlined text-primary/40"
                   >health_and_safety</span
                 >
@@ -618,17 +640,19 @@
           </div>
           <a
             class="text-2xl font-extrabold text-primary border-b border-primary/5 pb-4 mb-8"
-            href="#"
+            href="../reviews.html"
             >REVIEWS</a
           >
           <!-- Book Appointment as final item -->
           <div class="mt-4 pb-10">
-            <button
-              class="w-full bg-primary text-white py-5 rounded-full font-bold text-lg shadow-xl shadow-primary/20 flex items-center justify-center gap-3 active:scale-95 transition-transform"
+            <a href="../book-appointment.html"
+              ><button
+                class="w-full bg-primary text-white py-5 rounded-full font-bold text-lg shadow-xl shadow-primary/20 flex items-center justify-center gap-3 active:scale-95 transition-transform"
+              >
+                Book Appointment
+                <span class="material-symbols-outlined">calendar_today</span>
+              </button></a
             >
-              Book Appointment
-              <span class="material-symbols-outlined">calendar_today</span>
-            </button>
           </div>
         </div>
       </div>
@@ -644,7 +668,7 @@
                 alt="Radiant Smile"
                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 data-alt="Close-up of a stunningly bright and healthy human smile with almost invisible clear aligners in soft, natural studio lighting"
-                src="../images/dental-crown.png"
+                src="../images/services/crown2.avif"
               />
               <div
                 class="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent"
@@ -986,8 +1010,8 @@
                       >First Name</label
                     >
                     <input
-                      class="w-full glass-input rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary transition-all placeholder:text-secondary"
-                      placeholder="John"
+                      class="w-full glass-input rounded-xl px-4 py-3 focus:ring-2 focus:ring-white/50 transition-all placeholder:text-secondary placeholder:text-md"
+                      placeholder="Your First Name"
                       type="text"
                     />
                   </div>
@@ -997,8 +1021,8 @@
                       >Last Name</label
                     >
                     <input
-                      class="w-full bg-surface-container-high glass-input border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary/20 text-primary transition-all placeholder:text-secondary"
-                      placeholder="Doe"
+                      class="w-full bg-surface-container-high glass-input border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-white/50 text-primary transition-all placeholder:text-secondary placeholder:text-md"
+                      placeholder="Your Last Name"
                       type="text"
                     />
                   </div>
@@ -1009,8 +1033,8 @@
                     >Email Address</label
                   >
                   <input
-                    class="w-full bg-surface-container-high glass-input border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary/20 transition-all placeholder:text-secondary"
-                    placeholder="john.doe@example.com"
+                    class="w-full bg-surface-container-high glass-input border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-white/50 transition-all placeholder:text-secondary placeholder:text-md"
+                    placeholder="Your Email Address"
                     type="email"
                   />
                 </div>
@@ -1020,8 +1044,8 @@
                     >Phone Number</label
                   >
                   <input
-                    class="w-full bg-surface-container-high border-none glass-input rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary/20 transition-all placeholder:text-secondary"
-                    placeholder="+1 (555) 000-0000"
+                    class="w-full bg-surface-container-high border-none glass-input rounded-xl px-4 py-3 focus:ring-2 focus:ring-white/50 transition-all placeholder:text-secondary placeholder:text-md"
+                    placeholder="Your Mobile Number"
                     type="tel"
                   />
                 </div>
@@ -1031,8 +1055,8 @@
                     >Address</label
                   >
                   <input
-                    class="w-full bg-surface-container-high border-none glass-input rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary/20 transition-all placeholder:text-secondary"
-                    placeholder="123 Serenity Way"
+                    class="w-full bg-surface-container-high border-none glass-input rounded-xl px-4 py-3 focus:ring-2 focus:ring-white/50 transition-all placeholder:text-secondary placeholder:text-md"
+                    placeholder="Your Email"
                     type="text"
                   />
                 </div>
@@ -1043,8 +1067,8 @@
                       >City</label
                     >
                     <input
-                      class="w-full bg-surface-container-high border-none glass-input rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary/20 transition-all placeholder:text-secondary"
-                      placeholder="London"
+                      class="w-full bg-surface-container-high border-none glass-input rounded-xl px-4 py-3 focus:ring-2 focus:ring-white/50 transition-all placeholder:text-secondary placeholder:text-md"
+                      placeholder="Your City"
                       type="text"
                     />
                   </div>
@@ -1054,8 +1078,8 @@
                       >Postal Code</label
                     >
                     <input
-                      class="w-full bg-surface-container-high border-none glass-input rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary/20 transition-all placeholder:text-secondary/80"
-                      placeholder="N6A 1A1"
+                      class="w-full bg-surface-container-high border-none glass-input rounded-xl px-4 py-3 focus:ring-2 focus:ring-white/50 transition-all placeholder:text-secondary/80 placeholder:text-md"
+                      placeholder="Your Postal Code"
                       type="text"
                     />
                   </div>
@@ -1068,9 +1092,9 @@
                   <select
                     class="w-full bg-surface-container-high border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary/20 text-on-surface transition-all appearance-none"
                   >
-                    <option>London - Downtown</option>
-                    <option>Oakville - Sanctuary</option>
-                    <option>Toronto - Financial District</option>
+                    <option>Burlington</option>
+                    <option>Oakville</option>
+                    <option>Mississauga</option>
                   </select>
                 </div>
                 <!-- Callback Preferences -->
@@ -1084,7 +1108,7 @@
                       class="flex items-center gap-3 p-3 rounded-xl bg-surface-container border border-transparent hover:border-primary/20 cursor-pointer transition-all"
                     >
                       <input
-                        class="rounded text-white focus:ring-primary/20"
+                        class="rounded text-primary focus:ring-primary/20"
                         type="checkbox"
                       />
                       <span class="text-xs text-primary font-medium"
@@ -1095,7 +1119,7 @@
                       class="flex items-center gap-3 p-3 rounded-xl bg-surface-container border border-transparent hover:border-primary/20 cursor-pointer transition-all"
                     >
                       <input
-                        class="rounded text-white focus:ring-primary/20"
+                        class="rounded text-primary focus:ring-primary/20"
                         type="checkbox"
                       />
                       <span class="text-xs text-primary font-medium"
@@ -1106,7 +1130,7 @@
                 </div>
                 <div class="pt-6">
                   <button
-                    class="w-full bg-white text-primary py-5 rounded-full font-headline font-bold text-lg hover:bg-primary-container transition-all shadow-lg shadow-primary/20 flex items-center justify-center gap-3 active:scale-[0.98]"
+                    class="w-full bg-white text-primary py-5 rounded-full font-headline font-bold text-lg hover:bg-primary hover:text-white shadow-lg shadow-primary/20 flex items-center justify-center gap-3 active:scale-[0.98]"
                     type="submit"
                   >
                     Book Appointment
@@ -1116,11 +1140,6 @@
                       >arrow_forward</span
                     >
                   </button>
-                  <p
-                    class="text-[10px] text-center text-secondary mt-4 opacity-60"
-                  >
-                    By submitting, you agree to our clinical privacy protocols.
-                  </p>
                 </div>
               </form>
             </div>
@@ -1138,85 +1157,204 @@
                 >
               </div>
               <div>
-                <p class="text-xs font-bold text-primary">
-                  Invisalign Platinum Elite Provider
-                </p>
-                <p class="text-[10px] text-secondary">
-                  Top 1% of providers worldwide
+                <p class="text-sm font-bold text-primary">
+                  You can book an appointment immediately via the form above, or
+                  feel free to contact us via email or phone.
                 </p>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <section class="max-w-8xl mx-auto px-2 py-14">
-        <div
-          class="bg-primary rounded-[4rem] overflow-hidden relative p-12 md:p-14 text-on-primary"
+      <section class="max-w-8xl mt-20 mx-auto px-8 mb-10">
+        <h2
+          class="text-5xl md:text-6xl mb-10 text-center text-primary font-headline font-extrabold"
         >
+          Other Services
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-stretch">
+          <!-- Card 1: Precision Bonding (Large Vertical) -->
           <div
-            class="absolute top-0 right-0 w-full h-full opacity-30 mix-blend-overlay"
+            class="md:col-span-5 group relative overflow-hidden rounded-[2.5rem] min-h-[600px] shadow-sm transition-all duration-700"
           >
-            <img
-              class="w-full h-full object-cover"
-              data-alt="Abstract macro shot of white fabric ripples and soft flowing movement, representing comfort and luxury"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBw5-MU5wqcJvoeWtGd7WTfwExiFoi9zSoeedUgQWXp--2h38tVWeeBP5B0T2nxFd-14DuxN_MM6bMf1qo9JVB_cJfpzeIYFYgHz1eUJLhA4Fzcnqfb3Ftsusbj9wu6QpATaoN-qSCkzqYJrtdBgVBunVhjLnzU5KfLxflC_ubGNk0MciRBAiGrTxgy7V7ZbU2T_2ML-IhQ5IIr7WAZBIyflpJTM0AyRwYLz72LJhZ5-6lwBTZIQkRb7ldes5zznivoUKCpp6AM0JRh"
-            />
-          </div>
-          <div
-            class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center"
-          >
-            <div class="space-y-10">
-              <h2
-                class="text-5xl md:text-7xl font-headline font-extrabold leading-tight tracking-wide"
-              >
-                Ready to begin your journey?
-              </h2>
-              <p
-                class="text-on-primary-container text-xl md:text-2xl font-light leading-relaxed"
-              >
-                Your journey to dental excellence begins with a single
-                conversation. Choose your time, and let us prepare your arrival.
-              </p>
-              <div class="flex flex-wrap gap-6">
-                <button
-                  class="bg-surface text-primary px-10 py-5 rounded-full font-headline font-bold text-lg hover:shadow-2xl transition-all"
-                >
-                  Reserve My Experience
-                </button>
-                <button
-                  class="border border-on-primary/30 text-on-primary px-10 py-5 rounded-full font-headline font-bold text-lg hover:bg-white/10 transition-all"
-                >
-                  View Burlington Gallery
-                </button>
-              </div>
+            <div class="absolute inset-0 z-0">
+              <img
+                class="w-full h-full object-cover transition-transform duration-[2s] ease-out group-hover:scale-110"
+                data-alt="Close-up of professional dental bonding procedure with focused blue curing light and dentist's steady gloved hands"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7-_J5CF-vraOPT-Ud0MdwSXJiKV4LCldNo-MZFAk5S2XgDhx7DzHEP14Jk5uYP1f8vy38tvgGIdMqLXdwhRZJnjbQJqOox1vzqcjIs0thy8PypsUOwAfXMkzO3IdQbZX5-EakG-Kpdt2KDbEcun9d9UDeilWWWftUmtrzE_jqrgNHFUWJ104WR87qttP7wTaB64Dzl6iCHVP2cbsvvXvm48tKpt24S43gettv3mELMjy16KjJ9b69JV72CoBE23JdkRAiVjINNq-E"
+              />
             </div>
             <div
-              class="hidden lg:block space-y-12 border-l border-white/10 pl-16"
+              class="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent opacity-60"
+            ></div>
+            <div
+              class="absolute inset-0 glass-primary translate-y-full group-hover:translate-y-0 transition-transform duration-700 ease-in-out p-12 flex flex-col justify-end text-white"
             >
-              <div class="space-y-2">
-                <span
-                  class="text-xs font-bold uppercase tracking-[0.3em] opacity-60"
-                  >Location</span
+              <h3 class="font-headline text-4xl font-bold mb-4">
+                Dental Bonding
+              </h3>
+              <a href="../services/bonding.html"
+                ><div
+                  class="mt-1 mb-4 flex items-center text-center align-items-center gap-3 text-white font-semibold group/link cursor-pointer"
                 >
-                <p class="text-2xl font-headline">
-                  123 Lakeshore Rd, Burlington
-                </p>
+                  <span class="text-sm uppercase tracking-widest"
+                    >Learn More</span
+                  >
+                  <span
+                    class="material-symbols-outlined translate-x-0 group-hover/link:translate-x-2 transition-transform"
+                    >trending_flat</span
+                  >
+                </div></a
+              >
+              <p
+                class="text-on-primary-container text-lg mb-8 leading-relaxed font-light"
+              >
+                Seamless restorations using advanced composite artistry to
+                perfect chips, gaps, and surface imperfections.
+              </p>
+            </div>
+            <div
+              class="absolute bottom-10 left-10 text-white z-10 transition-opacity duration-500 group-hover:opacity-0"
+            >
+              <h3 class="font-headline text-3xl font-bold tracking-tight">
+                Dental Bonding
+              </h3>
+              <p class="opacity-80 font-light">Artistic Restorations</p>
+            </div>
+          </div>
+          <!-- Right Column: Nested Grid -->
+          <div class="md:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Card 2: Invisalign Mastery -->
+            <div
+              class="group relative overflow-hidden rounded-[2rem] h-[350px] shadow-sm"
+            >
+              <div class="absolute inset-0 z-0">
+                <img
+                  class="w-full h-full object-cover transition-transform duration-[2s] ease-out group-hover:scale-110"
+                  data-alt="Beautifully lit close-up of a clear orthodontic aligner being held by a patient with a soft-focus radiant smile in background"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBR1TwDU_jfvVfH1ij7ERVC4s_E9qfdGWqSgGWTWZfkUaFlczF2Yb4szN6eCM1a3GL08wQvrHTJrwMKcUVtkVPniYdLuMO_poN-ohVVzX1Ph1a1jd7QsxpWhXvm0dxe6-F8U6pzku7WfjUcGsEvX7OSK-iemUhIZx8Fh4dnoLG8KoTQXvHlQ5AlR4pbEBv6VEtoRvNcQd83DTS5IvNnQp7XHdwsTJV41GvG4tnYpTzMbZLs0l_EETOWB-fTWxd_RGVrzlrv-3Ti_1FT"
+                />
               </div>
-              <div class="space-y-2">
-                <span
-                  class="text-xs font-bold uppercase tracking-[0.3em] opacity-60"
-                  >Concierge Hours</span
-                >
-                <p class="text-2xl font-headline">Mon–Fri: 8:00 AM – 7:00 PM</p>
-              </div>
-              <div class="space-y-2">
-                <span
-                  class="text-xs font-bold uppercase tracking-[0.3em] opacity-60"
-                  >Digital Reach</span
-                >
-                <p class="text-2xl font-headline underline underline-offset-8">
-                  hello@chaggerburlington.com
+              <div
+                class="absolute inset-0 glass-primary translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out p-8 flex flex-col justify-center text-white text-center"
+              >
+                <h3 class="font-headline text-2xl font-bold mb-2">
+                  Invisalign
+                </h3>
+                <p class="text-sm opacity-90 leading-relaxed font-light mb-6">
+                  Discrete orthodontic engineering for a perfectly aligned smile
+                  without the visual weight of traditional braces.
                 </p>
+                <span class="material-symbols-outlined mx-auto text-3xl"
+                  >auto_fix_high</span
+                >
+                <a href="../services/invisalign.html"
+                  ><div
+                    class="mt-6 flex items-center text-center align-items-center gap-3 text-white font-semibold group/link cursor-pointer"
+                  >
+                    <span class="text-sm uppercase tracking-widest"
+                      >Learn More</span
+                    >
+                    <span
+                      class="material-symbols-outlined translate-x-0 group-hover/link:translate-x-2 transition-transform"
+                      >trending_flat</span
+                    >
+                  </div></a
+                >
+              </div>
+              <div
+                class="absolute bottom-6 left-6 text-white z-10 group-hover:opacity-0 transition-opacity"
+              >
+                <h3 class="font-headline text-xl font-bold">Invisalign</h3>
+              </div>
+            </div>
+            <!-- Card 3: Signature Crowns -->
+            <div
+              class="group relative overflow-hidden rounded-[2rem] h-[350px] shadow-sm"
+            >
+              <div class="absolute inset-0 z-0">
+                <img
+                  class="w-full h-full object-cover transition-transform duration-[2s] ease-out group-hover:scale-110"
+                  data-alt="Detailed macro shot of a porcelain dental crown being crafted in a modern laboratory under precise clinical lighting"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvd3HENY3taXVTRabI2Uvfipj_odbJoMWlSha0w7YfIJlfnC9bAMx_cdyTAlGxLIb1A34B7lK666bqa-IY20XDFLpdNLB8nz9VlUt4Ei9srGFkIleSzBf-RgtcuNruXxsCEW1pwN2Lpg3rgncDo9hCxrINS6vjUKPfrOjg4DtzXRpVJ20rNWB0q7rCJ-R8NQGdLPbq0jYgcGIJZ3cS8AxGagaEZ0dUVetjhyD6gbWs2CNMfSilTCsgDL3VVO2i6ASe2L7K4sI2vqas"
+                />
+              </div>
+              <div
+                class="absolute inset-0 glass-primary translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out p-8 flex flex-col justify-center text-white text-center"
+              >
+                <h3 class="font-headline text-2xl font-bold mb-2">
+                  Dental Crowns
+                </h3>
+                <p class="text-sm opacity-90 leading-relaxed font-light mb-6">
+                  Custom-milled porcelain that mimics the natural translucency
+                  and strength of biological tooth enamel.
+                </p>
+                <span class="material-symbols-outlined mx-auto text-3xl"
+                  >workspace_premium</span
+                >
+                <a href="../services/dental-crowns.html"
+                  ><div
+                    class="mt-6 flex items-center text-center align-items-center gap-3 text-white font-semibold group/link cursor-pointer"
+                  >
+                    <span class="text-sm uppercase tracking-widest"
+                      >Learn More</span
+                    >
+                    <span
+                      class="material-symbols-outlined translate-x-0 group-hover/link:translate-x-2 transition-transform"
+                      >trending_flat</span
+                    >
+                  </div></a
+                >
+              </div>
+              <div
+                class="absolute bottom-6 left-6 text-white z-10 group-hover:opacity-0 transition-opacity"
+              >
+                <h3 class="font-headline text-xl font-bold">Dental Crowns</h3>
+              </div>
+            </div>
+            <!-- Card 4: Dental Implants (Spanning) -->
+            <div
+              class="md:col-span-2 group relative overflow-hidden rounded-[2.5rem] h-[400px] shadow-sm"
+            >
+              <div class="absolute inset-0 z-0">
+                <img
+                  class="w-full h-full object-cover object-top transition-transform duration-[2.5s] ease-out group-hover:scale-105"
+                  data-alt="Elegant portrait of a mature confident man smiling warmly in a bright modern clinical setting with soft natural light"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_qs-kL-AUOPiqUl4vmvoZVsKgodCH-jw9Wc3l8QW3TWp75OgWEwSvUvgeyohitaRGfyMthMYUU1ymOxKoSgoshkJihiJiPoi-_XnnsiAsqpfMVu4MUBj8vvqQluwJHtBzFZsjwrGqBNlAb4YTHJsQV9B_2z5v7IEr6cNddbqjsQjxmeZw8TUBc-nB9dVE8IXcsENx6kyKWJ0J8pqqQQkuVFTSWTzhTJGnv35k1IxqkBvpIlr9g1Xc8Z7yOuJrP4S_h1l1UvTW--Ad"
+                />
+              </div>
+              <div
+                class="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"
+              ></div>
+              <div
+                class="relative h-full p-12 flex flex-col justify-end max-w-lg transition-transform duration-700 translate-y-8 group-hover:translate-y-0"
+              >
+                <div
+                  class="bg-primary-container/80 backdrop-blur-md p-8 rounded-[2rem] border border-white/10 group-hover:bg-primary-container/80 transition-colors duration-500"
+                >
+                  <h3 class="font-headline text-3xl font-bold mb-2 text-white">
+                    Dental Implants
+                  </h3>
+                  <p
+                    class="text-on-primary-container text-base leading-relaxed font-light"
+                  >
+                    The gold standard in tooth replacement, offering permanent
+                    stability and life-changing aesthetics.
+                  </p>
+                  <a href="../services/dental-implants.html"
+                    ><div
+                      class="mt-6 flex items-center text-center align-items-center gap-3 text-white font-semibold group/link cursor-pointer"
+                    >
+                      <span class="text-sm uppercase tracking-widest"
+                        >Learn More</span
+                      >
+                      <span
+                        class="material-symbols-outlined translate-x-0 group-hover/link:translate-x-2 transition-transform"
+                        >trending_flat</span
+                      >
+                    </div></a
+                  >
+                </div>
               </div>
             </div>
           </div>
@@ -1252,11 +1390,13 @@
               Our Locations
             </h2>
           </div>
-          <button
-            class="bg-surface-container-lowest text-primary px-10 py-5 rounded-full font-headline font-bold text-lg shadow-[0_8px_32px_rgba(0,30,73,0.15)] hover:scale-105 active:scale-95 transition-all duration-300"
+          <a href="../book-appointment.html"
+            ><button
+              class="bg-surface-container-lowest text-primary px-10 py-5 rounded-full font-headline font-bold text-lg shadow-[0_8px_32px_rgba(0,30,73,0.15)] hover:scale-105 active:scale-95 transition-all duration-300"
+            >
+              Book Appointment
+            </button></a
           >
-            Book Appointment
-          </button>
         </div>
         <!-- Floating Glassmorphism Contact Cards -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -1273,9 +1413,11 @@
                   >medical_services</span
                 >
               </div>
-              <span
-                class="text-xs font-label uppercase tracking-widest text-on-primary-container/60"
-                >View All</span
+              <a href="../locations_page.html"
+                ><span
+                  class="text-xs font-label uppercase tracking-widest text-on-primary-container/60"
+                  >View All</span
+                ></a
               >
             </div>
             <h3 class="font-headline text-2xl font-bold text-on-primary mb-2">
@@ -1331,9 +1473,11 @@
                   >medical_services</span
                 >
               </div>
-              <span
-                class="text-xs font-label uppercase tracking-widest text-on-primary-container/60"
-                >View All</span
+              <a href="../locations_page.html"
+                ><span
+                  class="text-xs font-label uppercase tracking-widest text-on-primary-container/60"
+                  >View All</span
+                ></a
               >
             </div>
             <h3 class="font-headline text-2xl font-bold text-on-primary mb-2">
@@ -1366,7 +1510,11 @@
             <div
               class="flex items-center gap-4 text-on-primary text-sm font-semibold group-hover:gap-6 transition-all"
             >
-              <span>View on Map</span>
+              <a
+                href="https://www.google.ca/maps/place/Chagger+Dental-Burlington/@43.4052011,-79.8075672,17z/data=!3m1!4b1!4m5!3m4!1s0x882b6137ad406ce9:0x74f409715649e1e0!8m2!3d43.4051972!4d-79.8053785?shorturl=1"
+                target="_blank"
+                ><span>View on Map</span></a
+              >
               <span class="material-symbols-outlined text-sm"
                 >arrow_forward</span
               >
@@ -1385,9 +1533,11 @@
                   >medical_services</span
                 >
               </div>
-              <span
-                class="text-xs font-label uppercase tracking-widest text-on-primary-container/60"
-                >View All</span
+              <a href="../locations_page.html"
+                ><span
+                  class="text-xs font-label uppercase tracking-widest text-on-primary-container/60"
+                  >View All</span
+                ></a
               >
             </div>
             <h3 class="font-headline text-2xl font-bold text-on-primary mb-2">
@@ -1441,13 +1591,16 @@
               <!-- Column 1: Brand & Philosophy -->
               <div class="space-y-8">
                 <div class="flex flex-col gap-4">
-                  <img src="images/dental-logo-footer.png" class="img-fluid" />
+                  <img
+                    src="../images/dental-logo-footer.png"
+                    class="img-fluid"
+                  />
                   <p
                     class="text-primary-fixed-dim leading-relaxed font-light text-sm"
                   >
-                    A sanctuary of dental innovation where clinical precision
-                    meets patient-centric comfort. We are committed to aesthetic
-                    excellence and lasting oral health.
+                    © Chagger Dental. Providing modern, compassionate dentistry
+                    for healthy, confident smiles. Emergency care, family
+                    dentistry, and advanced treatments—all under one roof.
                   </p>
                 </div>
                 <!-- Social Proof Badges -->
@@ -1495,51 +1648,51 @@
                   <li>
                     <a
                       class="text-primary-fixed-dim hover:text-white transition-colors flex items-center gap-2 group"
-                      href="#"
+                      href="../services/denture-services.html"
                       ><span
                         class="h-px w-0 group-hover:w-4 bg-primary-fixed-dim transition-all"
                       ></span
-                      >General Dentistry</a
+                      >Denture Services</a
                     >
                   </li>
                   <li>
                     <a
                       class="text-primary-fixed-dim hover:text-white transition-colors flex items-center gap-2 group"
-                      href="#"
+                      href="../services/cosmetic-dentistry.html"
                       ><span
                         class="h-px w-0 group-hover:w-4 bg-primary-fixed-dim transition-all"
                       ></span
-                      >Cosmetic Procedures</a
+                      >Cosmetic Dentistry</a
                     >
                   </li>
                   <li>
                     <a
                       class="text-primary-fixed-dim hover:text-white transition-colors flex items-center gap-2 group"
-                      href="#"
+                      href="../services/invisalign.html"
                       ><span
                         class="h-px w-0 group-hover:w-4 bg-primary-fixed-dim transition-all"
                       ></span
-                      >Dental Implants</a
+                      >Invisalign</a
                     >
                   </li>
                   <li>
                     <a
                       class="text-primary-fixed-dim hover:text-white transition-colors flex items-center gap-2 group"
-                      href="#"
+                      href="../services/teeth-whitening.html"
+                      ><span
+                        class="h-px w-0 group-hover:w-4 bg-primary-fixed-dim transition-all"
+                      ></span
+                      >Teeth Whitening</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="text-primary-fixed-dim hover:text-white transition-colors flex items-center gap-2 group"
+                      href="../services/orthodontics.html"
                       ><span
                         class="h-px w-0 group-hover:w-4 bg-primary-fixed-dim transition-all"
                       ></span
                       >Orthodontics</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      class="text-primary-fixed-dim hover:text-white transition-colors flex items-center gap-2 group"
-                      href="#"
-                      ><span
-                        class="h-px w-0 group-hover:w-4 bg-primary-fixed-dim transition-all"
-                      ></span
-                      >Sedation Dentistry</a
                     >
                   </li>
                 </ul>
@@ -1549,57 +1702,61 @@
                 <h3
                   class="font-headline text-xs uppercase tracking-[0.2em] text-white/40 mb-8 font-bold"
                 >
-                  Get Directions
+                  Quick Links
                 </h3>
                 <div class="space-y-6">
-                  <div class="group flex gap-4">
-                    <div
-                      class="w-16 h-16 rounded-lg overflow-hidden shrink-0 border border-white/10"
-                    >
-                      <img
-                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-80"
-                        data-alt="minimalist street map of downtown oakville with soft blue and grey tones"
-                        data-location="Oakville, Canada"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuB342vMJ70mrmSNUobd5U7gTqd2wGefTS-xAiTwlThO0BU6q2L_Re4QuhZTc8XXJxL87TSY--zeobJB8wDAFD-r3OQ9GiWnutOkVxzC9CjOCFXlcllfUiF3kKXAa_TGVmfP7OIa1-QKAo0prfg469uq2wO75tczrrbSjJiNrwv5_u0mQKInJrfLp0-vpMJAwwyrQZMQ9qqCnT4UbaiuIFw5XDU19VqwPc3zdlV-CR8U6woA5B8ffc1e20AuUr3SE6xWGk1hJpuy35S9"
-                      />
-                    </div>
-                    <div>
-                      <p class="text-white font-semibold text-sm">Oakville</p>
-                      <p class="text-white/50 text-xs mt-1">
-                        123 Lakeshore Rd E.
-                      </p>
+                  <ul class="space-y-4">
+                    <li>
                       <a
-                        class="text-xs text-primary-fixed-dim underline mt-2 block"
-                        href="#"
-                        >Directions</a
+                        class="text-primary-fixed-dim hover:text-white transition-colors flex items-center gap-2 group"
+                        href="../index.html"
+                        ><span
+                          class="h-px w-0 group-hover:w-4 bg-primary-fixed-dim transition-all"
+                        ></span
+                        >Home</a
                       >
-                    </div>
-                  </div>
-                  <div class="group flex gap-4">
-                    <div
-                      class="w-16 h-16 rounded-lg overflow-hidden shrink-0 border border-white/10"
-                    >
-                      <img
-                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-80"
-                        data-alt="minimalist street map of mississauga city center with clinical blue aesthetic"
-                        data-location="Mississauga, Canada"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuACVkrQW6BzoCWGTxVJP7oIPpYNnrHtzpPvnmvrzZmORNQl_umsTQPosyz_uO9-yRAYqNowA66rHBOFD_CYf6XJ-pwa_7PESdz1hW17uF0QUsooKtDNJ4rWlgzDwb7670BpG8lfwl7YiAT3PXDo2aOH8LxEhy0-uFNs8rq-HOwht9uBKD1h_wUeqHzW7sfG2YU7Asv2zm8LRsbDGtbrmsLpSq_Kpl8ekHYWrcpeEXEuI7IH9aws6CihwuCAeAXncrfgnCK69tJJXCSW"
-                      />
-                    </div>
-                    <div>
-                      <p class="text-white font-semibold text-sm">
-                        Mississauga
-                      </p>
-                      <p class="text-white/50 text-xs mt-1">
-                        4550 Hurontario St.
-                      </p>
+                    </li>
+                    <li>
                       <a
-                        class="text-xs text-primary-fixed-dim underline mt-2 block"
-                        href="#"
-                        >Directions</a
+                        class="text-primary-fixed-dim hover:text-white transition-colors flex items-center gap-2 group"
+                        href="../about_us.html"
+                        ><span
+                          class="h-px w-0 group-hover:w-4 bg-primary-fixed-dim transition-all"
+                        ></span
+                        >About Us</a
                       >
-                    </div>
-                  </div>
+                    </li>
+                    <li>
+                      <a
+                        class="text-primary-fixed-dim hover:text-white transition-colors flex items-center gap-2 group"
+                        href="../services.html"
+                        ><span
+                          class="h-px w-0 group-hover:w-4 bg-primary-fixed-dim transition-all"
+                        ></span
+                        >Services</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="text-primary-fixed-dim hover:text-white transition-colors flex items-center gap-2 group"
+                        href="../locations_page.html"
+                        ><span
+                          class="h-px w-0 group-hover:w-4 bg-primary-fixed-dim transition-all"
+                        ></span
+                        >Locations</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="text-primary-fixed-dim hover:text-white transition-colors flex items-center gap-2 group"
+                        href="../reviews.html"
+                        ><span
+                          class="h-px w-0 group-hover:w-4 bg-primary-fixed-dim transition-all"
+                        ></span
+                        >Reviews</a
+                      >
+                    </li>
+                  </ul>
                 </div>
               </div>
               <!-- Column 4: Reach Out -->
@@ -1628,7 +1785,7 @@
                         >call</span
                       >
                       <span class="text-primary-fixed-dim text-sm"
-                        >+1 (905) 555-0192</span
+                        >905-257-2221</span
                       >
                     </div>
                   </div>
@@ -1675,36 +1832,25 @@
             >
               <div class="flex flex-col md:flex-row items-center gap-8">
                 <p
-                  class="font-label text-[10px] uppercase tracking-widest text-white/30"
+                  class="font-label text-[12px] uppercase tracking-widest text-white/30"
                 >
                   © 2026 Chagger Dental. All rights reserved.
                 </p>
-                <div class="flex gap-6">
-                  <a
-                    class="font-label text-[10px] uppercase tracking-widest text-white/30 hover:text-white transition-colors"
-                    href="#"
-                    >Privacy Policy</a
-                  >
-                  <a
-                    class="font-label text-[10px] uppercase tracking-widest text-white/30 hover:text-white transition-colors"
-                    href="#"
-                    >Terms of Service</a
-                  >
-                  <a
-                    class="font-label text-[10px] uppercase tracking-widest text-white/30 hover:text-white transition-colors"
-                    href="#"
-                    >Clinical Standards</a
-                  >
-                </div>
+                <div class="flex gap-6"></div>
               </div>
               <div
                 class="flex items-center gap-4 grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all duration-500"
               >
-                <span
-                  class="text-[10px] uppercase tracking-[0.2em] text-white/30 font-bold"
-                  >Certified Partner of</span
+                <a
+                  class="font-label text-[12px] uppercase tracking-widest text-white/50 hover:text-white transition-colors"
+                  href="#"
+                  >Privacy Policy</a
                 >
-                <div class="h-6 w-24 bg-white/20 rounded-md"></div>
+                <a
+                  class="font-label text-[12px] uppercase tracking-widest text-white/50 hover:text-white transition-colors"
+                  href="#"
+                  >Terms of Service</a
+                >
               </div>
             </div>
           </div>
