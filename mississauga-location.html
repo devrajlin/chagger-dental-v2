@@ -208,12 +208,14 @@
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
       }
+      input[type="date"]::-webkit-calendar-picker-indicator {
+        filter: invert(1); /* Turns a black icon white */
+      }
     </style>
   </head>
   <body
     class="bg-surface text-on-surface font-body selection:bg-primary-fixed overflow-x-hidden"
   >
-    <!-- TopNavBar Implementation -->
     <!-- TopNavBar Implementation -->
     <nav
       class="fixed top-0 w-full chg-nav-z-menu chg-nav-glass-morphism shadow-sm font-manrope h-[75px]"
@@ -250,171 +252,113 @@
               </div></a
             >
             <div
-              class="chg-nav-dropdown-container z-[100] absolute top-[70px] left-0 right-0 w-full flex justify-center bg-white border-b border-primary/5"
+              class="chg-nav-dropdown-container absolute top-[70px] left-0 right-0 w-full flex justify-center bg-white border-b border-primary/5"
               id="chg-nav-services-dropdown"
             >
-              <div class="max-w-7xl w-full px-6 py-12">
-                <div class="grid grid-cols-3 gap-8">
+              <div class="max-w-8xl w-full px-6 py-4">
+                <div class="grid grid-cols-6 gap-2">
                   <!-- Invisalign -->
                   <a
-                    class="flex items-start gap-5 p-5 rounded-xl hover:bg-blue-100 transition-all group"
+                    class="items-center gap-2 p-4 rounded-xl bg-primary text-white hover:bg-blue-100 hover:text-primary transition-all group"
                     href="services/invisalign.html"
                   >
                     <img
                       alt="Invisalign"
-                      class="w-24 h-24 rounded-lg object-cover shrink-0 shadow-sm"
+                      class="w-full h-40 rounded-lg object-cover shrink-0 shadow-sm"
                       src="images/services/invisalign-new.jpg"
                     />
-                    <div>
-                      <div class="flex items-center gap-2 mb-2">
-                        <span
-                          class="material-symbols-outlined text-primary text-xl"
-                          >align_items_stretch</span
-                        >
-                        <h4 class="font-bold text-lg text-primary">
-                          Invisalign
-                        </h4>
-                      </div>
-                      <p class="text-sm text-secondary leading-relaxed">
-                        Clear aligners for a beautiful, straight transformation
-                        without braces.
-                      </p>
+                    <div
+                      class="align-items-center items-center text-center gap-2 mt-4"
+                    >
+                      <h4 class="font-bold text-lg">Invisalign</h4>
                     </div>
                   </a>
                   <!-- Dental Implants -->
                   <a
-                    class="flex items-start gap-5 p-5 rounded-xl hover:bg-blue-100 transition-all group"
+                    class="items-start gap-2 p-4 rounded-xl bg-primary text-white hover:bg-blue-100 hover:text-primary transition-all group"
                     href="services/dental-implants.html"
                   >
                     <img
                       alt="Implants"
-                      class="w-24 h-24 rounded-lg object-cover shrink-0 shadow-sm"
+                      class="w-full h-40 rounded-lg object-cover shrink-0 shadow-sm"
                       src="images/services/dental_implant.png"
                     />
                     <div>
-                      <div class="flex items-center gap-2 mb-2">
-                        <span
-                          class="material-symbols-outlined text-primary text-xl"
-                          >medical_services</span
-                        >
-                        <h4 class="font-bold text-lg text-primary">
-                          Dental Implants
-                        </h4>
+                      <div class="items-center text-center gap-2 mt-4">
+                        <h4 class="font-bold text-md">Dental Implants</h4>
                       </div>
-                      <p class="text-sm text-secondary leading-relaxed">
-                        Permanent, natural-looking replacement for missing
-                        teeth.
-                      </p>
                     </div>
                   </a>
                   <!-- Dental Crowns -->
                   <a
-                    class="flex items-start gap-5 p-5 rounded-xl hover:bg-blue-100 transition-all group"
+                    class="items-start gap-2 p-4 rounded-xl bg-primary text-white hover:bg-blue-100 hover:text-primary transition-all group"
                     href="services/dental-crowns.html"
                   >
                     <img
                       alt="Crowns"
-                      class="w-24 h-24 rounded-lg object-cover shrink-0 shadow-sm"
+                      class="w-full h-40 rounded-lg object-cover shrink-0 shadow-sm"
                       src="images/dental-crown.png"
                     />
                     <div>
-                      <div class="flex items-center gap-2 mb-2">
-                        <span
-                          class="material-symbols-outlined text-primary text-xl"
-                          >medical_services</span
-                        >
-                        <h4 class="font-bold text-lg text-primary">
-                          Dental Crowns
-                        </h4>
+                      <div class="items-center text-center gap-2 mb-2 mt-4">
+                        <h4 class="font-bold text-md">Dental Crowns</h4>
                       </div>
-                      <p class="text-sm text-secondary leading-relaxed">
-                        Restoring strength and aesthetics to damaged or decayed
-                        teeth.
-                      </p>
                     </div>
                   </a>
                   <!-- CEREC Crown -->
                   <a
-                    class="flex items-start gap-5 p-5 rounded-xl hover:bg-blue-100 transition-all group"
+                    class="items-start gap-2 p-4 rounded-xl bg-primary text-white hover:bg-blue-100 hover:text-primary transition-all group"
                     href="services/cerec-crown.html"
                   >
                     <img
                       alt="CEREC"
-                      class="w-24 h-24 rounded-lg object-cover shrink-0 shadow-sm"
-                      src="images/services/cerec-crown.jpg"
+                      class="w-full h-40 rounded-lg object-cover shrink-0 shadow-sm"
+                      src="images/dental_creg.png"
                     />
                     <div>
-                      <div class="flex items-center gap-2 mb-2">
-                        <span
-                          class="material-symbols-outlined text-primary text-xl"
-                          >precision_manufacturing</span
-                        >
-                        <h4 class="font-bold text-lg text-primary">
-                          CEREC Crown
-                        </h4>
+                      <div class="items-center text-center gap-2 mt-4">
+                        <h4 class="font-bold text-md">CEREC Crown</h4>
                       </div>
-                      <p class="text-sm text-secondary leading-relaxed">
-                        State-of-the-art same-day restoration technology.
-                      </p>
                     </div>
                   </a>
                   <!-- Teeth Whitening -->
                   <a
-                    class="flex items-start gap-5 p-5 rounded-xl hover:bg-blue-100 transition-all group"
+                    class="items-start gap-2 p-4 rounded-xl bg-primary text-white hover:bg-blue-100 hover:text-primary transition-all group"
                     href="services/teeth-whitening.html"
                   >
                     <img
                       alt="Teeth Whitening"
-                      class="w-24 h-24 rounded-lg object-cover shrink-0 shadow-sm"
+                      class="w-full h-40 rounded-lg object-cover shrink-0 shadow-sm"
                       src="images/white-6.jpg"
                     />
                     <div>
-                      <div class="flex items-center gap-2 mb-2">
-                        <span
-                          class="material-symbols-outlined text-primary text-xl"
-                          >flare</span
-                        >
-                        <h4 class="font-bold text-lg text-primary">
-                          Teeth Whitening
-                        </h4>
+                      <div class="items-center text-center gap-2 mt-4">
+                        <h4 class="font-bold text-md">Teeth Whitening</h4>
                       </div>
-                      <p class="text-sm text-secondary leading-relaxed">
-                        Brighten your smile instantly with professional
-                        treatments.
-                      </p>
                     </div>
                   </a>
                   <!-- Denture Services -->
                   <a
-                    class="flex items-start gap-5 p-5 rounded-xl hover:bg-blue-100 transition-all group"
+                    class="items-start gap-2 p-4 rounded-xl bg-primary text-white hover:bg-blue-100 hover:text-primary transition-all group"
                     href="services/denture-services.html"
                   >
                     <img
                       alt="Denture"
-                      class="w-24 h-24 rounded-lg object-cover shrink-0 shadow-sm"
+                      class="w-full h-40 rounded-lg object-cover shrink-0 shadow-sm"
                       src="images/custom.png"
                     />
                     <div>
-                      <div class="flex items-center gap-2 mb-2">
-                        <span
-                          class="material-symbols-outlined text-primary text-xl"
-                          >format_paint</span
-                        >
-                        <h4 class="font-bold text-lg text-primary">
-                          Denture Services
-                        </h4>
+                      <div class="items-center text-center mt-4">
+                        <h4 class="font-bold text-md">Denture Services</h4>
                       </div>
-                      <p class="text-sm text-secondary leading-relaxed">
-                        Quality custom partial and full dentures for comfort.
-                      </p>
                     </div>
                   </a>
                 </div>
                 <div
-                  class="mt-10 pt-8 border-t border-primary/5 flex justify-center"
+                  class="mt-2 pt-4 border-t border-primary/5 flex justify-center"
                 >
                   <a
-                    class="bg-primary text-white px-10 py-3 rounded-full font-bold text-sm flex items-center gap-2 hover:shadow-lg hover:shadow-primary/20 transition-all"
+                    class="bg-white text-primary border-2 border-primary px-10 py-3 rounded-full font-bold text-sm flex items-center gap-2 hover:shadow-lg hover:shadow-primary/20 transition-all"
                     href="services.html"
                   >
                     View All Clinical Services
@@ -544,7 +488,7 @@
       </div>
       <!-- Mobile Nav Drawer -->
       <div
-        class="fixed inset-0 top-[88px] bg-white z-[90] translate-x-full md:hidden flex flex-col"
+        class="fixed inset-0 top-[70px] bg-white z-[90] translate-x-full md:hidden flex flex-col"
         id="chg-nav-mobile-nav"
       >
         <div class="flex-1 overflow-y-auto px-8 py-10 flex flex-col">
@@ -619,7 +563,7 @@
               >
               <a
                 class="text-sm font-bold text-primary mt-2 flex items-center gap-2"
-                href="#"
+                href="services.html"
                 >View All Services
                 <span class="material-symbols-outlined text-xs"
                   >arrow_forward</span
@@ -714,9 +658,8 @@
             <p
               class="text-md md:text-md text-primary-fixed/80 max-w-lg font-light leading-relaxed mt-3"
             >
-              A multi-dimensional clinical environment engineered for
-              atmospheric calm in Mississauga. Surgical precision meets
-              architectural serenity.
+              We are committed to helping our patients achieve the best
+              treatment possible
             </p>
           </div>
           <div class="flex flex-wrap gap-4">
@@ -727,25 +670,6 @@
                 <span class="material-symbols-outlined">call</span>
                 Book Appointment
               </button></a
-            >
-            <a href="locations_page.html"
-              ><div
-                class="flex items-center gap-3 bg-white/5 p-2 rounded-full border border-white/10"
-              >
-                <div class="flex -space-x-3">
-                  <img
-                    class="w-10 h-10 rounded-full border-2 border-primary-container"
-                    src="images/location-1.webp"
-                  />
-                  <img
-                    class="w-10 h-10 rounded-full border-2 border-primary-container"
-                    src="images/location-3.png"
-                  />
-                </div>
-                <span class="text-white text-xs font-semibold pr-3"
-                  >View All</span
-                >
-              </div></a
             >
           </div>
         </div>
@@ -773,76 +697,12 @@
                   - 3427 Derry Rd East, Suite #201 Mississauga, ON L4T 4H7
                 </div>
               </div>
-              <div class="text-right">
-                <div
-                  class="text-[10px] text-primary-fixed uppercase tracking-widest font-bold"
-                >
-                  Local Time
-                </div>
-                <div class="text-xl font-mono text-white local-time-display">
-                  09:42 AM
-                </div>
-              </div>
             </div>
             <!-- Interactive Map Visual -->
             <div
               class="relative h-[300px] w-full rounded-[2rem] overflow-hidden bg-slate-900 mb-6 border border-white/10 group/map"
-            >
-              <img
-                class="location-content active w-full h-full object-cover opacity-60 mix-blend-luminosity grayscale group-hover:scale-110 transition-transform duration-[2s]"
-                id="map-mississauga"
-                src="https://images.unsplash.com/photo-1514565131-fce0801e5785?auto=format&fit=crop&q=80&w=1000"
-              />
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent"
-              ></div>
-              <div
-                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
-              >
-                <div class="relative">
-                  <div
-                    class="absolute inset-0 w-8 h-8 bg-primary-fixed rounded-full animate-ping opacity-20"
-                  ></div>
-                  <a
-                    href="https://www.google.com/maps/place/Chagger+Dental+Clinic+Mississauga/@43.7134378,-79.6324435,21z/data=!3m1!5s0x882b3be939451297:0xcf596aedfc8d3b37!4m14!1m7!3m6!1s0x882b3be924af2acd:0xb214cd5c8fcbf2ce!2sChagger+Dental+Clinic+Mississauga!8m2!3d43.7134099!4d-79.6324203!16s%2Fg%2F1v42gfnn!3m5!1s0x882b3be924af2acd:0xb214cd5c8fcbf2ce!8m2!3d43.7134099!4d-79.6324203!16s%2Fg%2F1v42gfnn?hl=en&entry=ttu&g_ep=EgoyMDI1MTAxMi4wIKXMDSoASAFQAw%3D%3D"
-                    target="_blank"
-                    ><div
-                      class="relative w-8 h-8 bg-primary-fixed rounded-full flex items-center justify-center shadow-lg"
-                    >
-                      <span
-                        class="material-symbols-outlined text-primary text-sm font-bold"
-                        >location_on</span
-                      >
-                    </div></a
-                  >
-                </div>
-              </div>
-              <!-- Availability Overlay -->
-              <div
-                class="absolute bottom-4 left-4 right-4 flex justify-between items-end"
-              >
-                <div
-                  class="glass-card px-4 py-2 rounded-xl text-xs font-bold text-white"
-                >
-                  <span class="location-content active" id="coords-mississauga"
-                    >LAT: 43.5890 N | LNG: 79.6441 W</span
-                  >
-                </div>
-                <div class="bg-white/90 backdrop-blur px-4 py-2 rounded-xl">
-                  <div
-                    class="text-[12px] text-primary uppercase tracking-wider font-bold leading-none"
-                  >
-                    Accessibility
-                  </div>
-                  <div
-                    class="location-content active text-[12px] text-primary leading-none mt-1"
-                    id="slots-mississauga"
-                  >
-                    Fully Accessible
-                  </div>
-                </div>
-              </div>
-            </div>
+              id="map"
+            ></div>
             <!-- Timings Row -->
             <div class="grid grid-cols-2 gap-4">
               <div
@@ -955,7 +815,8 @@
                 <div>
                   <h4 class="font-headline font-bold text-primary">Address</h4>
                   <p class="text-secondary">
-                    1234 Lakeshore Road, Unit 5<br />Burlington, ON L7R 1B2
+                    3427 Derry Rd East, Suite #201 Mississauga,<br />
+                    ON L4T 4H7
                   </p>
                 </div>
               </div>
@@ -1026,13 +887,6 @@
               Dentist Mississauga: Apprehensions About Your Initial Dental
               Appointment?
             </h2>
-            <p
-              class="text-lg text-on-surface-variant leading-relaxed opacity-90"
-            >
-              We understand that the clinical environment can be daunting. Our
-              space is engineered to trigger the parasympathetic nervous system
-              from the moment you step inside.
-            </p>
           </div>
           <div class="grid sm:grid-cols-2 gap-4">
             <div class="space-y-4 bg-primary text-white p-8 rounded-2xl">
@@ -1044,8 +898,8 @@
                   >psychology</span
                 >
               </div>
-              <h4 class="font-bold text-xl">The Misty Reveal</h4>
-              <p class="text-md opacity-60 leading-relaxed">
+
+              <p class="text-lg opacity-60 leading-relaxed">
                 Upon your first appointment, your dentist will provide you with
                 a careful oral examination. The dentist Mississauga will check
                 for such things as gum disease, tooth decay and other oral
@@ -1062,8 +916,8 @@
                   >waves</span
                 >
               </div>
-              <h4 class="font-bold text-xl">Calming Acoustics</h4>
-              <p class="text-md opacity-60 leading-relaxed">
+
+              <p class="text-lg opacity-60 leading-relaxed">
                 During this visit you might also receive a teeth cleaning, or a
                 cleaning could be scheduled to occur during a follow-up visit.
                 From beginning to end, the duration of your first appointment
@@ -1130,50 +984,35 @@
         </div>
       </div>
     </section>
-    <section class="bg-primary text-white py-12 overflow-hidden">
+    <section class="bg-primary text-white py-8 overflow-hidden">
       <div class="max-w-screen-2xl mx-auto px-8 mb-10">
-        <div class="mb-20 text-center max-w-3xl mx-auto">
-          <h2
-            class="text-5xl md:text-7xl font-headline font-extrabold tracking-tighter mb-6"
-          >
-            Emergency Dental Services in Oakville
-          </h2>
-        </div>
         <!-- Chapter: Jitters & Anxiety -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-20 items-center mb-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
           <div>
             <h3 class="text-4xl font-headline font-bold mb-6">
-              Emergency Care<br />
-              When You Need It Most
+              Dental Emergencies
             </h3>
-            <p
-              class="text-on-primary-container opacity-70 text-lg leading-relaxed mb-8"
-            >
-              Our specialized 'Anxiety Neutralization' protocol involves
-              non-pharmacological sensory management combined with gentle
-              sedative options. We believe fear is a lack of control; we give
-              you the remote.
+            <p class="text-secondary text-white/50 text-lg leading-relaxed">
+              You may not expect a dental emergency to happen to you, especially
+              if you are taking good care of your oral health. Chagger Dental
+              Mississauga is here to help you. When an unfortunate accident
+              happens and you need to see a dentist, the staff at Chagger dental
+              works extended hours to help you when in need. Unfortunately, you
+              cannot predict when an accident will occur that would warrant a
+              visit to a dental office for emergency treatment. If a tooth
+              breaks or fractures, you are going to need to see a dentist
+              Mississauga to understand the options of repair or replacement.
+
+              <br /><br />
+              Another reason you may require emergency dental care is
+              experiencing a sudden onset of pain. If your tooth hurts to the
+              point you can not sleep or eat properly, you should see your
+              dentist right away. An emergency visit will allow your dentist to
+              determine if you have an infection by carefully examining your
+              teeth and gums. The dentist in Mississauga can determine the cause
+              of pain and prescribe medication, or conduct emergency procedures
+              if necessary.
             </p>
-            <ul class="space-y-4">
-              <li class="flex items-center gap-3 opacity-70">
-                <span class="material-symbols-outlined text-primary-fixed-dim"
-                  >verified</span
-                >
-                Immediate Pain Relief Solutions
-              </li>
-              <li class="flex items-center gap-3 opacity-70">
-                <span class="material-symbols-outlined text-primary-fixed-dim"
-                  >verified</span
-                >
-                Advanced Emergency Treatment Technology
-              </li>
-              <li class="flex items-center gap-3 opacity-70">
-                <span class="material-symbols-outlined text-primary-fixed-dim"
-                  >verified</span
-                >
-                Comfort-Focused Urgent Care
-              </li>
-            </ul>
           </div>
           <div class="relative">
             <div
@@ -1183,256 +1022,92 @@
               class="refractive-card p-4 rounded-3xl overflow-hidden relative border border-white/10"
             >
               <img
-                class="w-full h-80 object-cover rounded-2xl"
+                class="w-full h-full object-cover rounded-2xl"
                 data-alt="peaceful close up of a woman with her eyes closed, wearing high-end headphones in a softly lit clinical setting"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuCK506a8XbQsBQVE3bK1aJdCgbc_Iae-mXSDuSpUvrNKIT0U_nD_vdpcnLjbNVObxOO7OSRqu61jZK2oAlEMckQMlqhdJ6UESJEcMVV8D43I1BRo8REQaxTNDAAeDJz5nUz22lrXUOWs8kvdI-U77plBrwOH4se6j8rcJPvLhTh-6ElVzVpdzIadM5v_K-SZjzvc5fLvA57uVGUe4_SKk8_51_5EGu1ZaKDlsxYOywgyehEUjnqt2joDj1dHniaw7B6_v4x7h69f-6-"
               />
             </div>
           </div>
         </div>
-        <!-- Chapter: Emergency & Cosmetic -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <!-- Emergency Card -->
-          <div
-            class="bg-white/10 backdrop-blur-md p-10 rounded-[2.5rem] border border-white/5 group hover:bg-white/10 transition-colors"
-          >
-            <span
-              class="material-symbols-outlined text-5xl text-primary-fixed-dim mb-6"
-              >bolt</span
-            >
-            <h4 class="text-2xl font-headline font-bold mb-4">
-              01 — Emergency Care With Extended Hours
-            </h4>
-            <p class="text-white/60 leading-relaxed mb-8">
-              In Mississauga, we deliver dependable emergency dental care
-              whenever you need it most. Whether you’re dealing with sudden
-              tooth pain, dental trauma, or a damaged tooth, our team is
-              prepared to respond promptly and professionally. Quick treatment
-              helps ease discomfort, minimise complications, and safeguard your
-              long-term oral health. Our extended hours mean you’re never
-              without support during urgent situations. We focus on rapid
-              assessments, effective pain relief, and timely treatment planning,
-              all delivered with compassionate care and modern technology.
-            </p>
-            <button
-              class="text-primary-fixed font-bold flex items-center gap-2 group-hover:translate-x-2 transition-transform"
-            >
-              Get Immediate Care
-              <span class="material-symbols-outlined">arrow_forward</span>
-            </button>
-          </div>
-          <!-- Cosmetic Card -->
-          <div
-            class="bg-white/10 backdrop-blur-md p-10 rounded-[2.5rem] border border-white/5 group hover:bg-white/10 transition-colors"
-          >
-            <span
-              class="material-symbols-outlined text-5xl text-primary-fixed-dim mb-6"
-              >auto_awesome</span
-            >
-            <h4 class="text-2xl font-headline font-bold mb-4">
-              02 — Chipped or Knocked-Out Tooth?
-            </h4>
-            <p class="text-white/60 leading-relaxed mb-8">
-              You may not expect a dental emergency to happen to you, especially
-              if you are taking good care of your oral health. Unfortunately,
-              you cannot predict when an accident will occur that would warrant
-              a visit to a dental office for emergency treatment. If an adult
-              tooth has been chipped or fractured, you are going to need to see
-              a dentist to understand the options of repair or replacement.
-              Prompt professional care can prevent further damage, reduce
-              discomfort, and improve the chances of saving the affected tooth.
-            </p>
-            <button
-              class="text-primary-fixed font-bold flex items-center gap-2 group-hover:translate-x-2 transition-transform"
-            >
-              View Archive
-              <span class="material-symbols-outlined">arrow_forward</span>
-            </button>
-          </div>
-          <!-- Ortho Card -->
-          <div
-            class="bg-white/10 backdrop-blur-md p-10 rounded-[2.5rem] border border-white/5 group hover:bg-white/10 transition-colors"
-          >
-            <span
-              class="material-symbols-outlined text-5xl text-primary-fixed-dim mb-6"
-              >align_items_stretch</span
-            >
-            <h4 class="text-2xl font-headline font-bold mb-4">
-              03 — Severe Tooth Pain? Act Fast
-            </h4>
-            <p class="text-white/60 leading-relaxed mb-8">
-              You may also require urgent attention if you experience a sudden
-              onset of pain. If you are unable to sleep or eat properly due to
-              tooth pain, seeing a dentist is necessary. In such cases,
-              following some emergency dental care tips can help manage
-              discomfort until you reach the clinic. An emergency visit will
-              allow your Burlington Dentist to determine if you have an
-              infection by carefully examining your teeth and gums. The cause of
-              pain can be identified, and emergency procedures can be performed
-              if necessary, or medication may be prescribed.
-            </p>
-            <button
-              class="text-primary-fixed font-bold flex items-center gap-2 group-hover:translate-x-2 transition-transform"
-            >
-              Smile Design
-              <span class="material-symbols-outlined">arrow_forward</span>
-            </button>
-          </div>
-        </div>
       </div>
     </section>
     <!-- cosmetic section -->
-    <section class="py-10 px-8">
+    <section class="py-8 px-8">
       <div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-20">
         <div class="flex-1">
           <div class="relative group">
-            <div class="aspect-[4/5] rounded-[3rem] overflow-hidden">
+            <div class="rounded-[3rem]">
               <img
                 class="w-full h-full object-cover"
                 data-alt="Editorial portrait of a woman with a confident perfect smile, soft studio lighting, high-end fashion aesthetic"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuABfc5PRP1Y8MmmiZ3pYUyhsPnHDQkNfs1qHBjxq4WMvtfTIg8Qq2yNXxDcAXWgQZqZKrV4bl9cbzAdXWuskvxIEUnd8PFnw_cSGOID0aeHwZdwo9tkDeSv7-24ZKYyJUHBCG9eJLDVd9AWeCq19bXZSsWKpMNsOqTrFTIOqYzSy9RAo9fccczdEjVb59wdHUzev7eGZ2jhkaNgrtJINBet0CJBgDlpiGafwe5PXKRYfsU6pQTuiGpZci2vrS9TWAH_jNGaV4kKy-33"
               />
             </div>
-            <div
-              class="absolute -bottom-10 -right-10 w-64 h-64 bg-surface-container rounded-[2rem] p-8 shadow-2xl flex flex-col justify-end"
-            >
-              <h4 class="text-4xl font-bold text-primary">98%</h4>
-              <p class="text-secondary text-sm font-semibold">
-                Patient Confidence Increase
-              </p>
-            </div>
           </div>
         </div>
-        <div class="flex-1 flex flex-col justify-center space-y-4">
+        <div class="flex-1 flex flex-col space-y-4">
           <h2 class="text-4xl font-extrabold tracking-tighter text-primary">
-            Thinking About Cosmetic Dentistry?
+            Are You Considering Cosmetic Dentistry?
           </h2>
           <p class="text-lg text-secondary leading-relaxed">
-            We have numerous smile makeover options for patients to explore with
-            their dentists if they are looking for a pretty smile that they are
-            proud to show the world. We can do anything from teeth whitening to
-            total smile makeovers using in/onlays or veneers. We also offer
-            bridges, crowns, bonding, and implants. Check out our services tab
-            for more details on these valuable options. After all, the smile you
-            offer is your way of greeting the world. Constantly improving
-            technology and numerous options which we can customize to your
-            personal needs mean that patients of any age can have a great smile.
+            A wide range of different options are offered by Cosmetic Dentistry
+            for dentists and patients to explore together in order to create a
+            beautiful smile that you will be proud for the whole world to see.
+            Cosmetic Dentistry can range from basic procedures like teeth
+            whitening to comprehensive smile makeovers using in/onlays or
+            veneers. The following are cosmetic dentistry options that our
+            Chagger Mississauga Dentistry team can offer:
           </p>
-          <div class="space-y-6 pt-4">
-            <div
-              class="group cursor-pointer py-6 border-b border-outline-variant flex justify-between items-center"
+          <ul class="space-y-4">
+            <li
+              class="flex items-center gap-3 opacity-70 before:content-['•'] before:mr-2"
             >
-              <span
-                class="text-2xl font-bold text-primary group-hover:pl-4 transition-all"
-                >Porcelain Veneers</span
-              >
-              <span
-                class="material-symbols-outlined text-primary group-hover:rotate-45 transition-transform"
-                >arrow_forward</span
-              >
-            </div>
-            <div
-              class="group cursor-pointer py-6 border-b border-outline-variant flex justify-between items-center"
+              Implants
+            </li>
+            <li
+              class="before:content-['•'] before:mr-2 flex items-center gap-3 opacity-70"
             >
-              <span
-                class="text-2xl font-bold text-primary group-hover:pl-4 transition-all"
-                >Teeth Whitening</span
-              >
-              <span
-                class="material-symbols-outlined text-primary group-hover:rotate-45 transition-transform"
-                >arrow_forward</span
-              >
-            </div>
-            <div
-              class="group cursor-pointer py-6 border-b border-outline-variant flex justify-between items-center"
+              Bonding
+            </li>
+            <li
+              class="before:content-['•'] before:mr-2 flex items-center gap-3 opacity-70"
             >
-              <span
-                class="text-2xl font-bold text-primary group-hover:pl-4 transition-all"
-                >Gum Contouring</span
-              >
-              <span
-                class="material-symbols-outlined text-primary group-hover:rotate-45 transition-transform"
-                >arrow_forward</span
-              >
-            </div>
-          </div>
+              Veneers
+            </li>
+            <li
+              class="before:content-['•'] before:mr-2 flex items-center gap-3 opacity-70"
+            >
+              Crowns
+            </li>
+            <li
+              class="before:content-['•'] before:mr-2 flex items-center gap-3 opacity-70"
+            >
+              Bridges
+            </li>
+            <li
+              class="before:content-['•'] before:mr-2 flex items-center gap-3 opacity-70"
+            >
+              Onlays/Inlays
+            </li>
+          </ul>
+          <p class="text-lg text-secondary leading-relaxed">
+            Visit our services tab for more detailed explanations of any of
+            these viable options. Your smile is essentially how you greet the
+            world every day. With technology that continues to evolve, and a
+            wide range of options that may be tailored to your individual needs,
+            a beautiful, healthy smile can be obtained by patients of every age.
+          </p>
         </div>
-      </div>
-      <div class="max-w-7xl mx-auto mt-20">
-        <div class="grid grid-cols-2 md:grid-cols-6 gap-4 mb-12">
-          <button
-            class="bg-primary text-white p-6 rounded-2xl shadow-sm hover:shadow-md hover:bg-white hover:text-primary transition-all group border-2 border-primary"
-          >
-            <span
-              class="material-symbols-outlined block text-3xl mb-2 group-hover:scale-110 transition-transform"
-              >medical_services</span
-            >
-            <span class="text-sm font-bold">Onlays/Inlays</span>
-          </button>
-          <button
-            class="bg-primary text-white p-6 rounded-2xl shadow-sm hover:shadow-md hover:bg-white hover:text-primary transition-all group border-2 border-primary"
-          >
-            <span
-              class="material-symbols-outlined block text-3xl mb-2 group-hover:scale-110 transition-transform"
-              >medical_services</span
-            >
-            <span class="text-sm font-bold">Crowns </span>
-          </button>
-          <button
-            class="bg-primary text-white p-6 rounded-2xl shadow-sm hover:shadow-md hover:bg-white hover:text-primary transition-all group border-2 border-primary"
-          >
-            <span
-              class="material-symbols-outlined block text-3xl mb-2 group-hover:scale-110 transition-transform"
-              >medical_services</span
-            >
-            <span class="text-sm font-bold">Bridges</span>
-          </button>
-          <button
-            class="bg-primary text-white p-6 rounded-2xl shadow-sm hover:shadow-md hover:bg-white hover:text-primary transition-all group border-2 border-primary"
-          >
-            <span
-              class="material-symbols-outlined block text-3xl mb-2 group-hover:scale-110 transition-transform"
-              >medical_services</span
-            >
-            <span class="text-sm font-bold">Bonding </span>
-          </button>
-          <button
-            class="bg-primary text-white p-6 rounded-2xl shadow-sm hover:shadow-md hover:bg-white hover:text-primary transition-all group border-2 border-primary"
-          >
-            <span
-              class="material-symbols-outlined block text-3xl mb-2 group-hover:scale-110 transition-transform"
-              >medical_services</span
-            >
-            <span class="text-sm font-bold">Veneers </span>
-          </button>
-          <button
-            class="bg-primary text-white p-6 rounded-2xl shadow-sm hover:shadow-md hover:bg-white hover:text-primary transition-all group border-2 border-primary"
-          >
-            <span
-              class="material-symbols-outlined block text-3xl mb-2 group-hover:scale-110 transition-transform"
-              >medical_services</span
-            >
-            <span class="text-sm font-bold">Implants </span>
-          </button>
-        </div>
-        <a href="services.html"
-          ><div class="flex align-items-center text-center items-center">
-            <button
-              class="bg-white border-2 border-primary px-8 py-4 rounded-full mx-auto text-primary font-semibold items-center gap-2 hover:bg-primary hover:text-white transition-all duration-500"
-            >
-              View All
-            </button>
-          </div></a
-        >
       </div>
     </section>
     <!-- try section -->
     <section class="px-8 py-10 bg-surface-container-low">
       <div class="text-center max-w-3xl mx-auto mb-10">
         <h2
-          class="text-6xl font-headline font-extrabold mb-5 text-primary tracking-tighter"
+          class="text-4xl font-headline font-extrabold mb-5 text-primary tracking-tighter"
         >
-          Clear Aligner Orthodontics at Chagger Dental
+          Try Clear Aligner Therapy (Orthodontics) such as Invisalign, SureSmile
+          or ClearCorrect
         </h2>
       </div>
       <div class="max-w-7xl mx-auto space-y-12">
@@ -1449,101 +1124,26 @@
             />
           </div>
           <div class="order-1 lg:order-2">
-            <h2 class="text-4xl font-headline font-bold text-primary mb-6">
-              Comfortable Clear Aligners
-            </h2>
             <p class="text-lg text-secondary mb-8">
-              Patients who opt for Invisalign, SureSmile, or ClearCorrect may
-              find that realigning their teeth is more comfortable than
-              traditional braces, especially when working with our skilled
-              dentists on the Chagger Dental team. Aligner therapy utilizes
-              clear trays that have been molded to fit precisely how your teeth
-              should be aligned. You’ll be fitted with multiple aligners over
-              time, with each designed to move your teeth slightly closer to
-              where they should ideally be positioned. The aligners are worn all
-              day; patients are typically told to remove their aligners when
-              they eat and sleep.
+              Chagger Dental Mississauga is happy to provide aligner therapy to
+              straighten teeth. We offer Invisalign, SureSmile and ClearCorrect
+              rather than the metal and elastics of standard braces. Aligner
+              therapy uses a unique tray system to realign your teeth and a
+              number of plastic aligners will be designed to carefully move your
+              teeth from their current position, to a beautiful and straight
+              smile. Each aligner slowly moves your teeth to their perfect
+              position. Many of our Mississauga patients appreciate the
+              convenience and anonymity of clear trays. The trays are not only
+              removable but they are also discreet in appearance, making it
+              nearly impossible for other to detect! Gone are the days of
+              navigating food debris lodged in your braces, or dealing with a
+              high-maintenance brushing schedule; trays are easy to wear, remove
+              and clean. If you are fearful of long treatment plans, studies
+              have shown that aligner therapy can lead to shorter time frames
+              than traditional braces. The length of treatment is unique to each
+              smile and is dependent on the hours of wear per day, as well as
+              the extent of realignment required.
             </p>
-            <a href="services/invisalign.html"
-              ><button
-                class="bg-error bg-primary text-white px-8 py-4 rounded-full font-bold hover:shadow-lg transition-all"
-              >
-                Know More
-              </button></a
-            >
-          </div>
-        </div>
-        <!-- Cosmetic -->
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div class="order-1">
-            <h2 class="text-4xl font-headline font-bold text-primary mb-6">
-              Why Choose Clear Aligners?
-            </h2>
-            <p class="text-lg text-secondary mb-8">
-              Aligner therapy has multiple advantages over traditional braces.
-              First, because the are completely transparent, no one knows that
-              you have them on your teeth. Also, because they are fitted over an
-              entire row of your teeth all at once, you don’t have to worry
-              about small pieces of food getting stuck in them as you do with
-              braces. Invisalign, ClearCorrect and SureSmile is usually reported
-              as more comfortable than normal braces, as it doesn’t typically
-              cause pain or aching.
-            </p>
-            <div class="flex gap-4">
-              <div
-                class="px-6 py-3 bg-white rounded-full text-primary border border-primary/10 shadow-sm"
-              >
-                Veneers
-              </div>
-              <div
-                class="px-6 py-3 bg-white rounded-full text-primary border border-primary/10 shadow-sm"
-              >
-                Bonding
-              </div>
-              <div
-                class="px-6 py-3 bg-white rounded-full text-primary border border-primary/10 shadow-sm"
-              >
-                Gum Contouring
-              </div>
-            </div>
-          </div>
-          <div
-            class="order-2 relative rounded-[2.5rem] overflow-hidden aspect-[4/3]"
-          >
-            <img
-              class="w-full h-full object-cover"
-              data-alt="extreme close up of a perfect healthy white smile with natural lighting and soft focus background"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDn1OMc7y7NZdMgOkKmNRlHBHTAW5y1tks_sF0fyCIFrw17ATsuYqiQHBDyyW2v0OWMQcR81Kui5WCqIS6CYmcr5pSzTi59eBs1Dhs8-glvBhWO70_Dr9TQiGqUCyaS1x1SGsjhbNreB_8G1KQWCBeZoNwbWg25CR9bzyMqCZ07bBu2xUjGLbNab-Fe7FKXWLSgW9U7kXvYEXcluGvuK76a4kPqI73ZZKNRjzzQ1FQi5x9uPyU0hJ8RyMl4Kus8MmnVNoxc3akXocTN"
-            />
-          </div>
-        </div>
-        <!-- Invisalign -->
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div
-            class="order-2 lg:order-1 relative rounded-[2.5rem] overflow-hidden aspect-[4/3]"
-          >
-            <img
-              class="w-full h-full object-cover"
-              data-alt="close up of hand holding a clear dental aligner tray against a clean white background"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJ83Ozup1NC-q_kWzNyq7eDU5iUt8p17e6IYfiNg-lfZqemau_sHZ_STPn25bgyRuKYmt8gTRDUYPi8jDm5j4yInNN_Xv4m8_qpmtWg-mm05Z9mEuBkmflhETlTypvjJHGsd_EIzPXwRPcl56Nm7qhD-VOdgOTn0M_-nQ5-R4ZFBWw4FLH0yb4sVtpRR9bBBKBFv4Bo-1pT4O4odDKnFjPhTy2FV9Pf0j4nM4MFIbMg_WEw0TD5EYgabnaKnN3HwCEjGqDsJiL3o5t"
-            />
-          </div>
-          <div class="order-1 lg:order-2">
-            <h2 class="text-4xl font-headline font-bold text-primary mb-6">
-              Personalised Treatment
-            </h2>
-            <p class="text-lg text-secondary mb-8">
-              The length of treatment is unique to each smile and is dependent
-              on the hours of wear per day, as well as the extent of realignment
-              required.
-            </p>
-            <a href="book-appointment.html"
-              ><button
-                class="bg-primary text-on-primary px-10 py-5 rounded-full font-bold"
-              >
-                Book Free Consultation
-              </button></a
-            >
           </div>
         </div>
       </div>
@@ -1710,19 +1310,72 @@
         class="absolute inset-0 bg-gradient-to-tr from-primary to-primary-container"
       ></div>
       <div class="max-w-4xl mx-auto relative z-10">
-        <div class="text-center mb-16">
-          <h2 class="text-5xl font-headline font-extrabold text-white mb-6">
-            Booking Concierge
+        <div class="text-center mb-10">
+          <h2 class="text-5xl font-headline font-extrabold text-white mb-2">
+            Booking Appointment
           </h2>
-          <p class="text-on-primary-container text-xl max-w-2xl mx-auto">
-            Your journey to a healthier, brighter smile starts with a simple
-            conversation. Let our patient coordinators curate your first visit.
-          </p>
         </div>
         <div
           class="glass-panel bg-white/10 p-12 rounded-[3rem] border border-white/20 backdrop-blur-xl"
         >
           <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="space-y-4">
+              <label
+                class="block font-headline font-bold text-sm text-white/90 uppercase tracking-widest"
+                >Patient Type</label
+              >
+              <div class="flex gap-6">
+                <label
+                  class="relative flex items-center gap-3 cursor-pointer group"
+                >
+                  <input
+                    checked=""
+                    class="peer hidden"
+                    name="patient_type"
+                    type="radio"
+                    value="new"
+                  />
+                  <div
+                    class="w-5 h-5 rounded-full border-2 border-white/30 peer-checked:border-white peer-checked:border-[6px] transition-all"
+                  ></div>
+                  <span
+                    class="text-white/70 group-hover:text-white transition-colors"
+                    >New Patient</span
+                  >
+                </label>
+                <label
+                  class="relative flex items-center gap-3 cursor-pointer group"
+                >
+                  <input
+                    class="peer hidden"
+                    name="patient_type"
+                    type="radio"
+                    value="returning"
+                  />
+                  <div
+                    class="w-5 h-5 rounded-full border-2 border-white/30 peer-checked:border-white peer-checked:border-[6px] transition-all"
+                  ></div>
+                  <span
+                    class="text-white/70 group-hover:text-white transition-colors"
+                    >Returning Patient</span
+                  >
+                </label>
+              </div>
+            </div>
+            <div class="md:col-span-2">
+              <div>
+                <label class="block text-sm font-label text-white/70 mb-2 px-1"
+                  >Preferred Location</label
+                >
+                <select
+                  class="w-full bg-white/10 border-none rounded-xl text-white/70 focus:ring-2 focus:ring-primary-fixed py-4"
+                >
+                  <option class="bg-primary-container">Burlington</option>
+                  <option class="bg-primary-container">Oakville</option>
+                  <option class="bg-primary-container">Mississauga</option>
+                </select>
+              </div>
+            </div>
             <!-- Field 1 -->
             <div>
               <label class="block text-sm font-label text-white/70 mb-2 px-1"
@@ -1759,60 +1412,72 @@
             <!-- Field 4 -->
             <div>
               <label class="block text-sm font-label text-white/70 mb-2 px-1"
-                >Preferred Location</label
+                >Address</label
               >
-              <select
-                class="w-full bg-white/10 border-none rounded-xl text-white/70 focus:ring-2 focus:ring-primary-fixed py-4"
-              >
-                <option class="bg-primary-container">
-                  Oakville (Oak Park)
-                </option>
-                <option class="bg-primary-container">Burlington</option>
-                <option class="bg-primary-container">Mississauga</option>
-              </select>
+              <input
+                class="w-full bg-white/10 border-none rounded-xl text-white placeholder-white/40 focus:ring-2 focus:ring-primary-fixed py-4"
+                placeholder="Your Address"
+                type="tel"
+              />
+            </div>
+            <!-- Field date -->
+            <div class="md:col-span-2">
+              <div class="space-y-2">
+                <label
+                  class="text-xs font-bold uppercase tracking-widest text-white/70 ml-1"
+                  >Preferred Date</label
+                >
+                <input
+                  class="w-full bg-white/10 border-none rounded-xl text-white/30 placeholder-white/40 focus:ring-2 focus:ring-primary-fixed py-4"
+                  type="date"
+                />
+              </div>
             </div>
             <!-- Field 5 -->
             <div class="md:col-span-2">
-              <label class="block text-sm font-label text-white/70 mb-2 px-1"
-                >Interest / Reason for Visit</label
-              >
-              <div class="flex flex-wrap gap-3 mt-2">
-                <button
-                  class="px-4 py-2 rounded-full border border-white/20 text-sm text-white hover:bg-white/20"
-                  type="button"
+              <div class="space-y-2">
+                <label
+                  class="block font-headline font-bold text-sm text-white uppercase tracking-widest"
+                  >Best Time to Call</label
                 >
-                  General Checkup
-                </button>
-                <button
-                  class="px-4 py-2 rounded-full border border-white/20 text-sm text-white hover:bg-white/20"
-                  type="button"
-                >
-                  Emergency Pain
-                </button>
-                <button
-                  class="px-4 py-2 rounded-full border border-white/20 text-sm text-white hover:bg-white/20"
-                  type="button"
-                >
-                  Cosmetic Consultation
-                </button>
-                <button
-                  class="px-4 py-2 rounded-full border border-white/20 text-sm text-white hover:bg-white/20"
-                  type="button"
-                >
-                  Invisalign
-                </button>
-                <button
-                  class="px-4 py-2 rounded-full border border-white/20 text-sm text-white hover:bg-white/20"
-                  type="button"
-                >
-                  Anxiety/Sedation
-                </button>
+                <div class="grid grid-cols-3 gap-4">
+                  <label class="flex items-center gap-2 cursor-pointer group">
+                    <input
+                      class="w-5 h-5 rounded border-white/20 text-primary focus:ring-white focus:ring-offset-0 bg-white/10 border-none transition-all"
+                      type="checkbox"
+                    />
+                    <span
+                      class="text-sm text-white/70 group-hover:text-white transition-colors"
+                      >Morning</span
+                    >
+                  </label>
+                  <label class="flex items-center gap-2 cursor-pointer group">
+                    <input
+                      class="w-5 h-5 rounded border-white/20 text-primary focus:ring-white focus:ring-offset-0 bg-white/10 border-none transition-all"
+                      type="checkbox"
+                    />
+                    <span
+                      class="text-sm text-white/70 group-hover:text-white transition-colors"
+                      >Afternoon</span
+                    >
+                  </label>
+                  <label class="flex items-center gap-2 cursor-pointer group">
+                    <input
+                      class="w-5 h-5 rounded border-white/20 text-primary focus:ring-white focus:ring-offset-0 bg-white/10 border-none transition-all"
+                      type="checkbox"
+                    />
+                    <span
+                      class="text-sm text-white/70 group-hover:text-white transition-colors"
+                      >Evening</span
+                    >
+                  </label>
+                </div>
               </div>
             </div>
             <!-- Field 6 -->
             <div class="md:col-span-2">
               <label class="block text-sm font-label text-white/70 mb-2 px-1"
-                >Additional Notes</label
+                >Message</label
               >
               <textarea
                 class="w-full bg-white/10 border-none rounded-2xl text-white placeholder-white/40 focus:ring-2 focus:ring-primary-fixed py-4"
@@ -1820,17 +1485,12 @@
                 rows="4"
               ></textarea>
             </div>
-            <div class="md:col-span-2 pt-6">
+            <div class="md:col-span-2">
               <button
                 class="w-full py-6 bg-white text-primary font-bold text-xl rounded-full hover:bg-surface-container-low transition-colors shadow-2xl"
               >
-                Request My Sanctuary Visit
+                Book Appointment
               </button>
-              <p
-                class="text-center text-white/50 text-xs mt-6 uppercase tracking-widest"
-              >
-                Confidential &amp; Secure Patient Intake
-              </p>
             </div>
           </form>
         </div>
@@ -2330,6 +1990,11 @@
       </div>
     </section>
     <!-- Footer -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYKAOpYx7GmXFhsI-OE7PGqSyIW7aH63E&callback=initMap"
+      async
+      defer
+    ></script>
     <script>
       gsap.registerPlugin(ScrollTrigger);
 
@@ -2594,6 +2259,22 @@
         ChaggerNavHub.init();
       });
       // end of navbar js
+
+      // map js
+      function initMap() {
+        const location = { lat: 43.7134378, lng: -79.6324435 }; // Your Coordinates
+        const map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 15,
+          center: location,
+          // Optional: match map UI to your site's clean design
+          disableDefaultUI: true,
+        });
+
+        new google.maps.Marker({
+          position: location,
+          map: map,
+        });
+      }
     </script>
   </body>
 </html>
