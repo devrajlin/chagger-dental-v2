@@ -254,7 +254,7 @@
         backdrop-filter: blur(24px);
         border: 1px solid rgba(255, 255, 255, 0.1);
       }
-      input[type="radio"],
+      /* input[type="radio"],
       input[type="checkbox"] {
         background-color: rgba(255, 255, 255, 0.05);
         border-color: rgba(255, 255, 255, 0.2);
@@ -269,7 +269,7 @@
         filter: invert(1);
         opacity: 0.5;
         cursor: pointer;
-      }
+      } */
       /* Custom scrollbar for clinical inquiries */
       textarea::-webkit-scrollbar {
         width: 4px;
@@ -3798,7 +3798,7 @@
             <div class="max-w-md mx-auto w-full space-y-8">
               <div class="space-y-2">
                 <h2 class="text-3xl font-headline font-bold text-primary">
-                  Request Appointment
+                  Book Appointment
                 </h2>
                 <p class="text-secondary font-body">
                   Complete the details below and our team will contact you
@@ -3809,15 +3809,28 @@
                 <div class="space-y-1">
                   <label
                     class="text-xs font-label font-bold uppercase tracking-wider text-primary opacity-60 ml-1"
-                    >Full Name</label
+                    >Preferred Location</label
                   >
-                  <input
+                  <select
                     class="w-full px-5 py-4 rounded-xl border-none bg-surface-container-lowest text-on-surface focus:ring-2 focus:ring-primary/20 transition-all placeholder:text-outline/50"
-                    placeholder="John Doe"
-                    type="text"
-                  />
+                  >
+                    <option class="bg-primary-container">Burlington</option>
+                    <option class="bg-primary-container">Oakville</option>
+                    <option class="bg-primary-container">Mississauga</option>
+                  </select>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                  <div class="space-y-1">
+                    <label
+                      class="text-xs font-label font-bold uppercase tracking-wider text-primary opacity-60 ml-1"
+                      >Full Name</label
+                    >
+                    <input
+                      class="w-full px-5 py-4 rounded-xl border-none bg-surface-container-lowest text-on-surface focus:ring-2 focus:ring-primary/20 transition-all placeholder:text-outline/50"
+                      placeholder="John Doe"
+                      type="text"
+                    />
+                  </div>
                   <div class="space-y-1">
                     <label
                       class="text-xs font-label font-bold uppercase tracking-wider text-primary opacity-60 ml-1"
@@ -3829,6 +3842,8 @@
                       type="email"
                     />
                   </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                   <div class="space-y-1">
                     <label
                       class="text-xs font-label font-bold uppercase tracking-wider text-primary opacity-60 ml-1"
@@ -3840,15 +3855,26 @@
                       type="tel"
                     />
                   </div>
+                  <div class="space-y-1">
+                    <label
+                      class="text-xs font-label font-bold uppercase tracking-wider text-primary opacity-60 ml-1"
+                      >Address</label
+                    >
+                    <input
+                      class="w-full px-5 py-4 rounded-xl border-none bg-surface-container-lowest text-on-surface focus:ring-2 focus:ring-primary/20 transition-all placeholder:text-outline/50"
+                      placeholder="Your Address"
+                      type="text"
+                    />
+                  </div>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                   <div class="space-y-1">
                     <label
                       class="text-xs font-label font-bold uppercase tracking-wider text-primary opacity-60 ml-1"
-                      >Check Out Date</label
+                      >Select Date</label
                     >
                     <input
-                      class="w-full px-5 py-4 rounded-xl border-none bg-surface-container-lowest text-on-surface focus:ring-2 focus:ring-primary/20 transition-all"
+                      class="w-full px-5 py-4 rounded-xl border-none bg-surface-container-lowest text-on-surface focus:ring-2 focus:ring-primary/20 transition-all placeholder-white/40"
                       type="date"
                     />
                   </div>
@@ -3868,14 +3894,52 @@
                     </select>
                   </div>
                 </div>
+                <div class="space-y-2 pt-1">
+                  <label
+                    class="text-xs font-label font-bold uppercase tracking-wider text-primary opacity-60 ml-1"
+                    >Preferred Time to Call</label
+                  >
+                  <div class="grid grid-cols-3 gap-2">
+                    <label class="flex items-center cursor-pointer group">
+                      <input
+                        class="w-5 h-5 rounded border-blue-500 border-2 text-blue-600 focus:ring-blue-500 focus:ring-offset-0 bg-blue-50 transition-all cursor-pointer ml-1"
+                        type="checkbox"
+                      />
+                      <span
+                        class="text-xs font-label font-bold uppercase tracking-wider text-primary opacity-60 ml-1"
+                        >Morning</span
+                      >
+                    </label>
+                    <label class="flex items-center cursor-pointer group">
+                      <input
+                        class="w-5 h-5 rounded border-blue-500 border-2 text-blue-600 focus:ring-blue-500 focus:ring-offset-0 bg-blue-50 transition-all cursor-pointer"
+                        type="checkbox"
+                      />
+                      <span
+                        class="text-xs font-label font-bold uppercase tracking-wider text-primary opacity-60 ml-1"
+                        >Afternoon</span
+                      >
+                    </label>
+                    <label class="flex items-center cursor-pointer group">
+                      <input
+                        class="w-5 h-5 rounded border-blue-500 border-2 text-blue-600 focus:ring-blue-500 focus:ring-offset-0 bg-blue-50 transition-all cursor-pointer"
+                        type="checkbox"
+                      />
+                      <span
+                        class="text-xs font-label font-bold uppercase tracking-wider text-primary opacity-60 ml-1"
+                        >Evening</span
+                      >
+                    </label>
+                  </div>
+                </div>
                 <div class="space-y-1">
                   <label
                     class="text-xs font-label font-bold uppercase tracking-wider text-primary opacity-60 ml-1"
-                    >Write Your Comment Here</label
+                    >Message</label
                   >
                   <textarea
                     class="w-full px-5 py-4 rounded-xl border-none bg-surface-container-lowest text-on-surface focus:ring-2 focus:ring-primary/20 transition-all placeholder:text-outline/50 resize-none"
-                    placeholder="How can we help you?"
+                    placeholder="Tell us about your dental goals or any concerns..."
                     rows="4"
                   ></textarea>
                 </div>
