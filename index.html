@@ -602,65 +602,54 @@
         color: #0e336a;
       }
       /* transformation iris css */
-      .transformation-iris-container {
-        position: relative;
-        overflow: hidden;
-        cursor: none;
-        --mouse-x: 50%;
-        --mouse-y: 50%;
+      .bridge-mastery-transition-glass {
+        background: rgba(255, 255, 255, 0.45);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        box-shadow: 0 8px 32px 0 rgba(0, 46, 77, 0.08);
       }
 
-      .transformation-iris-reveal {
-        position: absolute;
-        inset: 0;
-        z-index: 10;
-        clip-path: circle(0px at var(--mouse-x) var(--mouse-y));
-        transition: clip-path 0.15s cubic-bezier(0.165, 0.84, 0.44, 1);
-        pointer-events: none;
-        will-change: clip-path;
+      .bridge-mastery-transition-glow {
+        filter: drop-shadow(0 0 15px rgba(0, 92, 151, 0.4));
       }
 
-      .transformation-iris-container:hover .transformation-iris-reveal {
-        clip-path: circle(250px at var(--mouse-x) var(--mouse-y));
+      .bridge-mastery-transition-scan-active {
+        box-shadow: 0 0 30px 4px rgba(0, 92, 151, 0.5);
       }
 
-      .transformation-iris-edge {
-        position: absolute;
-        width: 500px;
-        height: 500px;
-        border-radius: 50%;
-        border: 2px solid rgba(15, 117, 188, 0.4);
-        box-shadow:
-          0 0 40px rgba(15, 117, 188, 0.6),
-          inset 0 0 20px rgba(15, 117, 188, 0.3);
-        pointer-events: none;
-        z-index: 20;
-        transform: translate(-50%, -50%);
-        left: var(--mouse-x);
-        top: var(--mouse-y);
-        opacity: 0;
-        transition: opacity 0.3s ease;
-        will-change: left, top, opacity;
+      @keyframes bridge-mastery-transition-pulse {
+        0%,
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+        50% {
+          opacity: 0.7;
+          transform: scale(1.05);
+        }
       }
 
-      .transformation-iris-container:hover .transformation-iris-edge {
-        opacity: 1;
+      .bridge-mastery-transition-indicator-pulse {
+        animation: bridge-mastery-transition-pulse 2s infinite ease-in-out;
       }
 
-      .sapphire-particle {
-        position: absolute;
-        background: radial-gradient(circle, #0f75bc 0%, transparent 70%);
-        border-radius: 50%;
-        pointer-events: none;
-        z-index: 25;
-      }
-
-      .material-symbols-outlined {
-        font-variation-settings:
-          "FILL" 0,
-          "wght" 400,
-          "GRAD" 0,
-          "opsz" 24;
+      /* Scoped mask for the animated crown */
+      .bridge-mastery-transition-crown-container {
+        mask-image: linear-gradient(
+          to bottom,
+          transparent,
+          black 20%,
+          black 80%,
+          transparent
+        );
+        -webkit-mask-image: linear-gradient(
+          to bottom,
+          transparent,
+          black 20%,
+          black 80%,
+          transparent
+        );
       }
     </style>
   </head>
@@ -1754,59 +1743,72 @@
           class="lg:col-span-6 relative group rounded-[3rem] overflow-hidden shadow-2xl min-h-[500px] bg-primary"
           data-aos="zoom-in"
         >
+          <!-- Background: The Prepared Bridge Base -->
           <div
-            class="w-full h-full transformation-iris-container"
-            id="iris-zone"
+            class="absolute inset-0 flex items-center justify-center bg-[#f8f9fa]"
           >
-            <!-- Baseline State (Always Visible Background) -->
-            <div
-              class="absolute inset-0 bg-cover bg-center"
-              style="
-                background-image: url(&quot;./images/dental-crown.webp&quot;);
-              "
-            ></div>
-            <!-- Clinical Result (Revealed by Iris) -->
-            <div
-              class="transformation-iris-reveal absolute inset-0 bg-cover bg-center"
-              style="
-                background-image: url(&quot;./images/dental-bridge.webp&quot;);
-              "
-            ></div>
-            <!-- Iris Visual Edge -->
-            <div class="transformation-iris-edge"></div>
-            <!-- Floating Sapphire Particles -->
-            <div
-              class="sapphire-particle w-1 h-1 left-[10%] top-[20%] opacity-40"
-            ></div>
-            <div
-              class="sapphire-particle w-2 h-2 left-[80%] top-[40%] opacity-20"
-            ></div>
-            <div
-              class="sapphire-particle w-1.5 h-1.5 left-[30%] top-[70%] opacity-30"
-            ></div>
-            <div
-              class="sapphire-particle w-1 h-1 left-[60%] top-[10%] opacity-50"
-            ></div>
-            <div
-              class="sapphire-particle w-2 h-2 left-[15%] top-[85%] opacity-10"
-            ></div>
-            <!-- Hover Instructions -->
-            <div
-              class="absolute bottom-12 left-1/2 -translate-x-1/2 z-30 pointer-events-none"
-            >
+            <div class="">
+              <!-- Static Bridge Base Imagery -->
+              <img
+                alt="Prepared dental bridge structure"
+                class="w-full h-full object-cover opacity-50 mix-blend-multiply grayscale"
+                src="https://lh3.googleusercontent.com/aida/ADBb0ug2b-Y09SDatDi4_zEGDHAJ5JmxSxU904_YYUqOlRe1iFt9DvH0ZErjZlY3gXV5TMRcfT8Dd4vGK7TWecWJJpZ2ygSp8KBd9jpQ_sdzrVuYOz5iYLxZtG2rLBBFgl5vtt8m9DJAKGcwD4_-L0x3PfeuRLN5ibgo3RSISSBGZRyQhwgt7ZMkE1uFHVm593S9IyNazK5ZceqvpHCGUQK_gDwSvQ16Ec4JpjRKaXrwnCbsLf9EfflNBue-w_WZttLX-wWH1n9ewJFOb8U"
+              />
+              <!-- Sapphire Architectural Grid (Visual Flourish) -->
               <div
-                class="flex items-center gap-3 bg-white/20 backdrop-blur-md px-6 py-3 rounded-full border border-white/10 shadow-lg"
+                class="absolute inset-0 opacity-10 pointer-events-none"
+                style="
+                  background-image: radial-gradient(
+                    #005c97 1px,
+                    transparent 1px
+                  );
+                  background-size: 40px 40px;
+                "
+              ></div>
+            </div>
+          </div>
+          <!-- Foreground: The Falling Crown Animation -->
+          <div
+            class="absolute inset-0 flex items-center justify-center bridge-mastery-transition-crown-container"
+          >
+            <div
+              class="relative w-full h-full max-w-5xl flex items-center justify-center"
+            >
+              <!-- The Crown Asset (Reference style IMAGE_41) -->
+              <div
+                class="relative w-[400px] h-[400px] transform-gpu"
+                id="bridgeMasteryCrown"
               >
-                <span
-                  class="material-symbols-outlined text-white text-sm"
-                  data-icon="mouse"
-                  >mouse</span
+                <img
+                  alt="Mastery Crown Detail"
+                  class="w-full h-full object-contain bridge-mastery-transition-glow"
+                  src="https://lh3.googleusercontent.com/aida/ADBb0ug2b-Y09SDatDi4_zEGDHAJ5JmxSxU904_YYUqOlRe1iFt9DvH0ZErjZlY3gXV5TMRcfT8Dd4vGK7TWecWJJpZ2ygSp8KBd9jpQ_sdzrVuYOz5iYLxZtG2rLBBFgl5vtt8m9DJAKGcwD4_-L0x3PfeuRLN5ibgo3RSISSBGZRyQhwgt7ZMkE1uFHVm593S9IyNazK5ZceqvpHCGUQK_gDwSvQ16Ec4JpjRKaXrwnCbsLf9EfflNBue-w_WZttLX-wWH1n9ewJFOb8U"
+                />
+                <!-- Glowing Sapphire Alignment Marker -->
+                <div
+                  class="absolute inset-0 flex items-center justify-center pointer-events-none opacity-0"
+                  id="bridgeMasteryAlignMarker"
                 >
-                <span
-                  class="text-white text-xs font-manrope font-bold uppercase tracking-widest"
-                  >Hover to reveal precision</span
-                >
+                  <div
+                    class="w-32 h-1 bg-primary/40 blur-md bridge-mastery-transition-indicator-pulse"
+                  ></div>
+                </div>
               </div>
+            </div>
+          </div>
+          <!-- Interaction Overlays -->
+          <div
+            class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white to-transparent pointer-events-none z-20"
+          ></div>
+          <div
+            class="absolute top-12 left-12 z-30 bridge-mastery-transition-glass px-6 py-3 rounded-full"
+          >
+            <div class="flex items-center gap-3">
+              <span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+              <span
+                class="text-xs font-bold tracking-[0.2em] text-[#002E4D] uppercase"
+                >Architecture Phase: Precise Seating</span
+              >
             </div>
           </div>
         </div>
@@ -5112,36 +5114,109 @@
       // end of nabbar js
 
       // transofromations js
-      const irisZone = document.getElementById("iris-zone");
+      gsap.registerPlugin(ScrollTrigger);
 
-      function updateIrisPosition(e) {
-        const rect = irisZone.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
+      (function () {
+        const root = document.getElementById("bridgeMasteryRoot");
+        const crown = document.getElementById("bridgeMasteryCrown");
+        const dataPanel = document.getElementById("bridgeMasteryData");
+        const progressBar = document.getElementById("bridgeMasteryProgress");
+        const marker = document.getElementById("bridgeMasteryAlignMarker");
 
-        // Set as percentage for better CSS scaling or as pixel values
-        irisZone.style.setProperty("--mouse-x", `${x}px`);
-        irisZone.style.setProperty("--mouse-y", `${y}px`);
-      }
+        if (!root || !crown) return;
 
-      irisZone.addEventListener("mousemove", updateIrisPosition);
-      irisZone.addEventListener("mouseenter", updateIrisPosition);
+        // Cinematic seating timeline
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: root,
+            start: "top center",
+            end: "bottom center",
+            scrub: 1.5, // Ultra smooth scroll driving
+            onUpdate: (self) => {
+              gsap.to(progressBar, {
+                width: self.progress * 100 + "%",
+                duration: 0.1,
+              });
+            },
+          },
+        });
 
-      // Touch support for mobile users
-      irisZone.addEventListener(
-        "touchmove",
-        (e) => {
-          if (e.touches.length > 0) {
-            const touch = e.touches[0];
-            const rect = irisZone.getBoundingClientRect();
-            const x = touch.clientX - rect.left;
-            const y = touch.clientY - rect.top;
-            irisZone.style.setProperty("--mouse-x", `${x}px`);
-            irisZone.style.setProperty("--mouse-y", `${y}px`);
-          }
-        },
-        { passive: true },
-      );
+        // Initial state: Crown floating high above
+        gsap.set(crown, {
+          y: -300,
+          opacity: 0,
+          scale: 1.2,
+          rotationX: 15,
+        });
+
+        tl.to(crown, {
+          opacity: 1,
+          y: -150,
+          duration: 0.5,
+          ease: "power2.out",
+        })
+          .to(
+            marker,
+            {
+              opacity: 1,
+              duration: 0.3,
+            },
+            "-=0.3",
+          )
+          .to(crown, {
+            y: 0,
+            scale: 1,
+            rotationX: 0,
+            duration: 1,
+            ease: "power3.inOut",
+          })
+          .to(
+            marker,
+            {
+              opacity: 0,
+              scale: 2,
+              duration: 0.4,
+            },
+            "-=0.4",
+          )
+          .to(
+            crown,
+            {
+              filter: "drop-shadow(0 0 25px rgba(0, 92, 151, 0.6))",
+              duration: 0.5,
+            },
+            "-=0.2",
+          );
+
+        // Floating data panel subtle animation
+        gsap.from(dataPanel, {
+          x: 100,
+          opacity: 0,
+          scrollTrigger: {
+            trigger: root,
+            start: "top center",
+            end: "top 20%",
+            scrub: true,
+          },
+        });
+
+        // Gentle hover effect for discovery
+        root.addEventListener("mousemove", (e) => {
+          const rect = root.getBoundingClientRect();
+          const mouseX = (e.clientX - rect.left) / rect.width - 0.5;
+          const mouseY = (e.clientY - rect.top) / rect.height - 0.5;
+
+          gsap.to(crown, {
+            x: mouseX * 20,
+            y: (gsap.getProperty(crown, "y") || 0) + mouseY * 10,
+            rotationY: mouseX * 10,
+            rotationX: -mouseY * 10,
+            duration: 1,
+            ease: "power2.out",
+            overwrite: "auto",
+          });
+        });
+      })();
     </script>
   </body>
 </html>
