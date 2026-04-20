@@ -601,6 +601,67 @@
       .service-card2:hover p {
         color: #0e336a;
       }
+      /* transformation iris css */
+      .transformation-iris-container {
+        position: relative;
+        overflow: hidden;
+        cursor: none;
+        --mouse-x: 50%;
+        --mouse-y: 50%;
+      }
+
+      .transformation-iris-reveal {
+        position: absolute;
+        inset: 0;
+        z-index: 10;
+        clip-path: circle(0px at var(--mouse-x) var(--mouse-y));
+        transition: clip-path 0.15s cubic-bezier(0.165, 0.84, 0.44, 1);
+        pointer-events: none;
+        will-change: clip-path;
+      }
+
+      .transformation-iris-container:hover .transformation-iris-reveal {
+        clip-path: circle(250px at var(--mouse-x) var(--mouse-y));
+      }
+
+      .transformation-iris-edge {
+        position: absolute;
+        width: 500px;
+        height: 500px;
+        border-radius: 50%;
+        border: 2px solid rgba(15, 117, 188, 0.4);
+        box-shadow:
+          0 0 40px rgba(15, 117, 188, 0.6),
+          inset 0 0 20px rgba(15, 117, 188, 0.3);
+        pointer-events: none;
+        z-index: 20;
+        transform: translate(-50%, -50%);
+        left: var(--mouse-x);
+        top: var(--mouse-y);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        will-change: left, top, opacity;
+      }
+
+      .transformation-iris-container:hover .transformation-iris-edge {
+        opacity: 1;
+      }
+
+      .sapphire-particle {
+        position: absolute;
+        background: radial-gradient(circle, #0f75bc 0%, transparent 70%);
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: 25;
+      }
+
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+      }
     </style>
   </head>
   <body
@@ -857,7 +918,7 @@
         <div class="flex items-center gap-4">
           <a href="book-appointment.html"
             ><button
-              class="hidden md:flex bg-primary text-white px-7 py-2 rounded-full font-bold text-sm items-center gap-2 shadow-lg shadow-primary/20 hover:shadow-primary/30 active:scale-95 transition-all duration-300"
+              class="hidden md:flex bg-primary text-white px-7 py-2 rounded-full font-bold text-sm items-center gap-2 shadow-lg shadow-primary/20 hover:shadow-primary/30 active:scale-95 transition-all duration-300 hover:bg-blue-100 hover:text-primary hover:scale-105 active:scale-95"
             >
               Book Appointment
               <span class="material-symbols-outlined text-2xl">call</span>
@@ -1053,7 +1114,7 @@
               <div class="flex items-center gap-6">
                 <a href="book-appointment.html"
                   ><button
-                    class="px-8 py-4 bg-primary text-on-primary rounded-full font-bold text-md flex items-center gap-3 transition-transform hover:scale-105 active:scale-95 shadow-2xl"
+                    class="px-8 py-4 bg-primary text-on-primary rounded-full font-bold text-md flex items-center gap-3 transition-transform hover:scale-105 active:scale-95 shadow-2xl hover:bg-blue-100 hover:text-primary"
                   >
                     Book Appointment
                     <span class="material-symbols-outlined">arrow_forward</span>
@@ -1096,7 +1157,7 @@
               <div class="flex items-center gap-6">
                 <a href="book-appointment.html"
                   ><button
-                    class="px-8 py-4 bg-primary text-on-primary rounded-full font-bold text-md flex items-center gap-3 transition-transform hover:scale-105 active:scale-95 shadow-2xl"
+                    class="px-8 py-4 bg-primary text-on-primary rounded-full font-bold text-md flex items-center gap-3 transition-transform hover:scale-105 active:scale-95 shadow-2xl hover:bg-blue-100 hover:text-primary"
                   >
                     Book Appointment
                     <span class="material-symbols-outlined">arrow_forward</span>
@@ -1138,7 +1199,7 @@
               <div class="flex items-center gap-6">
                 <a href="book-appointment.html"
                   ><button
-                    class="px-8 py-4 bg-primary text-on-primary rounded-full font-bold text-md flex items-center gap-3 transition-transform hover:scale-105 active:scale-95 shadow-2xl"
+                    class="px-8 py-4 bg-primary text-on-primary rounded-full font-bold text-md flex items-center gap-3 transition-transform hover:scale-105 active:scale-95 shadow-2xl hover:bg-blue-100 hover:text-primary"
                   >
                     Book Appointment
                     <span class="material-symbols-outlined">arrow_forward</span>
@@ -1180,7 +1241,7 @@
               <div class="flex items-center gap-6">
                 <a href="book-appointment.html"
                   ><button
-                    class="px-8 py-4 bg-primary text-on-primary rounded-full font-bold text-md flex items-center gap-3 transition-transform hover:scale-105 active:scale-95 shadow-2xl"
+                    class="px-8 py-4 bg-primary text-on-primary rounded-full font-bold text-md flex items-center gap-3 transition-transform hover:scale-105 active:scale-95 shadow-2xl hover:bg-blue-100 hover:text-primary"
                   >
                     Book Appointment
                     <span class="material-symbols-outlined">arrow_forward</span>
@@ -1234,29 +1295,23 @@
     </section>
     <!-- Cinematic Ribbon (Bottom Anchor) -->
     <section class="w-full z-40">
-      <div
-        class="flex h-32 glass-ribbon border-t border-white/10 overflow-hidden backdrop-blur-2xl"
-      >
+      <div class="flex h-32 glass-ribbon overflow-hidden backdrop-blur-2xl">
         <!-- Zone 1 -->
         <div
-          class="ribbon-zone group relative flex-1 flex flex-col items-center justify-center px-4 cursor-pointer transition-all duration-500 ease-out hover:bg-primary/20 border-r border-white/10 overflow-hidden"
+          class="ribbon-zone group relative flex-1 flex flex-col items-center justify-center px-4 cursor-pointer transition-all duration-500 ease-out hover:bg-primary/20 border-white/10 overflow-hidden hover:text-primary"
         >
           <div
             class="zone-bg absolute inset-0 opacity-0 transition-all duration-700 pointer-events-none"
           >
-            <img
-              alt="Finance"
-              class="w-full h-full object-cover"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUWTCOrwlr3QGUvrm1d2RTJsUaYkBfoiJWJd1-8d0jrhudyQLOIfckiFbTYd6eDQ7Tl9EiidDxW2RNZJ2mNtclRKXWmx54l7HVAo_34noimPzFm2OH3oMohtnuzMlwjoxKEEA3XD_-O4y0eIdoK15twuzInZe8LZSiUcQl7Nb2y9Wo4k3rPKJH4GGwYVEzt3kH3912JbCkvajpFmpI39G_N9TFvksj9PSeUcOCoA1QM_Vz-bE3Q0gpzW5-E534-YPcrAavCZPOnuzV"
-            />
-            <div class="absolute inset-0 bg-primary/40"></div>
+            <div class="absolute inset-0 bg-white/90"></div>
           </div>
           <div class="relative z-10 flex flex-col items-center text-center">
-            <span class="material-symbols-outlined text-white mb-2 text-3xl"
+            <span
+              class="material-symbols-outlined text-white mb-2 text-3xl group-hover:text-primary transition-colors"
               >face_6</span
             >
             <h4
-              class="font-headline font-bold text-sm text-white uppercase tracking-widest"
+              class="font-headline font-bold text-sm text-white uppercase tracking-widest group-hover:text-primary transition-colors"
             >
               Get your smile makeover
             </h4>
@@ -1270,19 +1325,15 @@
           <div
             class="zone-bg absolute inset-0 opacity-0 transition-all duration-700 pointer-events-none"
           >
-            <img
-              alt="Mastery"
-              class="w-full h-full object-cover"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuB44uCHQoZCTDGo71Ow2eCU6J6P4_6-UCN2M1oh1nQ5xLodBaVBQhKme31VIdXl2iTyQkDAe6Wrn-ALbz_pSOs1-9pK1lQ9ntMpHYMApmeiVX98gwJa7ucRVuq4pwPLxi7yDd_Dr25wF2wBeiEhqiKoTiRpYDjSmLsT5pMCd6QVsRNKoLhFaBq2WoMA_2soR5e3DJDctVOYAHt3fd6Vd_tzr9w7Mz5t_hEnUbc-1MDnD9qOYTxXN2sRPL-mYNgEYGjrfKtljYfirZ0h"
-            />
-            <div class="absolute inset-0 bg-primary/40"></div>
+            <div class="absolute inset-0 bg-white/90"></div>
           </div>
           <div class="relative z-10 flex flex-col items-center text-center">
-            <span class="material-symbols-outlined text-white mb-2 text-3xl"
+            <span
+              class="material-symbols-outlined text-white mb-2 text-3xl group-hover:text-primary transition-colors"
               >biotech</span
             >
             <h4
-              class="font-headline font-bold text-sm text-white uppercase tracking-widest"
+              class="font-headline font-bold text-sm text-white uppercase tracking-widest group-hover:text-primary transition-colors"
             >
               Where Expertise Meets Care
             </h4>
@@ -1295,19 +1346,15 @@
           <div
             class="zone-bg absolute inset-0 opacity-0 transition-all duration-700 pointer-events-none"
           >
-            <img
-              alt="Gentle"
-              class="w-full h-full object-cover"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTTT0ZAXhjGENtgkiPvXqxCW_AF6NAGXHqElCoPMUIBRASblCoEcMvlrGhIobYdoh_Ivo5DDRL34NjO72UPg3AH9BGvRHqCW68MC3aQykZn7pBriGJWoKHMn_xzHCZedcZVa7NVJqEQdHw4PfHSqiHdLAAgDeTovf0cz-qCjn5VMHmiXbr00Ih3mmJga3QgiCsB0_Xb3vZV6mKUIB9Yzmb2uNEDX80x4yKWZMwDCLgS-ABsiReHJJ4uVkbxSJcdLNM_PEwhy57RzAz"
-            />
-            <div class="absolute inset-0 bg-primary/40"></div>
+            <div class="absolute inset-0 bg-white/90"></div>
           </div>
           <div class="relative z-10 flex flex-col items-center text-center">
-            <span class="material-symbols-outlined text-white mb-2 text-3xl"
+            <span
+              class="material-symbols-outlined text-white mb-2 text-3xl group-hover:text-primary transition-colors"
               >spa</span
             >
             <h4
-              class="font-headline font-bold text-sm text-white uppercase tracking-widest"
+              class="font-headline font-bold text-sm text-white uppercase tracking-widest group-hover:text-primary transition-colors"
             >
               Smile with Confidence
             </h4>
@@ -1320,19 +1367,15 @@
           <div
             class="zone-bg absolute inset-0 opacity-0 transition-all duration-700 pointer-events-none"
           >
-            <img
-              alt="Access"
-              class="w-full h-full object-cover"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvCLDfYoUpqzBEGw9GFAt4yAjGWtelNiLo0N7CS6GG-ZLL8eNJLglt0UsYXAiy2X-NravNJ63LS76mUMvy7EJ0LLbbPV8utp5kJu6fL53kaAVdEf2oCNDUmLko7FMLenP6GcDqrYhlu8O8dxy3D5uJAb-Z2PyD1qfuTq84nb0yi37L7HJ3Aqphgnbfkd-mUn5A9Aqv8BAQCcPf3DzLFYpwmVN1CBuVqERZSWTN3WvkPeJFrI7EKTfiIqtQ8DIC22eEd7rnQJLFK0Tu"
-            />
-            <div class="absolute inset-0 bg-primary/40"></div>
+            <div class="absolute inset-0 bg-white/90"></div>
           </div>
           <div class="relative z-10 flex flex-col items-center text-center">
-            <span class="material-symbols-outlined text-white mb-2 text-3xl"
+            <span
+              class="material-symbols-outlined text-white mb-2 text-3xl group-hover:text-primary transition-colors"
               >calendar_month</span
             >
             <h4
-              class="font-headline font-bold text-sm text-white uppercase tracking-widest"
+              class="font-headline font-bold text-sm text-white uppercase tracking-widest group-hover:text-primary transition-colors"
             >
               Your comfort is our priority
             </h4>
@@ -1420,25 +1463,19 @@
               >verified</span
             >
             <span
-              class="text-xs font-semibold uppercase tracking-wider text-on-secondary-fixed-variant"
-              >Aesthetic Excellence</span
-            >
-          </div>
-          <div
-            class="bg-secondary-container px-4 py-2 rounded-full flex items-center gap-2"
-          >
-            <span
-              class="material-symbols-outlined text-sm"
-              data-icon="spa"
-              style="font-variation-settings: &quot;FILL&quot; 1"
-              >spa</span
-            >
-            <span
-              class="text-xs font-semibold uppercase tracking-wider text-on-secondary-fixed-variant"
-              >Pain-Free Tech</span
+              class="text-md font-semibold tracking-wider text-on-secondary-fixed-variant"
+              >We Value your Smile Above anything else</span
             >
           </div>
         </div>
+        <a href="book-appointment.html"
+          ><button
+            class="px-8 py-3 mt-4 bg-primary text-on-primary rounded-full font-bold text-md flex items-center gap-3 transition-transform hover:scale-105 active:scale-95 shadow-2xl hover:bg-blue-100 hover:text-primary"
+          >
+            Book Appointment
+            <span class="material-symbols-outlined">arrow_forward</span>
+          </button></a
+        >
       </div>
     </section>
 
@@ -1460,20 +1497,20 @@
             >
               Why <span class="italic font-serif">Chagger Dental</span>
             </h1>
-            <p
-              class="text-on-primary-container/80 max-w-2xl mt-3 text-lg leading-relaxed"
-            >
+            <p class="text-white/80 max-w-2xl mt-3 text-lg leading-relaxed">
               A curated suite of specialized treatments where medical precision
               meets aesthetic vision. Each procedure is a masterpiece of modern
               dentistry.
             </p>
           </div>
           <div class="hidden md:block">
-            <div class="flex items-center space-x-4 text-on-primary-container">
-              <span class="text-sm font-label uppercase tracking-widest"
-                >Scroll to Explore</span
+            <div class="flex items-center space-x-4 text-white">
+              <a href="services.html"
+                ><span class="text-sm font-label uppercase tracking-widest"
+                  >Our Services</span
+                ></a
               >
-              <div class="w-12 h-[1px] bg-on-primary-container/30"></div>
+              <div class="w-12 h-[1px] bg-white"></div>
             </div>
           </div>
         </div>
@@ -1671,16 +1708,6 @@
                 </h3>
                 <!-- <p class="text-white/80 text-sm leading-relaxed">Restore functional integrity and aesthetic harmony with titanium foundations.</p> -->
               </div>
-              <div
-                class="flex items-center gap-2 text-white/40 font-bold text-xs uppercase tracking-wider group-hover:gap-4 transition-all"
-              >
-                <span>Know More</span>
-                <span
-                  class="material-symbols-outlined text-sm"
-                  data-icon="arrow_forward"
-                  >arrow_forward</span
-                >
-              </div>
             </div>
             <div
               class="absolute inset-0 border border-white/20 rounded-[2rem] pointer-events-none shadow-[inset_0_1px_1px_rgba(255,255,255,0.2)]"
@@ -1716,16 +1743,6 @@
                 </h3>
                 <!-- <p class="text-white/80 text-sm leading-relaxed">Precision alignment solutions for perfectly balanced dental architecture.</p> -->
               </div>
-              <div
-                class="flex items-center gap-2 text-white/40 font-bold text-xs uppercase tracking-wider group-hover:gap-4 transition-all"
-              >
-                <span>Know More</span>
-                <span
-                  class="material-symbols-outlined text-sm"
-                  data-icon="arrow_forward"
-                  >arrow_forward</span
-                >
-              </div>
             </div>
             <div
               class="absolute inset-0 border border-white/20 rounded-[2rem] pointer-events-none shadow-[inset_0_1px_1px_rgba(255,255,255,0.2)]"
@@ -1734,45 +1751,57 @@
         </div>
         <!-- Central High-Impact Visual -->
         <div
-          class="lg:col-span-6 relative group rounded-[3rem] overflow-hidden shadow-2xl min-h-[600px] bg-primary"
+          class="lg:col-span-6 relative group rounded-[3rem] overflow-hidden shadow-2xl min-h-[500px] bg-primary"
           data-aos="zoom-in"
         >
-          <img
-            alt="Modern dental clinic"
-            class="absolute inset-0 w-full h-full object-cover opacity-80 mix-blend-luminosity group-hover:scale-105 transition-transform duration-1000"
-            data-alt="Ultra-modern dental clinic suite with sun-drenched minimalist interiors, sleek white medical equipment, and floor-to-ceiling windows showing soft greenery."
-            src="images/full-sec.png"
-          />
           <div
-            class="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent opacity-60"
-          ></div>
-          <div class="absolute bottom-0 left-0 w-full p-10 space-y-8">
-            <div class="max-w-md">
-              <h2
-                class="text-white font-headline text-4xl font-extrabold mb-4 leading-tight"
-              >
-                Cutting-Edge Tech
-              </h2>
-            </div>
-            <!-- Operational Status Bar -->
+            class="w-full h-full transformation-iris-container"
+            id="iris-zone"
+          >
+            <!-- Baseline State (Always Visible Background) -->
             <div
-              class="bg-white/20 backdrop-blur-md rounded-2xl p-4 flex items-center justify-between border border-white/20"
-              style="margin-top: 0px"
+              class="absolute inset-0 bg-cover bg-center"
+              style="background-image: url(&quot;./images/pre.png&quot;)"
+            ></div>
+            <!-- Clinical Result (Revealed by Iris) -->
+            <div
+              class="transformation-iris-reveal absolute inset-0 bg-cover bg-center"
+              style="background-image: url(&quot;./images/post.png&quot;)"
+            ></div>
+            <!-- Iris Visual Edge -->
+            <div class="transformation-iris-edge"></div>
+            <!-- Floating Sapphire Particles -->
+            <div
+              class="sapphire-particle w-1 h-1 left-[10%] top-[20%] opacity-40"
+            ></div>
+            <div
+              class="sapphire-particle w-2 h-2 left-[80%] top-[40%] opacity-20"
+            ></div>
+            <div
+              class="sapphire-particle w-1.5 h-1.5 left-[30%] top-[70%] opacity-30"
+            ></div>
+            <div
+              class="sapphire-particle w-1 h-1 left-[60%] top-[10%] opacity-50"
+            ></div>
+            <div
+              class="sapphire-particle w-2 h-2 left-[15%] top-[85%] opacity-10"
+            ></div>
+            <!-- Hover Instructions -->
+            <div
+              class="absolute bottom-12 left-1/2 -translate-x-1/2 z-30 pointer-events-none"
             >
-              <div class="flex items-center gap-4">
-                <!-- <div class="relative">
-<div class="w-3 h-3 bg-emerald-400 rounded-full animate-pulse shadow-[0_0_12px_rgba(52,211,153,0.8)]"></div>
-</div> -->
-                <span class="text-white/90 font-label text-sm tracking-wide">
-                  <p class="text-white text-sm leading-relaxed">
-                    The field of dentistry is constantly evolving. We are
-                    committed to staying on top of the latest advancements in
-                    the field so that we can provide you with the safest and
-                    most painless treatments possible. Furthermore, our cosmetic
-                    dental procedures in Oakville may help you feel and look
-                    your best by enhancing your smile.
-                  </p>
-                </span>
+              <div
+                class="flex items-center gap-3 bg-white/20 backdrop-blur-md px-6 py-3 rounded-full border border-white/10 shadow-lg"
+              >
+                <span
+                  class="material-symbols-outlined text-white text-sm"
+                  data-icon="mouse"
+                  >mouse</span
+                >
+                <span
+                  class="text-white text-xs font-manrope font-bold uppercase tracking-widest"
+                  >Hover to reveal precision</span
+                >
               </div>
             </div>
           </div>
@@ -1780,50 +1809,44 @@
         <!-- Right Flank: Cards -->
         <div class="lg:col-span-3 flex flex-col gap-8">
           <!-- Pediatric Dentistry -->
-          <div
-            class="group mt-3 p-8 rounded-[2rem] border border-white/10 shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer overflow-hidden relative bg-[#0E336A]/90 backdrop-blur-xl hover:-translate-y-2"
-            data-aos="zoom-in"
-          >
-            <div
-              class="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-40 transition-opacity"
+          <a href="services/cerec-crown.html"
+            ><div
+              class="group mt-3 p-8 rounded-[2rem] border border-white/10 shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer overflow-hidden relative bg-[#0E336A]/90 backdrop-blur-xl hover:-translate-y-2"
+              data-aos="zoom-in"
             >
-              <span
-                class="material-symbols-outlined text-6xl text-white"
-                data-icon="child_care"
-                >child_care</span
-              >
-            </div>
-            <div class="relative z-10 space-y-6">
               <div
-                class="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center text-white border border-white/80"
+                class="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-40 transition-opacity"
               >
                 <span
-                  class="material-symbols-outlined text-3xl"
-                  data-icon="face_6"
-                  >face_6</span
+                  class="material-symbols-outlined text-6xl text-white"
+                  data-icon="child_care"
+                  >child_care</span
                 >
               </div>
-              <div>
-                <h3 class="font-headline text-2xl font-bold text-white/80 mb-2">
-                  AI-Guided Smile Design & Treatment Planning
-                </h3>
-                <!-- <p class="text-white/80 text-sm leading-relaxed">Nurturing young smiles with gentle techniques and a magical touch.</p> -->
+              <div class="relative z-10 space-y-6">
+                <div
+                  class="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center text-white border border-white/80"
+                >
+                  <span
+                    class="material-symbols-outlined text-3xl"
+                    data-icon="face_6"
+                    >face_6</span
+                  >
+                </div>
+                <div>
+                  <h3
+                    class="font-headline text-2xl font-bold text-white/80 mb-2"
+                  >
+                    CEREC Crown
+                  </h3>
+                  <!-- <p class="text-white/80 text-sm leading-relaxed">Nurturing young smiles with gentle techniques and a magical touch.</p> -->
+                </div>
               </div>
               <div
-                class="flex items-center gap-2 text-white/40 font-bold text-xs uppercase tracking-wider group-hover:gap-4 transition-all"
-              >
-                <span>Know More</span>
-                <span
-                  class="material-symbols-outlined text-sm"
-                  data-icon="arrow_forward"
-                  >arrow_forward</span
-                >
-              </div>
+                class="absolute inset-0 border border-white/20 rounded-[2rem] pointer-events-none shadow-[inset_0_1px_1px_rgba(255,255,255,0.2)]"
+              ></div>
             </div>
-            <div
-              class="absolute inset-0 border border-white/20 rounded-[2rem] pointer-events-none shadow-[inset_0_1px_1px_rgba(255,255,255,0.2)]"
-            ></div>
-          </div>
+          </a>
           <!-- Teeth Whitening -->
           <div
             class="group p-8 rounded-[2rem] border border-white/10 shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer overflow-hidden relative bg-[#0E336A]/90 backdrop-blur-xl hover:-translate-y-2"
@@ -1853,16 +1876,6 @@
                   Advanced CAD/CAM
                 </h3>
                 <!-- <p class="text-white/80 text-sm leading-relaxed">Advanced brilliance treatments for a luminous, professional-grade radiance.</p> -->
-              </div>
-              <div
-                class="flex items-center gap-2 text-white/40 font-bold text-xs uppercase tracking-wider group-hover:gap-4 transition-all"
-              >
-                <span>Know More</span>
-                <span
-                  class="material-symbols-outlined text-sm"
-                  data-icon="arrow_forward"
-                  >arrow_forward</span
-                >
               </div>
             </div>
             <div
@@ -3333,7 +3346,7 @@
                     <img
                       class="orb-image w-full h-full object-cover"
                       data-alt="Calm clinical hallway at night with soft architectural accent lighting and a sense of quiet security"
-                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuCb-ih3t2Y2bpNddUSaiunDhx2jE4bpPzdFdOO3WJ-OcsVp7nyeFCdTxfkW6NfhWxISeiivMZi7bxnxp6LL69RaYifVIs71d5yIOHdcL8wXihr5qoz7m4WQO00bJsEZqMRluMFPs4FEAlaK_dgkmjzP3lmoqED5FXt2Y0L_LJufvUAgerZn6TZu8vO1Uz4IJ5gIllapFK2FjBb8IU0q5RO947HQZx4ZRNWDFCrjNORSwTMmOhTGMZy35qzttWoArkN-X99m_8vWI_93"
+                      src="images/chagger.png"
                     />
                   </div>
                 </div>
@@ -3409,15 +3422,16 @@
                 <blockquote
                   class="quote-text text-xl md:text-xl font-headline italic font-semibold leading-l tracking-wide mb-4 relative z-10 tracking-tight"
                 >
-                  "The Clinical Sanctuary redefined my perception of dentistry.
-                  From the serene atmosphere to the precision of laser
-                  whitening, it felt like a spa day."
+                  "Professional and friendly environment. As usual, I had a very
+                  pleasant experience; procedure done at the highest standards.
+                  I would definitely recommend Dr. Chagger’s dental office to
+                  all my friends."
                 </blockquote>
                 <div
                   class="flex items-center gap-6 relative z-10 border-t border-white/10 pt-2"
                 >
                   <div
-                    class="w-14 h-14 rounded-2xl bg-white/10 icon-div flex items-center justify-center text-white border border-white/80"
+                    class="w-14 h-14 mt-4 rounded-2xl bg-white/10 icon-div flex items-center justify-center text-white border border-white/80"
                   >
                     <span
                       class="material-symbols-outlined text-3xl author-icon"
@@ -3429,13 +3443,8 @@
                     <h4
                       class="author-name font-headline font-extrabold text-2xl tracking-tight"
                     >
-                      Helena Chambers
+                      Rodica Dutka
                     </h4>
-                    <p
-                      class="author-title font-semibold text-sm uppercase tracking-widest mt-1 opacity-80"
-                    >
-                      Cosmetic Restoration Patient
-                    </p>
                   </div>
                 </div>
               </div>
@@ -3478,15 +3487,17 @@
                 <blockquote
                   class="quote-text text-xl md:text-xl font-headline font-semibold italic leading-l tracking-wide mb-4 relative z-10 tracking-tight"
                 >
-                  "I've never felt more comfortable in a clinical setting. The
-                  team's attention to detail and absolute expertise in dental
-                  implants gave me my confidence back."
+                  "Dr. Chagger and his team are the absolute best in the
+                  business. From the time you walk in it is clear you are
+                  important to them. State of the art equipment and beautiful
+                  clean offices. I recommend them to all wanting high quality
+                  service with a smile."
                 </blockquote>
                 <div
                   class="flex items-center gap-6 relative z-10 border-t border-white/10 pt-2 mt-5"
                 >
                   <div
-                    class="w-14 h-14 rounded-2xl bg-white/10 icon-div flex items-center justify-center text-white border border-white/80"
+                    class="w-14 h-14 mt-4 rounded-2xl bg-white/10 icon-div flex items-center justify-center text-white border border-white/80"
                   >
                     <span
                       class="material-symbols-outlined text-3xl author-icon"
@@ -3498,13 +3509,8 @@
                     <h4
                       class="author-name font-headline font-extrabold text-2xl tracking-tight"
                     >
-                      David Miller
+                      Mike Wakefield
                     </h4>
-                    <p
-                      class="author-title font-semibold text-sm uppercase tracking-widest mt-1 opacity-80"
-                    >
-                      Full Arch Restoration
-                    </p>
                   </div>
                 </div>
               </div>
@@ -3547,15 +3553,16 @@
                 <blockquote
                   class="quote-text text-xl md:text-xl font-headline font-semibold italic leading-l tracking-wide mb-4 relative z-10 tracking-tight"
                 >
-                  "Invisalign journey was seamless. The digital mapping made
-                  every step predictable and painless. The support was
-                  incredible throughout."
+                  "CHAGGER Dental deserves more than 5 stars - 10+ - wonderful
+                  dental office, professional and very caring. Visiting the
+                  dentist can be very stressful. Dr. Chagger and all his staff
+                  do a great job of making you feel at ease. Always! THANK YOU"
                 </blockquote>
                 <div
                   class="flex items-center gap-6 relative z-10 border-t border-white/10 pt-2 mt-5"
                 >
                   <div
-                    class="w-14 h-14 rounded-2xl bg-white/10 icon-div flex items-center justify-center text-white border border-white/80"
+                    class="w-14 h-14 mt-4 rounded-2xl bg-white/10 icon-div flex items-center justify-center text-white border border-white/80"
                   >
                     <span
                       class="material-symbols-outlined text-3xl author-icon"
@@ -3567,34 +3574,374 @@
                     <h4
                       class="author-name font-headline font-extrabold text-2xl tracking-tight"
                     >
-                      Sarah Jenkins
+                      Motria
                     </h4>
-                    <p
-                      class="author-title font-semibold text-sm uppercase tracking-widest mt-1 opacity-80"
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- slide 4 -->
+            <div class="testimonial-slide">
+              <div
+                class="testimonial-slide-content w-full p-12 md:p-14 rounded-[4rem] flex flex-col justify-center min-h-[350px]"
+              >
+                <span class="quote-icon">“</span>
+                <div
+                  class="star-container flex items-center gap-1.5 mb-4 relative z-10"
+                >
+                  <span
+                    class="material-symbols-outlined !text-xl"
+                    style="font-variation-settings: &quot;FILL&quot; 1"
+                    >star</span
+                  >
+                  <span
+                    class="material-symbols-outlined !text-xl"
+                    style="font-variation-settings: &quot;FILL&quot; 1"
+                    >star</span
+                  >
+                  <span
+                    class="material-symbols-outlined !text-xl"
+                    style="font-variation-settings: &quot;FILL&quot; 1"
+                    >star</span
+                  >
+                  <span
+                    class="material-symbols-outlined !text-xl"
+                    style="font-variation-settings: &quot;FILL&quot; 1"
+                    >star</span
+                  >
+                  <span
+                    class="material-symbols-outlined !text-xl"
+                    style="font-variation-settings: &quot;FILL&quot; 1"
+                    >star</span
+                  >
+                </div>
+                <blockquote
+                  class="quote-text text-xl md:text-xl font-headline font-semibold italic leading-l tracking-wide mb-4 relative z-10 tracking-tight"
+                >
+                  "The team was extremely helpful and treated my 88 year old mom
+                  with great kindness and respect. Dr B outlined options with
+                  risks and benefits. Sonia is tremendous to work with!"
+                </blockquote>
+                <div
+                  class="flex items-center gap-6 relative z-10 border-t border-white/10 pt-2 mt-5"
+                >
+                  <div
+                    class="w-14 h-14 mt-4 rounded-2xl bg-white/10 icon-div flex items-center justify-center text-white border border-white/80"
+                  >
+                    <span
+                      class="material-symbols-outlined text-3xl author-icon"
+                      data-icon="dentistry"
+                      >dentistry</span
                     >
-                      Orthodontic Treatment
-                    </p>
+                  </div>
+                  <div>
+                    <h4
+                      class="author-name font-headline font-extrabold text-2xl tracking-tight"
+                    >
+                      Debbie Moretta
+                    </h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- slide 5 -->
+            <div class="testimonial-slide">
+              <div
+                class="testimonial-slide-content w-full p-12 md:p-14 rounded-[4rem] flex flex-col justify-center min-h-[350px]"
+              >
+                <span class="quote-icon">“</span>
+                <div
+                  class="star-container flex items-center gap-1.5 mb-4 relative z-10"
+                >
+                  <span
+                    class="material-symbols-outlined !text-xl"
+                    style="font-variation-settings: &quot;FILL&quot; 1"
+                    >star</span
+                  >
+                  <span
+                    class="material-symbols-outlined !text-xl"
+                    style="font-variation-settings: &quot;FILL&quot; 1"
+                    >star</span
+                  >
+                  <span
+                    class="material-symbols-outlined !text-xl"
+                    style="font-variation-settings: &quot;FILL&quot; 1"
+                    >star</span
+                  >
+                  <span
+                    class="material-symbols-outlined !text-xl"
+                    style="font-variation-settings: &quot;FILL&quot; 1"
+                    >star</span
+                  >
+                  <span
+                    class="material-symbols-outlined !text-xl"
+                    style="font-variation-settings: &quot;FILL&quot; 1"
+                    >star</span
+                  >
+                </div>
+                <blockquote
+                  class="quote-text text-xl md:text-xl font-headline font-semibold italic leading-l tracking-wide mb-4 relative z-10 tracking-tight"
+                >
+                  "I have been going to Chaggar Dental for over a year now and
+                  the staff are excellent! I always feel welcomed and relaxed.
+                  My anxiety about going to the dentist is nearly non-existent
+                  now!"
+                </blockquote>
+                <div
+                  class="flex items-center gap-6 relative z-10 border-t border-white/10 pt-2 mt-5"
+                >
+                  <div
+                    class="w-14 h-14 mt-4 rounded-2xl bg-white/10 icon-div flex items-center justify-center text-white border border-white/80"
+                  >
+                    <span
+                      class="material-symbols-outlined text-3xl author-icon"
+                      data-icon="dentistry"
+                      >dentistry</span
+                    >
+                  </div>
+                  <div>
+                    <h4
+                      class="author-name font-headline font-extrabold text-2xl tracking-tight"
+                    >
+                      Caitlin Korff
+                    </h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- slide 6 -->
+            <div class="testimonial-slide">
+              <div
+                class="testimonial-slide-content w-full p-12 md:p-14 rounded-[4rem] flex flex-col justify-center min-h-[350px]"
+              >
+                <span class="quote-icon">“</span>
+                <div
+                  class="star-container flex items-center gap-1.5 mb-4 relative z-10"
+                >
+                  <span
+                    class="material-symbols-outlined !text-xl"
+                    style="font-variation-settings: &quot;FILL&quot; 1"
+                    >star</span
+                  >
+                  <span
+                    class="material-symbols-outlined !text-xl"
+                    style="font-variation-settings: &quot;FILL&quot; 1"
+                    >star</span
+                  >
+                  <span
+                    class="material-symbols-outlined !text-xl"
+                    style="font-variation-settings: &quot;FILL&quot; 1"
+                    >star</span
+                  >
+                  <span
+                    class="material-symbols-outlined !text-xl"
+                    style="font-variation-settings: &quot;FILL&quot; 1"
+                    >star</span
+                  >
+                  <span
+                    class="material-symbols-outlined !text-xl"
+                    style="font-variation-settings: &quot;FILL&quot; 1"
+                    >star</span
+                  >
+                </div>
+                <blockquote
+                  class="quote-text text-xl md:text-xl font-headline font-semibold italic leading-l tracking-wide mb-4 relative z-10 tracking-tight"
+                >
+                  "This is by far one of the best dental offices I have been to!
+                  The staff are always kind and the procedures have always gone
+                  smoothly. Thank you to the wonderful team for all their hard
+                  work!!"
+                </blockquote>
+                <div
+                  class="flex items-center gap-6 relative z-10 border-t border-white/10 pt-2 mt-5"
+                >
+                  <div
+                    class="w-14 h-14 mt-4 rounded-2xl bg-white/10 icon-div flex items-center justify-center text-white border border-white/80"
+                  >
+                    <span
+                      class="material-symbols-outlined text-3xl author-icon"
+                      data-icon="dentistry"
+                      >dentistry</span
+                    >
+                  </div>
+                  <div>
+                    <h4
+                      class="author-name font-headline font-extrabold text-2xl tracking-tight"
+                    >
+                      Sabrina Sappal
+                    </h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- slide 7 -->
+            <div class="testimonial-slide">
+              <div
+                class="testimonial-slide-content w-full p-12 md:p-14 rounded-[4rem] flex flex-col justify-center min-h-[350px]"
+              >
+                <span class="quote-icon">“</span>
+                <div
+                  class="star-container flex items-center gap-1.5 mb-4 relative z-10"
+                >
+                  <span
+                    class="material-symbols-outlined !text-xl"
+                    style="font-variation-settings: &quot;FILL&quot; 1"
+                    >star</span
+                  >
+                  <span
+                    class="material-symbols-outlined !text-xl"
+                    style="font-variation-settings: &quot;FILL&quot; 1"
+                    >star</span
+                  >
+                  <span
+                    class="material-symbols-outlined !text-xl"
+                    style="font-variation-settings: &quot;FILL&quot; 1"
+                    >star</span
+                  >
+                  <span
+                    class="material-symbols-outlined !text-xl"
+                    style="font-variation-settings: &quot;FILL&quot; 1"
+                    >star</span
+                  >
+                  <span
+                    class="material-symbols-outlined !text-xl"
+                    style="font-variation-settings: &quot;FILL&quot; 1"
+                    >star</span
+                  >
+                </div>
+                <blockquote
+                  class="quote-text text-xl md:text-xl font-headline font-semibold italic leading-l tracking-wide mb-4 relative z-10 tracking-tight"
+                >
+                  "I love the staff and dentists at this office. They’re so kind
+                  and friendly. I am always nervous about seeing dentists but
+                  the team at this office makes the visits so easy. Thank
+                  you!!!"
+                </blockquote>
+                <div
+                  class="flex items-center gap-6 relative z-10 border-t border-white/10 pt-2 mt-5"
+                >
+                  <div
+                    class="w-14 h-14 mt-4 rounded-2xl bg-white/10 icon-div flex items-center justify-center text-white border border-white/80"
+                  >
+                    <span
+                      class="material-symbols-outlined text-3xl author-icon"
+                      data-icon="dentistry"
+                      >dentistry</span
+                    >
+                  </div>
+                  <div>
+                    <h4
+                      class="author-name font-headline font-extrabold text-2xl tracking-tight"
+                    >
+                      ViVi
+                    </h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- slide 8 -->
+            <div class="testimonial-slide">
+              <div
+                class="testimonial-slide-content w-full p-12 md:p-14 rounded-[4rem] flex flex-col justify-center min-h-[350px]"
+              >
+                <span class="quote-icon">“</span>
+                <div
+                  class="star-container flex items-center gap-1.5 mb-4 relative z-10"
+                >
+                  <span
+                    class="material-symbols-outlined !text-xl"
+                    style="font-variation-settings: &quot;FILL&quot; 1"
+                    >star</span
+                  >
+                  <span
+                    class="material-symbols-outlined !text-xl"
+                    style="font-variation-settings: &quot;FILL&quot; 1"
+                    >star</span
+                  >
+                  <span
+                    class="material-symbols-outlined !text-xl"
+                    style="font-variation-settings: &quot;FILL&quot; 1"
+                    >star</span
+                  >
+                  <span
+                    class="material-symbols-outlined !text-xl"
+                    style="font-variation-settings: &quot;FILL&quot; 1"
+                    >star</span
+                  >
+                  <span
+                    class="material-symbols-outlined !text-xl"
+                    style="font-variation-settings: &quot;FILL&quot; 1"
+                    >star</span
+                  >
+                </div>
+                <blockquote
+                  class="quote-text text-xl md:text-xl font-headline font-semibold italic leading-l tracking-wide mb-4 relative z-10 tracking-tight"
+                >
+                  "Awesome place the staff is super welcoming excellent service
+                  doctor knows his job amazing with kids."
+                </blockquote>
+                <div
+                  class="flex items-center gap-6 relative z-10 border-t border-white/10 pt-2 mt-5"
+                >
+                  <div
+                    class="w-14 h-14 mt-4 rounded-2xl bg-white/10 icon-div flex items-center justify-center text-white border border-white/80"
+                  >
+                    <span
+                      class="material-symbols-outlined text-3xl author-icon"
+                      data-icon="dentistry"
+                      >dentistry</span
+                    >
+                  </div>
+                  <div>
+                    <h4
+                      class="author-name font-headline font-extrabold text-2xl tracking-tight"
+                    >
+                      Ebtesam Salman
+                    </h4>
                   </div>
                 </div>
               </div>
             </div>
           </div>
           <!-- Enhanced Slider Navigation -->
-          <!-- <div class="absolute bottom-28 left-16 md:left-28 flex items-center gap-10 z-30">
-<div class="flex gap-4">
-<button class="nav-btn w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center shadow-lg text-chagger-blue" id="prev-btn" onclick="prevTestimonialSlide()">
-<span class="material-symbols-outlined !text-xl">arrow_back_ios_new</span>
-</button>
-<button class="nav-btn w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center shadow-lg text-chagger-blue" id="next-btn" onclick="nextTestimonialSlide()">
-<span class="material-symbols-outlined !text-xl">arrow_forward_ios</span>
-</button>
-</div>
-<div class="flex gap-3" id="slider-dots">
-<button class="dot active h-2.5 rounded-full bg-chagger-blue w-10 transition-all duration-300" onclick="jumpToTestimonialSlide(0)"></button>
-<button class="dot w-2.5 h-2.5 rounded-full bg-slate-300 opacity-50 transition-all duration-300" onclick="jumpToTestimonialSlide(1)"></button>
-<button class="dot w-2.5 h-2.5 rounded-full bg-slate-300 opacity-50 transition-all duration-300" onclick="jumpToTestimonialSlide(2)"></button>
-</div>
-</div> -->
+          <div
+            class="absolute bottom-28 right-16 md:right-28 flex items-center gap-10 z-30"
+          >
+            <div class="flex gap-4">
+              <button
+                class="nav-btn w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center shadow-lg text-chagger-blue"
+                id="prev-btn"
+                onclick="prevTestimonialSlide()"
+              >
+                <span class="material-symbols-outlined !text-xl"
+                  >arrow_back_ios_new</span
+                >
+              </button>
+              <button
+                class="nav-btn w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center shadow-lg text-chagger-blue"
+                id="next-btn"
+                onclick="nextTestimonialSlide()"
+              >
+                <span class="material-symbols-outlined !text-xl"
+                  >arrow_forward_ios</span
+                >
+              </button>
+            </div>
+            <!-- <div class="flex gap-3" id="slider-dots">
+              <button
+                class="dot active h-2.5 rounded-full bg-chagger-blue w-10 transition-all duration-300"
+                onclick="jumpToTestimonialSlide(0)"
+              ></button>
+              <button
+                class="dot w-2.5 h-2.5 rounded-full bg-slate-300 opacity-50 transition-all duration-300"
+                onclick="jumpToTestimonialSlide(1)"
+              ></button>
+              <button
+                class="dot w-2.5 h-2.5 rounded-full bg-slate-300 opacity-50 transition-all duration-300"
+                onclick="jumpToTestimonialSlide(2)"
+              ></button>
+            </div> -->
+          </div>
         </div>
       </div>
     </section>
@@ -3635,12 +3982,6 @@
             <div
               class="absolute inset-0 bg-gradient-to-r from-transparent to-surface-container-low/20"
             ></div>
-            <div class="absolute bottom-6 left-6 flex gap-2">
-              <span
-                class="bg-white/90 text-primary text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full backdrop-blur-md"
-                >24/7 Response</span
-              >
-            </div>
           </div>
           <!-- Content Side -->
           <div
@@ -3697,7 +4038,7 @@
               <!-- Glowing Pulse CTA -->
               <a href="book-appointment.html"
                 ><button
-                  class="pulse-glow relative flex items-center justify-center gap-3 bg-primary text-on-primary px-10 py-5 rounded-full font-headline font-black text-lg group/btn overflow-hidden transition-all active:scale-95 w-full sm:w-auto"
+                  class="pulse-glow relative flex items-center justify-center gap-3 bg-primary text-on-primary px-10 py-5 rounded-full font-headline font-black text-lg group/btn overflow-hidden transition-all active:scale-95 w-full sm:w-auto hover:bg-blue-100 hover:text-primary"
                 >
                   <span
                     class="material-symbols-outlined"
@@ -3787,8 +4128,8 @@
                   Book Appointment
                 </h2>
                 <p class="text-secondary font-body">
-                  Complete the details below and our team will contact you
-                  shortly.
+                  Complete the details below and our Team member will contact
+                  you with shortly.
                 </p>
               </div>
               <form class="space-y-5">
@@ -3872,11 +4213,14 @@
                     <select
                       class="w-full px-5 py-4 rounded-xl border-none bg-surface-container-lowest text-on-surface focus:ring-2 focus:ring-primary/20 transition-all appearance-none cursor-pointer"
                     >
+                      <option>Family Dentistry</option>
+                      <option>Kids Dentistry</option>
                       <option>General Consultation</option>
                       <option>Cosmetic Dentistry</option>
                       <option>Dental Implants</option>
                       <option>Teeth Whitening</option>
                       <option>Emergency Care</option>
+                      <option>Others</option>
                     </select>
                   </div>
                 </div>
@@ -3930,7 +4274,7 @@
                   ></textarea>
                 </div>
                 <button
-                  class="w-full bg-[#0e336a] text-on-primary py-5 rounded-full font-headline font-bold text-lg hover:opacity-90 transition-all shadow-[0_12px_24px_rgba(14,51,106,0.2)] active:scale-[0.98]"
+                  class="w-full bg-[#0e336a] text-on-primary py-5 rounded-full font-headline font-bold text-lg hover:opacity-90 transition-all shadow-[0_12px_24px_rgba(14,51,106,0.2)] active:scale-[0.98] hover:bg-blue-100 hover:text-primary"
                   type="submit"
                 >
                   Book Appointment
@@ -4595,10 +4939,7 @@
       };
 
       // Auto-advance every 10 seconds for a premium feel
-      let testimonialAutoSlide = setInterval(
-        window.nextTestimonialSlide,
-        10000,
-      );
+      let testimonialAutoSlide = setInterval(window.nextTestimonialSlide, 2000);
 
       // Pause auto-advance on interaction
       const testimonialViewport = document.getElementById(
@@ -4765,6 +5106,38 @@
         ChaggerNavHub.init();
       });
       // end of nabbar js
+
+      // transofromations js
+      const irisZone = document.getElementById("iris-zone");
+
+      function updateIrisPosition(e) {
+        const rect = irisZone.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        // Set as percentage for better CSS scaling or as pixel values
+        irisZone.style.setProperty("--mouse-x", `${x}px`);
+        irisZone.style.setProperty("--mouse-y", `${y}px`);
+      }
+
+      irisZone.addEventListener("mousemove", updateIrisPosition);
+      irisZone.addEventListener("mouseenter", updateIrisPosition);
+
+      // Touch support for mobile users
+      irisZone.addEventListener(
+        "touchmove",
+        (e) => {
+          if (e.touches.length > 0) {
+            const touch = e.touches[0];
+            const rect = irisZone.getBoundingClientRect();
+            const x = touch.clientX - rect.left;
+            const y = touch.clientY - rect.top;
+            irisZone.style.setProperty("--mouse-x", `${x}px`);
+            irisZone.style.setProperty("--mouse-y", `${y}px`);
+          }
+        },
+        { passive: true },
+      );
     </script>
   </body>
 </html>
